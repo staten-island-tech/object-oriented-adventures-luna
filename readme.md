@@ -1,19 +1,40 @@
-## File One
+# Christina put in a title for the game!!!!
 
-Simply Print the titles of all movies
+## Introduction/Prologue
 
-## File Two
-After accepting user input, print all movies that released AFTER a given year.
+The MC and their sibling would be traveling from world to world. They are stopping at a space station for supplies, when the station is attached by a group of criminals, "The Oblivion". Here they would encounter them and try to stop them, but fail. 
 
-## File Three
-After accepting user input, print all movies that released AFTER a given year and BEFORE a different year.
+The player would then choose between the female character or the male character.
 
-## File 4
-After accepting user input, print all movies that released during a given year.
+After choosing a character, the other sibling would be captured, while the MC would escape (probably through their sibling's sacrafice). They will be found by a group of travelers who help him/her to recovery.
 
-## File 5
-Develop a function that allows users to search for a specific movie and returns all results that match
+    Let the MC choose:
+        1: Travel alone
+            End of the game with a short log from the MC (will be written later)
+                - Probably on adventure
+        2: Travel with the group of travelers
+            The game will continue...
+                Travel through different worlds(3-4) before final battle
+                Decisions will decide the reunion of the siblings
+                Travel by "Christina PICKS"
+    
 
-## File 6
+## MC
 
-Develop a function that allows users to search for movies by genre
+The main character will be chosen by the player.
+
+Choice 1: Female
+    
+    The name will be "Amaris"
+    Weapon: Stellar Gun
+    Type: Destruction
+    Element: Dark
+
+Choice 2: Male
+
+    The name will be "Aelius"
+    Weapon: Stellar Gun
+    Type: Destruction
+    Element: Light
+
+The MC would inherit from the character class
