@@ -58,7 +58,12 @@ MC should have an inventory, hp bar, money (do i make a class or something for t
     Element: Ice
 
 
-??
+3: Female
+
+    Name: 
+    Weapon: um does magic work
+    Type: Harmony
+    Element: Quantum
 
 
 
