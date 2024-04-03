@@ -28,14 +28,14 @@ Choice 1: Female
     The name will be "Amaris"
     Weapon: Stellar Gun
     Type: Destruction
-    Element: Dark
+    Element: Quantum
 
 Choice 2: Male
 
     The name will be "Aelius"
     Weapon: Stellar Gun
     Type: Destruction
-    Element: Light
+    Element: Quantum
 
 The MC would inherit from the character class
 
@@ -56,11 +56,11 @@ MC should have an inventory, hp bar, money (do i make a class or something for t
     Weapon: Sword
     Type: Hunt
     Element: Ice
-a
+
 
 3: Female
 
-    Name: 
+    The 
     Weapon: Scythe
     Type: Harmony
     Element: Quantum
