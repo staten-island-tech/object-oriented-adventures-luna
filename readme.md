@@ -1,4 +1,4 @@
-# CHRISTINA put in a title for the game!!!!
+# LEAH put in a title for the game!!!!
 
 ## Introduction/Prologue
 
@@ -115,13 +115,43 @@ Monde(follows the path of erudition):
 
     The name will be "Genevieve"
     Rarity: ****
-    Weapon: Christina do this
-    Type: Christina do this
-    Element: Christina do this
+    Weapon: Scythe
+    Type: Preservation
+    Element: Lightning
 
 Pero(follows the path of Harmony)
 
-Chrstina creTE FOUR CHARACTERS FOR THIS WORLD (1 FIVE STAR AND 4 FOUR STAR, LET ME CHOOSE THE NAME)
+1: Female
+    
+    The name will be "elisa"
+    Rarity: ****
+    Weapon: Daggers
+    Type: Nihility
+    Element: Lightning
+
+2: Male
+
+    The name will be "elisa"
+    Rarity: ****
+    Weapon: Gun
+    Type: Abundance
+    Element: Fire
+
+3: Male
+
+    The name will be "elisa"
+    Rarity: *****
+    Weapon: Glaive
+    Type: Erudition
+    Element: Physical
+
+4: Female
+
+    The name will be "elisa"
+    Rarity: ****
+    Weapon: Rifle
+    Type: Preservation
+    Element: Ice
 
 
 ## NPCS
@@ -133,5 +163,12 @@ GIVES MISSIONS
 
 
 ## Stars
+
+Currency name: crystals idk
+
+Player earns crystals from doing missions and defeating enemies. 
+They can use those crystals to pull characters, weapons, items, etc.
+Pulls are random - can get either nothing, four-star, or five-star (rare)
+
 
 GAMBLING SYSTEM
