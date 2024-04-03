@@ -67,6 +67,7 @@ MC should have an inventory, hp bar, money (do i make a class or something for t
 
 
 
+
 ## NPCS
 
 ??
