@@ -56,12 +56,12 @@ MC should have an inventory, hp bar, money (do i make a class or something for t
     Weapon: Sword
     Type: Hunt
     Element: Ice
-
+a
 
 3: Female
 
     Name: 
-    Weapon: um does magic work
+    Weapon: Scythe
     Type: Harmony
     Element: Quantum
 
