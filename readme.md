@@ -45,14 +45,14 @@ MC should have an inventory, hp bar, money (do i make a class or something for t
 
 1: Female
     
-    The name will be "elisa choose"
+    The name will be
     Weapon: Crossbow
     Type: Erudition
     Element: Fire
 
 2: Male
 
-    The name will be "elisa choose"
+    The name will be
     Weapon: Sword
     Type: Hunt
     Element: Ice
@@ -60,7 +60,7 @@ MC should have an inventory, hp bar, money (do i make a class or something for t
 
 3: Female
 
-    The 
+    The name will be 
     Weapon: Scythe
     Type: Harmony
     Element: Quantum
