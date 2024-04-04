@@ -232,7 +232,8 @@ Monde: Hydro Robots
 
 Pero: 
 
-    - fjlasdjf;sl
+    - Must pass Monde to transport to Pero
+    - sjfsljfa;sdjf;lsdjfa
 
 Taiyo:
 
