@@ -1,4 +1,4 @@
-# LEAH put in a title for the game!!!!
+# Legacy
 
 ## Introduction/Prologue
 
@@ -6,7 +6,7 @@ The MC and their sibling would be traveling from world to world. They are stoppi
 
 The player would then choose between the female character or the male character.
 
-After choosing a character, the other sibling would be captured, while the MC would escape (probably through their sibling's sacrifice). They will be found by a group of travelers who help him/her to recovery.
+After choosing a character, the other sibling would be captured, while the MC would escape (probably through their sibling's sacrifice). They will be found by a group of travelers who help him/her to recovery. The group of travelers call themselves, "Legacy". It composes of the captain (guide/tutorial person), Asahi(free character), and other npcs(gives missions).
 
     Let the MC choose:
         1: Travel alone
@@ -85,7 +85,7 @@ Space Station Characters:
     Type: Presevation
     Element: Imaginary
 
-Monde(follows the path of erudition):
+Monde(follows the path of Erudition):
 
 1: Female
     
@@ -123,7 +123,7 @@ Pero(follows the path of Harmony)
 
 1: Female
     
-    The name will be "elisa"
+    The name will be "Dinara"
     Rarity: ****
     Weapon: Daggers
     Type: Nihility
@@ -131,7 +131,7 @@ Pero(follows the path of Harmony)
 
 2: Male
 
-    The name will be "elisa"
+    The name will be "Igor"
     Rarity: ****
     Weapon: Gun
     Type: Abundance
@@ -139,7 +139,7 @@ Pero(follows the path of Harmony)
 
 3: Male
 
-    The name will be "elisa"
+    The name will be "Aleksandr"
     Rarity: *****
     Weapon: Glaive
     Type: Erudition
@@ -147,12 +147,45 @@ Pero(follows the path of Harmony)
 
 4: Female
 
-    The name will be "elisa"
+    The name will be "Innessa"
     Rarity: ****
     Weapon: Rifle
     Type: Preservation
     Element: Ice
 
+Taiyo(follows the path of Nihility)
+
+1: Male
+
+    The name will be "Asahi - Prince of Taiyo"
+    Rarity: *****
+    Weapon: Magic Orb
+    Type: Abundance
+    Element: Wind
+
+2: Female
+
+    The name will be "Himari"
+    Rarity: ****
+    Weapon: Polearm
+    Type: Hunt
+    Element: Quantum
+
+3: Female
+
+    The name will be "Fumiko"
+    Rarity: ****
+    Weapon: Book
+    Type: Nihility
+    Element: Imaginary
+
+4: Female
+
+    The name will be "Izumi"
+    Rarity: *****
+    Weapon: Katana
+    Type: Nihility
+    Element: Wind
 
 ## NPCS
 
@@ -160,14 +193,49 @@ GIVES MISSIONS
 
 ## Enemies
 
+Battles are turn Based!!!!
 
+Options:
+
+    Normal Skill(different for every character if we have time)
+    Ultimate(different for every character if we have time)
+        -Requires ten turns to do (saves from every battle)
+    Change Character(Two characters per team)
+
+EACH TEAM CANNOT HAVE TWO OF THE SAME CHARACTER!!
+
+Items gained from Enemies:
+
+    Tutorial Battle: 2-3 crystals
+    Normal Battle: 5-8 crystals
+    Boss Battle: 25-40 crystals
+
+Spaceship: Minions of the Oblivion
+
+    - Must defeat them to go on the spaceship
+    - 3 battles(minion, minion, boss)
+      - First Battle: Tutorial Battle(3 minions/ Oblivion Guards)
+      - Second Battle: Normal Battle(5 minions(two waves)/ Oblivion Guards and Oblivion Drones)
+        - Gain Asahi as free character
+      - Third Battle: Boss Battle(2 minions(wave one), Boss(wave two)/ Oblivion Guards and General Aeron)
+    If 
+
+Monde: Hydro Robots
+
+    - Must talk to the first npc first for quest
+    - Will be transported to the world, Monde
+    - Charlotte's attacks will be null to these mobs
+    - 3 Battles(minion, minion, boss)
+    - First Battle: Normale Battle(3 hydro robots(2 waves))
+    - Second Battle: Normal Battle(same as battle one but against hydro robot dogs)
+    - Third Battle: Boss Battle(2 minions(wave one). Boss(wave two)/ hydro robot and giant hydro robot)
 
 ## Stars
 
-Currency name: crystals idk
+Currency name: Crystals
 
 Player earns crystals from doing missions and defeating enemies. 
-They can use those crystals to pull characters, weapons, items, etc.
+They can use those crystals to pull characters, items.
 Pulls are random - can get either nothing, four-star, or five-star (rare)
 
 
