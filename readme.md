@@ -43,7 +43,7 @@ The MC would inherit from the character class
 
 ## Characters
 
-Space Station Characters:
+### Space Station Characters:
 
 1: Female
     
@@ -85,7 +85,7 @@ Space Station Characters:
     Type: Presevation
     Element: Imaginary
 
-Monde(follows the path of Erudition):
+### Monde(follows the path of Erudition):
 
 1: Female
     
@@ -119,7 +119,7 @@ Monde(follows the path of Erudition):
     Type: Preservation
     Element: Lightning
 
-Pero(follows the path of Harmony)
+### Pero(follows the path of Harmony)
 
 1: Female
     
@@ -153,7 +153,7 @@ Pero(follows the path of Harmony)
     Type: Preservation
     Element: Ice
 
-Taiyo(follows the path of Nihility)
+### Taiyo(follows the path of Nihility)
 
 1: Male
 
@@ -193,7 +193,7 @@ GIVES MISSIONS
 
 ## Enemies
 
-Battles are turn Based!!!!
+Battles are turn Based!!!! 
 
 Options:
 
@@ -218,7 +218,7 @@ Spaceship: Minions of the Oblivion
       - Second Battle: Normal Battle(5 minions(two waves)/ Oblivion Guards and Oblivion Drones)
         - Gain Asahi as free character
       - Third Battle: Boss Battle(2 minions(wave one), Boss(wave two)/ Oblivion Guards and General Aeron)
-    If 
+    If <--- what is this
 
 Monde: Hydro Robots
 
@@ -230,13 +230,24 @@ Monde: Hydro Robots
     - Second Battle: Normal Battle(same as battle one but against hydro robot dogs)
     - Third Battle: Boss Battle(2 minions(wave one). Boss(wave two)/ hydro robot and giant hydro robot)
 
+Pero: 
+
+    - fjlasdjf;sl
+
+Taiyo:
+
+    - jljfalsdfjas;lk
+
+
+
 ## Stars
 
 Currency name: Crystals
 
 Player earns crystals from doing missions and defeating enemies. 
-They can use those crystals to pull characters, items.
+They can use those crystals to pull characters, items. One star costs 160 crystals.
+Every character has different rates.
 Pulls are random - can get either nothing, four-star, or five-star (rare)
 
 
-GAMBLING SYSTEM
+GAMBLING SYSTEM <-- what is this
