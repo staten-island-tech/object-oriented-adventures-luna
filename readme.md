@@ -193,19 +193,19 @@ NPCs give information about the missions to the players for each world. They rem
 
 NPC 1: Female
     
-    Name: 
-    Mission Type: Monde - Hydro Robots
+    Name: elisa
+    Mission: World 1 - Monde
 
 
 NPC 2: Female
 
-    Name: 
-    Mission Type: Pero - Minions of the Oblivion and Ice Trolls
+    Name: asile
+    Mission Type: World 2 - Pero
 
 NPC 3: Male
 
-    Name: 
-    Mission Type: Taiyo - Guards of Taiyo
+    Name: elisasile
+    Mission Type: World 3 - Taiyo
 
 
 
@@ -237,7 +237,6 @@ Spaceship: Minions of the Oblivion
       - Second Battle: Normal Battle(5 minions(two waves)/ Oblivion Guards and Oblivion Drones)
         - Gain Asahi as free character
       - Third Battle: Boss Battle(2 minions(wave one), Boss(wave two)/ Oblivion Guards and General Aeron)
-    If <--- what is this
 
 Monde: Hydro Robots
 
