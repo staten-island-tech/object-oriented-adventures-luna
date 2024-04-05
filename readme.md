@@ -286,7 +286,7 @@ Could buy one star or ten stars at a time(automatically pull after buying star)
 
 Pulls are random - can get either nothing, four-star, or five-star (rare)
 
-Rates:
+### Rates:
 
     Nothing: 85.875%
     Characters: 14.125%
@@ -295,6 +295,6 @@ Rates:
 
 At 70 stars, soft pity will activate. The rate for characters would increase by 5-10% and the rate for nothing would decrease by the same amount.
 
-At 80 stars, hard pity will activate. The rate for characters would increase by 15-185 and the rate for nothing will decrease by the same amount.
+At 80 stars, hard pity will activate. The rate for characters would increase by 15-20% and the rate for nothing will decrease by the same amount.
 
 At 100 stars, a five star character would be guaranteed.
