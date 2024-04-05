@@ -200,7 +200,8 @@ Options:
     Normal Skill(different for every character if we have time)
     Ultimate(different for every character if we have time)
         -Requires ten turns to do (saves from every battle)
-    Change Character(Two characters per team)
+    Change Character(Four characters per team)
+        -The characters would go in a cycle(first character, second character, third character, fourth character, enemy, repeat)
 
 EACH TEAM CANNOT HAVE TWO OF THE SAME CHARACTER!!
 
@@ -230,15 +231,30 @@ Monde: Hydro Robots
     - Second Battle: Normal Battle(same as battle one but against hydro robot dogs)
     - Third Battle: Boss Battle(2 minions(wave one). Boss(wave two)/ hydro robot and giant hydro robot)
 
-Pero: 
+Pero: Minions of the Oblivion and Ice Trolls
 
     - Must pass Monde to transport to Pero
-    - sjfsljfa;sdjf;lsdjfa
+    - Must talk to second npc to get quest and will be transported to Pero
+    - All ice character's attacks will be null to these mobs
+    - 3 Battles(same as the other worlds)
+    - First Battle: Normal Battle(6 minions/Oblivion Guards and Ice goblins)
+    - Second Battle: Normal Battle(3 minions(two waves)/Oblivion orbs and Ice archer goblins)
+    - Third Battle: Boss Battle()
 
-Taiyo:
+Taiyo: Guards of Taiyo
 
-    - jljfalsdfjas;lk
-
+    - Must pass all previous worlds
+    - Must talk to the third npc to get the quest and will be transported to Taiyo
+    - All imaginary character's attacks will be null to these mobs
+    - 3 Battles(same as the other worlds)
+    - First Battle: Normal Battle(3 trainee gaurds(two waves))
+    - Second Battle: Boss Battle(wave one: 3 trainee guards, wave two: 4 normal guards, wave three: Captain of the Guard)
+    - Third Battle: Boss Battle(Queen of Taiyo(could summon normal guards to her side))
+      - After defeating the third boss, the player will see a gem that is dropped.
+            Choice One: Pick it up
+                - Happy Ending(find their sibling(gem shows where their sibling is))
+            Choice Two: Leave without it
+                - Sad Ending(don't find their sibling)
 
 
 ## Stars
@@ -246,9 +262,21 @@ Taiyo:
 Currency name: Crystals
 
 Player earns crystals from doing missions and defeating enemies. 
-They can use those crystals to pull characters, items. One star costs 160 crystals.
-Every character has different rates.
+They can use those crystals to pull characters, items. One star costs 160 crystals. Every character has different rates.
+
+Could buy one star or ten stars at a time(automatically pull after buying star)
+
 Pulls are random - can get either nothing, four-star, or five-star (rare)
 
+Rates:
 
-GAMBLING SYSTEM <-- what is this
+    Nothing: 85.875%
+    Characters: 14.125%
+        4-star characters: 99.125%
+        5-star characters: 0.875%
+
+At 70 stars, soft pity will activate. The rate for characters would increase by 5-10% and the rate for nothing would decrease by the same amount.
+
+At 80 stars, hard pity will activate. The rate for characters would increase by 15-185 and the rate for nothing will decrease by the same amount.
+
+At 100 stars, a five star character would be guaranteed.
