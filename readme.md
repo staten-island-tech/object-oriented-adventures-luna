@@ -246,7 +246,7 @@ Taiyo:
 Currency name: Crystals
 
 Player earns crystals from doing missions and defeating enemies. 
-They can use those crystals to pull characters, items. One star costs 160 crystals.
+They can use those crystals to buy stars to pull characters, and items. One star costs 160 crystals.
 Every character has different rates.
 Pulls are random - can get either nothing, four-star, or five-star (rare)
 
