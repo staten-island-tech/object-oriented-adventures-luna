@@ -262,14 +262,20 @@ Taiyo: Guards of Taiyo
 Currency name: Crystals
 
 Player earns crystals from doing missions and defeating enemies. 
+<<<<<<< HEAD
 They can use those crystals to pull characters, items. One star costs 160 crystals. Every character has different rates.
 
 Could buy one star or ten stars at a time(automatically pull after buying star)
 
+=======
+They can use those crystals to buy stars to pull characters, and items. One star costs 160 crystals.
+Every character has different rates.
+>>>>>>> 0814ef55924dc0311bc510dc1e49774a758bb60c
 Pulls are random - can get either nothing, four-star, or five-star (rare)
 
 Rates:
 
+<<<<<<< HEAD
     Nothing: 85.875%
     Characters: 14.125%
         4-star characters: 99.125%
@@ -280,3 +286,6 @@ At 70 stars, soft pity will activate. The rate for characters would increase by 
 At 80 stars, hard pity will activate. The rate for characters would increase by 15-185 and the rate for nothing will decrease by the same amount.
 
 At 100 stars, a five star character would be guaranteed.
+=======
+GAMBLING SYSTEM <-- what is this
+>>>>>>> 0814ef55924dc0311bc510dc1e49774a758bb60c
