@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-08T16:23:06.026Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="TDCGwSJTrl3U4ycYCZiS" version="24.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-08T16:23:25.311Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="Nn5lI7nNP0n074nr5Qgx" version="24.2.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
@@ -165,6 +165,9 @@
         <mxCell id="eBmnW1i_nvroXhUuj0xD-39" value="short tutorial on space station missions" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="420" y="590" width="110" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="eBmnW1i_nvroXhUuj0xD-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eBmnW1i_nvroXhUuj0xD-41" target="eBmnW1i_nvroXhUuj0xD-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="eBmnW1i_nvroXhUuj0xD-41" value="World Quest 1 - Monde" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="370" y="750" width="120" height="60" as="geometry" />
         </mxCell>
@@ -188,6 +191,9 @@
         </mxCell>
         <mxCell id="eBmnW1i_nvroXhUuj0xD-48" value="short dialogue(npc who gave quest brings them back to spaceship)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="200" y="680" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eBmnW1i_nvroXhUuj0xD-49" value="win" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="535" y="750" width="70" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
