@@ -310,6 +310,3 @@ At 70 stars, soft pity will activate. The rate for characters would increase by 
 At 80 stars, hard pity will activate. The rate for characters would increase by 15-20% and the rate for nothing will decrease by the same amount.
 
 At 90 stars, a five star character would be guaranteed.
-
-## Flowchart
-
