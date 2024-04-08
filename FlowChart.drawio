@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-08T22:02:45.144Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/123 Version/11.1.1 Safari/605.1.15" etag="Sp3RSZBcVmdX-KdXCmR2" version="24.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-08T22:06:36.112Z" agent="Mozilla/5.0 (iPad; CPU OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/123.0.6312.52 Mobile/15E148 Safari/604.1" etag="xskZeRHm5ShDrdRcoziu" version="24.2.3" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Flowchart">
-    <mxGraphModel dx="1785" dy="911" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+    <mxGraphModel dx="1657" dy="846" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -342,6 +342,9 @@
               <mxPoint x="440" y="960" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="JB6uiVMoaFN4JNbeCVoE-10" value="short dialogue, gained new quest" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="825" y="1270" width="100" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
