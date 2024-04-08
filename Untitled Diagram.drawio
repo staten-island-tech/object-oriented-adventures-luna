@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-08T16:08:32.954Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="dd_IjOnVKL_CaKF5AdzH" version="24.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-08T16:11:18.069Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="zUGAYTD6Ji7XP54IyQ4V" version="24.2.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
@@ -88,6 +88,21 @@
         </mxCell>
         <mxCell id="eBmnW1i_nvroXhUuj0xD-19" value="short epilogue(really bad ending)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="195" y="390" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eBmnW1i_nvroXhUuj0xD-20" value="travel with saviors, Legacy" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="500" y="290" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eBmnW1i_nvroXhUuj0xD-21" value="fight oblivion monsters(tutorial to battle)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eBmnW1i_nvroXhUuj0xD-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eBmnW1i_nvroXhUuj0xD-20" target="eBmnW1i_nvroXhUuj0xD-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="440" as="sourcePoint" />
+            <mxPoint x="600" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="420" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
