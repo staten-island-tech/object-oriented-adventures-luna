@@ -193,19 +193,33 @@ NPCs give information about the missions to the players for each world. They rem
 
 NPC 1: Female
     
-    Name: elisa
+    Name: Amalthea
     Mission: World 1 - Monde
+    Reward: 80 crystals
+    **could only be done once
 
 
 NPC 2: Female
 
-    Name: asile
+    Name: Lyra
     Mission Type: World 2 - Pero
+    Reward: 80 crystals
+    **could only be done once
 
 NPC 3: Male
 
-    Name: elisasile
+    Name: Astrophel
     Mission Type: World 3 - Taiyo
+    Reward: 80 crystals
+    **could only be done once
+
+NPC 4: Female
+
+    Name: Adhara
+    Mission Type: Normal Battle - Choose World( will be the first battle from the world)
+    Reward: 10 crystals
+    **will be unlocked after finishing Monde World Quest
+    **could be done as many times as you want
 
 
 
@@ -273,7 +287,6 @@ Taiyo: Guards of Taiyo
             Choice Two: Leave without it
                 - Sad Ending(don't find their sibling)
 
-
 ## Stars
 
 Currency name: Crystals
@@ -296,4 +309,7 @@ At 70 stars, soft pity will activate. The rate for characters would increase by 
 
 At 80 stars, hard pity will activate. The rate for characters would increase by 15-20% and the rate for nothing will decrease by the same amount.
 
-At 100 stars, a five star character would be guaranteed.
+At 90 stars, a five star character would be guaranteed.
+
+## Flowchart
+
