@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-08T22:21:12.358Z" agent="Mozilla/5.0 (iPad; CPU OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/123.0.6312.52 Mobile/15E148 Safari/604.1" etag="fMENeKbZK5zmEkNmH0d7" version="24.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-08T22:22:48.697Z" agent="Mozilla/5.0 (iPad; CPU OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/123.0.6312.52 Mobile/15E148 Safari/604.1" etag="84NvgBdYqgoUlUcnrCTY" version="24.2.3" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Flowchart">
-    <mxGraphModel dx="1933" dy="987" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+    <mxGraphModel dx="3867" dy="1973" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -192,8 +192,13 @@
         <mxCell id="eBmnW1i_nvroXhUuj0xD-48" value="short dialogue(npc who gave quest brings them back to spaceship)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="200" y="680" width="90" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="JB6uiVMoaFN4JNbeCVoE-48" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eBmnW1i_nvroXhUuj0xD-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="eBmnW1i_nvroXhUuj0xD-49" value="win" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="535" y="750" width="70" height="60" as="geometry" />
+          <mxGeometry x="535" y="665" width="70" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eBmnW1i_nvroXhUuj0xD-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eBmnW1i_nvroXhUuj0xD-51" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -203,9 +208,9 @@
         <mxCell id="eBmnW1i_nvroXhUuj0xD-51" value="go to the space ship" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="510" y="870" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="eBmnW1i_nvroXhUuj0xD-52" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eBmnW1i_nvroXhUuj0xD-49" target="eBmnW1i_nvroXhUuj0xD-51" edge="1">
+        <mxCell id="eBmnW1i_nvroXhUuj0xD-52" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="eBmnW1i_nvroXhUuj0xD-51" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="820" as="sourcePoint" />
+            <mxPoint x="570" y="810" as="sourcePoint" />
             <mxPoint x="440" y="770" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -492,6 +497,9 @@
               <mxPoint x="610" y="1430" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="JB6uiVMoaFN4JNbeCVoE-49" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="750" width="100" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
