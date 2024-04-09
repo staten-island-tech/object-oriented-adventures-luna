@@ -43,6 +43,13 @@ The MC would inherit from the character class
 
 ## Characters
 
+All Characters would start with 5000 hp. This would increase for every battle the character wins(any battle that the character is in the team of).
+
+Attack stat will be affected by enemy, but the base attack stat would be set and can't be changed.
+
+    5-star: 200 base attack
+    4-star: 150 base attack
+
 ### Space Station Characters:
 
 1: Female
