@@ -35,9 +35,13 @@ with open("users.json", "r") as f:
         if user_request == "PLAYER":
             username = input("enter username: ")
             password = input("enter password: ")
-        type = input("enter type: ")
+            type = "PLAYER"
+            add_user(username, password)
+        if user_request == "ADMIN":
+
+        
         add_user(username, password, type)
-        continue_add = input(" want to add another user? Y/N ").upper()
+        continue_add = input("want to add another user? Y/N ").upper()
 
 
 
