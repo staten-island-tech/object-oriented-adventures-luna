@@ -16,3 +16,5 @@ class admin(user):
     def __init__(self, username, password, type, rank):
         super().__init__(username, password, type)
         self.rank = rank
+
+def add():
