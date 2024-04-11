@@ -1,6 +1,7 @@
 import json
 import os
 
+
 class user():
     def __init__(self, username, password, type):
         self.username = username
@@ -26,14 +27,14 @@ with open("users.json", "r") as f:
     data = json.load(f)
 
     def add():
-        a = input("Would you like to add a new user? Y/N ").lower()
+        a = input("Would you like to add a new user? y/n ").lower()
         while a != "y" and a != "n":
-            a = input("Would you like to add a new user? Y/N ").lower()
+            a = input("Would you like to add a new user? y/n ").lower()
         while a == "y":
             type = input("What type of user would you like to make? (player/admin) ").lower()
             while type != "player" and type != "admin":
                 type = input("What type of user would you like to make? (player/admin) ").lower()
-            while type == "player":
+            if type == "player":
                 username = input("Choose a username: ")
                 users = open("./users.json", encoding="utf8")
                 user_data = json.load(users)
@@ -50,7 +51,9 @@ with open("users.json", "r") as f:
                 player_made = player(username, password, type, version, team_lvl, crystals, stars, characters)
                 print(player_made.__dict__)
                 data.append(player_made.__dict__)
-            while type == "admin":
+                type = input("Want to add another user? y/n ").lower()                             # BREAK THE WHILE LOOP !!!!!!
+                
+            if type == "admin":
                 username = "admin_"+ input("Enter your name: ").lower()
                 print(username)
                 password = input("Enter your password: ")
@@ -58,6 +61,7 @@ with open("users.json", "r") as f:
                 admin_made = admin(username, password, type, rank)
                 print(admin_made.__dict__)
                 data.append(admin_made.__dict__)
+                type = input("Want to add another user? y/n ").lower()
 
 
 
