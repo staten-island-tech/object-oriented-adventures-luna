@@ -22,7 +22,7 @@ class admin(user):
         self.rank = rank
 
 
-with open("user.json", "r") as f:
+with open("users.json", "r") as f:
     data = json.load(f)
 
     def add():
@@ -72,5 +72,5 @@ with open(new_file, "w") as f:
     f.write(json_string)
 
 # Overwrite the old JSON file with the new one
-os.remove("user.json")
-os.rename(new_file, "user.json")
+os.remove("users.json")
+os.rename(new_file, "users.json")
