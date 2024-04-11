@@ -26,13 +26,13 @@ with open("user.json", "r") as f:
     data = json.load(f)
 
     def add():
-        a = input("Would you like to add a new user? Y/N").lower()
+        a = input("Would you like to add a new user? Y/N ").lower()
         while a != "y" or a != "n":
-            a = input("Would you like to add a new user? Y/N").lower()
+            a = input("Would you like to add a new user? Y/N ").lower()
         while a == "y":
-            type = input("What type of user would you like to make? (player or admin)").lower()
+            type = input("What type of user would you like to make? (player or admin) ").lower()
             while type != "player" or type != "admin":
-                type = input("What type of user would you like to make? (player or admin)").lower()
+                type = input("What type of user would you like to make? (player or admin) ").lower()
             while type == "player":
                 username = input("Choose a username: ")
                 users = open("./users.json", encoding="utf8")
