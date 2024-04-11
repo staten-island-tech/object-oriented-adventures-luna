@@ -42,6 +42,7 @@ with open("users.json", "r") as f:
                     # checks for duplicates
                     while username == user["username"]:
                         username = input("Username taken, choose another username: ")
+                print(username)
                 password = input("Choose a password: ")
                 version = 0000000000
                 team_lvl = 1
@@ -51,17 +52,23 @@ with open("users.json", "r") as f:
                 player_made = player(username, password, type, version, team_lvl, crystals, stars, characters)
                 print(player_made.__dict__)
                 data.append(player_made.__dict__)
-                type = input("Want to add another user? y/n ").lower()                             # BREAK THE WHILE LOOP !!!!!!
-                
-            if type == "admin":
-                username = "admin_"+ input("Enter your name: ").lower()
+            elif type == "admin":
+                username_beta = "admin_" + input("Enter your name: ").lower()
+                dupe_checker = 0
+                for user in user_data:
+                    if username == user["username"]:
+                        dupe_check += 1
+                if dupe_checker != 0:
+                    username = username_beta + str(dupe_check)
+                else:
+                    username = username_beta
                 print(username)
                 password = input("Enter your password: ")
                 rank = 1
                 admin_made = admin(username, password, type, rank)
                 print(admin_made.__dict__)
                 data.append(admin_made.__dict__)
-                type = input("Want to add another user? y/n ").lower()
+            type = input("Would you like to add another user? y/n ").lower()
 
 
 
