@@ -27,19 +27,20 @@ with open("user.json", "r") as f:
 
     def add():
         a = input("Would you like to add a new user? Y/N ").lower()
-        while a != "y" or a != "n":
+        while a != "y" and a != "n":
             a = input("Would you like to add a new user? Y/N ").lower()
         while a == "y":
-            type = input("What type of user would you like to make? (player or admin) ").lower()
-            while type != "player" or type != "admin":
-                type = input("What type of user would you like to make? (player or admin) ").lower()
+            type = input("What type of user would you like to make? (player/admin) ").lower()
+            while type != "player" and type != "admin":
+                type = input("What type of user would you like to make? (player/admin) ").lower()
             while type == "player":
                 username = input("Choose a username: ")
                 users = open("./users.json", encoding="utf8")
                 user_data = json.load(users)
                 for user in user_data:
+                    # checks for duplicates
                     while username == user["username"]:
-                        username = input("Choose another username: ")
+                        username = input("Username taken, choose another username: ")
                 password = input("Choose a password: ")
                 version = 0000000000
                 team_lvl = 1
@@ -51,7 +52,7 @@ with open("user.json", "r") as f:
                 data.append(player_made.__dict__)
             while type == "admin":
                 username = "admin_"+ input("Enter your name: ").lower()
-                print (username)
+                print(username)
                 password = input("Enter your password: ")
                 rank = 1
                 admin_made = admin(username, password, type, rank)
