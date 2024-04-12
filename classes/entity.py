@@ -34,11 +34,13 @@ with open("entities.json", "r") as f:
 
     def add():
         a = input("Would you like to add an entity? y/n ").lower()
-        while a != "y" or a != "n":
+        while a != "y" and a != "n":
             a = input("Would you like to add an entity? y/n ").lower()
-        while a != "y":
-            type_entity = input("What type of entity would you like to make? (npc, character, enemy) ").lower()
+        while a == "y":
+            type_entity = input("What type of entity would you like to make? (enter x to stop loop) (npc, character, enemy) ").lower()
             type_entity_list = ["character", "enemy", "npc"]
+            if type_entity == "x":
+                break
             while type_entity not in type_entity_list:
                 type_entity = input("What type of entity would you like to make? (npc, character, enemy) ").lower()
             if type_entity == "character":
@@ -85,7 +87,6 @@ with open("entities.json", "r") as f:
                 world_list = ["Monde", "Pero", "Taiyo"]
                 while mission_beta not in world_list:
                     mission_beta = input("Put in a world name: ").title()
-                
 
 
 

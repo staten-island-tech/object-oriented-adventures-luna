@@ -68,7 +68,7 @@ with open("users.json", "r") as f:
                 admin_made = admin(username, password, type, rank)
                 print(admin_made.__dict__)
                 data.append(admin_made.__dict__)
-            type = input("Would you like to add another user? y/n ").lower()
+            a = input("Would you like to add another user? y/n ").lower()
     add()
 
 
