@@ -57,9 +57,9 @@ with open("users.json", "r") as f:
                 dupe_checker = 0
                 for user in user_data:
                     if username == user["username"]:
-                        dupe_check += 1
+                        dupe_checker += 1
                 if dupe_checker != 0:
-                    username = username_beta + str(dupe_check)
+                    username = username_beta + str(dupe_checker)
                 else:
                     username = username_beta
                 print(username)
@@ -69,7 +69,7 @@ with open("users.json", "r") as f:
                 print(admin_made.__dict__)
                 data.append(admin_made.__dict__)
             type = input("Would you like to add another user? y/n ").lower()
-
+    add()
 
 
 
