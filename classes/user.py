@@ -72,8 +72,6 @@ with open("users.json", "r") as f:
     add()
 
 
-
-
 new_file = "updated.json"
 with open(new_file, "w") as f:
     # Serialize the updated Python list to a JSON string
