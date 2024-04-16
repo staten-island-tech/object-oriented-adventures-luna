@@ -83,7 +83,7 @@ with open("entities.json", "r") as f:
                         print(f"{name} has already been used.")
                         name = input("What is another name for the npc? ").title()
                 type_mission = input("Is the npc a world quest npc? (y/n) ").lower()
-                while type_mission != "y" or type_mission != "n":
+                while type_mission != "y" and type_mission != "n":
                     type_mission = input("Is the npc a world quest npc? (y/n) ").lower()
                 if type_mission == "y":
                     mission_beta = input("Put in a world name: ").title()
@@ -113,7 +113,8 @@ with open("entities.json", "r") as f:
                 enemy_made = Enemies(name, type, hp, attack)
                 print(enemy_made.__dict__)
                 data.append(enemy_made.__dict__)
-        a = input("Would you like to add another entity? y/n ").lower()
+            a = input("Would you like to add another entity? y/n ").lower()
+    add()
 
 
 
