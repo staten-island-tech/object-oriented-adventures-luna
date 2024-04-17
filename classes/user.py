@@ -47,7 +47,7 @@ with open("users.json", "r") as f:
                 version = 0000000000
                 team_lvl = 1
                 crystals = 0
-                characters = []
+                characters = [] 
                 stars = 0
                 player_made = player(username, password, type, version, team_lvl, crystals, stars, characters)
                 print(player_made.__dict__)

@@ -9,7 +9,7 @@ class Entities():                        # user does not inherit from entities c
 class NPC(Entities):
     def __init__(self, name, mission, reward):
         super().__init__(name)
-        self.mission = mission
+        self.mission = mission  
         self.reward = reward
 
 class Characters(Entities):              # MC is part of characters class
