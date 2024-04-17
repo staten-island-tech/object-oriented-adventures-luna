@@ -3,7 +3,7 @@ import os
 
 class dialogues_npc():
     def prologue(x):            # x can't be greater than 3 (lowest number = 0)
-        dialogue = ["You and your sibling are travelers from world to world. Frome time to time, you stop by the space station for supplies. But this time, something big happened....", 
+        dialogue = ["You and your sibling are travelers across worlds. Frome time to time, you stop by the space station for supplies. But this time, something big happened....", 
                     "The Oblivion, a cult who follows the path of destruction, has invaded the space station.", 
                     "You try and stop them in their tracks before they take all the supplies from the space station, but you fail...", 
                     "You feel your consciousness fade into the void as your kin was abducted, unaware of all that just occurred."]
@@ -16,7 +16,7 @@ class dialogues_npc():
                     "Asahi: No, you were alone when we found you.", 
                     "Asahi: I see, well the space station is still filled with guards from the Oblivion. It's not safe to travel alone right now....", 
                     "Asahi: How about you rest up first and recover before we head out to look for your sibling?", 
-                    "One week later, you and your new companion are walking around the space station looking for your sibling when you ran into the oblivion guards.", 
+                    "One week later, you and your new companion are walking around the space station looking for your sibling when you ran into the Oblivion guards.", 
                     "Asahi: Are you alright?", 
                     "Asahi: Look out, there's more of them.", 
                     "Asahi: Finally, it's over.", 
