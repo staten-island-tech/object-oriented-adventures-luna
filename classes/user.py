@@ -17,12 +17,6 @@ class player(user):
         self.stars = stars
         self.character = character
 
-class admin(user):
-    def __init__(self, username, password, type, rank):
-        super().__init__(username, password, type)
-        self.rank = rank
-
-
 with open("users.json", "r") as f:
     data = json.load(f)
 
@@ -32,7 +26,7 @@ with open("users.json", "r") as f:
             a = input("Would you like to add a new user? y/n ").lower()
         while a == "y":
             type = input("What type of user would you like to make? (player/admin) ").lower()
-            while type != "player" and type != "admin":
+            while type != "player":
                 type = input("What type of user would you like to make? (player/admin) ").lower()
             if type == "player":
                 username = input("Choose a username: ")
@@ -52,23 +46,6 @@ with open("users.json", "r") as f:
                 player_made = player(username, password, type, version, team_lvl, crystals, stars, characters)
                 print(player_made.__dict__)
                 data.append(player_made.__dict__)
-            elif type == "admin":
-                username_beta = "admin_" + input("Enter your name: ").lower()
-                dupe_checker = 0
-                for user in user_data:
-                    if username == user["username"]:
-                        dupe_checker += 1
-                if dupe_checker != 0:
-                    username = username_beta + str(dupe_checker)
-                else:
-                    username = username_beta
-                print(username)
-                password = input("Enter your password: ")
-                rank = 1
-                admin_made = admin(username, password, type, rank)
-                print(admin_made.__dict__)
-                data.append(admin_made.__dict__)
-            a = input("Would you like to add another user? y/n ").lower()
     add()
 
 
