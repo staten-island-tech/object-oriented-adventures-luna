@@ -1,9 +1,5 @@
-import os
-import json
 
-
-
-data = [{'username': 'a', 'password': 'abc'}, {'username': 'b', 'password': 'xyz'}]     # for testing the code
+data = [{'username': 'a', 'password': 'abc'}]
 
 def player():
         username = input("enter player username: ")
@@ -20,4 +16,5 @@ def player():
 """ def admin():
         username = input("enter admin username"): """
     
+
 player()
