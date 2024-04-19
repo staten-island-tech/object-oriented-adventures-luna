@@ -8,7 +8,7 @@ class dialogues_story():
                     "You try and stop them in their tracks before they take all the supplies from the space station, but you fail...", 
                     "You feel your consciousness fade into the void as your kin was abducted, unaware of all that just occurred."]
         print(dialogue[x])
-    def space_station(x):       # x can't be greater than 17
+    def space_station(x):       # x can't be greater than 16
         dialogue = ["Waking up, you see a young man who seems to in his late teens next to you.", 
                     "Looking around, you see that you are in the space station infirmary, your sibling no where to be seen.", 
                     "Asahi: Hey there. Are you okay? You were unconcious for a while there, thankfully we found you before anything else happened.", 
@@ -27,7 +27,7 @@ class dialogues_story():
                     "As you depart from the space station alone in search of your sibling, you travel to many worlds after world with not even finding a sliver of your sibling's hair. This journey would continue until the end of your life.", 
                     "As you depart from the space station with 'The Legacy', you ponder over what the future might hold for you."]
         print(dialogue[x])
-    def monde(x):              # x can't be greater than 18
+    def monde(x):              # x can't be greater than 17
         dialogue = ["Asahi: Are you ready to go?", 
                     "It has already been a few days since you decided to join the Legacy.", 
                     "Asahi: Here is the world, Monde. They worship the god of Erudition. The world has seen better days, but now...", 
@@ -55,9 +55,13 @@ class dialogues_story():
                     "Asahi: Well, I can't quite go to this world with you just yet.", 
                     "Asahi: The spaceship is in need of fixing.", 
                     "Asahi: Someone else will be joining you for this adventure.", 
+<<<<<<< HEAD
                     "Asahi: She's just a bit more convervative...", 
                     "Looking around you see a purple haired woman walking towards you, her long hair glistening in the starlight.", 
                     "Unknown woman: Hi.", 
+=======
+                    "Asahi: She's just a bit more conservative...", 
+>>>>>>> c08c9b2f4cb32a994ba6c41f656eff33d7f0fdec
                     ""]
     def taiyo(x):
         dialogue = []
