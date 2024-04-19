@@ -56,6 +56,8 @@ class dialogues_story():
                     "Asahi: The spaceship is in need of fixing.", 
                     "Asahi: Someone else will be joining you for this adventure.", 
                     "Asahi: She's just a bit more convervative...", 
+                    "Looking around you see a purple haired woman walking towards you, her long hair glistening in the starlight.", 
+                    "Unknown woman: Hi.", 
                     ""]
     def taiyo(x):
         dialogue = []
