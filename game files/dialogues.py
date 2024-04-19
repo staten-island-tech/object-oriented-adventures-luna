@@ -55,13 +55,10 @@ class dialogues_story():
                     "Asahi: Well, I can't quite go to this world with you just yet.", 
                     "Asahi: The spaceship is in need of fixing.", 
                     "Asahi: Someone else will be joining you for this adventure.", 
-<<<<<<< HEAD
                     "Asahi: She's just a bit more convervative...", 
                     "Looking around you see a purple haired woman walking towards you, her long hair glistening in the starlight.", 
                     "Unknown woman: Hi.", 
-=======
                     "Asahi: She's just a bit more conservative...", 
->>>>>>> c08c9b2f4cb32a994ba6c41f656eff33d7f0fdec
                     ""]
     def taiyo(x):
         dialogue = []
