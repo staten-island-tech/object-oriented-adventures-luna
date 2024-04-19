@@ -23,7 +23,7 @@ class login():
         print("Congrats! You have successfully logged in ")
         # and then load that user's data or something idkidkidk
 
-    def admin():
+"""     def admin():
         username = input("Enter admin username: ")   # do i even need to make a separate one for admin
         num_matches = []
         for user in data:
@@ -38,6 +38,6 @@ class login():
                 print("incorrect password, try again")
                 password = input(f"enter password for {username}: ")
         print("Congrats! You have successfully logged in ")
-        # and then load that user's data or something idkidkidk
+        # and then load that user's data or something idkidkidk """
     
 login.player()  # function works in this file, dk to how incorporate data from users.json
