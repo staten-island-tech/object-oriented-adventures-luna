@@ -58,8 +58,25 @@ class dialogues_story():
                     "Asahi: She's just a bit more convervative...", 
                     "Looking around you see a purple haired woman walking towards you, her long hair glistening in the starlight.", 
                     "Unknown woman: Hi.", 
-                    "Asahi: She's just a bit more conservative...", 
-                    ""]
+                    "Asahi: Say hi to your partner for the mission!", 
+                    "Asahi: Mael!",
+                    "Mael: Hi.",
+                    "Based off of her short yet simple style of talking, you could tell that",
+                    "this is going to be a long trip."
+                    "Soon,the two of you set off on your journey to the new world, Pero.", 
+                    "You had learned from Asahi that this is the world that follows the path of Harmony,", 
+                    "but right now the planet is in dissarray due to the recent raids from the Oblivion.", 
+                    "It seems that after the defeat on the Space Ship, they have went to other planets.", 
+                    "Mael: We're landing.", 
+                    "Mael: ...",
+                    "Mael: Watchout!",
+                    "Mael: ...",
+                    "Soon, after all the fighting, you find a scroll on the floor.", 
+                    "You then see a message on the paper, in a writing that you aren't familiar with.", 
+                    "Mael: Asahi will probably be able to read it.", 
+                    "Looking over your shoulder, you see Mael looking at the scroll intently.", 
+                    "With that this journey concludes and you and Mael go back to the ship with the scroll."]
+        print(dialogue[x])
     def taiyo(x):
         dialogue = []
 
