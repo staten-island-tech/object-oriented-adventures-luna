@@ -30,7 +30,7 @@ class Enemies(Entities):
         self.attack = attack
 
 
-with open("entities.json", "r") as f:
+with open(r"classes\entities.json", "r") as f:
     data = json.load(f)
 
     def add():

@@ -17,7 +17,7 @@ class player(user):
         self.stars = stars
         self.character = character
 
-with open("users.json", "r") as f:
+with open(r"classes\users.json", "r") as f:
     data = json.load(f)
 
     def add():
