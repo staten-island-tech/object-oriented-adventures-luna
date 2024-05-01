@@ -305,6 +305,8 @@ Could buy one star or ten stars at a time(automatically pull after buying star)
 
 Pulls are random - can get either nothing, four-star, or five-star (rare)
 
+If you get a duplicate, you will get 80 crystals back.
+
 ### Rates:
 
     Nothing: 85.875%

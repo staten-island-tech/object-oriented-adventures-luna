@@ -47,7 +47,7 @@ class dialogues_story():
                     "Asahi: I see then let's go there next then.", 
                     "Soon, the adventure in Monde has come to an end. A clue from your sibling has been found."]
         print(dialogue[x])
-    def pero(x):
+    def pero(x):                # x can't be greater than 27
         dialogue = ["Looking around the spaceship, you wonder about what has just occured on Monde.", 
                     "You found a clue on your sibling's location.", 
                     "Asahi: You seem quite determined.", 
@@ -78,7 +78,30 @@ class dialogues_story():
                     "With that this journey concludes and you and Mael go back to the ship with the scroll."]
         print(dialogue[x])
     def taiyo(x):
-        dialogue = []
+        dialogue = ["Back at the space ship, you and Mael rush towards Asahi's room to deciper the message.", 
+                    "Asahi: Oh, hi.", 
+                    "Mael: ...", 
+                    "Asahi: How was your adventure in Pero?", 
+                    "Asahi: I see.", 
+                    "Asahi: Sure.", 
+                    "As Asahi translates the scroll for you, his face begins to darken.", 
+                    "Asahi: It seems that your next destination in Taiyo.", 
+                    "Asahi: I'm afraid you would need to go to Taiyo with Mael.", 
+                    "Mael: Alright.", 
+                    "Asahi: It's complicated.", 
+                    "Asahi: Sure.", 
+                    "Mael: Should we head out now?", 
+                    "Asahi: Bye.", 
+                    "As you leave for Taiyo, you hope that your brother is there, and that Asahi will feel better.", 
+                    "Mael: We've arrived.", 
+                    "Mael: The planet of Nihility.", 
+                    "Moving around, you see that the planet is more developed than the other planets you have encountered.", 
+                    "You see shrines, townhouses, walls, statues, and other larege monuments in the distance.", 
+                    "Soon, you arrive at the center of the town, and you are stopped by the guards.", 
+                    "Mael: Are you alright?", 
+                    "Unknown: Are you guys alright?", 
+                    "Looking up, you see Asahi in a spaceship.", 
+                    "Topgether you guys defeat the queen of the planet."]
 
 class dialogues_quest():
     pass
