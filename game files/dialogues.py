@@ -101,7 +101,12 @@ class dialogues_story():
                     "Mael: Are you alright?", 
                     "Unknown: Are you guys alright?", 
                     "Looking up, you see Asahi in a spaceship.", 
-                    "Topgether you guys defeat the queen of the planet."]
+                    "Together you guys defeat the queen of the planet. And a stone falls on the ground.", 
+                    "It's redish hue, similar to that of blood, shines in the sun.", 
+                    "You contemplate whether or not to pick it up or not...", 
+                    "You choose to pick up the stone, and as you go to pick it up, the stone glows. You see your sibling standing in front of you. (Happy Ending)", 
+                    "You choose to leave the stone alone, and go back to the spaceship empty handed. Still, looking around yoiu see your new friends and find peace in that.", 
+                    "You hope that one day you will be able to fiund your sibling, but for now you are content with your current situation. (Legacy Ending)"]
 
 class dialogues_quest():
     pass
@@ -110,4 +115,7 @@ class dialogues_player():
     pass
 
 class dialogues_tutorial():
+    pass
+
+class dialogues_controls():
     pass
