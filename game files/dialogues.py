@@ -110,7 +110,7 @@ class dialogues_story():
 
 class dialogues_quest():
     def monde(x):
-        dialouge = ["Do yo"]
+        dialogue = ["Do yo"]
 class dialogues_player():
     pass
 
