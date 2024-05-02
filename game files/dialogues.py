@@ -109,8 +109,8 @@ class dialogues_story():
                     "You hope that one day you will be able to fiund your sibling, but for now you are content with your current situation. (Legacy Ending)"]
 
 class dialogues_quest():
-    pass
-
+    def monde(x):
+        dialouge = ["Do yo"]
 class dialogues_player():
     pass
 
