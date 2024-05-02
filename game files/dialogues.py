@@ -104,8 +104,8 @@ class dialogues_story():
                     "Topgether you guys defeat the queen of the planet."]
 
 class dialogues_quest():
-    pass
-
+    def monde(x):
+        dialouge = ["Do yo"]
 class dialogues_player():
     pass
 
