@@ -26,11 +26,11 @@ with open(r"classes\users.json", "r") as f:
             a = input("Would you like to add a new user? y/n ").lower()
         while a == "y":
             type = input("What type of user would you like to make? (player/admin) ").lower()
-            while type != "player":
+            while type != "player" and type != "admin":
                 type = input("What type of user would you like to make? (player/admin) ").lower()
             if type == "player":
                 username = input("Choose a username: ")
-                users = open("./users.json", encoding="utf8")
+                users = open(r"classes\users.json", encoding="utf8")
                 user_data = json.load(users)
                 for user in user_data:
                     # checks for duplicates
@@ -58,5 +58,5 @@ with open(new_file, "w") as f:
     f.write(json_string)
 
 # Overwrite the old JSON file with the new one
-os.remove("users.json")
-os.rename(new_file, "users.json")
+os.remove(r"classes\users.json")
+os.rename(new_file, r"classes\users.json")

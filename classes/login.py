@@ -1,13 +1,12 @@
+from user import *
+
 import json
 # Open the JSON file of pokemon data
-test = open(r"C:\Users\owner\Documents\GitHub\object-oriented-adventures-luna\classes\users.json", encoding="utf8")
+test = open(r"classes\users.json", encoding="utf8")
 # create variable "data" that represents the enitre pokedex list
 data = json.load(test)
 
-# use data from users.json file idk how to do that
-""" 
-data = [{'username': 'a', 'password': 'abc'}, {'username': 'b', 'password': 'xyz'}]     # examples for testing the code - delete later
- """
+
 class login():
     def player():
         username = input("Enter player username: ")
@@ -26,5 +25,7 @@ class login():
         print("Congrats! You have successfully logged in ")
         # and then load that user's data or something idkidkidk
 
-    
-login.player()  
+    def signup():
+        add()
+
+login.signup()  

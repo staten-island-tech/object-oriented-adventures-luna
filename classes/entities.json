@@ -1,1 +1,175 @@
-[{"name": "Amalthea", "mission": "mission - Monde", "reward": "80 crystals"}, {"name": "Lyra", "mission": "mission - Pero", "reward": "80 crystals"}, {"name": "Astrophel", "mission": "mission - Taiyo", "reward": "80 crystals"}, {"name": "Adhara", "mission": "mission - choose world", "reward": "10 crystals"}, {"name": "Estella", "hp": 4000, "attack": 1000, "rarity": "****", "weapon": "crossbow", "type": "erudition", "element": "fire"}, {"name": "Altair", "hp": 7500.0, "attack": 1875.0, "rarity": "*****", "weapon": "sword", "type": "hunt", "element": "ice"}, {"name": "Sirius", "hp": 7500.0, "attack": 1875.0, "rarity": "*****", "weapon": "scythe", "type": "harmony", "element": "quantum"}, {"name": "Callisto", "hp": 7500.0, "attack": 1875.0, "rarity": "*****", "weapon": "spear", "type": "destruction", "element": "wind"}, {"name": "Asahi", "hp": 4000, "attack": 1000, "rarity": "****", "weapon": "greatsword", "type": "preservation", "element": "imaginary"}, {"name": "Celine", "hp": 4000, "attack": 1000, "rarity": "****", "weapon": "bow and arrow", "type": "nihility", "element": "ice"}, {"name": "Mael", "hp": 4000, "attack": 1000, "rarity": "****", "weapon": "strings", "type": "destruction", "element": "physical"}, {"name": "Charlotte", "hp": 7500.0, "attack": 1875.0, "rarity": "*****", "weapon": "round blade", "type": "hunt", "element": "water"}, {"name": "Genevieve", "hp": 4000, "attack": 1000, "rarity": "****", "weapon": "scythe", "type": "preservation", "element": "lightning"}, {"name": "Dinara", "hp": 4000, "attack": 1000, "rarity": "****", "weapon": "daggers", "type": "nihility", "element": "lightning"}, {"name": "Igor", "hp": 4000, "attack": 1000, "rarity": "****", "weapon": "gun", "type": "abundance", "element": "fire"}, {"name": "Aleksandr", "hp": 7500.0, "attack": 1875.0, "rarity": "*****", "weapon": "glaive", "type": "erudition", "element": "physical"}, {"name": "Innessa", "hp": 4000, "attack": 1000, "rarity": "****", "weapon": "rifle", "type": "preservation", "element": "ice"}, {"name": "Asahi - Prince Of Taiyo", "hp": 7500.0, "attack": 1875.0, "rarity": "*****", "weapon": "magic orb", "type": "abundance", "element": "wind"}, {"name": "Himari", "hp": 4000, "attack": 1000, "rarity": "****", "weapon": "polearm", "type": "hunt", "element": "quantum"}, {"name": "Fumiko", "hp": 4000, "attack": 1000, "rarity": "****", "weapon": "book", "type": "nihility", "element": "imaginary"}, {"name": "Izumi", "hp": 7500.0, "attack": 1875.0, "rarity": "*****", "weapon": "katana", "type": "nihility", "element": "wind"}]
+[
+    {
+        "name": "Amalthea",
+        "mission": "mission - Monde",
+        "reward": "80 crystals"
+    },
+    {
+        "name": "Lyra",
+        "mission": "mission - Pero",
+        "reward": "80 crystals"
+    },
+    {
+        "name": "Astrophel",
+        "mission": "mission - Taiyo",
+        "reward": "80 crystals"
+    },
+    {
+        "name": "Adhara",
+        "mission": "mission - choose world",
+        "reward": "10 crystals"
+    },
+    {
+        "name": "Estella",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "crossbow",
+        "type": "erudition",
+        "element": "fire"
+    },
+    {
+        "name": "Altair",
+        "hp": 7500.0,
+        "attack": 1875.0,
+        "rarity": "*****",
+        "weapon": "sword",
+        "type": "hunt",
+        "element": "ice"
+    },
+    {
+        "name": "Sirius",
+        "hp": 7500.0,
+        "attack": 1875.0,
+        "rarity": "*****",
+        "weapon": "scythe",
+        "type": "harmony",
+        "element": "quantum"
+    },
+    {
+        "name": "Callisto",
+        "hp": 7500.0,
+        "attack": 1875.0,
+        "rarity": "*****",
+        "weapon": "spear",
+        "type": "destruction",
+        "element": "wind"
+    },
+    {
+        "name": "Asahi",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "greatsword",
+        "type": "preservation",
+        "element": "imaginary"
+    },
+    {
+        "name": "Celine",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "bow and arrow",
+        "type": "nihility",
+        "element": "ice"
+    },
+    {
+        "name": "Mael",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "strings",
+        "type": "destruction",
+        "element": "physical"
+    },
+    {
+        "name": "Charlotte",
+        "hp": 7500.0,
+        "attack": 1875.0,
+        "rarity": "*****",
+        "weapon": "round blade",
+        "type": "hunt",
+        "element": "water"
+    },
+    {
+        "name": "Genevieve",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "scythe",
+        "type": "preservation",
+        "element": "lightning"
+    },
+    {
+        "name": "Dinara",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "daggers",
+        "type": "nihility",
+        "element": "lightning"
+    },
+    {
+        "name": "Igor",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "gun",
+        "type": "abundance",
+        "element": "fire"
+    },
+    {
+        "name": "Aleksandr",
+        "hp": 7500.0,
+        "attack": 1875.0,
+        "rarity": "*****",
+        "weapon": "glaive",
+        "type": "erudition",
+        "element": "physical"
+    },
+    {
+        "name": "Innessa",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "rifle",
+        "type": "preservation",
+        "element": "ice"
+    },
+    {
+        "name": "Asahi - Prince Of Taiyo",
+        "hp": 7500.0,
+        "attack": 1875.0,
+        "rarity": "*****",
+        "weapon": "magic orb",
+        "type": "abundance",
+        "element": "wind"
+    },
+    {
+        "name": "Himari",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "polearm",
+        "type": "hunt",
+        "element": "quantum"
+    },
+    {
+        "name": "Fumiko",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "book",
+        "type": "nihility",
+        "element": "imaginary"
+    },
+    {
+        "name": "Izumi",
+        "hp": 7500.0,
+        "attack": 1875.0,
+        "rarity": "*****",
+        "weapon": "katana",
+        "type": "nihility",
+        "element": "wind"
+    }
+]

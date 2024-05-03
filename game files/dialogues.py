@@ -110,10 +110,28 @@ class dialogues_story():
 
 class dialogues_quest():
     def monde(x):
-        dialouge = ["Do yo"]
+        dialogue = ["Do you wish to begin your adventure to Monde?"]
+        print(dialogue[x])
+    def pero(x):
+        dialogue = ["Do you wish to head to Pero?"]
+        print(dialogue[x])
+    def taiyo(x):
+        dialogue = ["Do you wish to head to the final world, Taiyo? The journey may be harsh."]
+        print(dialogue[x])
+    
 class dialogues_player():
-    pass
-
+    def space_station(x):
+        dialogue = ["You: I think I'm fine. Who are you?",
+                    "You: Did you see anyone else?",
+                    "You: I think I've been separated from my sibling.",
+                    "You: Then...",
+                    "You: Okay, thanks for watching out for me.",
+                    "You: Yeah, but they seem dangerous.",
+                    "You: We shouldn't just stand here.",
+                    "You: "]
+                
+    def monde(x):
+        dialogue = [""]
 class dialogues_tutorial():
     pass
 
