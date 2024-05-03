@@ -1,3 +1,20 @@
 [
-    
+    {
+        "name": "Charlotte",
+        "hp": 7500.0,
+        "attack": 1875.0,
+        "rarity": "*****",
+        "weapon": "round blade",
+        "type": "hunt",
+        "element": "water"
+    },
+    {
+        "name": "Genevieve",
+        "hp": 4000,
+        "attack": 1000,
+        "rarity": "****",
+        "weapon": "scythe",
+        "type": "preservation",
+        "element": "lightning"
+    }
 ]
