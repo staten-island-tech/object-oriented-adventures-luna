@@ -238,7 +238,7 @@ Options:
 
     Normal Skill(different for every character if we have time)
     Ultimate(different for every character if we have time)
-        -Requires ten turns to do (saves from every battle)
+        -random chances of ult
     Change Character(Four characters per team)
         -The characters would go in a cycle(first character, second character, third character, fourth character, enemy, repeat)
 
