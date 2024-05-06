@@ -23,7 +23,7 @@ characters = [{'name': "c",
                'type': "d3"}]
 
 class battle_character():
-    def attack():
+    def attack(x):
         print("Choose an enemy to attack:")
         a = 0
         b = ["A", "B", "C", "D", "E", "F"]
@@ -35,7 +35,9 @@ class battle_character():
         d = b[c]
         while d != enemy_chosen:
             c += 1
-        
+        e = enemies[c['hp']]
+        d = x
+        enemies[c['hp']] = e - d
     def ult():
         pass
     def cycle():
@@ -46,4 +48,4 @@ class battle_character():
 class battle_enemy():
     pass
 
-battle_character.attack()
+battle_character.attack(250)
