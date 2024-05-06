@@ -126,8 +126,12 @@ class dialogues_player():
                     "You: I think I've been separated from my sibling.",
                     "You: Then...",
                     "You: Okay, thanks for watching out for me.",
-                    "You: Yeah, but they seem dangerous.",
-                    "You: We shouldn't just stand here.",
+                    "You: Yeah, but they seem dangerous.", #X8
+                    "You: Erm.. what're those...", #X8
+                    "You: We shouldn't just stand here.", #X9
+                    "You: Oh god", #X9
+                    "You: Phew.. I carried" #x10    
+                    "You: Aw man..",
                     "You: "]
                 
     def monde(x):
