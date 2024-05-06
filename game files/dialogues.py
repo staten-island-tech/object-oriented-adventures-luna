@@ -130,9 +130,10 @@ class dialogues_player():
                     "You: Erm.. what're those...", #X8
                     "You: We shouldn't just stand here.", #X9
                     "You: Oh god", #X9
-                    "You: Phew.. I carried" #x10    
-                    "You: Aw man..",
-                    "You: "]
+                    "You: Phew.. I carried", #x10    
+                    "You: Aw man..", #x11
+                    "You: It's alright. Where there's a will, there's a way.", #x11
+                    "You: Travel with the Legacy? Of course!",]
                 
     def monde(x):
         dialogue = [""]
