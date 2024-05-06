@@ -35,7 +35,7 @@ class battle_character():
         d = b[c]
         while d != enemy_chosen:
             c += 1
-        e = enemies[c['hp']]
+        e = enemies[enemy[c['hp']]]
         d = x
         enemies[c['hp']] = e - d
     def ult():
