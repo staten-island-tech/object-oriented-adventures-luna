@@ -37,7 +37,7 @@ class dialogues_story():
                     "Looking around you see a world of blue. It seems as if the water had engulfed all the land in this world.", 
                     "As you get closer to the surface, you see archipelagos filled with small settlements, all scattered.", 
                     "Asahi: Look, there you might be able to find your sibling.", 
-                    "Asahi: Be careful though. There are many dangers that lurk on these islands.", 
+                    "Asahi: Be careful though. There are many dangers that lurk on these islands.", #battle
                     "Asahi: They might not look it, but they are more advanced in technology than other civilizations that you ever encounter.", 
                     "Asahi: What?", 
                     "Asahi: Really.", 
@@ -126,12 +126,32 @@ class dialogues_player():
                     "You: I think I've been separated from my sibling.",
                     "You: Then...",
                     "You: Okay, thanks for watching out for me.",
-                    "You: Yeah, but they seem dangerous.",
-                    "You: We shouldn't just stand here.",
-                    "You: "]
-                
+                    "You: Yeah, but they seem dangerous.", #X8
+                    "You: Erm.. what're those...", #X8
+                    "You: We shouldn't just stand here.", #X9
+                    "You: Oh god", #X9
+                    "You: Phew.. I carried", #x10    
+                    "You: Aw man..", #x11
+                    "You: It's alright. Where there's a will, there's a way.", #x11
+                    "You: Travel with the Legacy? Of course!", #choices for which path player will take
+                    "You: I'd rather search for my sibling on my own.",]
+        print(dialogue[x])
     def monde(x):
-        dialogue = [""]
+        dialogue = ["You: Nuh uh",
+                    "You: Duh",
+                    "You: Yikes.. what on earth happened here?",
+                    "You: It's still gorgeous in my eyes.",
+                    "You: What a shame.",
+                    "You: Woohoo!",
+                    "You: Here we go...",
+                    "You: Yeah. I hope I find them soon.",
+                    "You: More bad guys?? I'm tired of fighting!", #x9
+                    "You: Aaaaaaaaaaaaaaaaaaaaaa", #x9
+                    "You: Light work", #x9
+                    "You: Well... those robots seemed...",
+                    "You: ..pretty old. They were all rusty and it didn't take much for them to break.", #x11
+                    "You: ..pretty strong. I almost lost an arm.", #x11
+                    "You: Yup. I think we've checked everything out here."] 
 class dialogues_tutorial():
     pass
 
