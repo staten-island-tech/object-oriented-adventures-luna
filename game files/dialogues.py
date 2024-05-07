@@ -27,11 +27,11 @@ class dialogues_story():
                     "As you depart from the space station alone in search of your sibling, you travel to many worlds after world with not even finding a sliver of your sibling's hair. This journey would continue until the end of your life.", 
                     "As you depart from the space station with 'The Legacy', you ponder over what the future might hold for you."]
         print(dialogue[x])
-    def monde(x):              # x can't be greater than 17
+    def monde(x):              # x can't be greater than 18
         dialogue = ["Asahi: Are you ready to go?", 
                     "It has already been a few days since you decided to join the Legacy.", 
                     "Asahi: Here is the world, Monde. They worship the god of Erudition. The world has seen better days, but now...", 
-                    "Asahi: Mainly ice and water remains. Humanity has all scattered on this planet.", 
+                    "Asahi: Mainly water remains. Humanity has all scattered on this planet.", 
                     "Asahi: Look! We're landing now!", 
                     "As he says that, the spaceship begins to land.", 
                     "Looking around you see a world of blue. It seems as if the water had engulfed all the land in this world.", 
@@ -45,9 +45,10 @@ class dialogues_story():
                     "Asahi: Look up there.", 
                     "Looking up, you see a message in the sky.", 
                     "Asahi: I see then let's go there next then.", 
+                    "Asahi: Pero.",
                     "Soon, the adventure in Monde has come to an end. A clue from your sibling has been found."]
         print(dialogue[x])
-    def pero(x):                # x can't be greater than 27
+    def pero(x):                # x can't be greater than 26
         dialogue = ["Looking around the spaceship, you wonder about what has just occured on Monde.", 
                     "You found a clue on your sibling's location.", 
                     "Asahi: You seem quite determined.", 
@@ -57,7 +58,6 @@ class dialogues_story():
                     "Asahi: Someone else will be joining you for this adventure.", 
                     "Asahi: She's just a bit more convervative...", 
                     "Looking around you see a purple haired woman walking towards you, her long hair glistening in the starlight.", 
-                    "Unknown woman: Hi.", 
                     "Asahi: Say hi to your partner for the mission!", 
                     "Asahi: Mael!",
                     "Mael: Hi.",
@@ -71,7 +71,7 @@ class dialogues_story():
                     "Mael: ...",
                     "Mael: Watchout!",
                     "Mael: ...",
-                    "Soon, after all the fighting, you find a scroll on the floor.", 
+                    "You find a scroll on the floor.", 
                     "You then see a message on the paper, in a writing that you aren't familiar with.", 
                     "Mael: Asahi will probably be able to read it.", 
                     "Looking over your shoulder, you see Mael looking at the scroll intently.", 
@@ -107,6 +107,7 @@ class dialogues_story():
                     "You choose to pick up the stone, and as you go to pick it up, the stone glows. You see your sibling standing in front of you. (Happy Ending)", 
                     "You choose to leave the stone alone, and go back to the spaceship empty handed. Still, looking around yoiu see your new friends and find peace in that.", 
                     "You hope that one day you will be able to fiund your sibling, but for now you are content with your current situation. (Legacy Ending)"]
+        print(dialogue[x])
 
 class dialogues_quest():
     def monde(x):
@@ -134,13 +135,13 @@ class dialogues_player():
                     "You: Aw man..", #x11
                     "You: It's alright. Where there's a will, there's a way.", #x11
                     "You: Travel with the Legacy? Of course!", #choices for which path player will take
-                    "You: I'd rather search for my sibling on my own.",]
+                    "You: I'd rather search for my sibling on my own."]
         print(dialogue[x])
     def monde(x):
-        dialogue = ["You: Nuh uh",
-                    "You: Duh",
-                    "You: Yikes.. what on earth happened here?",
-                    "You: It's still gorgeous in my eyes.",
+        dialogue = ["You: Nuh uh", #x0
+                    "You: Duh", #x0
+                    "You: Yikes.. what on earth happened here?", #x2
+                    "You: It's still gorgeous in my eyes.", #x2
                     "You: What a shame.",
                     "You: Woohoo!",
                     "You: Here we go...",
@@ -151,7 +152,28 @@ class dialogues_player():
                     "You: Well... those robots seemed...",
                     "You: ..pretty old. They were all rusty and it didn't take much for them to break.", #x11
                     "You: ..pretty strong. I almost lost an arm.", #x11
-                    "You: Yup. I think we've checked everything out here."] 
+                    "You: Yup. I think we've checked everything out here."
+                    "You: What is that?",
+                    "You: Make your way to the land of ice, where the trolls reside?",
+                    "You: Where is that?",
+                    "You: ..."]
+        print(dialogue[x])
+    def pero(x):
+        dialogue = ["You: Well we've already come this far, and my sibling means a lot to me.",
+                    "You: ..Why not?", #x4
+                    "You: Bailing out?", #x4
+                    "You: Who?", #X6
+                    "You: Hi...?", #X9
+                    "You: HI!!!!!!!!!!!!!!", #x9
+                    "You: Oh my god", #x20
+                    "You: Looks like they dropped something.", #x21
+                    "You: Booty?!", #x21
+                    "You: What can't he do..."] #x24
+        print(dialogue[x])
+    def taiyo(x):
+        dialogue = ["You: We're finally back..", #after x0
+                    "You: Well. It was something for sure.",
+                    "You: I GOT THE BOOTY"]
 class dialogues_tutorial():
     pass
 
