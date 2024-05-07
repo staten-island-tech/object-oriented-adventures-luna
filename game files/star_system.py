@@ -1,19 +1,15 @@
-""" 
-#import stuff
-import json
-import os
-users = open(r"\object-oriented-adventures-luna\classes\users.json", encoding="utf8")
-user_data = json.load(users)
- """
 
-user = [
+#import stuff
+
+
+users = [
     {
-        "username": "example",
+        'username': "example",
         "password": "123",
         "type": "player",
         "version": 0,
         "team_lvl": 1,
-        "crystals": 0,
+        'crystals': 500,
         "stars": 0,
         "character": []
     },
@@ -48,13 +44,24 @@ class star():
             pass
             #increase
 
-    def pull_one(num):
-        user[1["crystals"]] -= 160 #subtract 160 crystals from user
+    def pull_one(usernam):
+        a = 0
+        for user in users:
+            while user['username'] != usernam:
+               a += 1
+            crystals = user['crystals']
+            print(f"{usernam} currently has {crystals} crystals")
+            break
+        crystals -= 160
+        print(f"{usernam} now has {crystals} crystals left")
+        
+         #subtract 160 crystals from user - DONE
         #if not enough, go to do mission
         #choose random character, use rates
         # check for dupes: if yes, add 80 crystals
         # if no, append character to user data
-        return user[1["crystals"]]
+
+        
 
     def pull_ten(user):
         # subtract 1600 crystals
@@ -64,4 +71,4 @@ class star():
         #if no append to user data
         pass
 
-star.pull_one()
+star.pull_one("example")
