@@ -1,6 +1,11 @@
 
 #import stuff
 
+import json
+# Open the JSON file of pokemon data
+test = open(r"C:\Users\christina.chen23\Documents\GitHub\object-oriented-adventures-luna\game files\classes\entities.json", encoding="utf8")
+# create variable "data" that represents the enitre pokedex list
+entities = json.load(test)
 
 users = [
     {
@@ -38,6 +43,7 @@ users = [
 star_counter = 0
 
 class star():
+    import random
     
     def soft_pity():
         while star_counter == 70:
@@ -52,8 +58,22 @@ class star():
             crystals = user['crystals']
             print(f"{usernam} currently has {crystals} crystals")
             break
-        crystals -= 160
-        print(f"{usernam} now has {crystals} crystals left")
+        if crystals > 160:
+            crystals -= 160
+            print(f"{usernam} now has {crystals} crystals left")
+        else:
+            print("You do not have enough crystals.")
+        rare = []
+        super_rare = []
+        for i in entities:
+            if i["rarity"] == "****":
+                rare.append(i)
+            else:
+                super_rare.append(i)
+        rates = [0.85875, 0.14125*0.99125, 0.14125*0.00875]
+
+    
+
         
          #subtract 160 crystals from user - DONE
         #if not enough, go to do mission
