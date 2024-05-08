@@ -27,6 +27,8 @@ class dialogues_story():
                     "As you depart from the space station alone in search of your sibling, you travel to many worlds after world with not even finding a sliver of your sibling's hair. This journey would continue until the end of your life.", 
                     "As you depart from the space station with 'The Legacy', you ponder over what the future might hold for you."]
         print(dialogue[x])
+    def getting_asahi(x):
+        dialogue = ["You got Asahi!!!!!"]
     def monde(x):              # x can't be greater than 18
         dialogue = ["Asahi: Are you ready to go?", 
                     "It has already been a few days since you decided to join the Legacy.", 
@@ -92,7 +94,7 @@ class dialogues_story():
                     "Asahi: Sure.", 
                     "Mael: Should we head out now?", 
                     "Asahi: Bye.", 
-                    "As you leave for Taiyo, you hope that your brother is there, and that Asahi will feel better.", 
+                    "As you leave for Taiyo, you hope that your sibling is there.", 
                     "Mael: We've arrived.", 
                     "Mael: The planet of Nihility.", 
                     "Moving around, you see that the planet is more developed than the other planets you have encountered.", 
@@ -119,6 +121,9 @@ class dialogues_quest():
     def taiyo(x):
         dialogue = ["Do you wish to head to the final world, Taiyo? The journey may be harsh."]
         print(dialogue[x])
+    def transition(x):
+        dialogue = 
+
     
 class dialogues_player():
     def space_station(x):
@@ -138,44 +143,42 @@ class dialogues_player():
                     "You: I'd rather search for my sibling on my own."]
         print(dialogue[x])
     def monde(x):
-        dialogue = ["You: Nuh uh", #x0
-                    "You: Duh", #x0
-                    "You: Yikes.. what on earth happened here?", #x2
-                    "You: It's still gorgeous in my eyes.", #x2
+        dialogue = ["You: [a] Nuh uh. [b] Duh.", #x0
+                    "You: [a] Yikes.. what on earth happened here? [b] It's still gorgeous in my eyes.", #x2
                     "You: What a shame.",
                     "You: Woohoo!",
                     "You: Here we go...",
                     "You: Yeah. I hope I find them soon.",
-                    "You: More bad guys?? I'm tired of fighting!", #x9
-                    "You: Aaaaaaaaaaaaaaaaaaaaaa", #x9
-                    "You: Light work", #x9
+                    "You: [a] More bad guys?? I'm tired of fighting! [b] Aaaaaaaaaaaaaaaaaaaaaa [c] Light work", #x9
                     "You: Well... those robots seemed...",
-                    "You: ..pretty old. They were all rusty and it didn't take much for them to break.", #x11
-                    "You: ..pretty strong. I almost lost an arm.", #x11
+                    "You: [a] ..pretty old. They were all rusty and it didn't take much for them to break. [b] ..pretty strong. I almost lost an arm.", #x11
                     "You: Yup. I think we've checked everything out here."
                     "You: What is that?",
                     "You: Make your way to the land of ice, where the trolls reside?",
-                    "You: Where is that?",
-                    "You: ..."]
+                    "You: Where is that?"]
         print(dialogue[x])
     def pero(x):
         dialogue = ["You: Well we've already come this far, and my sibling means a lot to me.",
-                    "You: ..Why not?", #x4
-                    "You: Bailing out?", #x4
+                    "You: [a] ..Why not? [b] Bailing out already?", #x4
                     "You: Who?", #X6
-                    "You: Hi...?", #X9
-                    "You: HI!!!!!!!!!!!!!!", #x9
+                    "You: [a] Hi...? [b] HI!!!!!!!!!!!!!!", #X9
                     "You: Oh my god", #x20
-                    "You: Looks like they dropped something.", #x21
-                    "You: Booty?!", #x21
-                    "You: What can't he do..."] #x24
+                    "You: [a] Looks like they dropped something. [b] Booty?!", #x21
+                    "You: [a] What can't he do... he seems smart afterall. [b] Nerd"] #x24
         print(dialogue[x])
     def taiyo(x):
         dialogue = ["You: We're finally back..", #after x0
-                    "You: Well. It was something for sure.",
-                    "You: I GOT THE BOOTY"]
+                    "You: [a] Well. It was something for sure. [b] I GOT THE BOOTY", #x3
+                    "You: Could you take a look at this? We found it in Pero.",
+                    "You: Is something wrong?",
+                    "You: You're staying back again? Are you gonna come later on?",
+                    "You: Yeah. Let's go.",
+                    "You: Soooo.. which planet is this?"
+                    "You: [a] You're finally here. [b] Took you long enough."
+                    "Pick up the stone? [a] Yes [b] No"]
+        print(dialogue[x])
+        
 class dialogues_tutorial():
-    pass
-
-class dialogues_controls():
-    pass
+    def spaceship(x):
+        dialogue = ["Captain: Tutorial time!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+                    "Captain: You're gonna be beating up a lot of enemies, so you'll need to know the controls. "]
