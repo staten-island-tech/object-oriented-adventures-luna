@@ -46,6 +46,7 @@ with open(r"classes\users.json", "r") as f:
                 player_made = player(username, password, type, version, team_lvl, crystals, stars, characters)
                 print(player_made.__dict__)
                 data.append(player_made.__dict__)
+            a = "n"
     add()
 
 
