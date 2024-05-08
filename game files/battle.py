@@ -62,41 +62,51 @@ class battle():
         import random
         for character in characters:
             if a == x:
+                print (f"{character['name']} is preparing to attack.")
+                print( )
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
                 print(f"Attack: {character['attack'[0]]}")
                 attack_stat = character['attack']
+                print( )
         for enemy in enemies:
             print (enemy['name'])
             print (enemy['hp'])
+            print( )
         b = 7
         c = random.randrange(1, 20)
+        e = 0
         if c == b:
             print("You are able to use your ult right now. It will affect all enemies")
             print(f"Ult: {attack_stat[1]}")
             print("[U] Use Ultimate")
+            e += 1
         print("[A] Use attack")
         d = input("").upper()
         answers = ["U", "A"]
         if d not in answers:
-            print("[U] Use Ultimate")
-            print("[A] Use attack")
+            if e == 1:
+                print("[U] Use Ultimate")
+            print ("[A] Use attack")
+            d = input("").upper()
         if d == "U":
             battle.ult(attack_stat[1])
         elif d == "A":
             battle.attack(attack_stat[0])
-    def attack_enemy(x):
+    def attack_enemy():
         import random
+        import os
         a = 0
         for enemy in enemies:
             a += 1
         b = a - 1
         c = random.randrange(0, b)
         a = 0
-        for enemy in enemy:
+        for enemy in enemies:
             if a == c:
                 d = enemy['name']
                 print(f"Enemy {enemy['name']} is preparing to attack.")
+                os.system("cls")
                 attack_stat = enemy['attack']
             a += 1
         a = 0
@@ -108,7 +118,16 @@ class battle():
         for character in characters:
             if a == c:
                 print(f"Enemy {d} is preparing to attack {character['name']}.")
-    def hp():
+                os.system("cls")
+                print(f"Your character has taken {attack_stat} damage.")
+                os.system("cls")
+                print(f"Name: {character['name']}")
+                new_hp = character['hp'] - attack_stat
+                character['hp'] = new_hp
+                print(f"HP: {new_hp}")
+            a += 1
+    def select_character():
         pass
 
-battle.attack(250)
+
+battle.cycle()
