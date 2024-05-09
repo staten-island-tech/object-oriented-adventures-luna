@@ -28,7 +28,8 @@ class dialogues_story():
                     "As you depart from the space station with 'The Legacy', you ponder over what the future might hold for you."]
         print(dialogue[x])
     def getting_asahi(x):
-        dialogue = ["You got Asahi!!!!!"]
+        dialogue = ["You got Asahi!!!!!",
+                    "He is now able to be added to your party."]
     def monde(x):              # x can't be greater than 18
         dialogue = ["Asahi: Are you ready to go?", 
                     "It has already been a few days since you decided to join the Legacy.", 
@@ -122,7 +123,14 @@ class dialogues_quest():
         dialogue = ["Do you wish to head to the final world, Taiyo? The journey may be harsh."]
         print(dialogue[x])
     def transition(x):
-        dialogue = 
+        dialogue = ["You will now set out for Monde.",
+                    "After your first and successful mission in Monde, you return to the spaceship.",
+                    "You can now choose your next action: [a] try out the star system [b] edit your party [c] choose a mission",
+                    "What mission will you target? [a] go to your next destination, Pero [b] complete a NPC mission",
+                    "Congrats! It is time to return to the space station.",
+                    "What would you like to do next?",
+                    "[a] gamble with the star system [b] edit your party [c] complete your current missions",
+                    "Which mission will you target? [a] go to your next destintation, Taiyo [b] complete your NPC mission"]
 
     
 class dialogues_player():
@@ -178,7 +186,12 @@ class dialogues_player():
                     "Pick up the stone? [a] Yes [b] No"]
         print(dialogue[x])
         
-class dialogues_tutorial():
-    def spaceship(x):
-        dialogue = ["Captain: Tutorial time!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-                    "Captain: You're gonna be beating up a lot of enemies, so you'll need to know the controls. "]
+class tutorial():
+    def starsystem(x):
+        dialogue = ["Captain: Tutorial time!",
+                    "Captain: Everyone loves gambling, but it might get complicated. (it wont)",
+                    "Captain: From completing your missions, tutorials, and winning your battles, you can gain crystals.",
+                    "Captain: With these crystals, you can convert them to stars. Every 160 crystals is equivalent to one star.",
+                    "Captain: Stars can be used to pull for characters. To use your stars, just open the star system, only accessible after a world quest.",
+                    "Captain: In the rare occassion that you 
+                    "Captain: It may be rigged though."]
