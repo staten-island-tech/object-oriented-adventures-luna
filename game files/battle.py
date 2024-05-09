@@ -1,3 +1,12 @@
+import json
+
+with open ("users.json", "r") as user : 
+    users = json.load(user)
+
+with open ("entities.json", "r") as entity :
+    entities = json.load(entity)
+
+
 enemies = [{'name': "a", 
           'hp': 4500, 
           'attack': 40, 
@@ -66,21 +75,24 @@ class battle():
                 print( )
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
-                print(f"Attack: {character['attack'[0]]}")
                 attack_stat = character['attack']
+                print(f"Attack: {attack_stat[0]}")
                 print( )
+            a += 1
         for enemy in enemies:
             print (enemy['name'])
             print (enemy['hp'])
             print( )
-        b = 7
+        b = [7, 1, 3, 13, 9, 15]
         c = random.randrange(1, 20)
         e = 0
-        if c == b:
-            print("You are able to use your ult right now. It will affect all enemies")
-            print(f"Ult: {attack_stat[1]}")
+        if c in b:
+            print("You are able to use your ultimate right now. It will affect all enemies")
+            print(f"Ultimate: {attack_stat[1]}")
             print("[U] Use Ultimate")
             e += 1
+        else:
+            print("You are not able to use your ultimate right now.")
         print("[A] Use attack")
         d = input("").upper()
         answers = ["U", "A"]
@@ -90,8 +102,12 @@ class battle():
             print ("[A] Use attack")
             d = input("").upper()
         if d == "U":
+            import os
+            os.system("cls")
             battle.ult(attack_stat[1])
         elif d == "A":
+            import os
+            os.system("cls")
             battle.attack(attack_stat[0])
     def attack_enemy():
         import random
@@ -128,6 +144,8 @@ class battle():
             a += 1
     def select_character():
         pass
+    def select_enemy():
+        pass
 
 
-battle.cycle()
+battle.cycle(1)
