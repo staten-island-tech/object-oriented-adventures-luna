@@ -122,15 +122,19 @@ class dialogues_quest():
     def taiyo(x):
         dialogue = ["Do you wish to head to the final world, Taiyo? The journey may be harsh."]
         print(dialogue[x])
+
     def transition(x):
-        dialogue = ["You will now set out for Monde.",
+        dialogue = ["Before you embark on your journey, you will complete a short tutorial on space station missions.",
+                    "You will now set out for Monde.",
                     "After your first and successful mission in Monde, you return to the spaceship.",
                     "You can now choose your next action: [a] try out the star system [b] edit your party [c] choose a mission",
                     "What mission will you target? [a] go to your next destination, Pero [b] complete a NPC mission",
+                    "You will now travel to Pero.",
                     "Congrats! It is time to return to the space station.",
                     "What would you like to do next?",
                     "[a] gamble with the star system [b] edit your party [c] complete your current missions",
-                    "Which mission will you target? [a] go to your next destintation, Taiyo [b] complete your NPC mission"]
+                    "Which mission will you target? [a] go to your next destintation, Taiyo [b] complete your NPC mission",
+                    "You will now travel to Taiyo."]
 
     
 class dialogues_player():
@@ -147,8 +151,8 @@ class dialogues_player():
                     "You: Phew.. I carried", #x10    
                     "You: Aw man..", #x11
                     "You: It's alright. Where there's a will, there's a way.", #x11
-                    "You: Travel with the Legacy? Of course!", #choices for which path player will take
-                    "You: I'd rather search for my sibling on my own."]
+                    "You: [a] Travel with the Legacy? Of course! [b] Thanks but you've helped me enough.. I'd rather search for my sibling on my own."] #continue/end
+
         print(dialogue[x])
     def monde(x):
         dialogue = ["You: [a] Nuh uh. [b] Duh.", #x0
@@ -193,5 +197,5 @@ class tutorial():
                     "Captain: From completing your missions, tutorials, and winning your battles, you can gain crystals.",
                     "Captain: With these crystals, you can convert them to stars. Every 160 crystals is equivalent to one star.",
                     "Captain: Stars can be used to pull for characters. To use your stars, just open the star system, only accessible after a world quest.",
-                    "Captain: In the rare occassion that you 
+                    "Captain: In the rare occassion that you obtain a character that you already have, you will recieve 80 crystals",
                     "Captain: It may be rigged though."]
