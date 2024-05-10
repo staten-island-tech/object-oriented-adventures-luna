@@ -61,13 +61,34 @@ class star():
         crystals -= 160
         print(f"{usernam} now has {crystals} crystals left")
             
-        """ 
-        r = [85.875, 14.125*0.99125, 14.125*0.00875]
-        results = random.choices(("nothing", ), weights=(r[0],r[1],r[2]), k=1) """
+        character = random.choices(entities)
+        list_b = [random.randint(1,100) for i in range(15)]       #generates a list of 15 random int btwn 1-100
+        b = random.randint(1,100)           # generate 1 random int btwn 1-100
+        if b in list_b:                     #15% chance of occurring
+            if character["rarity"] == "*****":
+                the_number = random.randint(1,100)
+                c = random.randint(1,100)                 #1 percent chance of this happening
+                if c in the_number:
+                    print(f"Congrats! You pulled a five-star character")
+                    print("")
+                    print(character)
+                    user['character'].append(character)
+                else:
+                    print("oh no! you lost ur five-star :(")
+            else:
+                the_number = [random.randint(1,100) for i in range(99)]
+                c = random.randint(1,100)
+                if c in the_number:
+                    print(f"Congrats! You pulled a four-star character")
+                    print("")
+                    print(character)
+                    user['character'].append(character)
+        else: 
+            print("you got nothing hahahahah")
+            
+            b = random.randint(1,100)
 
-        results = random.choice(entities)
-        user['character'].append(results)
-        print(user['character'])
+        print(f"Your current characters: {user['character']}")
         
          #subtract 160 crystals from user
         #if not enough, go to do mission
@@ -89,13 +110,7 @@ class star():
             print("You do not have enough crystals.")
         crystals -= 1600
         print(f"{usernam} now has {crystals} crystals left")
-            
-        """ 
-        r = [85.875, 14.125*0.99125, 14.125*0.00875]
-        results = random.choices(("nothing", ), weights=(r[0],r[1],r[2]), k=1) """
-
-        results = random.choice(entities, k=10)
-        user['character'].append(results)
+        
         # subtract 1600 crystals
         #if not enough, go to do mission
         #choose random character 10 times
