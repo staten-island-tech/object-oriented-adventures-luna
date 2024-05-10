@@ -44,7 +44,7 @@ with open(r"classes/json/entities.json", "r") as f:
                 type_entity = input("What type of entity would you like to make? (npc, character, enemy) ").lower()
             if type_entity == "character":
                 name = input("What is the character's name? ").title()
-                entities = open(r"classes\entities.json", encoding="utf8")
+                entities = open(r"json/entities.json", encoding="utf8")
                 entities_data = json.load(entities)
                 for entity in entities_data:
                     while name == entity["name"]:
@@ -124,5 +124,9 @@ with open(new_file, "w") as f:
     f.write(json_string)
 
 # Overwrite the old JSON file with the new one
-os.remove(r"classes\entities.json")
-os.rename(new_file, r"classes\entities.json")
+os.remove(r"json/entities.json")
+os.rename(new_file, r"json/entities.json")
+
+
+
+
