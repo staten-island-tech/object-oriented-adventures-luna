@@ -9,12 +9,13 @@ class user():
         self.type = type
 
 class player(user):
-    def __init__(self, username, password, type, version, crystals, stars, character):
+    def __init__(self, username, password, type, version, crystals, stars, character, team):
         super().__init__(username, password, type)
         self.version = version
         self.crystals = crystals
         self.stars = stars
         self.character = character
+        self.team = team
 
 with open(r"classes/json/users.json", "r") as f:
     data = json.load(f)
@@ -40,8 +41,9 @@ with open(r"classes/json/users.json", "r") as f:
                 version = 0000000000
                 crystals = 0
                 characters = [] 
+                team = []
                 stars = 0
-                player_made = player(username, password, type, version, crystals, stars, characters)
+                player_made = player(username, password, type, version, crystals, stars, characters, team)
                 print(player_made.__dict__)
                 data.append(player_made.__dict__)
             a = input("Would you like to add a new user?").lower()
@@ -59,5 +61,5 @@ with open(new_file, "w") as f:
     f.write(json_string)
 
 # Overwrite the old JSON file with the new one
-os.remove(r"classes\users.json")
-os.rename(new_file, r"classes\users.json")
+os.remove(r"json/users.json")
+os.rename(new_file, r"json/users.json")

@@ -1,9 +1,9 @@
 import json
 
-with open ("users.json", "r") as user : 
+with open (r"classes/json/users.json", "r") as user : 
     users = json.load(user)
 
-with open ("entities.json", "r") as entity :
+with open (r"classes/json/entities.json", "r") as entity :
     entities = json.load(entity)
 
 
@@ -142,10 +142,18 @@ class battle():
                 character['hp'] = new_hp
                 print(f"HP: {new_hp}")
             a += 1
-    def select_character():
-        pass
-    def select_enemy():
-        pass
-
+    def select_character(username):
+        for user in users:
+            if user == username:
+                characters = user['characters']
+                team = user['team']
+        a = 0
+        b = ["A", "B", "C", "D"]
+        print("You currently have this team setup.")
+        for characters_team in team:
+            print (f"[{[b[a]]}] {characters_team}")
+        print("You currently have these characters.")
+        for character in characters:
+            print(character)
 
 battle.cycle(1)
