@@ -3,7 +3,7 @@
 
 import json
 import random
-test = open(r"C:\Users\christina.chen23\Documents\GitHub\object-oriented-adventures-luna\game files\classes\json\entities.json", encoding="utf8")
+test = open(r"game files\classes\json\entities.json", encoding="utf8")
 entities = json.load(test)
 
 users = [
@@ -58,35 +58,39 @@ class star():
             break
         while crystals < 160:
             print("You do not have enough crystals.")
-        crystals -= 160
-        print(f"{usernam} now has {crystals} crystals left")
-            
-        character = random.choices(entities)
-        list_b = [random.randint(1,100) for i in range(15)]       #generates a list of 15 random int btwn 1-100
-        b = random.randint(1,100)           # generate 1 random int btwn 1-100
-        if b in list_b:                     #15% chance of occurring
-            if character["rarity"] == "*****":
-                the_number = random.randint(1,100)
-                c = random.randint(1,100)                 #1 percent chance of this happening
-                if c in the_number:
-                    print(f"Congrats! You pulled a five-star character")
-                    print("")
-                    print(character)
-                    user['character'].append(character)
-                else:
-                    print("oh no! you lost ur five-star :(")
-            else:
-                the_number = [random.randint(1,100) for i in range(99)]
-                c = random.randint(1,100)
-                if c in the_number:
-                    print(f"Congrats! You pulled a four-star character")
-                    print("")
-                    print(character)
-                    user['character'].append(character)
+        answer = input("are you sure you want to use 160 crystals? y/n").lower()
+        while answer != "n" and answer != "y":
+            answer = input("are you sure you want to use 160 crystals? y/n").lower()
+        while answer == "n":
+            break
         else: 
-            print("you got nothing hahahahah")
+            crystals -= 160
+            print(f"{usernam} now has {crystals} crystals left")
+            character = random.choices(entities)
+            list_b = [random.randint(1,100) for i in range(15)]       #generates a list of 15 random int btwn 1-100
+            b = random.randint(1,100)           # generate 1 random int btwn 1-100
+            if b in list_b:                     #15% chance of occurring
+                if character["rarity"] == "*****":
+                    the_number = random.randint(1,100)
+                    c = random.randint(1,100)                 #1 percent chance of this happening
+                    if c in the_number:
+                        print(f"Congrats! You pulled a five-star character")
+                        print("")
+                        print(character)
+                        user['character'].append(character)
+                    else:
+                        print("oh no! you lost ur five-star :(")
+                else:
+                    the_number = [random.randint(1,100) for i in range(99)]
+                    c = random.randint(1,100)
+                    if c in the_number:
+                        print(f"Congrats! You pulled a four-star character")
+                        print("")
+                        print(character)
+                        user['character'].append(character)
+            else: 
+                print("you got nothing hahahahah")
             
-            b = random.randint(1,100)
 
         print(f"Your current characters: {user['character']}")
         
@@ -118,4 +122,4 @@ class star():
         #if no append to user data
         
 
-star.pull_one("example")
+star.pull_one("exampleee")
