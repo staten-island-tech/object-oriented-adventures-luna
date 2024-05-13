@@ -47,8 +47,8 @@ All Characters would have 5000 hp.
 
 Attack stat will be affected by enemy, but the base attack stat would be set and can't be changed.
 
-    5-star: 200 base attack
-    4-star: 150 base attack
+    5-star: 500 base attack
+    4-star: 250 base attack
 
 ### Space Station Characters:
 
@@ -238,7 +238,7 @@ Options:
 
     Normal Skill(different for every character if we have time)
     Ultimate(different for every character if we have time)
-        -Requires ten turns to do (saves from every battle)
+        -random chances of ult
     Change Character(Four characters per team)
         -The characters would go in a cycle(first character, second character, third character, fourth character, enemy, repeat)
 
@@ -309,10 +309,10 @@ If you get a duplicate, you will get 80 crystals back.
 
 ### Rates:
 
-    Nothing: 85.875%
-    Characters: 14.125%
-        4-star characters: 99.125%
-        5-star characters: 0.875%
+    Nothing: 85%
+    Characters: 15%
+        4-star characters: 99%
+        5-star characters: 1%
 
 At 70 stars, soft pity will activate. The rate for characters would increase by 5-10% and the rate for nothing would decrease by the same amount.
 

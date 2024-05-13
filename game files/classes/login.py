@@ -24,7 +24,6 @@ class login():
                 password = input(f"enter password for {username}: ")
         print("Congrats! You have successfully logged in ")
         # and then load that user's data or something idkidkidk
-
     def signup():
         add()
 

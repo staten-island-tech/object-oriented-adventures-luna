@@ -30,7 +30,7 @@ class Enemies(Entities):
         self.attack = attack
 
 
-with open(r"classes\entities.json", "r") as f:
+with open(r"classes/json/entities.json", "r") as f:
     data = json.load(f)
 
     def add():
@@ -44,24 +44,21 @@ with open(r"classes\entities.json", "r") as f:
                 type_entity = input("What type of entity would you like to make? (npc, character, enemy) ").lower()
             if type_entity == "character":
                 name = input("What is the character's name? ").title()
-                entities = open(r"classes\entities.json", encoding="utf8")
+                entities = open(r"json/entities.json", encoding="utf8")
                 entities_data = json.load(entities)
                 for entity in entities_data:
                     while name == entity["name"]:
                         print(f"{name} has already been used.")
                         name = input("What is another name for the character? ").title()
-                hp_beta = 1000
-                attack_beta = 250
+                hp = 5000
                 rarity = input("What rarity would the character be? (**** or *****) ")
                 rarity_list = ["****", "*****"]
                 while rarity not in rarity_list:
                     rarity = input("What rarity would the character be? (**** or *****) ")
                 if rarity == "****":
-                    hp = hp_beta * 4
-                    attack = attack_beta * 4
+                    attack = [250, 750]
                 elif rarity == "*****":
-                    hp = hp_beta * 7.5
-                    attack = attack_beta * 7.5
+                    attack = [500, 1500]
                 weapon = input(f"Pick a weapon for {name}: ").lower()
                 type_list = ["hunt", "destruction", "nihility", "preservation", "erudition", "harmony", "abundance"]
                 type = input(f"Pick a type: ({type_list}) ").lower()
@@ -127,5 +124,9 @@ with open(new_file, "w") as f:
     f.write(json_string)
 
 # Overwrite the old JSON file with the new one
-os.remove(r"classes\entities.json")
-os.rename(new_file, r"classes\entities.json")
+os.remove(r"json/entities.json")
+os.rename(new_file, r"json/entities.json")
+
+
+
+
