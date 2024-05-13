@@ -161,7 +161,7 @@ class dialogues_player():
                     "You: Woohoo!",
                     "You: Here we go...",
                     "You: Yeah. I hope I find them soon.",
-                    "You: [a] More bad guys?? I'm tired of fighting! [b] Aaaaaaaaaaaaaaaaaaaaaa [c] Light work", #x9
+                    "You: [a] More bad guys?? [b] Aaaaaaaaaaaaaaaaaaaaaa", #x9
                     "You: Well... those robots seemed...",
                     "You: [a] ..pretty old. They were all rusty and it didn't take much for them to break. [b] ..pretty strong. I almost lost an arm.", #x11
                     "You: Yup. I think we've checked everything out here."
