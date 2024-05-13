@@ -29,7 +29,7 @@ class dialogues_story():
         print(dialogue[x])
     def getting_asahi(x):
         dialogue = ["You got Asahi!!!!!",
-                    "He is now able to be added to your party."]
+                    "He is now able to be added to your party after completing Monde."]
     def monde(x):              # x can't be greater than 18
         dialogue = ["Asahi: Are you ready to go?", 
                     "It has already been a few days since you decided to join the Legacy.", 
@@ -107,22 +107,24 @@ class dialogues_story():
                     "Together you guys defeat the queen of the planet. And a stone falls on the ground.", 
                     "It's redish hue, similar to that of blood, shines in the sun.", 
                     "You contemplate whether or not to pick it up or not...", 
-                    "You choose to pick up the stone, and as you go to pick it up, the stone glows. You see your sibling standing in front of you. (Happy Ending)", 
-                    "You choose to leave the stone alone, and go back to the spaceship empty handed. Still, looking around yoiu see your new friends and find peace in that.", 
+                    "You choose to pick up the stone, and as you go to pick it up, the stone glows. A shadow appears, and you look up, seeing your sibling. (Happy Ending)", 
+                    "You choose to leave the stone alone, and go back to the spaceship empty handed. Still, looking around you see your new friends and find peace in that.", 
                     "You hope that one day you will be able to fiund your sibling, but for now you are content with your current situation. (Legacy Ending)"]
         print(dialogue[x])
 
 class dialogues_quest():
-    def monde(x):
-        dialogue = ["Do you wish to begin your adventure to Monde?"]
+    def amalthea(x):
+        dialogue = ["Amalthea: Do you wish to begin your adventure to Monde?"]
         print(dialogue[x])
-    def pero(x):
-        dialogue = ["Do you wish to head to Pero?"]
+    def lyra(x):
+        dialogue = ["Lyra: Do you wish to head to Pero?"]
         print(dialogue[x])
-    def taiyo(x):
-        dialogue = ["Do you wish to head to the final world, Taiyo? The journey may be harsh."]
+    def astrophel(x):
+        dialogue = ["Astrophel: Do you wish to head to the final world, Taiyo? The journey may be harsh."]
         print(dialogue[x])
-
+    def adhara(x):
+        dialogue = ["Adhara: Would you like to complete your daily mission for 10 crystals?",
+                    "Good luck."]
     def transition(x):
         dialogue = ["Before you embark on your journey, you will complete a short tutorial on space station missions.",
                     "You will now set out for Monde.",
@@ -138,6 +140,17 @@ class dialogues_quest():
 
     
 class dialogues_player():
+    def amalthea(x):
+        dialogue = ["[a] yes [b] no"]
+        print(dialogue(x))
+    def lyra(x):
+        dialogue = ["[a] yes [b] no"]
+    def transition(x):
+        dialogue = ["[a], [b], [c]", #x3
+                    "[a], [b]", #x4
+                    "[a], [b], [c]", #x8
+                    "[a], [b]"] #x9
+        print(dialogue(x))
     def space_station(x):
         dialogue = ["You: I think I'm fine. Who are you?",
                     "You: Did you see anyone else?",
@@ -152,7 +165,6 @@ class dialogues_player():
                     "You: Aw man..", #x11
                     "You: It's alright. Where there's a will, there's a way.", #x11
                     "You: [a] Travel with the Legacy? Of course! [b] Thanks but you've helped me enough.. I'd rather search for my sibling on my own."] #continue/end
-
         print(dialogue[x])
     def monde(x):
         dialogue = ["You: [a] Nuh uh. [b] Duh.", #x0
@@ -192,10 +204,10 @@ class dialogues_player():
         
 class tutorial():
     def starsystem(x):
-        dialogue = ["Captain: Tutorial time!",
+        dialogue = ["Captain: Tutorial time",
                     "Captain: Everyone loves gambling, but it might get complicated. (it wont)",
                     "Captain: From completing your missions, tutorials, and winning your battles, you can gain crystals.",
                     "Captain: With these crystals, you can convert them to stars. Every 160 crystals is equivalent to one star.",
                     "Captain: Stars can be used to pull for characters. To use your stars, just open the star system, only accessible after a world quest.",
                     "Captain: In the rare occassion that you obtain a character that you already have, you will recieve 80 crystals",
-                    "Captain: It may be rigged though."]
+                    "(It may be rigged though)"]
