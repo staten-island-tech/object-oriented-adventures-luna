@@ -1,7 +1,6 @@
 import json
 import os
 
-
 class user():
     def __init__(self, username, password, type):
         self.username = username
@@ -17,7 +16,7 @@ class player(user):
         self.character = character
         self.team = team
 
-with open(r"classes/json/users.json", "r") as f:
+with open(r"json\users.json", "r") as f:
     data = json.load(f)
 
     def add():
@@ -30,7 +29,7 @@ with open(r"classes/json/users.json", "r") as f:
                 type = input("What type of user would you like to make? (player/admin) ").lower()
             if type == "player":
                 username = input("Choose a username: ")
-                users = open(r"classes\users.json", encoding="utf8")
+                users = open(r"json\users.json", encoding="utf8")
                 user_data = json.load(users)
                 for user in user_data:
                     # checks for duplicates
@@ -61,5 +60,5 @@ with open(new_file, "w") as f:
     f.write(json_string)
 
 # Overwrite the old JSON file with the new one
-os.remove(r"json/users.json")
-os.rename(new_file, r"json/users.json")
+os.remove(r"json\users.json")
+os.rename(new_file, r"json\users.json")
