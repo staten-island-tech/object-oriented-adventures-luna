@@ -1,10 +1,10 @@
 import json
 
-with open (r"classes\json\users.json", "r") as user : 
-    users = json.load(user)
+with open (r"classes\json\users.json", "r") as hi : 
+    users = json.load(hi)
 
-with open (r"classes\json\entities.json", "r") as entity :
-    entities = json.load(entity)
+with open (r"classes\json\entities.json", "r") as bye :
+    entities = json.load(bye)
 
 
 enemies = [{'name': "a", 
@@ -160,6 +160,16 @@ class battle():
         if answer == "y":
             c = input("Choose a character: ").title()
             d = input("Choose the character to replace(enter the letter in front of it): ").upper()
-            for characters_team in team:
-                pass
-
+            a = 0
+            for letter in b:
+                if letter == d:
+                    team[a] = c
+                a += 1
+            print (f"This is your new team set up: {team}")
+            for user in users:
+                if user == username:
+                    del user['team']
+                    user['team'].append(team)
+                    json.dump(users, hi)
+        elif answer == "n":
+            print(f"thank you for your time. You will now be returning to the space ship....")
