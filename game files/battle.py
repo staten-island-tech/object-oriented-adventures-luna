@@ -1,10 +1,10 @@
 import json
 
-with open (r"classes/json/users.json", "r") as user : 
-    users = json.load(user)
+with open (r"classes\json\users.json", "r") as hi : 
+    users = json.load(hi)
 
-with open (r"classes/json/entities.json", "r") as entity :
-    entities = json.load(entity)
+with open (r"classes\json\entities.json", "r") as bye :
+    entities = json.load(bye)
 
 
 enemies = [{'name': "a", 
@@ -149,11 +149,27 @@ class battle():
                 team = user['team']
         a = 0
         b = ["A", "B", "C", "D"]
-        print("You currently have this team setup.")
+        print("You currently have this team setup:")
         for characters_team in team:
             print (f"[{[b[a]]}] {characters_team}")
-        print("You currently have these characters.")
+            a += 1
+        print("You currently have these characters:")
         for character in characters:
             print(character)
-
-battle.cycle(1)
+        answer = input("Would you like to change your team setup: y/n ").lower()
+        if answer == "y":
+            c = input("Choose a character: ").title()
+            d = input("Choose the character to replace(enter the letter in front of it): ").upper()
+            a = 0
+            for letter in b:
+                if letter == d:
+                    team[a] = c
+                a += 1
+            print (f"This is your new team set up: {team}")
+            for user in users:
+                if user == username:
+                    del user['team']
+                    user['team'].append(team)
+                    json.dump(users, hi)
+        elif answer == "n":
+            print(f"thank you for your time. You will now be returning to the space ship....")
