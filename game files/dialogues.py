@@ -29,7 +29,7 @@ class dialogues_story():
         print(dialogue[x])
     def getting_asahi(x):
         dialogue = ["You got Asahi!!!!!",
-                    "He is now able to be added to your party after completing Monde."]
+                    "He is now added to your party."]
     def monde(x):              # x can't be greater than 18
         dialogue = ["Asahi: Are you ready to go?", 
                     "It has already been a few days since you decided to join the Legacy.", 
@@ -114,17 +114,25 @@ class dialogues_story():
 
 class dialogues_quest():
     def amalthea(x):
-        dialogue = ["Amalthea: Do you wish to begin your adventure to Monde?"]
+        dialogue = ["Amalthea: Do you wish to begin your adventure to Monde?",
+                    "Amalthea: I hope you return.",
+                    "Amalthea: Hurry up. The spaceship will be departing soon."]
         print(dialogue[x])
     def lyra(x):
-        dialogue = ["Lyra: Do you wish to head to Pero?"]
+        dialogue = ["Lyra: Do you wish to head to Pero?",
+                    "Lyra: Stay safe!",
+                    "Lyra: No worries!"]
         print(dialogue[x])
     def astrophel(x):
-        dialogue = ["Astrophel: Do you wish to head to the final world, Taiyo? The journey may be harsh."]
+        dialogue = ["Astrophel: Do you wish to head to the final world, Taiyo? The journey may be harsh.",
+                    "Astrophel: Alright. I wish you a safe journey.",
+                    "Astrophel: ..Okay. Return when you're ready."]
         print(dialogue[x])
     def adhara(x):
         dialogue = ["Adhara: Would you like to complete your daily mission for 10 crystals?",
-                    "Good luck."]
+                    "Adhara: Good luck.",
+                    "Adhara: Come back if you change your mind."]
+        print(dialogue[x])
     def transition(x):
         dialogue = ["Before you embark on your journey, you will complete a short tutorial on space station missions.",
                     "You will now set out for Monde.",
@@ -137,14 +145,9 @@ class dialogues_quest():
                     "[a] gamble with the star system [b] edit your party [c] complete your current missions",
                     "Which mission will you target? [a] go to your next destintation, Taiyo [b] complete your NPC mission",
                     "You will now travel to Taiyo."]
-
+        print(dialogue[x])
     
 class dialogues_player():
-    def amalthea(x):
-        dialogue = ["[a] yes [b] no"]
-        print(dialogue(x))
-    def lyra(x):
-        dialogue = ["[a] yes [b] no"]
     def transition(x):
         dialogue = ["[a], [b], [c]", #x3
                     "[a], [b]", #x4
@@ -192,7 +195,7 @@ class dialogues_player():
         print(dialogue[x])
     def taiyo(x):
         dialogue = ["You: We're finally back..", #after x0
-                    "You: [a] Well. It was something for sure. [b] I GOT THE BOOTY", #x3
+                    "You: [a] Well. It was something for sure. [b] I found booty again", #x3
                     "You: Could you take a look at this? We found it in Pero.",
                     "You: Is something wrong?",
                     "You: You're staying back again? Are you gonna come later on?",
