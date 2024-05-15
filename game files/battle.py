@@ -142,7 +142,7 @@ class battle():
                 character['hp'] = new_hp
                 print(f"HP: {new_hp}")
             a += 1
-    def select_character(username):
+    def select_character(username):             ## needs to be tested
         for user in users:
             if user == username:
                 characters = user['characters']

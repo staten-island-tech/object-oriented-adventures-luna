@@ -1,3 +1,110 @@
 [
-    
+    {
+        "name": "Amaris",
+        "hp": 5000,
+        "attack": [
+            500,
+            1500
+        ],
+        "rarity": "*****",
+        "weapon": "stellar gun",
+        "type": "destruction",
+        "element": "quantum"
+    },
+    {
+        "name": "Aelius",
+        "hp": 5000,
+        "attack": [
+            500,
+            1500
+        ],
+        "rarity": "*****",
+        "weapon": "stellar gun",
+        "type": "destruction",
+        "element": "imaginary"
+    },
+    {
+        "name": "Estella",
+        "hp": 5000,
+        "attack": [
+            250,
+            750
+        ],
+        "rarity": "****",
+        "weapon": "crossbow",
+        "type": "erudition",
+        "element": "fire"
+    },
+    {
+        "name": "Altair",
+        "hp": 5000,
+        "attack": [
+            500,
+            1500
+        ],
+        "rarity": "*****",
+        "weapon": "sword",
+        "type": "hunt",
+        "element": "ice"
+    },
+    {
+        "name": "Sirius",
+        "hp": 5000,
+        "attack": [
+            500,
+            1500
+        ],
+        "rarity": "*****",
+        "weapon": "scythe",
+        "type": "harmony",
+        "element": "quantum"
+    },
+    {
+        "name": "Callisto",
+        "hp": 5000,
+        "attack": [
+            500,
+            1500
+        ],
+        "rarity": "*****",
+        "weapon": "spear",
+        "type": "destruction",
+        "element": "wind"
+    },
+    {
+        "name": "Asahi",
+        "hp": 5000,
+        "attack": [
+            250,
+            750
+        ],
+        "rarity": "****",
+        "weapon": "greatsword",
+        "type": "preservation",
+        "element": "imaginary"
+    },
+    {
+        "name": "Celine",
+        "hp": 5000,
+        "attack": [
+            250,
+            750
+        ],
+        "rarity": "****",
+        "weapon": "bow and arrow",
+        "type": "nihility",
+        "element": "ice"
+    },
+    {
+        "name": "Mael",
+        "hp": 5000,
+        "attack": [
+            250,
+            750
+        ],
+        "rarity": "****",
+        "weapon": "strings",
+        "type": "destruction",
+        "element": "physical"
+    }
 ]
