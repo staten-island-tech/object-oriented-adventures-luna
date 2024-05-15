@@ -162,7 +162,7 @@ class dialogues_player():
                     "You: Okay, thanks for watching out for me.",
                     "You: Yeah, but they seem dangerous.", #X8
                     "You: Erm.. what're those...", #X8
-                    "You: We shouldn't just stand here.", #X9
+                    "You: We shouldn't just stand here", #X9
                     "You: Oh god", #X9
                     "You: Phew.. I carried", #x10    
                     "You: Aw man..", #x11
@@ -171,7 +171,7 @@ class dialogues_player():
         print(dialogue[x])
     def monde(x):
         dialogue = ["You: [a] Nuh uh. [b] Duh.", #x0
-                    "You: [a] Yikes.. what on earth happened here? [b] It's still gorgeous in my eyes.", #x2
+                    "You: [a] Yikes.. what on earth happened here? [b] It's still gorgeous in my eyes", #x2
                     "You: What a shame.",
                     "You: Woohoo!",
                     "You: Here we go...",
