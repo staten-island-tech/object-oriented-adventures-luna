@@ -106,5 +106,77 @@
         "weapon": "strings",
         "type": "destruction",
         "element": "physical"
+    },
+    {
+        "name": "Charlotte",
+        "hp": 5000,
+        "attack": [
+            500,
+            1500
+        ],
+        "rarity": "*****",
+        "weapon": "round blade",
+        "type": "hunt",
+        "element": "water"
+    },
+    {
+        "name": "Genevieve",
+        "hp": 5000,
+        "attack": [
+            250,
+            750
+        ],
+        "rarity": "****",
+        "weapon": "scythe",
+        "type": "preservation",
+        "element": "lightning"
+    },
+    {
+        "name": "Dinara",
+        "hp": 5000,
+        "attack": [
+            250,
+            750
+        ],
+        "rarity": "****",
+        "weapon": "daggers",
+        "type": "nihility",
+        "element": "lightning"
+    },
+    {
+        "name": "Igor",
+        "hp": 5000,
+        "attack": [
+            250,
+            750
+        ],
+        "rarity": "****",
+        "weapon": "gun",
+        "type": "abundance",
+        "element": "fire"
+    },
+    {
+        "name": "Aleksandr",
+        "hp": 5000,
+        "attack": [
+            500,
+            1500
+        ],
+        "rarity": "*****",
+        "weapon": "glaive",
+        "type": "erudition",
+        "element": "physical"
+    },
+    {
+        "name": "Innessa",
+        "hp": 5000,
+        "attack": [
+            250,
+            750
+        ],
+        "rarity": "****",
+        "weapon": "rifle",
+        "type": "preservation",
+        "element": "ice"
     }
 ]

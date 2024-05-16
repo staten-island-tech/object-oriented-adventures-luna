@@ -47,7 +47,7 @@ class type():
             data.append(enemy_made.__dict__)
         def npc():
             name = input("What is the npc's name? ").title()
-            entities = open(r"classes\classes\json\entities.json", encoding="utf8")
+            entities = open(r"game files\classes\json\entities.json", encoding="utf8")
             entities_data = json.load(entities)
             for entity in entities_data:
                 while name == entity["name"]:
