@@ -1,0 +1,29 @@
+[
+    {
+        "username": "example",
+        "password": "123",
+        "type": "player",
+        "crystals": 200,
+        "stars": 0,
+        "character": [],
+        "team": []
+    },
+    {
+        "username": "examplee",
+        "password": "abc",
+        "type": "player",
+        "crystals": 0,
+        "stars": 0,
+        "character": [],
+        "team": []
+    },
+    {
+        "username": "exampleee",
+        "password": "abc",
+        "type": "player",
+        "crystals": 0,
+        "stars": 0,
+        "character": [],
+        "team": []
+    }
+]

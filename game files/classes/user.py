@@ -15,7 +15,7 @@ class player(user):
         self.character = character
         self.team = team
 
-with open(r"json\users.json", "r") as f:
+with open(r"game files\classes\json\users.json", "r") as f:
     data = json.load(f)
 
     def add():
@@ -28,7 +28,7 @@ with open(r"json\users.json", "r") as f:
                 type = input("What type of user would you like to make? (player/admin) ").lower()
             if type == "player":
                 username = input("Choose a username: ")
-                users = open(r"json\users.json", encoding="utf8")
+                users = open(r"game files\classes\json\users.json", encoding="utf8")
                 user_data = json.load(users)
                 for user in user_data:
                     # checks for duplicates
@@ -43,7 +43,7 @@ with open(r"json\users.json", "r") as f:
                 player_made = player(username, password, type, crystals, stars, characters, team)
                 print(player_made.__dict__)
                 data.append(player_made.__dict__)
-            a = input("Would you like to add a new user?").lower()
+            a = input("Would you like to add a new user? y/n ").lower()
         while a == "n":
             return "thank you for your time."
     add()
@@ -58,5 +58,5 @@ with open(new_file, "w") as f:
     f.write(json_string)
 
 # Overwrite the old JSON file with the new one
-os.remove(r"json\users.json")
-os.rename(new_file, r"json\users.json")
+os.remove(r"game files\classes\json\users.json")
+os.rename(new_file, r"game files\classes\json\users.json")
