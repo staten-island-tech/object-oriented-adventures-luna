@@ -37,11 +37,11 @@ class type():
             while type not in type_list:
                 type = input("Pick a type for the enemy: (boss or minion) ").lower()
             if type == "boss":
-                hp = 50000
-                attack = 2500
+                hp = 10000
+                attack = 200
             if type == "minion":
-                hp = 5000
-                attack = 100
+                hp = 4500
+                attack = 60
             enemy_made = Enemies(name, type, hp, attack)
             print(enemy_made.__dict__)
             data.append(enemy_made.__dict__)
@@ -133,7 +133,3 @@ with open(new_file, "w") as f:
 # Overwrite the old JSON file with the new one
 os.remove(r"game files\classes\json\entities.json")
 os.rename(new_file, r"game files\classes\json\entities.json")
-
-
-
-

@@ -8,12 +8,13 @@ class user():
         self.type = type
 
 class player(user):
-    def __init__(self, username, password, type, crystals, stars, character, team):
+    def __init__(self, username, password, type, crystals, stars, character, team, quest):
         super().__init__(username, password, type)
         self.crystals = crystals
         self.stars = stars
         self.character = character
         self.team = team
+        self.quest = quest
 
 with open(r"game files\classes\json\users.json", "r") as f:
     data = json.load(f)
@@ -39,8 +40,9 @@ with open(r"game files\classes\json\users.json", "r") as f:
                 crystals = 0
                 characters = [] 
                 team = []
+                quest = []
                 stars = 0
-                player_made = player(username, password, type, crystals, stars, characters, team)
+                player_made = player(username, password, type, crystals, stars, characters, team, quest)
                 print(player_made.__dict__)
                 data.append(player_made.__dict__)
             a = input("Would you like to add a new user? y/n ").lower()
