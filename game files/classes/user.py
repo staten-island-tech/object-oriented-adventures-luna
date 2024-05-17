@@ -8,11 +8,11 @@ class user():
         self.type = type
 
 class player(user):
-    def __init__(self, username, password, type, crystals, stars, character, team, quest):
+    def __init__(self, username, password, type, crystals, stars, characters, team, quest):
         super().__init__(username, password, type)
         self.crystals = crystals
         self.stars = stars
-        self.character = character
+        self.characters = characters
         self.team = team
         self.quest = quest
 
@@ -38,7 +38,7 @@ with open(r"game files\classes\json\users.json", "r") as f:
                 print(username)
                 password = input("Choose a password: ")
                 crystals = 0
-                characters = [] 
+                characters = ["","","",""] 
                 team = []
                 quest = []
                 stars = 0

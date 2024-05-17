@@ -5,8 +5,17 @@
         "type": "player",
         "crystals": 200,
         "stars": 0,
-        "character": [],
-        "team": []
+        "character": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+        ],
+        "team": [
+            "A",
+            "D"
+        ]
     },
     {
         "username": "examplee",
@@ -14,8 +23,15 @@
         "type": "player",
         "crystals": 0,
         "stars": 0,
-        "character": [],
-        "team": []
+        "character": [
+            "a",
+            "b",
+            "c"
+        ],
+        "team": [
+            "A",
+            "B"
+        ]
     },
     {
         "username": "exampleee",
