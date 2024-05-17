@@ -3,44 +3,18 @@
 
 import json
 import random
+from user import *
 test = open(r"game files\classes\json\entities.json", encoding="utf8")
 entities = json.load(test)
-
-users = [
-    {
-        'username': "example",
-        "password": "123",
-        "type": "player",
-        "team_lvl": 1,
-        'crystals': 200,
-        "stars": 0,
-        "character": []
-    },
-    {
-        "username": "examplee",
-        "password": "abc",
-        "type": "player",
-        "team_lvl": 1,
-        "crystals": 200,
-        "stars": 0,
-        "character": []
-    },
-    {
-        "username": "exampleee",
-        "password": "abc",
-        "type": "player",
-        "team_lvl": 1,
-        "crystals": 0,
-        "stars": 0,
-        "character": []
-    }
-]
+tst = open("test.json", encoding="utf8")
+users = json.load(tst)
 
 star_counter = 0
+k = 15
 
 class star():
     global star_counter
-    
+    global k 
     def check_dup_characters(user,character):
         a = 0
         for i in users:
@@ -55,7 +29,6 @@ class star():
                                                  # n is the username of the user who is pulling the characters --> becomes username in the pull_one and pull_ten functions
         character = random.choices(entities).pop()
         print(character)
-        k = 15
         list_b = [random.randint(1,100) for i in range(k)]       #generates a list of 15 random int btwn 1-100
         b = random.randint(1,100)           # generate 1 random int btwn 1-100
         if b in list_b:                     #15% chance of occurring        
@@ -81,15 +54,15 @@ class star():
     def soft_pity(k,username):
         while star_counter == 70:
             n = random.randint(5,10)          # n is the percentage the rate for characters will increase by
-            m = k + n
-            star.get_random_character(m,username)   # m is the new, increased percentage
+            k = k + n
+            star.get_random_character(k,username)   # m is the new, increased percentage
 
 
     def hard_pity(k,username):
         while star_counter == 80:
             n = random.randint(15,20)          # n is the percentage the rate for characters will increase by
-            m = k + n
-            star.get_random_character(m,username)   # m is the new, increased percentage
+            k = k + n
+            star.get_random_character(k,username)   # m is the new, increased percentage
 
 
     def super_hard_pity(username):
@@ -103,7 +76,7 @@ class star():
 
     def pull_one(username):
         global star_counter
-        star.       #next steps: use activate inside pull_one or vice versa
+        star.       #next steps: use activate inside pull_one or vice versa and add versions
         a = 0
         for user in users:
             while user['username'] != username:
