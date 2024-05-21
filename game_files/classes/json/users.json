@@ -1,0 +1,38 @@
+[
+    {
+        "username": "ex",
+        "password": "123",
+        "type": "player",
+        "crystals": 0,
+        "stars": 0,
+        "characters": [],
+        "team": [
+            "",
+            "",
+            "",
+            ""
+        ],
+        "quest": []
+    },
+    {
+        "username": "exa",
+        "password": "abc",
+        "type": "player",
+        "crystals": 0,
+        "stars": 0,
+        "characters": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+        ],
+        "team": [
+            "A",
+            "B",
+            "",
+            ""
+        ],
+        "quest": []
+    }
+]

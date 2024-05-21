@@ -1,10 +1,10 @@
 import json
 import os
 
-with open (r"game files\classes\json\users.json", "r") as hi : 
+with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
 
-with open (r"game files\classes\json\entities.json", "r") as bye :
+with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 
 
@@ -143,7 +143,7 @@ class battle():
                 character['hp'] = new_hp
                 print(f"HP: {new_hp}")
             a += 1
-    def select_character(username):             ## needs to be tested
+    def select_character(username):             ## needs to be tested - TESTED 
         for user in users:
             if user['username'] == username:
                 characters = user['characters']
@@ -170,17 +170,10 @@ class battle():
             answer = input("continue changing team setup? y/n ").lower()
         if answer == "n":
             print(f"thank you for your time. You will now be returning to the space ship....")
-
-
-
-new_file = "updated.json"
-with open(new_file, "w") as f:
-    # Serialize the updated Python list to a JSON string
-    json_string = json.dumps(users)
-
-    # Write the JSON string to the new JSON file
-    f.write(json_string)
-
-# Overwrite the old JSON file with the new one
-os.remove(r"test.json")
-os.rename(new_file, r"test.json")
+        # append to json file
+        new_file = "updated.json"
+        with open(new_file, "w") as f:
+            json_string = json.dumps(users)
+            f.write(json_string)
+        os.remove(r"game_files\classes\json\users.json")
+        os.rename(new_file, r"game_files\classes\json\users.json")
