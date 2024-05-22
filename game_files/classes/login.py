@@ -1,7 +1,7 @@
 from user import *
 
 # Open the JSON file of pokemon data
-test = open(r"game files\classes\json\users.json", encoding="utf8")
+test = open(r"game_files\classes\json\users.json", encoding="utf8")
 # create variable "data" that represents the enitre pokedex list
 data = json.load(test)
 

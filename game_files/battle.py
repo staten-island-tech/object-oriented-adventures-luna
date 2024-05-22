@@ -1,9 +1,10 @@
 import json
+import os
 
-with open (r"classes\json\users.json", "r") as hi : 
+with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
 
-with open (r"classes\json\entities.json", "r") as bye :
+with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 
 
@@ -142,9 +143,9 @@ class battle():
                 character['hp'] = new_hp
                 print(f"HP: {new_hp}")
             a += 1
-    def select_character(username):             ## needs to be tested
+    def select_character(username):             ## needs to be tested - TESTED 
         for user in users:
-            if user == username:
+            if user['username'] == username:
                 characters = user['characters']
                 team = user['team']
         a = 0
@@ -157,8 +158,8 @@ class battle():
         for character in characters:
             print(character)
         answer = input("Would you like to change your team setup: y/n ").lower()
-        if answer == "y":
-            c = input("Choose a character: ").title()
+        while answer == "y":
+            c = input("Choose a character to add onto the team: ").title()
             d = input("Choose the character to replace(enter the letter in front of it): ").upper()
             a = 0
             for letter in b:
@@ -166,10 +167,13 @@ class battle():
                     team[a] = c
                 a += 1
             print (f"This is your new team set up: {team}")
-            for user in users:
-                if user == username:
-                    del user['team']
-                    user['team'].append(team)
-                    json.dump(users, hi)
-        elif answer == "n":
+            answer = input("continue changing team setup? y/n ").lower()
+        if answer == "n":
             print(f"thank you for your time. You will now be returning to the space ship....")
+        # append to json file
+        new_file = "updated.json"
+        with open(new_file, "w") as f:
+            json_string = json.dumps(users)
+            f.write(json_string)
+        os.remove(r"game_files\classes\json\users.json")
+        os.rename(new_file, r"game_files\classes\json\users.json")

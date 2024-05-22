@@ -8,15 +8,15 @@ class user():
         self.type = type
 
 class player(user):
-    def __init__(self, username, password, type, crystals, stars, character, team, quest):
+    def __init__(self, username, password, type, crystals, stars, characters, team, quest):
         super().__init__(username, password, type)
         self.crystals = crystals
         self.stars = stars
-        self.character = character
+        self.characters = characters
         self.team = team
         self.quest = quest
 
-with open(r"json\users.json", "r") as f:
+with open(r"game_files\classes\json\users.json", "r") as f:
     data = json.load(f)
 
     def add():
@@ -29,7 +29,7 @@ with open(r"json\users.json", "r") as f:
                 type = input("What type of user would you like to make? (player/admin) ").lower()
             if type == "player":
                 username = input("Choose a username: ")
-                users = open(r"json\users.json", encoding="utf8")
+                users = open(r"game_files\classes\json\users.json", encoding="utf8")
                 user_data = json.load(users)
                 for user in user_data:
                     # checks for duplicates
@@ -39,13 +39,13 @@ with open(r"json\users.json", "r") as f:
                 password = input("Choose a password: ")
                 crystals = 0
                 characters = [] 
-                team = []
+                team = ["","","",""]
                 quest = []
                 stars = 0
                 player_made = player(username, password, type, crystals, stars, characters, team, quest)
                 print(player_made.__dict__)
                 data.append(player_made.__dict__)
-            a = input("Would you like to add a new user?").lower()
+            a = input("Would you like to add a new user? y/n ").lower()
         while a == "n":
             return "thank you for your time."
     add()
@@ -60,5 +60,5 @@ with open(new_file, "w") as f:
     f.write(json_string)
 
 # Overwrite the old JSON file with the new one
-os.remove(r"json\users.json")
-os.rename(new_file, r"json\users.json")
+os.remove(r"game_files\classes\json\users.json")
+os.rename(new_file, r"game_files\classes\json\users.json")

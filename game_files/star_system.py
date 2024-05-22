@@ -1,61 +1,48 @@
 
 #import stuff
-
+import os
 import json
 import random
-test = open(r"game files\classes\json\entities.json", encoding="utf8")
-entities = json.load(test)
-
-users = [
-    {
-        'username': "example",
-        "password": "123",
-        "type": "player",
-        "team_lvl": 1,
-        'crystals': 200,
-        "stars": 0,
-        "character": []
-    },
-    {
-        "username": "examplee",
-        "password": "abc",
-        "type": "player",
-        "team_lvl": 1,
-        "crystals": 200,
-        "stars": 0,
-        "character": []
-    },
-    {
-        "username": "exampleee",
-        "password": "abc",
-        "type": "player",
-        "team_lvl": 1,
-        "crystals": 0,
-        "stars": 0,
-        "character": []
-    }
-]
+with open (r"game_files\classes\json\entities.json", "r") as bye :
+    entities = json.load(bye)
+with open ("test.json", "r") as hi:
+    users = json.load(hi)
 
 star_counter = 0
+k = 15
 
 class star():
     global star_counter
-    
-    def check_dup_characters(user,character):
+    global k 
+
+    def view_characters(username):
         a = 0
-        for i in users:
-            while i['name'] != user:
+        for user in users:
+            while user['username'] != username:
                 a += 1
-            if character in i['character']:
-                i['crystals'] += 80
-            else:
-                i['character'].append(character)
+            characters = user['character']
+            return characters
+
+    def check_dup_characters(username,character):
+        for i in users:
+            if i['username'] == username:
+                if character in i['character']:
+                    i['crystals'] += 80
+                else:
+                    del i['character']
+                    i['character'].append(character)
+                    new_file = "updated.json"
+                    with open(new_file, "w") as f:
+                        json_string = json.dumps(users)
+                        f.write(json_string)
+                    os.remove(r"game_files\classes\json\users.json")
+                    os.rename(new_file, r"game_files\classes\json\users.json")
 
     def get_random_character(k,n):                 # k = 15 --> represents the percent chance of pulling a character
                                                  # n is the username of the user who is pulling the characters --> becomes username in the pull_one and pull_ten functions
+        
         character = random.choices(entities).pop()
         print(character)
-        k = 15
         list_b = [random.randint(1,100) for i in range(k)]       #generates a list of 15 random int btwn 1-100
         b = random.randint(1,100)           # generate 1 random int btwn 1-100
         if b in list_b:                     #15% chance of occurring        
@@ -77,19 +64,20 @@ class star():
                     star.check_dup_characters(n,character)
         else: 
                     print("you got nothing hahahahah")
+                    
 
     def soft_pity(k,username):
         while star_counter == 70:
             n = random.randint(5,10)          # n is the percentage the rate for characters will increase by
-            m = k + n
-            star.get_random_character(m,username)   # m is the new, increased percentage
+            k = k + n
+            star.get_random_character(k,username)   # m is the new, increased percentage
 
 
     def hard_pity(k,username):
         while star_counter == 80:
             n = random.randint(15,20)          # n is the percentage the rate for characters will increase by
-            m = k + n
-            star.get_random_character(m,username)   # m is the new, increased percentage
+            k = k + n
+            star.get_random_character(k,username)   # m is the new, increased percentage
 
 
     def super_hard_pity(username):
@@ -103,14 +91,16 @@ class star():
 
     def pull_one(username):
         global star_counter
-        star.       #next steps: use activate inside pull_one or vice versa
+
+        #star.       #next steps: use activate inside pull_one or vice versa and add versions
         a = 0
         for user in users:
             while user['username'] != username:
                a += 1
             crystals = user['crystals']
+            characters = user['character']
             print(f"{username} currently has {crystals} crystals")
-            return
+            break
         if crystals < 160:
             print("You do not have enough crystals.")
         else: 
@@ -119,7 +109,7 @@ class star():
                 answer = input("are you sure you want to use 160 crystals? y/n ").lower()
             while answer == "y":
                 crystals -= 160
-                star.get_random_character(15,username)
+                star.get_random_character(k,username)
                 retry = input("pull again? y/n ").lower()
                 if retry == "n":
                     answer = "n"
@@ -133,8 +123,9 @@ class star():
 
         star_counter += 1
         print(f"{username} now has {crystals} crystals left")
-        print(f"Your current characters: {user['character']}")
+        print(f"Your current characters: {characters}")
         print(f"you used {star_counter} stars")
+
 
 
 
@@ -181,4 +172,4 @@ class star():
         #if no append to user data
         
 
-star.pull_one("example")
+star.view_characters("example")
