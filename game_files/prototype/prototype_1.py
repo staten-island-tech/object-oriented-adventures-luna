@@ -1,0 +1,2 @@
+class prototype():
+    pass

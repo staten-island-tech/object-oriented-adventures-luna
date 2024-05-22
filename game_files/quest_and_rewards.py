@@ -1,5 +1,5 @@
 class quests():
-    def rewards(x):
+    def rewards(x,username):
         if x == "world":
             rewards = 80
         else:
