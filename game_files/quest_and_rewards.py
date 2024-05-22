@@ -1,21 +1,24 @@
 class quests():
     def rewards(x):
         if x == "world":
-            pass
+            rewards = 80
         else:
-            pass
+            rewards = 10
     def win(x):
         pass
     def lose(x):
         pass
     def enemy(x):
         if x == "monde":
-            pass
+            enemy = []
         elif x == "pero":
-            pass
+            enemy = []
         elif x == "taiyo":
-            pass
-        elif x == "starter":
-            pass
+            enemy = []
+        elif x == "spaceship":
+            enemy = []
         elif x == "choose":
-            pass
+            enemy = []
+    def wave(x):
+        pass
+    
