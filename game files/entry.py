@@ -63,9 +63,3 @@ class entry():
         ]
         for i in range(57):
             print(loading[i])
-
-<<<<<<< HEAD
-=======
-
-entry.loading()
->>>>>>> main
