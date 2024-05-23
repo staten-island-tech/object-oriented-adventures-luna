@@ -5,25 +5,27 @@ import json
 import random
 with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
-with open ("test.json", "r") as hi:
+with open (r"game_files\classes\json\users.json", "r") as hi:
     users = json.load(hi)
 
 star_counter = 0
 k = 15
 
 class star():
-    global star_counter
-    global k 
-
+    global k
     def view_characters(username):
         a = 0
         for user in users:
-            while user['username'] != username:
+            if user['username'] == username:
+                characters = user['characters']
+                print("You currently have these characters: ")
+                for i in characters:
+                    print(i)
+            else:
                 a += 1
-            characters = user['character']
-            return characters
 
-    def check_dup_characters(username,character):
+
+    def check_dupe_or_append(username,character):
         for i in users:
             if i['username'] == username:
                 if character in i['character']:
@@ -40,7 +42,7 @@ class star():
 
     def get_random_character(k,n):                 # k = 15 --> represents the percent chance of pulling a character
                                                  # n is the username of the user who is pulling the characters --> becomes username in the pull_one and pull_ten functions
-        
+
         character = random.choices(entities).pop()
         print(character)
         list_b = [random.randint(1,100) for i in range(k)]       #generates a list of 15 random int btwn 1-100
@@ -52,7 +54,7 @@ class star():
                 if c == the_number:
                     print(f"Congrats! You pulled a five-star character")
                     print(character)
-                    star.check_dup_characters(n,character)
+                    star.check_dupe_or_append(n,character)
                 else:
                     print("oh no! you lost ur five-star :(")
             else:
@@ -61,12 +63,13 @@ class star():
                 if c in the_number:
                     print(f"Congrats! You pulled a four-star character")
                     print(character)
-                    star.check_dup_characters(n,character)
+                    star.check_dupe_or_append(n,character)
         else: 
                     print("you got nothing hahahahah")
-                    
+                  
 
     def soft_pity(k,username):
+
         while star_counter == 70:
             n = random.randint(5,10)          # n is the percentage the rate for characters will increase by
             k = k + n
@@ -74,6 +77,7 @@ class star():
 
 
     def hard_pity(k,username):
+
         while star_counter == 80:
             n = random.randint(15,20)          # n is the percentage the rate for characters will increase by
             k = k + n
@@ -84,13 +88,14 @@ class star():
         while star_counter == 90:
             star.get_random_character(100,username)
         
-    def activate(k,username):
+    def activate_pity(k,username):
         star.soft_pity(k,username)
         star.hard_pity(k,username)
         star.super_hard_pity(username)
 
     def pull_one(username):
         global star_counter
+        global k
 
         #star.       #next steps: use activate inside pull_one or vice versa and add versions
         a = 0
@@ -132,6 +137,7 @@ class star():
     def pull_ten(username):
         a = 0
         global star_counter
+        global k
         for user in users:
             while user['username'] != username:
                a += 1
@@ -149,7 +155,7 @@ class star():
                 crystals -= 1600
                 count = 0
                 while count < 10:
-                    star.get_random_character(15,username)
+                    star.get_random_character(k,username)
                     count += 1
 
             if answer == "n":
@@ -172,4 +178,4 @@ class star():
         #if no append to user data
         
 
-star.view_characters("example")
+star.pull_one("exa")
