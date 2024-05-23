@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [
     {
         "name": "Amaris",
@@ -322,9 +321,9 @@
     },
     {
         "name": "Guard Captain",
-        "type": "boss",
-        "hp": 10000,
-        "attack": 200
+        "type": "minion",
+        "hp": 4500,
+        "attack": 60
     },
     {
         "name": "Queen Of Taiyo",
@@ -333,5 +332,3 @@
         "attack": 200
     }
 ]
-=======
->>>>>>> main

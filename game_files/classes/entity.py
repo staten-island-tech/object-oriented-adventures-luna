@@ -47,7 +47,7 @@ class type():
             data.append(enemy_made.__dict__)
         def npc():
             name = input("What is the npc's name? ").title()
-            entities = open(r"game files\classes\json\entities.json", encoding="utf8")
+            entities = open(r"game_files\classes\json\entities.json", encoding="utf8")
             entities_data = json.load(entities)
             for entity in entities_data:
                 while name == entity["name"]:
@@ -71,7 +71,7 @@ class type():
             data.append(npc_made.__dict__)
         def character():
             name = input("What is the character's name? ").title()
-            entities = open(r"game files\classes\json\entities.json", encoding="utf8")
+            entities = open(r"game_files\classes\json\entities.json", encoding="utf8")
             entities_data = json.load(entities)
             for entity in entities_data:
                 while name == entity["name"]:
@@ -99,7 +99,7 @@ class type():
             print(character_made.__dict__)
             data.append(character_made.__dict__)
 
-with open(r"game files\classes\json\entities.json", "r") as f:
+with open(r"game_files\classes\json\entities.json", "r") as f:
     data = json.load(f)
     
     def add():
@@ -131,5 +131,5 @@ with open(new_file, "w") as f:
     f.write(json_string)
 
 # Overwrite the old JSON file with the new one
-os.remove(r"game files\classes\json\entities.json")
-os.rename(new_file, r"game files\classes\json\entities.json")
+os.remove(r"game_files\classes\json\entities.json")
+os.rename(new_file, r"game_files\classes\json\entities.json")

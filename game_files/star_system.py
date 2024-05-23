@@ -1,9 +1,9 @@
 
 #import stuff
-
+import os
 import json
 import random
-with open (r"game files\classes\json\entities.json", "r") as bye :
+with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 with open ("test.json", "r") as hi:
     users = json.load(hi)
@@ -31,7 +31,12 @@ class star():
                 else:
                     del i['character']
                     i['character'].append(character)
-                    json.dump(users,hi)
+                    new_file = "updated.json"
+                    with open(new_file, "w") as f:
+                        json_string = json.dumps(users)
+                        f.write(json_string)
+                    os.remove(r"game_files\classes\json\users.json")
+                    os.rename(new_file, r"game_files\classes\json\users.json")
 
     def get_random_character(k,n):                 # k = 15 --> represents the percent chance of pulling a character
                                                  # n is the username of the user who is pulling the characters --> becomes username in the pull_one and pull_ten functions
