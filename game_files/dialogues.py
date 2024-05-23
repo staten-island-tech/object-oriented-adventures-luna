@@ -170,8 +170,8 @@ class dialogues_player():
                     "You: [a] Travel with the Legacy? Of course! [b] Thanks but you've helped me enough.. I'd rather search for my sibling on my own."] #continue/end
         print(dialogue[x])
     def monde(x):
-        dialogue = ["You: [a] Nuh uh. [b] Duh.", #x0
-                    "You: [a] Yikes.. what on earth happened here? [b] It's still gorgeous in my eyes", #x2
+        dialogue = ["You: [a] Nuh uh [b] yiorp", #x0
+                    "You: [a] Yikes.. what on earth happened here? [b] It's the inside that counts", #x2
                     "You: What a shame.",
                     "You: Woohoo!",
                     "You: Here we go...",
@@ -181,8 +181,9 @@ class dialogues_player():
                     "You: [a] ..pretty old. They were all rusty and it didn't take much for them to break. [b] ..pretty strong. I almost lost an arm.", #x11
                     "You: Yup. I think we've checked everything out here."
                     "You: What is that?",
-                    "You: Make your way to the land of ice, where the trolls reside?",
-                    "You: Where is that?"]
+                    "You: Make your way to the land of ice, where the trolls reside..? Sounds fishy.",
+                    "You: Where is that?",
+                    "You: ..."]
         print(dialogue[x])
     def pero(x):
         dialogue = ["You: Well we've already come this far, and my sibling means a lot to me.",
@@ -198,17 +199,16 @@ class dialogues_player():
                     "You: [a] Well. It was something for sure. [b] I found booty again", #x3
                     "You: Could you take a look at this? We found it in Pero.",
                     "You: Is something wrong?",
-                    "You: You're staying back again? Are you gonna come later on?",
+                    "You: You're staying back again?",
+                    "You: Are you gonna come later on?",
                     "You: Yeah. Let's go.",
-                    "You: Soooo.. which planet is this?"
-                    "You: [a] You're finally here. [b] Took you long enough."
-                    "Pick up the stone? [a] Yes [b] No"]
+                    "You: Soooo.. which planet is this?",
+                    "You: [a] A plane??? [b] omg asahi!!!!!!!!!!!!!!!!!!!!!!!"]
         print(dialogue[x])
         
 class tutorial():
     def starsystem(x):
-        dialogue = ["Captain: Tutorial time",
-                    "Captain: Everyone loves gambling, but it might get complicated. (it wont)",
+        dialogue = ["Captain: do u like gambling?? hitting it big?? well ur at the right place",
                     "Captain: From completing your missions, tutorials, and winning your battles, you can gain crystals.",
                     "Captain: With these crystals, you can convert them to stars. Every 160 crystals is equivalent to one star.",
                     "Captain: Stars can be used to pull for characters. To use your stars, just open the star system, only accessible after a world quest.",
