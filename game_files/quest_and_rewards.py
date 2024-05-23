@@ -8,15 +8,16 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 
 class quests():                                             #the whole class needs to be tested
-    def rewards(x, username):
+    def rewards(x, username):           # x is type of mission?
         if x == "world":
             rewards = 80
         else:
             rewards = 10
         for user in users:
-            if user['name'] == username:
+            if user['username'] == username:
                 crystals = user['crystals']
                 add = crystals + rewards
+                print(f"{username} now has {add} crystals")
                 user['crystals'] = add
         new_file = "updated.json"
         with open(new_file, "w") as f:
@@ -24,8 +25,12 @@ class quests():                                             #the whole class nee
             f.write(json_string)
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json") 
-    def lose(team, username):
+    def lose(username):
         a = 0
+        for user in users:
+            if user['username'] == username:
+                team = user['team']
+                print(team)
         for character in team:
             if character['hp'] == 0:
                 a += 1
@@ -52,4 +57,5 @@ class quests():                                             #the whole class nee
         pass
     def wave():
         pass
-    
+
+quests.lose("ex")
