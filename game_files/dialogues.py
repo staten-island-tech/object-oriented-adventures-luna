@@ -160,15 +160,12 @@ class dialogues_player():
                     "You: Did you see anyone else?",
                     "You: I think I've been separated from my sibling.",
                     "You: Then...",
-                    "You: Okay, thanks for watching out for me.",
-                    "You: Yeah, but they seem dangerous.", #X8
-                    "You: Erm.. what're those...", #X8
-                    "You: We shouldn't just stand here", #X9
-                    "You: Oh god", #X9
-                    "You: Phew.. I carried", #x10    
-                    "You: Aw man..", #x11
-                    "You: It's alright. Where there's a will, there's a way.", #x11
-                    "You: [a] Travel with the Legacy? Of course! [b] Thanks but you've helped me enough.. I'd rather search for my sibling on my own."] #continue/end
+                    "You: Okay, thanks for helping me.",
+                    "You: [a] Yeah, but they seem dangerous. [b] Let me at them", #X8
+                    "You: [a] We shouldn't just stand here then. [b] Oh my god", #X9
+                    "You: [a] Phew.. I totally carried. [b] Uh... I'm gonna puke", #x10    
+                    "You: [a] Aw man.. [b] It's alright. I still have hope.", #x11
+                    "You: [a] Travel with the Legacy? Of course! [b] Thanks, but you've helped me enough.. I'll be fine searching for my sibling on my own."] #continue/end
         print(dialogue[x])
     def monde(x):
         dialogue = ["You: [a] Nuh uh [b] yiorp", #x0
@@ -180,9 +177,9 @@ class dialogues_player():
                     "You: [a] More bad guys?? [b] Aaaaaaaaaaaaaaaaaaaaaa", #x9
                     "You: Well... those robots seemed...",
                     "You: [a] ..pretty old. They were all rusty and it didn't take much for them to break. [b] ..pretty strong. I almost lost an arm.", #x11
-                    "You: Yup. I think we've checked everything out here."
+                    "You: Yup. Anyway, I think we've checked everything out here."
                     "You: What is that?",
-                    "You: Make your way to the land of ice, where the trolls reside..? Sounds fishy.",
+                    "You: Make your way to the land of ice, where the trolls reside..? Is that our next destination?",
                     "You: Where is that?",
                     "You: ..."]
         print(dialogue[x])
@@ -209,9 +206,9 @@ class dialogues_player():
         
 class tutorial():
     def starsystem(x):
-        dialogue = ["Captain: do u like gambling?? hitting it big?? well ur at the right place",
-                    "Captain: From completing your missions, tutorials, and winning your battles, you can gain crystals.",
-                    "Captain: With these crystals, you can convert them to stars. Every 160 crystals is equivalent to one star.",
-                    "Captain: Stars can be used to pull for characters. To use your stars, just open the star system, only accessible after a world quest.",
-                    "Captain: In the rare occassion that you obtain a character that you already have, you will recieve 80 crystals",
-                    "(It may be rigged though)"]
+        dialogue = ["Xingxing: Do you like gambling?? Hitting it big??",
+                    "Xingxing: Well from completing your missions, tutorials, and winning your battles, you can gain crystals.",
+                    "Xingxing: With these crystals, you can convert them to stars. Every 160 crystals is equivalent to one star.",
+                    "Xingxing: Stars can be used to pull for characters. To use your stars, just open the star system, only accessible after a world quest.",
+                    "Xingxing: In the rare occassion that you obtain a character that you already have, you will recieve 80 crystals back",
+                    "(No refunds though)"]
