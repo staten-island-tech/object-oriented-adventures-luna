@@ -160,6 +160,9 @@ class battle():
         answer = input("Would you like to change your team setup: y/n ").lower()
         while answer == "y":
             c = input("Choose a character to add onto the team: ").title()
+            for charact in team:
+                if charact == c:
+                                                    #import error clone
             d = input("Choose the character to replace(enter the letter in front of it): ").upper()
             a = 0
             for letter in b:

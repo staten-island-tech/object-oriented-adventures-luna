@@ -38,13 +38,21 @@ class quests():                                             #the whole class nee
             print(f"{username}, you have lost this battle. You will now be transported back to the spaceship for further treatment.")
     def win(enemies, username, quest):
         a = []
+        c = []
         for enemy in enemies:
             a.append(enemy['hp'])
         if sum(a) == 0:
             print(f"{username}, you have passed this hurdle. May your journey be rich in prosperity and sopistication.")
         for user in users:
             if user['name'] == username:
-                
+                c = user['quest']
+                c.append(quest)
+        new_file = "updated.json"
+        with open(new_file, "w") as f:
+            json_string = json.dumps(users)
+            f.write(json_string)
+        os.remove(r"game_files\classes\json\users.json")
+        os.rename(new_file, r"game_files\classes\json\users.json")
     def enemy(x, username):
         if x == "monde":
             enemy = ["Hydro Robot", "Hydro Robot Dog", "Giant Hydro Robot"]

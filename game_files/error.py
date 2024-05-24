@@ -5,3 +5,5 @@ class error():
         pass
     def timetraveller():
         pass
+    def clone():
+        pass
