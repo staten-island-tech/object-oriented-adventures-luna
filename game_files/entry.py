@@ -64,5 +64,3 @@ class entry():
         for i in range(57):
             print(loading[i])
 
-
-entry.loading()

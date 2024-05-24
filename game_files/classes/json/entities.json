@@ -321,7 +321,7 @@
     },
     {
         "name": "Guard Captain",
-        "type": "minion",
+        "type": "boss",
         "hp": 4500,
         "attack": 60
     },
