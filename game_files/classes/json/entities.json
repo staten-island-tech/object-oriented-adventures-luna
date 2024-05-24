@@ -284,19 +284,19 @@
         "attack": 200
     },
     {
-        "name": "Ice Goblins",
+        "name": "Ice Goblin",
         "type": "minion",
         "hp": 4500,
         "attack": 60
     },
     {
-        "name": "Ice Archer Goblins",
+        "name": "Ice Archer Goblin",
         "type": "minion",
         "hp": 4500,
         "attack": 60
     },
     {
-        "name": "Oblivion Orbs",
+        "name": "Oblivion Orb",
         "type": "minion",
         "hp": 4500,
         "attack": 60
@@ -308,13 +308,13 @@
         "attack": 200
     },
     {
-        "name": "Trainee Guards",
+        "name": "Trainee Guard",
         "type": "minion",
         "hp": 4500,
         "attack": 60
     },
     {
-        "name": "Normal Guards",
+        "name": "Guard",
         "type": "minion",
         "hp": 4500,
         "attack": 60
