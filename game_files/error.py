@@ -3,3 +3,5 @@ class error():
         pass
     def gamble():
         pass
+    def timetraveller():
+        pass

@@ -31,23 +31,41 @@ class quests():                                             #the whole class nee
                 a += 1
         if a == 4:
             print(f"{username}, you have lost this battle. You will now be transported back to the spaceship for further treatment.")
-    def win(enemies, username):
+    def win(enemies, username, quest):
         a = []
         for enemy in enemies:
             a.append(enemy['hp'])
         if sum(a) == 0:
             print(f"{username}, you have passed this hurdle. May your journey be rich in prosperity and sopistication.")
-    def enemy(x):
+        for user in users:
+            if user['name'] == username:
+                
+    def enemy(x, username):
         if x == "monde":
-            enemy = []
+            enemy = ["Hydro Robot", "Hydro Robot Dog", "Giant Hydro Robot"]
         elif x == "pero":
-            enemy = []
+            enemy = ["Oblivion Gaurds", "Ice Goblin", "Ice Archer Goblin", ""]
         elif x == "taiyo":
             enemy = []
         elif x == "spaceship":
             enemy = []
         elif x == "choose":
-            enemy = []
+            print("Please note that you could only choose the worlds you have already passed.")
+            completed = []
+            for user in users:
+                if user['name'] == username:
+                    completed = user['quest']
+            y = input("Choose a world: ").lower()
+            if y not in completed:
+                pass                                #import error timetraveller
+            if y == "monde":
+                pass
+            elif y == "pero":
+                pass
+            elif y == "taiyo":
+                pass
+            elif y == "spaceship":
+                pass
     def select_wave(x):
         pass
     def wave():
