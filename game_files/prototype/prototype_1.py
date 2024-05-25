@@ -11,5 +11,5 @@ class prototype():
             print("Please put your terminal in full screen.")
             a = input("Is your terminal in full screen now? y/n").lower()
         while a == "y":
-            pass
+            entry.
             
