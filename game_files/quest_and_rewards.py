@@ -8,7 +8,7 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 
 class quests():                                             #the whole class needs to be tested
-    def rewards(x, username):           # x is type of mission?
+    def rewards(x, username):           # x is type of mission? yep
         if x == "world":
             rewards = 80
         else:
@@ -72,13 +72,13 @@ class quests():                                             #the whole class nee
             if y not in completed:
                 pass                                #import error timetraveller
             if y == "monde":
-                pass
+                enemy = []
             elif y == "pero":
-                pass
+                enemy = []
             elif y == "taiyo":
-                pass
+                enemy = []
             elif y == "spaceship":
-                pass
+                enemy = []
     def select_wave(x):
         pass
     def wave():
