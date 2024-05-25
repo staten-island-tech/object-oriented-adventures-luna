@@ -7,8 +7,7 @@ data = json.load(test)
 
 
 class login():
-    def player():
-        username = input("Enter player username: ")
+    def player(username):
         num_matches = []
         for user in data:
             if username in user["username"]:
@@ -25,5 +24,3 @@ class login():
         # and then load that user's data or something idkidkidk
     def signup():
         add()
-
-login.signup()  
