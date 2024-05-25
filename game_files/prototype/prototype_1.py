@@ -4,7 +4,8 @@ import sys
 import os
 sys.path.append(game_files/classes)
 import login
-sys.path
+sys.path.append(game_files)
+import entry
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -28,7 +29,7 @@ class prototype():
             entry.loading()
             c = input("[A] Continue").upper()
             while c != "A":
-                c = input("")
+                c = input("").upper()
             os.system("cls")
             print("Welcome to our game! Would you like to sign in to your existing account or sign up for a new account?")
             print("[1] Sign in")
@@ -40,7 +41,49 @@ class prototype():
                 print("[2] Sign up")
                 account = input("")
             if account == "1":
-                
-            
-            
-            
+                username = input("What is your username? ")
+                login.player(username)
+                os.system("cls")
+                print("Welcome back!")
+                os.system("cls")
+                for i in range(35):
+                    print("loading '")
+                    os.system("cls")
+                    print("loading !")
+                    os.system("cls")
+                    print("loading ,")
+                    os.system("cls")
+                    print("loading .")
+                    os.system("cls")
+                    print("loading ;")
+                    os.system("cls")
+                    print("loading *")
+                    os.system("cls")
+                for user in users:
+                    if user['name'] == username:
+                        data = len(user['quest'])
+                if data == 0:
+                    pass                     ## import prologue and spaceship/tutorial battles
+                else:
+                    print("Transporting back to spaceship...")
+                    c = input("[A] Continue").upper()
+                    while c != "A":
+                        c = input("").upper()
+                    if c == "A":
+                        pass                   ## import spacehship code
+            if account == "2":
+                login.signup()
+                os.system("cls")
+                for i in range(35):
+                    print("loading '")
+                    os.system("cls")
+                    print("loading !")
+                    os.system("cls")
+                    print("loading ,")
+                    os.system("cls")
+                    print("loading .")
+                    os.system("cls")
+                    print("loading ;")
+                    os.system("cls")
+                    print("loading *")
+                    os.system("cls")
