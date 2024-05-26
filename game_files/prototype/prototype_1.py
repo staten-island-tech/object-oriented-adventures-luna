@@ -47,7 +47,7 @@ class prototype():
                 os.system("cls")
                 print("Welcome back!")
                 os.system("cls")
-                rand.load()
+                random.load()
                 for user in users:
                     if user['name'] == username:
                         data = len(user['quest'])
@@ -63,4 +63,4 @@ class prototype():
             if account == "2":
                 login.signup()
                 os.system("cls")
-                rand.load()
+                random.load()
