@@ -70,7 +70,7 @@ class quests():                                             #the whole class nee
                     completed = user['quest']
             y = input("Choose a world: ").lower()
             if y not in completed:
-                pass                                #import error timetraveller
+                pass                                # import error timetraveller
             if y == "monde":
                 pass
             elif y == "pero":
@@ -79,9 +79,12 @@ class quests():                                             #the whole class nee
                 pass
             elif y == "spaceship":
                 pass
-    def select_wave(x):
-        pass
-    def wave():
-        pass
+    def wave(x, y, z):   # x = wave umber(current) y = what type of battle(not current/normal or boss) z = world(taiyo, etc)
+        if y <= 2:
+            print(f"Wave {x+1}: {y} Battle")
+        elif:
+            print(f"
+        a = z.lower()
+        
 
 quests.lose("ex")
