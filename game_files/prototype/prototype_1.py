@@ -6,6 +6,7 @@ sys.path.append(game_files/classes)
 import login
 sys.path.append(game_files)
 import entry
+import rand
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -46,19 +47,7 @@ class prototype():
                 os.system("cls")
                 print("Welcome back!")
                 os.system("cls")
-                for i in range(35):
-                    print("loading '")
-                    os.system("cls")
-                    print("loading !")
-                    os.system("cls")
-                    print("loading ,")
-                    os.system("cls")
-                    print("loading .")
-                    os.system("cls")
-                    print("loading ;")
-                    os.system("cls")
-                    print("loading *")
-                    os.system("cls")
+                rand.load()
                 for user in users:
                     if user['name'] == username:
                         data = len(user['quest'])
@@ -74,16 +63,4 @@ class prototype():
             if account == "2":
                 login.signup()
                 os.system("cls")
-                for i in range(35):
-                    print("loading '")
-                    os.system("cls")
-                    print("loading !")
-                    os.system("cls")
-                    print("loading ,")
-                    os.system("cls")
-                    print("loading .")
-                    os.system("cls")
-                    print("loading ;")
-                    os.system("cls")
-                    print("loading *")
-                    os.system("cls")
+                rand.load()
