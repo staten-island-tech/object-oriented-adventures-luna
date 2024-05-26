@@ -3,10 +3,10 @@
 import sys
 import os
 sys.path.append(game_files/classes)
-import login
+from login import *
 sys.path.append(game_files)
-import entry
-import rand
+from entry import *
+from rand import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
