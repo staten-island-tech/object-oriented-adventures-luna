@@ -3,7 +3,7 @@ with open (r"game_files\classes\json\users.json", "r") as hi :
 
 import sys
 sys.path.append(gamefile)
-from random import *
+from rand import *
 import os
 
 class spaceship():
