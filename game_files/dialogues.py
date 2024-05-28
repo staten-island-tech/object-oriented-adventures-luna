@@ -134,27 +134,8 @@ class dialogues_quest():
                     "Adhara: Good luck.",
                     "Adhara: Come back if you change your mind."]
         print(dialogue[x])
-    def transition(x):
-        dialogue = ["Before you embark on your journey, you will complete a short tutorial on space station missions.",
-                    "You will now set out for Monde.",
-                    "After your first and successful mission in Monde, you return to the spaceship.",
-                    "You can now choose your next action: [a] try out the star system [b] edit your party [c] choose a mission",
-                    "What mission will you target? [a] go to your next destination, Pero [b] complete a NPC mission",
-                    "You will now travel to Pero.",
-                    "Congrats! It is time to return to the space station.",
-                    "What would you like to do next?",
-                    "[a] gamble with the star system [b] edit your party [c] complete your current missions",
-                    "Which mission will you target? [a] go to your next destintation, Taiyo [b] complete your NPC mission",
-                    "You will now travel to Taiyo."]
-        print(dialogue[x])
     
 class dialogues_player():
-    def transition(x):
-        dialogue = ["[a], [b], [c]", #x3
-                    "[a], [b]", #x4
-                    "[a], [b], [c]", #x8
-                    "[a], [b]"] #x9
-        print(dialogue(x))
     def space_station(x):
         dialogue = ["You: I think I'm fine. Who are you?",
                     "You: Did you see anyone else?",

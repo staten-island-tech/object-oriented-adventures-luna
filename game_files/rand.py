@@ -1,7 +1,7 @@
 class random():
   def contin():
     c = input("[A] Continue").upper()
-      while c != "A":
+    while c != "A":
       c = input("").upper()
   def load():
     for i in range(35):

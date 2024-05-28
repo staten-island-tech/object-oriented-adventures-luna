@@ -1,10 +1,9 @@
 
 ## call in the json files and other programs(login and loading screen)
-import sys
+import json
 import os
-sys.path.append(game_files/classes)
-from login import *
-sys.path.append(game_files)
+
+from classes import login
 from entry import *
 from rand import *
 
@@ -59,8 +58,9 @@ class prototype():
                     while c != "A":
                         c = input("").upper()
                     if c == "A":
-                        pass                   ## import spacehship code
+                        pass                   ## import spaceship code
             if account == "2":
                 login.signup()
                 os.system("cls")
                 random.load()
+                                    ##  import prologue
