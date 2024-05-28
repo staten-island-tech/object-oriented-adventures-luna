@@ -25,8 +25,9 @@ class spaceship():
         while answer not in a:
             print("Xingxing: Choose again! You can't just make your own choices!!")
             answer = input("")
-        ## call on functions later......
-    def quest(username):
+        print("Xingxing: Hmm. Alright then. Let's go.")
+        random.load()
+    def quest_story(username):
         for user in users:
             if user['name'] == username:
                 quests = len(user['quest'])
@@ -62,10 +63,53 @@ class spaceship():
             while answer not in a:
                 print("Lyra: Hmm...what's that? Can you please tell me again?")
                 answer = input("")
+            if answer == a[0]:
+                dialogues_quest.lyra(1)
+                random.contin()
+                print("You: Thank you for allowing this expedition and you too, Lyra.")
+                random.contin()
+                dialogues_quest.lyra(2)
+                random.contin()
+                dialogues_quest.transition(1)
+                random.load()
+            if answer == a[1]:
+                print("Lyra: Alright. Enjoy your time exploring the spaceship then new recruit!")
+                os.system("cls")
+                print("Lyra: The observatory at the front of this spacecraft is absolutely wonderful! Be sure to see it!")
         elif quests == 3:
-            pass
+            dialogues_quest.astrophel(0)
+            print("[1] Yes")
+            print("[2] No")
+            a = ["1", "2"]
+            answer = input("")
+            while answer not in a:
+                print("Astrophel: What did you say?")
+                answer = input("")
+            if answer == a[0]:
+                dialogues_quest.astrophel(1)
+                random.contin()
+                print("You: I will. see you when I come back then, Astrophel!")
+                random.contin()
+                dialogues_quest.astrophel(2)
+                random.contin()
+                dialogues_quest.transition(1)
+                random.load()
+            if answer == a[1]:
+                print("Astrophel: Oh. Alright! Please enjoy your time on the spaceship then!")
         elif quests == 4:
-            pass
+            print("Looking around you find yourself at the transportation and logistics department once more.")
+            random.contin()
+            print("Lyra: Oh. Hi, what are you doing here new recruit? There isn't any other tasks for you so far.")
+            random.contin()
+            print("You: ...")
+            random.contin()
+            print("Lyra: You must have gotten used to coming here...")
+            random.contin()
+            print("Nodding, you leave the division to wander the large endless spaceship.")
+        if answer == a[1]:
+            pass            # import the battle or story for that quest or mission
+        else:
+            spaceship.welcome(username)
     def star_system():
         pass
     def team():
