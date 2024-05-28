@@ -78,21 +78,13 @@ class quests():                                             #the whole class nee
             elif y == "taiyo":
                 enemy = []
             elif y == "spaceship":
-<<<<<<< HEAD
                 pass
     def wave(x, y, z):   # x = wave umber(current) y = what type of battle(not current/normal or boss) z = world(taiyo, etc)
         if y <= 2:
             print(f"Wave {x+1}: {y} Battle")
         elif:
-            print(f"
+            print(f"")
         a = z.lower()
         
-=======
-                enemy = []
-    def select_wave(x):
-        pass
-    def wave():
-        pass
->>>>>>> Elisa
 
 quests.lose("ex")

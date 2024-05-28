@@ -1,10 +1,11 @@
+import json
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
 
 import sys
-sys.path.append(gamefile)
+sys.path.append('gamefile')
 from rand import *
-from dialogue import *
+from dialogues import *
 import os
 
 class spaceship():
@@ -12,7 +13,7 @@ class spaceship():
         print("??: Welcome abroad the spaceship! Captain Xingxing, here!")
         random.contin()
         print("Xingxing: Greetings! Is there anything you would like?")
-        print([1] Quests)
+        print("[1] Quests")
         for user in users:
             if user['name'] == username:
                 data = len(user['quest'])
@@ -33,9 +34,9 @@ class spaceship():
         print("Quests chosen...")
         os.system("cls")
         random.load()
+        print("You walk towards the transportation and logistics division to begin your next task.")
+        print("You feel that you are getting closer to finding your sibling.")
         if quests == 1:
-            print("You walk towards the transportation and logistics division to begin your next task.")
-            print("You feel that you are getting closer to finding your sibling.")
             dialogues_quest.amalthea(0)
             print("[1] Yes")
             print("[2] No")
@@ -50,16 +51,21 @@ class spaceship():
                 dialogues_quest.amalthea(2)
                 dialogues_quest.transition(1)
                 random.load()
-        else:
-                                #import the mission tutorial
-            
-            
-            if quests == 2:
-                dialogues_quest.
-            elif quests == 3:
-                pass
-            elif quests == 4:
-                pass
+            if answer == a[1]:
+                print("Amalthea: I see")
+        elif quests == 2:
+            dialogues_quest.lyra(0)
+            print("[1] Yes")
+            print("[2] No")
+            a = ["1", "2"]
+            answer = input("")
+            while answer not in a:
+                print("Lyra: Hmm...what's that? Can you please tell me again?")
+                answer = input("")
+        elif quests == 3:
+            pass
+        elif quests == 4:
+            pass
     def star_system():
         pass
     def team():

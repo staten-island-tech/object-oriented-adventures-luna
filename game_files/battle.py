@@ -162,6 +162,7 @@ class battle():
             c = input("Choose a character to add onto the team: ").title()
             for charact in team:
                 if charact == c:
+                    pass
                                                     #import error clone
             d = input("Choose the character to replace(enter the letter in front of it): ").upper()
             a = 0

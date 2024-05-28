@@ -1,4 +1,3 @@
-
 ## call in the json files and other programs(login and loading screen)
 import json
 import os
@@ -54,13 +53,12 @@ class prototype():
                     pass                     ## import prologue and spaceship/tutorial battles
                 else:
                     print("Transporting back to spaceship...")
-                    c = input("[A] Continue").upper()
-                    while c != "A":
-                        c = input("").upper()
-                    if c == "A":
-                        pass                   ## import spaceship code
+                    random.contin()
+                    pass                   ## import spaceship code
             if account == "2":
                 login.signup()
                 os.system("cls")
                 random.load()
                                     ##  import prologue
+
+prototype.start()
