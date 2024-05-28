@@ -39,7 +39,31 @@ with open(r"game_files\classes\json\users.json", "r") as f:
                 password = input("Choose a password: ")
                 crystals = 0
                 characters = [] 
-                team = ["","","",""]
+                team = [{"name": "",
+                "hp": 0,
+                "attack": [],
+                "rarity": "",
+                "weapon": "",
+                "type": "",
+                "element": ""},{"name": "",
+                "hp": 0,
+                "attack": [],
+                "rarity": "",
+                "weapon": "",
+                "type": "",
+                "element": ""},{"name": "",
+                "hp": 0,
+                "attack": [],
+                "rarity": "",
+                "weapon": "",
+                "type": "",
+                "element": ""},{"name": "",
+                "hp": 0,
+                "attack": [],
+                "rarity": "",
+                "weapon": "",
+                "type": "",
+                "element": ""}]
                 quest = []
                 stars = 0
                 player_made = player(username, password, type, crystals, stars, characters, team, quest)

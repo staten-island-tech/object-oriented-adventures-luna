@@ -8,7 +8,7 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 
 class quests():                                             #the whole class needs to be tested
-    def rewards(x, username):           # x is type of mission? yep
+    def rewards(x, username):           # x is type of mission
         if x == "world":
             rewards = 80
         else:
@@ -84,7 +84,5 @@ class quests():                                             #the whole class nee
             print(f"Wave {x+1}: {y} Battle")
         elif:
             print(f"")
-        a = z.lower()
-        
+        a = z.lower() 
 
-quests.lose("ex")
