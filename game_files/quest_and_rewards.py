@@ -44,7 +44,7 @@ class quests():                                             #the whole class nee
         if sum(a) == 0:
             print(f"{username}, you have passed this hurdle. May your journey be rich in prosperity and sopistication.")
         for user in users:
-            if user['name'] == username:
+            if user['username'] == username:
                 c = user['quest']
                 c.append(quest)
         new_file = "updated.json"
@@ -66,7 +66,7 @@ class quests():                                             #the whole class nee
             print("Please note that you could only choose the worlds you have already passed.")
             completed = []
             for user in users:
-                if user['name'] == username:
+                if user['username'] == username:
                     completed = user['quest']
             y = input("Choose a world: ").lower()
             if y not in completed:
@@ -82,7 +82,7 @@ class quests():                                             #the whole class nee
     def wave(x, y, z):   # x = wave umber(current) y = what type of battle(not current/normal or boss) z = world(taiyo, etc)
         if y <= 2:
             print(f"Wave {x+1}: {y} Battle")
-        elif:
+        else:
             print(f"")
         a = z.lower() 
 
