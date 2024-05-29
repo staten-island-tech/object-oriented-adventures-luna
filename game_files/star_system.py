@@ -8,11 +8,9 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
 with open (r"game_files\classes\json\users.json", "r") as hi:
     users = json.load(hi)
 
-star_counter = 0
-k = 15
 
 class star():
-    global k
+    k = 15
     def view_characters(username):
         a = 0
         for user in users:
@@ -28,11 +26,13 @@ class star():
     def check_dupe_or_append(username,character):
         for i in users:
             if i['username'] == username:
-                if character in i['character']:
+                if character in i['characters']:
                     i['crystals'] += 80
+                    i['stars'] += 1
                 else:
-                    del i['character']
-                    i['character'].append(character)
+                    del i['characters']
+                    i['characters'].append(character)
+                    i['stars'] += 1
                     new_file = "updated.json"
                     with open(new_file, "w") as f:
                         json_string = json.dumps(users)
@@ -69,7 +69,9 @@ class star():
                   
 
     def soft_pity(k,username):
-
+        for user in users:
+            if user['username'] == username:
+                star_counter = user['stars']
         while star_counter == 70:
             n = random.randint(5,10)          # n is the percentage the rate for characters will increase by
             k = k + n
@@ -77,7 +79,9 @@ class star():
 
 
     def hard_pity(k,username):
-
+        for user in users:
+            if user['username'] == username:
+                star_counter = user['stars']
         while star_counter == 80:
             n = random.randint(15,20)          # n is the percentage the rate for characters will increase by
             k = k + n
@@ -85,6 +89,9 @@ class star():
 
 
     def super_hard_pity(username):
+        for user in users:
+            if user['username'] == username:
+                star_counter = user['stars']
         while star_counter == 90:
             star.get_random_character(100,username)
         
@@ -94,18 +101,15 @@ class star():
         star.super_hard_pity(username)
 
     def pull_one(username):
-        global star_counter
-        global k
+        k = star.k
 
         #star.       #next steps: use activate inside pull_one or vice versa and add versions
         a = 0
         for user in users:
-            while user['username'] != username:
-               a += 1
-            crystals = user['crystals']
-            characters = user['character']
-            print(f"{username} currently has {crystals} crystals")
-            break
+            if user['username'] == username:
+                crystals = user['crystals']
+                characters = user['characters']
+                print(f"{username} currently has {crystals} crystals")
         if crystals < 160:
             print("You do not have enough crystals.")
         else: 
@@ -126,24 +130,20 @@ class star():
                 star.pull_one(username)
             answer = "n"
 
-        star_counter += 1
         print(f"{username} now has {crystals} crystals left")
         print(f"Your current characters: {characters}")
-        print(f"you used {star_counter} stars")
+        print(f"you used {user['stars']} stars")
 
 
 
 
     def pull_ten(username):
         a = 0
-        global star_counter
-        global k
+        k = star.k
         for user in users:
-            while user['username'] != username:
-               a += 1
-            crystals = user['crystals']
-            print(f"{username} currently has {crystals} crystals")
-            return
+            if user['username'] == username:
+                crystals = user['crystals']
+                print(f"{username} currently has {crystals} crystals")
         if crystals < 1600:
             print("You do not have enough crystals.")
         
@@ -166,10 +166,9 @@ class star():
                 star.pull_one(username)
             answer = "n"
 
-        star_counter += 10
         print(f"{username} now has {crystals} crystals left")
-        print(f"Your current characters: {user['character']}")
-        print(f"you used {star_counter} stars")
+        print(f"Your current characters: {user['characters']}")
+        print(f"you used {user['stars']} stars")
 
         # subtract 1600 crystals
         #if not enough, go to do mission
