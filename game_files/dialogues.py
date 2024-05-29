@@ -90,9 +90,9 @@ class dialogues_story():
                     "Asahi: Sure.", 
                     "As Asahi translates the scroll for you, his face begins to darken.", 
                     "Asahi: It seems that your next destination in Taiyo.", 
-                    "Asahi: I'm afraid you would need to go to Taiyo with Mael.", 
+                    "Asahi: I'm afraid you would need to go to Taiyo with Mael again.", 
                     "Mael: Alright.", 
-                    "Asahi: It's complicated.", 
+                    "Asahi: It's complicated. Sorry for staying behind twice.", 
                     "Asahi: Sure.", 
                     "Mael: Should we head out now?", 
                     "Asahi: Bye.", 
@@ -100,17 +100,17 @@ class dialogues_story():
                     "Mael: We've arrived.", 
                     "Mael: The planet of Nihility.", 
                     "Moving around, you see that the planet is more developed than the other planets you have encountered.", 
-                    "You see shrines, townhouses, walls, statues, and other larege monuments in the distance.", 
+                    "You see shrines, townhouses, walls, statues, and other large monuments in the distance.", 
                     "Soon, you arrive at the center of the town, and you are stopped by the guards.", 
                     "Mael: Are you alright?", 
                     "Unknown: Are you guys alright?", 
                     "Looking up, you see Asahi in a spaceship.", 
                     "Together you guys defeat the queen of the planet. And a stone falls on the ground.", 
-                    "It's redish hue, similar to that of blood, shines in the sun.", 
-                    "You contemplate whether or not to pick it up or not...", 
-                    "You choose to pick up the stone, and as you go to pick it up, the stone glows. A shadow appears, and you look up, seeing your sibling. (Happy Ending)", 
-                    "You choose to leave the stone alone, and go back to the spaceship empty handed. Still, looking around you see your new friends and find peace in that.", 
-                    "You hope that one day you will be able to fiund your sibling, but for now you are content with your current situation. (Legacy Ending)"]
+                    "It's reddish hue, similar to that of blood, shines in the sun.", 
+                    "You contemplate whether or not to pick it up or not, as its 2,000 aura unsettles you..", 
+                    "You choose to pick up the stone, and as you go to pick it up, the stone glows. A shadow appears, and you look up. You see your sibling. (Happy Reunion Ending)", 
+                    "You choose to leave the stone alone, unaware of it's dangers, and go back to the spaceship empty handed. Still, looking around you see your new friends and find peace in that.", 
+                    "You hope that one day you will be able to find your sibling, but for now you are content with your current situation. (Legacy Ending)"]
         print(dialogue[x])
 
 class dialogues_quest():
@@ -139,7 +139,7 @@ class dialogues_player():
     def space_station(x):
         dialogue = ["You: I think I'm fine. Who are you?",
                     "You: Did you see anyone else?",
-                    "You: I think I've been separated from my sibling.",
+                    "You: I believe me and my sibling were separated before you found me.",
                     "You: Then...",
                     "You: Okay, thanks for helping me.",
                     "You: [a] Yeah, but they seem dangerous. [b] Let me at them", #X8
@@ -165,8 +165,8 @@ class dialogues_player():
                     "You: ..."]
         print(dialogue[x])
     def pero(x):
-        dialogue = ["You: Well we've already come this far, and my sibling means a lot to me.",
-                    "You: [a] ..Why not? [b] Bailing out already?", #x4
+        dialogue = ["You: Well we've already come this far, and I can't leave my sibling behind.",
+                    "You: [a] ..Why not? [b] Is something wrong?", #x4
                     "You: Who?", #X6
                     "You: [a] Hi...? [b] HI!!!!!!!!!!!!!!", #X9
                     "You: Oh my god", #x20
@@ -177,12 +177,12 @@ class dialogues_player():
         dialogue = ["You: We're finally back..", #after x0
                     "You: [a] Well. It was something for sure. [b] I found booty again", #x3
                     "You: Could you take a look at this? We found it in Pero.",
-                    "You: Is something wrong?",
-                    "You: You're staying back again?",
+                    "You: Huh? Again?",
+                    "You: It's alright. I understand.",
                     "You: Are you gonna come later on?",
                     "You: Yeah. Let's go.",
                     "You: Soooo.. which planet is this?",
-                    "You: [a] A plane??? [b] omg asahi!!!!!!!!!!!!!!!!!!!!!!!"]
+                    "You: [a] A plane??? [b] omg it's.. Asahi???"]
         print(dialogue[x])
         
 class tutorial():
@@ -190,6 +190,6 @@ class tutorial():
         dialogue = ["Xingxing: Do you like gambling?? Hitting it big??",
                     "Xingxing: Well from completing your missions, tutorials, and winning your battles, you can gain crystals.",
                     "Xingxing: With these crystals, you can convert them to stars. Every 160 crystals is equivalent to one star.",
-                    "Xingxing: Stars can be used to pull for characters. To use your stars, just open the star system, only accessible after a world quest.",
-                    "Xingxing: In the rare occassion that you obtain a character that you already have, you will recieve 80 crystals back",
+                    "Xingxing: Stars can be used to pull for characters. To use your stars, just open the star system! (only accessible after a world quest.)",
+                    "Xingxing: In the rare occassion that you obtain a character that you already have, you will recieve 80 crystals back.",
                     "(No refunds though)"]
