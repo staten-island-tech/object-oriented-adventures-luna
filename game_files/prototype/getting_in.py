@@ -1,10 +1,12 @@
 ## call in the json files and other programs(login and loading screen)
 import json
 import os
+import sys
 
-from classes import login
+sys.path.append("game_files")
 from entry import *
 from rand import *
+from classes import login
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -59,6 +61,7 @@ class prototype():
                 login.signup()
                 os.system("cls")
                 random.load()
+                pass
                                     ##  import prologue
 
 prototype.start()

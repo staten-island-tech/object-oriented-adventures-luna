@@ -13,6 +13,10 @@ class spaceship():
         print("??: Welcome abroad the spaceship! Captain Xingxing, here!")
         random.contin()
         print("Xingxing: Greetings! Is there anything you would like?")
+        for user in users:
+            if user['username'] == username:
+                if len(user['quest']) == 0:
+                    pass                    ## import prologue
         print("[1] Quests")
         for user in users:
             if user['username'] == username:
@@ -38,10 +42,10 @@ class spaceship():
         random.load()
     def quest_story(username):
         for user in users:
-            if user['name'] == username:
+            if user['username'] == username:
                 quests = len(user['quest'])
-        worlds = ["spaceship", "monde", "pero", "taiyo"]
-        print("Quests chosen...")
+        print("Story Quests chosen...")
+        random.contin()
         os.system("cls")
         random.load()
         print("You walk towards the transportation and logistics division to begin your next task.")
@@ -115,13 +119,22 @@ class spaceship():
             print("Lyra: You must have gotten used to coming here...")
             random.contin()
             print("Nodding, you leave the division to wander the large endless spaceship.")
-        if answer == a[1]:
-            pass            # import the battle or story for that quest or mission
         else:
+            print("Wow. You are too weak for this, player!")
+            random.contin()
+            print("Going back to the main lobby...")
+            os.system("cls")
+            random.load()
             spaceship.welcome(username)
+    def daily(username):
+        print("Dailies Chosen...")
+        os.system("cls")
+        random.load()
+        print("You walk towards the holo-reality, a virtual reality simulator on the spaceship used for training.")
+
     def star_system():
         pass
     def team():
         pass
 
-spaceship.welcome("exa")
+spaceship.quest_story("exa")

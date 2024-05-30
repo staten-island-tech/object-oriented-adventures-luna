@@ -1,5 +1,6 @@
 import json
 import os
+import random
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -69,7 +70,6 @@ class battle():
             print(f"HP: {enemy['hp']}")
     def cycle(x):
         a = 0
-        import random
         for character in characters:
             if a == x:
                 print (f"{character['name']} is preparing to attack.")
@@ -111,8 +111,6 @@ class battle():
             os.system("cls")
             battle.attack(attack_stat[0])
     def attack_enemy():
-        import random
-        import os
         a = 0
         for enemy in enemies:
             a += 1
