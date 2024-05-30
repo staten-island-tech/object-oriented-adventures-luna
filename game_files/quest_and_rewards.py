@@ -57,11 +57,11 @@ class quests():                                             #the whole class nee
         if x == "monde":
             enemy = ["Hydro Robot", "Hydro Robot Dog", "Giant Hydro Robot"]
         elif x == "pero":
-            enemy = ["Oblivion Gaurds", "Ice Goblin", "Ice Archer Goblin", ""]
+            enemy = ["Oblivion Gaurds", "Ice Goblin", "Ice Archer Goblin", "Yeti"]
         elif x == "taiyo":
-            enemy = []
+            enemy = ["Trainee Guard", "Guard", "Guard Captain", "Queen of Taiyo"]
         elif x == "spaceship":
-            enemy = []
+            enemy = ["Oblivion Guard", "Oblivion Drone", "General Aeron"]
         elif x == "choose":
             print("Please note that you could only choose the worlds you have already passed.")
             completed = []
@@ -72,13 +72,13 @@ class quests():                                             #the whole class nee
             if y not in completed:
                 pass                                # import error timetraveller
             if y == "monde":
-                enemy = []
+                enemy = ["Hydro Robot"]
             elif y == "pero":
-                enemy = []
+                enemy = ["Oblivion Guard", "Ice Goblin"]
             elif y == "taiyo":
-                enemy = []
+                enemy = ["Trainee Guard"]
             elif y == "spaceship":
-                pass
+                enemy = ["Oblivion Guard"]
     def wave(x, y, z):   # x = wave umber(current) y = what type of battle(not current/normal or boss) z = world(taiyo, etc)
         if y <= 2:
             print(f"Wave {x+1}: {y} Battle")
