@@ -277,7 +277,7 @@ Pero: Minions of the Oblivion and Ice Trolls
     - 3 Battles(same as the other worlds)
     - First Battle: Normal Battle(6 minions/Oblivion Guards and Ice goblins)
     - Second Battle: Normal Battle(3 minions(two waves)/Oblivion orbs and Ice archer goblins)
-    - Third Battle: Boss Battle()
+    - Third Battle: Boss Battle(Yeti)
 
 Taiyo: Guards of Taiyo
 

@@ -3,10 +3,10 @@ import os
 
 class dialogues_story():
     def prologue(x):            # x can't be greater than 3 (lowest number = 0)
-        dialogue = ["You and your sibling are travelers across worlds. Frome time to time, you stop by the space station for supplies. But this time, something big happened....", 
+        dialogue = ["You and your sibling are travelers across worlds. Frome time to time, you stop by the space station for supplies. But this time, something has blocked your path....", 
                     "The Oblivion, a cult who follows the path of destruction, has invaded the space station.", 
                     "You try and stop them in their tracks before they take all the supplies from the space station, but you fail...", 
-                    "You feel your consciousness fade into the void as your kin was abducted, unaware of all that just occurred."]
+                    "You feel your consciousness fade into the void as your sibling was abducted, unaware of all that just occurred."]
         print(dialogue[x])
     def space_station(x):       # x can't be greater than 16
         dialogue = ["Waking up, you see a young man who seems to in his late teens next to you.", 
@@ -67,11 +67,11 @@ class dialogues_story():
                     "Mael: Hi.",
                     "Based off of her short yet simple style of talking, you could tell that",
                     "this is going to be a long trip."
-                    "Soon,the two of you set off on your journey to the new world, Pero.", 
+                    "Soon, the two of you set off on your journey to the new world, Pero.", 
                     "You had learned from Asahi that this is the world that follows the path of Harmony,", 
                     "but right now the planet is in dissarray due to the recent raids from the Oblivion.", 
                     "It seems that after the defeat on the Space Ship, they have went to other planets.", 
-                    "Mael: We're landing.", 
+                    "Mael: We're landing.",  
                     "Mael: ...",
                     "Mael: Watchout!",
                     "Mael: ...",
@@ -82,7 +82,7 @@ class dialogues_story():
                     "With that this journey concludes and you and Mael go back to the ship with the scroll."]
         print(dialogue[x])
     def taiyo(x):
-        dialogue = ["Back at the space ship, you and Mael rush towards Asahi's room to deciper the message.", 
+        dialogue = ["Back at the spaceship, you and Mael rush towards Asahi's room to ask him to deciper the message.", 
                     "Asahi: Oh, hi.", 
                     "Mael: ...", 
                     "Asahi: How was your adventure in Pero?", 
@@ -107,7 +107,7 @@ class dialogues_story():
                     "Looking up, you see Asahi in a spaceship.", 
                     "Together you guys defeat the queen of the planet. And a stone falls on the ground.", 
                     "It's reddish hue, similar to that of blood, shines in the sun.", 
-                    "You contemplate whether or not to pick it up or not, as its 2,000 aura unsettles you..", 
+                    "You contemplate whether or not to pick it up or not, as its 10,000 aura unsettles you..", 
                     "You choose to pick up the stone, and as you go to pick it up, the stone glows. A shadow appears, and you look up. You see your sibling. (Happy Reunion Ending)", 
                     "You choose to leave the stone alone, unaware of it's dangers, and go back to the spaceship empty handed. Still, looking around you see your new friends and find peace in that.", 
                     "You hope that one day you will be able to find your sibling, but for now you are content with your current situation. (Legacy Ending)"]
@@ -171,11 +171,11 @@ class dialogues_player():
                     "You: [a] Hi...? [b] HI!!!!!!!!!!!!!!", #X9
                     "You: Oh my god", #x20
                     "You: [a] Looks like they dropped something. [b] Booty?!", #x21
-                    "You: [a] What can't he do... he seems smart afterall. [b] Nerd"] #x24
+                    "You: [a] What can't he do... he seems smart afterall [b] Nerd behavior"] #x24
         print(dialogue[x])
     def taiyo(x):
         dialogue = ["You: We're finally back..", #after x0
-                    "You: [a] Well. It was something for sure. [b] I found booty again", #x3
+                    "You: [a] Well, It was something for sure. [b] I found some booty for you to see", #x3
                     "You: Could you take a look at this? We found it in Pero.",
                     "You: Huh? Again?",
                     "You: It's alright. I understand.",
