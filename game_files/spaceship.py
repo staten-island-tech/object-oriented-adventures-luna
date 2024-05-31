@@ -60,6 +60,7 @@ class spaceship():
                 print("Amalthea: What does that mean? Please be more specific!")
                 answer = input("")
             if answer == a[0]:
+                os.system()
                 dialogues_quest.amalthea(1)
                 print("You:...")
                 dialogues_quest.amalthea(2)
@@ -77,9 +78,10 @@ class spaceship():
                 print("Lyra: Hmm...what's that? Can you please tell me again?")
                 answer = input("")
             if answer == a[0]:
+                os.system("cls")
                 dialogues_quest.lyra(1)
                 random.contin()
-                print("You: Thank you for allowing this expedition and you too, Lyra.")
+                print("You: You too, Lyra.")
                 random.contin()
                 dialogues_quest.lyra(2)
                 random.contin()
