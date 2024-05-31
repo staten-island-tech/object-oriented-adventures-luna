@@ -1,12 +1,12 @@
 ## call in the json files and other programs(login and loading screen)
 import json
 import os
-import sys
 
-sys.path.append("game_files")
-from entry import *
-from rand import *
-from classes import login
+
+from game_files.entry import *
+from game_files.rand import *
+from game_files.classes.login import *
+
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -27,7 +27,7 @@ class prototype():
             a = input("Is your terminal in full screen now? y/n").lower()
         while a == "y":
             os.system("cls")
-            entry.loading()
+            entry.screen()
             c = input("[A] Continue").upper()
             while c != "A":
                 c = input("").upper()

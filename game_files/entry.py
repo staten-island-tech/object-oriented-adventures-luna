@@ -1,5 +1,5 @@
 class entry():
-    def loading():
+    def screen():
         loading = [                                                                                                                                                 
         "",                                                                                                     
         "=:",                                                                                                                                             
