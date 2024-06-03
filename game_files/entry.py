@@ -1,5 +1,5 @@
 class entry():
-    def loading():
+    def screen():
         loading = [                                                                                                                                                 
         "",                                                                                                     
         "=:",                                                                                                                                             
@@ -63,5 +63,3 @@ class entry():
         ]
         for i in range(57):
             print(loading[i])
-
-entry.loading()

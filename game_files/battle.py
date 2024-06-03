@@ -1,5 +1,6 @@
 import json
 import os
+import random
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -8,7 +9,7 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 
 
-enemies = [{'name': "a", 
+""" enemies = [{'name': "a", 
           'hp': 4500, 
           'attack': 40, 
           'type': "minion"}, 
@@ -30,10 +31,11 @@ characters = [{'name': "c",
                'attack': [250, 750], 
                'element': "d1", 
                'weapon': "d2", 
-               'type': "d3"}]
+               'type': "d3"}] """
 
 class battle():
-    def attack(x):
+    def attack(x, y):
+        enemies = y
         print("Choose an enemy to attack:")
         a = 0
         b = ["A", "B", "C", "D", "E", "F"]
@@ -58,7 +60,8 @@ class battle():
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
-    def ult(x):
+    def ult(x, y):
+        enemies = y
         for enemy in enemies:
             e = enemy['hp']
             f = e
@@ -67,9 +70,10 @@ class battle():
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
-    def cycle(x):
+    def cycle(x, y, z):
+        enemies = y
+        characters = z
         a = 0
-        import random
         for character in characters:
             if a == x:
                 print (f"{character['name']} is preparing to attack.")
@@ -105,14 +109,14 @@ class battle():
         if d == "U":
             import os
             os.system("cls")
-            battle.ult(attack_stat[1])
+            battle.ult(attack_stat[1], enemies)
         elif d == "A":
             import os
             os.system("cls")
-            battle.attack(attack_stat[0])
-    def attack_enemy():
-        import random
-        import os
+            battle.attack(attack_stat[0], enemies)
+    def attack_enemy(y, z):
+        enemies = y
+        characters = z
         a = 0
         for enemy in enemies:
             a += 1
@@ -162,8 +166,8 @@ class battle():
             c = input("Choose a character to add onto the team: ").title()
             for charact in team:
                 if charact == c:
-                    pass
-                                                    #import error clone
+                    print("You already have this character in the team! Please choose another character.")
+                    c = input("Choose a character to add onto the team: ").title()
             d = input("Choose the character to replace(enter the letter in front of it): ").upper()
             a = 0
             for letter in b:

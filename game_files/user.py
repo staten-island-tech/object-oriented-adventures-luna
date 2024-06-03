@@ -72,7 +72,7 @@ with open(r"game_files\classes\json\users.json", "r") as f:
             a = input("Would you like to add a new user? y/n ").lower()
         while a == "n":
             return "thank you for your time."
-    add()
+
 
 
 new_file = "updated.json"
