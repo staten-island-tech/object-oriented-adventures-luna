@@ -1,5 +1,6 @@
 import json
 import os
+from rand import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -79,10 +80,22 @@ class quests():                                             #the whole class nee
                 enemy = []
             elif y == "spaceship":
                 pass
-    def wave(x, y, z):   # x = wave umber(current) y = what type of battle(not current/normal or boss) z = world(taiyo, etc)
-        if y <= 2:
-            print(f"Wave {x+1}: {y} Battle")
+    def wave(x, z):   # x = wave umber(current) z = world(taiyo, etc)
+        a = int(x)
+        c = str(z).lower()
+        if x <= 2:
+            if x <= 1:
+                print(f"Wave {x+1}: Normal Battle")
+            else:
+                print("Wave 3: Boss Battle")
         else:
-            print(f"")
-        a = z.lower() 
+            if c == "taiyo":
+                if x == 3:
+                    print(f"Wave 4: Boss Battle")
+                elif x > 3:
+                    print("Congratulations! Going back to main story...")
+                    random.load()
+            else:
+                print("Congratulations! Going back to main story...")
+                random.load()
 
