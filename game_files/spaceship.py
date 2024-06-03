@@ -7,6 +7,7 @@ sys.path.append('gamefile')
 from rand import *
 from dialogues import *
 import os
+from battle import *
 
 class spaceship():
     def welcome(username):
@@ -137,6 +138,6 @@ class spaceship():
     def star_system():
         pass
     def team():
-        pass
+        
 
 spaceship.quest_story("exa")

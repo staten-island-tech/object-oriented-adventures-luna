@@ -1,11 +1,12 @@
 ## call in the json files and other programs(login and loading screen)
 import json
 import os
+import sys
 
-
-from game_files.entry import *
-from game_files.rand import *
-from game_files.classes.login import *
+sys.path.append("game_files")
+from login import *
+from entry import *
+from rand import random
 
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
@@ -38,6 +39,8 @@ class prototype():
             account = input("")
             d = ["1", "2"]
             while account not in d:
+                os.system("cls")
+                print("Please try again!")
                 print("[1] Sign in")
                 print("[2] Sign up")
                 account = input("")
@@ -46,7 +49,7 @@ class prototype():
                 login.player(username)
                 os.system("cls")
                 print("Welcome back!")
-                os.system("cls")
+                random.contin()
                 random.load()
                 for user in users:
                     if user['name'] == username:
