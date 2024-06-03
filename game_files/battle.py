@@ -9,7 +9,7 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 
 
-""enemies = [{'name': "a", 
+""" enemies = [{'name': "a", 
           'hp': 4500, 
           'attack': 40, 
           'type': "minion"}, 
@@ -31,7 +31,7 @@ characters = [{'name': "c",
                'attack': [250, 750], 
                'element': "d1", 
                'weapon': "d2", 
-               'type': "d3"}]""
+               'type': "d3"}] """
 
 class battle():
     def attack(x, y):
@@ -115,8 +115,8 @@ class battle():
             os.system("cls")
             battle.attack(attack_stat[0], enemies)
     def attack_enemy(y, z):
-        y = enemies
-        z = characters
+        enemies = y
+        characters = z
         a = 0
         for enemy in enemies:
             a += 1
@@ -166,8 +166,8 @@ class battle():
             c = input("Choose a character to add onto the team: ").title()
             for charact in team:
                 if charact == c:
-                    pass
-                                                    #import error clone
+                    print("You already have this character in the team! Please choose another character.")
+                    c = input("Choose a character to add onto the team: ").title()
             d = input("Choose the character to replace(enter the letter in front of it): ").upper()
             a = 0
             for letter in b:

@@ -131,13 +131,13 @@ class spaceship():
             spaceship.welcome(username)
     def daily(username):
         print("Dailies Chosen...")
-        os.system("cls")
+        random.contin()
         random.load()
         print("You walk towards the holo-reality, a virtual reality simulator on the spaceship used for training.")
 
     def star_system():
         pass
-    def team():
-        
+    def team(username):
+        battle.select_character(username)
 
 spaceship.quest_story("exa")
