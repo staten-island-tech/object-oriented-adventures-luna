@@ -1,6 +1,6 @@
 import json
 import os
-from random import *
+from rand import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
