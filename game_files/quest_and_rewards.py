@@ -26,12 +26,8 @@ class quests():                                             #the whole class nee
             f.write(json_string)
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json") 
-    def lose(username):
+    def lose(username, team):
         a = 0
-        for user in users:
-            if user['username'] == username:
-                team = user['team']
-                print(team)
         for character in team:
             if character['hp'] == 0:
                 a += 1
