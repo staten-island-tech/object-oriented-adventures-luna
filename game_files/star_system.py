@@ -28,30 +28,38 @@ class star():
         for user in users: 
             if user['username'] == username:
                 characters = user['characters']
-                print(f"{username} currenlty has these characters: ")
+                print(f"{username} currently has these characters: ")
                 for i in characters:
                     print(i)
 
     
-    def check_dupe_or_append(username, char_name):
+    def check_dupe_or_append(username, char):
         for user in users:
             if user['username'] == username:
-                for character in user['characters']:
-                    if character['name'] == char_name:
-                        user['crystals'] += 80
-                        user['stars'] += 1
-                        os.remove(r"game_files\classes\json\users.json")
-                        os.rename(new_file, r"game_files\classes\json\users.json")
-                        os.system("cls")
-                    else: 
-                        user['characters'].append(character)
-                        user['stars'] += 1
-                        new_file = "updated.json"
-                        with open(new_file, "w") as f:
-                            json_string = json.dumps(users)
-                            f.write(json_string)
-                        os.remove(r"game_files\classes\json\users.json")
-                        os.rename(new_file, r"game_files\classes\json\users.json")
-                        os.system("cls")
+                characters = user['characters']
+        names = []
+        for character in characters:
+            names.append(character['name'])
+        if char['name'] in names:
+            user['crystals'] += 80
+            user['stars'] += 1
+            new_file = "updated.json"
+            with open(new_file, "w") as f:
+                json_string = json.dumps(users)
+                f.write(json_string)
+            os.remove(r"game_files\classes\json\users.json")
+            os.rename(new_file, r"game_files\classes\json\users.json")
+            os.system("cls")
+            return
+        else: 
+            user['characters'].append(char)
+            user['stars'] += 1
+            new_file = "updated.json"
+            with open(new_file, "w") as f:
+                json_string = json.dumps(users)
+                f.write(json_string)
+            os.remove(r"game_files\classes\json\users.json")
+            os.rename(new_file, r"game_files\classes\json\users.json")
+            os.system("cls")
 
 star.check_dupe_or_append("ex",char)
