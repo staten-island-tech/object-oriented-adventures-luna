@@ -1,6 +1,6 @@
 import json
 import os
-from random import *
+from rand import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -90,8 +90,8 @@ class quests():                                             #the whole class nee
                     print(f"Wave 4: Boss Battle")
                 elif x > 3:
                     print("Congratulations! Going back to main story...")
-                    random.load()
+                    rand.load()
             else:
                 print("Congratulations! Going back to main story...")
-                random.load()
+                rand.load()
 
