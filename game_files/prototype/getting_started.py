@@ -113,7 +113,7 @@ class prologue():
         b = []
         for character in team:
             a.append(character['hp'])
-        for en in enemy_team:
+        for en in enemy_team1:
             b.append(en['hp'])
         ally_hp = sum(a)
         enemy_hp = sum(b)
@@ -185,4 +185,9 @@ class prologue():
             if en['name'] == "Oblivion Guard":
                 for i in range(3):
                     enemy_team.append(en)
-            elif en['name'] == 
+            elif en['name'] == "Oblivion Orb":
+                for i in range(2):
+                    enemy_team.append(en)
+        wave = 0
+        while wave != 3:
+            pass
