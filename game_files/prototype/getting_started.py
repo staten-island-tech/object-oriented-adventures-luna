@@ -167,3 +167,5 @@ class prologue():
             answer = input("").lower()
         random.contin()
         print("Getting ready for battle...")
+
+prologue.start('exa')
