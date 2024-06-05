@@ -3,7 +3,7 @@ import os
 import sys
 
 sys.path.append("game_files")
-from rand import random
+from rand import *
 from dialogues import *
 from battle import *
 from quest_and_rewards import *
@@ -47,47 +47,47 @@ class prologue():
         os.rename(new_file, r"game_files\classes\json\users.json")
         os.system("cls")
         print("Starting story now...")
-        random.contin()
-        random.load()
+        rand.contin()
+        rand.load()
     def newbeginnings():
         x = 0
         for i in range(4):
             dialogues_story.prologue(x)
             x += 1
-            random.contin()
-        random.load()
+            rand.contin()
+        rand.load()
     def path(username):
         x = 0
         for i in range(3):
             dialogues_story.space_station(x)
             x += 1
-            random.contin()
+            rand.contin()
         dialogues_player.space_station(0)
-        random.contin()
+        rand.contin()
         dialogues_story.space_station(3)
-        random.contin()
+        rand.contin()
         dialogues_player.space_station(1)
-        random.contin()
+        rand.contin()
         dialogues_story.space_station(4)
-        random.contin()
+        rand.contin()
         dialogues_player.space_station(2)
-        random.contin()
+        rand.contin()
         dialogues_story.space_station(5)
-        random.contin()
+        rand.contin()
         dialogues_player.space_station(3)
-        random.contin()
+        rand.contin()
         dialogues_story.space_station(6)
-        random.contin()
+        rand.contin()
         dialogues_player.space_station(4)
-        random.contin()
+        rand.contin()
         dialogues_story.space_station(7)
-        random.contin()
+        rand.contin()
         print("Before you begin this battle, you will first get someone to help you on this journey.")
         x = 0
         for i in range(2):
             dialogues_story.getting_asahi(x)
             x += 1
-            random.contin()
+            rand.contin()
         for user in users:
             if user['username'] == username:
                 c = user['characters']
@@ -142,30 +142,43 @@ class prologue():
         if ally_hp != 0:
             quests.lose(username, team)
             prologue.path(username)
+        rewards = 3
+        for user in users:
+            if user['username'] == username:
+                crystals = user['crystals']
+                add = crystals + rewards
+                print(f"{username} now has {add} crystals")
+                user['crystals'] = add
+        new_file = "updated.json"
+        with open(new_file, "w") as f:
+            json_string = json.dumps(users)
+            f.write(json_string)
+        os.remove(r"game_files\classes\json\users.json")
+        os.rename(new_file, r"game_files\classes\json\users.json") 
         dialogues_story.space_station(8)
-        random.contin()
+        rand.contin()
         dialogues_player.space_station(5)
         answer = input("").lower()
         hi = ["a", "b"]
         while answer not in hi:
             print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-            random.contin()
+            rand.contin()
             print("You try and think of another response.")
             dialogues_player.space_station(5)
             answer = input("").lower()
-        random.contin()
+        rand.contin()
         dialogues_story.space_station(9)
-        random.contin()
+        rand.contin()
         dialogues_player.space_station(6)
         answer = input("").lower()
         hi = ["a", "b"]
         while answer not in hi:
             print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-            random.contin()
+            rand.contin()
             print("You try and think of another response.")
             dialogues_player.space_station(6)
             answer = input("").lower()
-        random.contin()
+        rand.contin()
         print("Getting ready for battle...")
 
 prologue.start('exa')

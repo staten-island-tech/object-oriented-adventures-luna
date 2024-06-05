@@ -5,7 +5,7 @@ with open (r"game_files\classes\json\users.json", "r") as hi :
   users = json.load(hi)
 
 
-class random():
+class rand():
   def contin():
     c = input("[A] Continue").upper()
     while c != "A":
