@@ -17,11 +17,8 @@ with open (r"game_files\classes\json\users.json", "r") as hi:
 
 
 class star():
-    with open (r"game_files\classes\json\entities.json", "r") as bye :
-        entities = json.load(bye)
-    with open (r"game_files\classes\json\users.json", "r") as hi:
-        users = json.load(hi)
     k = 15
+
     def view_characters(username):
         a = 0
         for user in users:
@@ -41,7 +38,6 @@ class star():
                     i['crystals'] += 80
                     i['stars'] += 1
                 else:
-                    del i['characters']
                     i['characters'].append(character)
                     i['stars'] += 1
                     new_file = "updated.json"

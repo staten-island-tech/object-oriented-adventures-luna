@@ -4,7 +4,7 @@
         "password": "123",
         "type": "player",
         "crystals": 0,
-        "stars": 867,
+        "stars": 0,
         "characters": [
             {
                 "name": "Amaris",
@@ -53,8 +53,8 @@
         "username": "exa",
         "password": "abc",
         "type": "player",
-        "crystals": 360,
-        "stars": 3,
+        "crystals": 240,
+        "stars": 4,
         "characters": [
             "a",
             "b",
@@ -72,10 +72,22 @@
                 "weapon": "stellar gun",
                 "type": "destruction",
                 "element": "quantum"
+            },
+            {
+                "name": "Amaris",
+                "hp": 0,
+                "attack": [
+                    500,
+                    1500
+                ],
+                "rarity": "*****",
+                "weapon": "stellar gun",
+                "type": "destruction",
+                "element": "quantum"
             }
         ],
         "team": [
-            "A",
+            "Amaris",
             "C",
             "",
             ""
