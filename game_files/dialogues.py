@@ -30,7 +30,7 @@ class dialogues_story():
     def getting_asahi(x):
         dialogue = ["You got Asahi!!!!!",
                     "He is now added to your party."]
-        print (dialogue(x))
+        print(dialogue[x])
     def monde(x):              # x can't be greater than 18
         dialogue = ["Asahi: Are you ready to go?", 
                     "It has already been a few days since you decided to join the Legacy.", 
