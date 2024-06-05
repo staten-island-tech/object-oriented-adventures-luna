@@ -50,7 +50,7 @@ class quests():                                             #the whole class nee
                 f.write(json_string)
             os.remove(r"game_files\classes\json\users.json")
             os.rename(new_file, r"game_files\classes\json\users.json")
-    def enemy(x, username):
+"""     def enemy(x, username):
         if x == "monde":
             enemy = ["Hydro Robot", "Hydro Robot Dog", "Giant Hydro Robot"]
         elif x == "pero":
@@ -75,7 +75,7 @@ class quests():                                             #the whole class nee
             elif y == "taiyo":
                 enemy = ["Trainee Guard"]
             elif y == "spaceship":
-                pass
+                pass """
     def wave(x, z):   # x = wave umber(current) z = world(taiyo, etc)
         a = int(x)
         c = str(z).lower()
