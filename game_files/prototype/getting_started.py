@@ -46,7 +46,7 @@ class prologue():
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json")
         os.system("cls")
-        print("Starting story now...)
+        print("Starting story now...")
         random.contin()
         random.load()
     def newbeginnings():
@@ -54,40 +54,40 @@ class prologue():
         for i in range(4):
             dialogues_story.prologue(x)
             x += 1
-            rand.contin()
+            random.contin()
         random.load()
     def path(username):
         x = 0
         for i in range(3):
             dialogues_story.space_station(x)
             x += 1
-            rand.contin()
+            random.contin()
         dialogues_player.space_station(0)
-        rand.contin()
+        random.contin()
         dialogues_story.space_station(3)
-        rand.contin()
+        random.contin()
         dialogues_player.space_station(1)
-        rand.contin()
+        random.contin()
         dialogues_story.space_station(4)
-        rand.contin()
+        random.contin()
         dialogues_player.space_station(2)
-        rand.contin()
+        random.contin()
         dialogues_story.space_station(5)
-        rand.contin()
+        random.contin()
         dialogues_player.space_station(3)
-        rand.contin()
+        random.contin()
         dialogues_story.space_station(6)
-        rand.contin()
+        random.contin()
         dialogues_player.space_station(4)
-        rand.contin()
+        random.contin()
         dialogues_story.space_station(7)
-        rand.contin()
+        random.contin()
         print("Before you begin this battle, you will first get someone to help you on this journey.")
         x = 0
         for i in range(2):
             dialogues_story.getting_asahi(x)
             x += 1
-            rand.contin()
+            random.contin()
         for user in users:
             if user['username'] == username:
                 c = user['characters']
@@ -118,19 +118,18 @@ class prologue():
         ally_hp = sum(a)
         enemy_hp = sum(b)
         y = 0
-        t = 1
         l = len(team_name)
         enemy_team = []
-        for en im enemy_team1:
+        for en in enemy_team1:
             if en['name'] == "Oblivion Guards":
-                for i in range(3)
+                for i in range(3):
                     enemy_team.append(en)
         while ally_hp != 0 and enemy_hp != 0:
             z = team_name[y]
             battle.cycle(z,enemy_team, team)
             b = []
             for en in enemy_team:
-                b.append(en['hp])
+                b.append(en['hp'])
             battle.attack_enemy(enemy_team, team)
             a = []
             for character in team:
@@ -141,8 +140,8 @@ class prologue():
             if y > l - 1:
                 y = 0
         if ally_hp != 0:
-            quest_and_rewards.lose(username, team)
-            path(username)
+            quests.lose(username, team)
+            prologue.path(username)
         dialogues_story.space_station(8)
         random.contin()
         dialogues_player.space_station(5)
