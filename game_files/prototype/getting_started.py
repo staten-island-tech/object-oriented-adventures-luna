@@ -180,10 +180,6 @@ class prologue():
             answer = input("").lower()
         rand.contin()
         print("Getting ready for battle...")
-<<<<<<< HEAD
-
-prologue.path('exa')
-=======
         enemy_team = []
         for en in enemy_team1:
             if en['name'] == "Oblivion Guard":
@@ -195,4 +191,5 @@ prologue.path('exa')
         wave = 0
         while wave != 3:
             pass
->>>>>>> main
+
+prologue.path('exa')
