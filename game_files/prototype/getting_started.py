@@ -181,4 +181,4 @@ class prologue():
         rand.contin()
         print("Getting ready for battle...")
 
-prologue.start('exa')
+prologue.path('exa')
