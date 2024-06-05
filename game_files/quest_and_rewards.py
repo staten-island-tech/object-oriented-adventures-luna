@@ -50,6 +50,25 @@ class quests():                                             #the whole class nee
                 f.write(json_string)
             os.remove(r"game_files\classes\json\users.json")
             os.rename(new_file, r"game_files\classes\json\users.json")
+    def wave(x, z):   # x = wave umber(current) z = world(taiyo, etc)
+        a = int(x)
+        c = str(z).lower()
+        if x <= 2:
+            if a <= 1:
+                print(f"Wave {a+1}: Normal Battle")
+            else:
+                print("Wave 3: Boss Battle")
+        else:
+            if c == "taiyo":
+                if a == 3:
+                    print(f"Wave 4: Boss Battle")
+                elif a > 3:
+                    print("Congratulations! Going back to main story...")
+                    rand.load()
+            else:
+                print("Congratulations! Going back to main story...")
+                rand.load()
+
 """     def enemy(x, username):
         if x == "monde":
             enemy = ["Hydro Robot", "Hydro Robot Dog", "Giant Hydro Robot"]
@@ -76,22 +95,3 @@ class quests():                                             #the whole class nee
                 enemy = ["Trainee Guard"]
             elif y == "spaceship":
                 pass """
-    def wave(x, z):   # x = wave umber(current) z = world(taiyo, etc)
-        a = int(x)
-        c = str(z).lower()
-        if x <= 2:
-            if x <= 1:
-                print(f"Wave {x+1}: Normal Battle")
-            else:
-                print("Wave 3: Boss Battle")
-        else:
-            if c == "taiyo":
-                if x == 3:
-                    print(f"Wave 4: Boss Battle")
-                elif x > 3:
-                    print("Congratulations! Going back to main story...")
-                    rand.load()
-            else:
-                print("Congratulations! Going back to main story...")
-                rand.load()
-
