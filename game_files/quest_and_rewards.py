@@ -26,12 +26,8 @@ class quests():                                             #the whole class nee
             f.write(json_string)
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json") 
-    def lose(username):
+    def lose(username, team):
         a = 0
-        for user in users:
-            if user['username'] == username:
-                team = user['team']
-                print(team)
         for character in team:
             if character['hp'] == 0:
                 a += 1
@@ -44,17 +40,36 @@ class quests():                                             #the whole class nee
             a.append(enemy['hp'])
         if sum(a) == 0:
             print(f"{username}, you have passed this hurdle. May your journey be rich in prosperity and sopistication.")
-        for user in users:
-            if user['username'] == username:
-                c = user['quest']
-                c.append(quest)
-        new_file = "updated.json"
-        with open(new_file, "w") as f:
-            json_string = json.dumps(users)
-            f.write(json_string)
-        os.remove(r"game_files\classes\json\users.json")
-        os.rename(new_file, r"game_files\classes\json\users.json")
-    def enemy(x, username):
+            for user in users:
+                if user['username'] == username:
+                    c = user['quest']
+                    c.append(quest)
+            new_file = "updated.json"
+            with open(new_file, "w") as f:
+                json_string = json.dumps(users)
+                f.write(json_string)
+            os.remove(r"game_files\classes\json\users.json")
+            os.rename(new_file, r"game_files\classes\json\users.json")
+    def wave(x, z):   # x = wave umber(current) z = world(taiyo, etc)
+        a = int(x)
+        c = str(z).lower()
+        if x <= 2:
+            if a <= 1:
+                print(f"Wave {a+1}: Normal Battle")
+            else:
+                print("Wave 3: Boss Battle")
+        else:
+            if c == "taiyo":
+                if a == 3:
+                    print(f"Wave 4: Boss Battle")
+                elif a > 3:
+                    print("Congratulations! Going back to main story...")
+                    rand.load()
+            else:
+                print("Congratulations! Going back to main story...")
+                rand.load()
+
+"""     def enemy(x, username):
         if x == "monde":
             enemy = ["Hydro Robot", "Hydro Robot Dog", "Giant Hydro Robot"]
         elif x == "pero":
@@ -79,23 +94,4 @@ class quests():                                             #the whole class nee
             elif y == "taiyo":
                 enemy = ["Trainee Guard"]
             elif y == "spaceship":
-                pass
-    def wave(x, z):   # x = wave umber(current) z = world(taiyo, etc)
-        a = int(x)
-        c = str(z).lower()
-        if x <= 2:
-            if x <= 1:
-                print(f"Wave {x+1}: Normal Battle")
-            else:
-                print("Wave 3: Boss Battle")
-        else:
-            if c == "taiyo":
-                if x == 3:
-                    print(f"Wave 4: Boss Battle")
-                elif x > 3:
-                    print("Congratulations! Going back to main story...")
-                    random.load()
-            else:
-                print("Congratulations! Going back to main story...")
-                random.load()
-
+                pass """
