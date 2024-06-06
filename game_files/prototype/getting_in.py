@@ -3,11 +3,13 @@ import json
 import os
 import sys
 
+from getting_started import *
+
 sys.path.append("game_files")
 from login import *
 from entry import *
 from rand import *
-
+from spaceship import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -55,16 +57,17 @@ class prototype():
                     if user['name'] == username:
                         data = len(user['quest'])
                 if data == 0:
-                    pass                     ## import prologue and spaceship/tutorial battles
+                    prologue.start(username)
+                    prologue.newbeginnings()
+                    prologue.path(username)
                 else:
                     print("Transporting back to spaceship...")
                     rand.contin()
-                    pass                   ## import spaceship code
+                    spaceship.welcome(username)
             if account == "2":
                 login.signup()
                 os.system("cls")
                 rand.load()
-                pass
-                                    ##  import prologue
-
-prototype.start()
+                prologue.start(username)
+                prologue.newbeginnings()
+                prologue.path(username)
