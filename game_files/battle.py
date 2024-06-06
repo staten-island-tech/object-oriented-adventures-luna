@@ -80,7 +80,9 @@ class battle():
                 print( )
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
-                attack_stat = character['attack']
+                attack_stat = []
+                for att in character['attack']:
+                    attack_stat.append(att)
                 print(f"Attack: {attack_stat[0]}")
                 print( )
             a += 1
