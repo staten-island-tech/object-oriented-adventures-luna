@@ -111,8 +111,6 @@ class prologue():
         b = []
         for character in team:
             a.append(character['hp'])
-        for en in enemy_team1:
-            b.append(en['hp'])
         ally_hp = sum(a)
         enemy_hp = sum(b)
         y = 0
@@ -123,6 +121,8 @@ class prologue():
             if enemy['name'] == "Oblivion Guard":
                 for i in range(3):
                     enemy_team.append(en)
+        for enemy in enemy_team:
+            b.append(enemy['hp']
         while ally_hp <= 0 and enemy_hp <= 0:
             battle.cycle(z, enemy_team, team)
             b = []
