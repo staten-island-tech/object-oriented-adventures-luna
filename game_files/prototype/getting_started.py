@@ -28,17 +28,13 @@ class prologue():
         if a == b[0]:
             for user in users:
                 if user['username'] == username:
-                    c = user['characters']
-                    c.append("Aelius")
-                    d = user['team']
-                    d.append("Aelius")
+                    user['characters'].append("Aelius")
+                    user['team'].append("Aelius")
         elif a == b[1]:
             for user in users:
                 if user['username'] == username:
-                    c = user['characters']
-                    c.append("Amaris")
-                    d = user['team']
-                    d.append("Aelius")
+                    user['characters'].append("Amaris")
+                    user['team'].append("Amaris")
         new_file = "updated.json"
         with open(new_file, "w") as f:
             json_string = json.dumps(users)
