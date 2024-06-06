@@ -87,7 +87,7 @@ class prologue():
             rand.contin()
         for user in users:
             if user['username'] == username:
-                if 'Asahi' in user['character']:
+                if 'Asahi' in user['characters']:
                     pass
                 else:
                     c = user['characters']
@@ -118,7 +118,7 @@ class prologue():
         z = team[y]
         l = len(team)
         enemy_team = []
-        for enemy in entity:
+        for enemy in entities:
             if enemy['name'] == "Oblivion Guard":
                 for i in range(3):
                     enemy_team.append(en)
@@ -187,7 +187,7 @@ class prologue():
         while wave != 2:
             quests.wave(wave, 0)
             enemy_team = []
-            for enemy in entity:
+            for enemy in entities:
                 if enemy['name'] == "Oblivion Guard":
                     for i in range(3):
                         enemy_team.append(en)
@@ -233,7 +233,7 @@ class prologue():
             wave = 0
             quests.wave(wave, 0)
             enemy_team = []
-            for enemy in entity:
+            for enemy in entities:
                 if enemy['name'] == "Oblivion Drones":
                     for i in range(2):
                         enemy_team.append(en)
@@ -273,7 +273,7 @@ class prologue():
             wave += 1
             quests.wave(wave, 1)
             enemy_team = []
-            for enemy in entity:
+            for enemy in entities:
                 if enemy['name'] == "General Aeron":
                     enemy_team.append(en)
             for enemy in enemy_team:
@@ -366,6 +366,7 @@ class prologue():
                     add = crystals + rewards
                     print(f"{username} now has {add} crystals")
                     user['crystals'] = add
+                    user['quest'].append("space_station")
             new_file = "updated.json"
             with open(new_file, "w") as f:
                 json_string = json.dumps(users)
