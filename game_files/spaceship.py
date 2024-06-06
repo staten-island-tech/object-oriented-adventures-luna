@@ -3,11 +3,12 @@ with open (r"game_files\classes\json\users.json", "r") as hi :
     users = json.load(hi)
 
 import sys
+import os
 sys.path.append('gamefile')
 from rand import *
 from dialogues import *
-import os
 from battle import *
+from prototype import getting_started
 
 class spaceship():
     def welcome(username):
