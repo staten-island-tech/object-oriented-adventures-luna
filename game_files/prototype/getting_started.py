@@ -123,7 +123,7 @@ class prologue():
             if en['name'] == "Oblivion Guard":
                 for i in range(3):
                     enemy_team.append(en)
-        while ally_hp != 0 and enemy_hp != 0:
+        while ally_hp <= 0 and enemy_hp <= 0:
             z = team[y]
             battle.cycle(z, enemy_team, team)
             b = []
@@ -138,7 +138,7 @@ class prologue():
             y += 1
             if y > l - 1:
                 y = 0
-        if ally_hp != 0:
+        if ally_hp <= 0:
             quests.lose(username, team)
             prologue.path(username)
         rewards = 3
@@ -191,7 +191,7 @@ class prologue():
                 elif en['name'] == "Oblivion Drones":
                     for i in range(2):
                         enemy_team.append(en)
-            while ally_hp != 0 and enemy_hp != 0:
+            while ally_hp <= 0 and enemy_hp <= 0:
                 z = team[y]
             battle.cycle(z,enemy_team, team)
             b = []
@@ -206,7 +206,7 @@ class prologue():
             y += 1
             if y > l - 1:
                 y = 0
-            if ally_hp != 0:
+            if ally_hp <= 0:
                 quests.lose(username, team)
                 prologue.path(username)
             else:
