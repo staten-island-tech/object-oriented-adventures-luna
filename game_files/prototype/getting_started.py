@@ -188,7 +188,7 @@ class prologue():
         wave = 0
         while wave != 3:
             while ally_hp != 0 and enemy_hp != 0:
-            z = team_name[y]
+                z = team_name[y]
             battle.cycle(z,enemy_team, team)
             b = []
             for en in enemy_team:
@@ -208,8 +208,8 @@ class prologue():
             else:
                 reward = 7
                 for user in users:
-                if user['username'] == username:
-                    crystals = user['crystals']
+                    if user['username'] == username:
+                        crystals = user['crystals']
                     add = crystals + rewards
                     print(f"{username} now has {add} crystals")
                     user['crystals'] = add
@@ -219,3 +219,5 @@ class prologue():
                 f.write(json_string)
             os.remove(r"game_files\classes\json\users.json")
             os.rename(new_file, r"game_files\classes\json\users.json") 
+            
+prologue.path('exa')
