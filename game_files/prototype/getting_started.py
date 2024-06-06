@@ -87,7 +87,7 @@ class prologue():
             rand.contin()
         for user in users:
             if user['username'] == username:
-                if 'Asahi' in user['character']:
+                if 'Asahi' in user['characters']:
                     pass
                 else:
                     c = user['characters']
