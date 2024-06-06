@@ -1,10 +1,10 @@
 [
     {
-        "username": "ex",
+        "username": "bob",
         "password": "123",
         "type": "player",
-        "crystals": 0,
-        "stars": 0,
+        "crystals": 400,
+        "stars": 80,
         "characters": [
             {
                 "name": "Amaris",
@@ -16,6 +16,102 @@
                 "rarity": "*****",
                 "weapon": "stellar gun",
                 "type": "destruction",
+                "element": "quantum"
+            },
+            {
+                "name": "Aelius",
+                "hp": 5000,
+                "attack": [
+                    500,
+                    1500
+                ],
+                "rarity": "*****",
+                "weapon": "stellar gun",
+                "type": "destruction",
+                "element": "imaginary"
+            },
+            {
+                "name": "Aleksandr",
+                "hp": 5000,
+                "attack": [
+                    500,
+                    1500
+                ],
+                "rarity": "*****",
+                "weapon": "glaive",
+                "type": "erudition",
+                "element": "physical"
+            },
+            {
+                "name": "Igor",
+                "hp": 5000,
+                "attack": [
+                    250,
+                    750
+                ],
+                "rarity": "****",
+                "weapon": "gun",
+                "type": "abundance",
+                "element": "fire"
+            },
+            {
+                "name": "Celine",
+                "hp": 5000,
+                "attack": [
+                    250,
+                    750
+                ],
+                "rarity": "****",
+                "weapon": "bow and arrow",
+                "type": "nihility",
+                "element": "ice"
+            },
+            {
+                "name": "Asahi",
+                "hp": 5000,
+                "attack": [
+                    250,
+                    750
+                ],
+                "rarity": "****",
+                "weapon": "greatsword",
+                "type": "preservation",
+                "element": "imaginary"
+            },
+            {
+                "name": "Sirius",
+                "hp": 5000,
+                "attack": [
+                    500,
+                    1500
+                ],
+                "rarity": "*****",
+                "weapon": "scythe",
+                "type": "harmony",
+                "element": "quantum"
+            },
+            {
+                "name": "Innessa",
+                "hp": 5000,
+                "attack": [
+                    250,
+                    750
+                ],
+                "rarity": "****",
+                "weapon": "rifle",
+                "type": "preservation",
+                "element": "ice"
+            },
+            {
+                "name": "Himari",
+                "hp": 5000,
+                "attack": [
+                    250,
+                    750
+                ],
+                "rarity": "****",
+                "weapon": "polearm",
+                "type": "hunt",
                 "element": "quantum"
             }
         ],
@@ -53,16 +149,11 @@
         "username": "exa",
         "password": "abc",
         "type": "player",
-        "crystals": 240,
-        "stars": 4,
+        "crystals": 0,
+        "stars": 1,
         "characters": [
-            "a",
-            "b",
-            "c",
-            "d",
-            "e",
             {
-                "name": "Amaris",
+                "name": "Aelius",
                 "hp": 0,
                 "attack": [
                     500,
@@ -71,7 +162,7 @@
                 "rarity": "*****",
                 "weapon": "stellar gun",
                 "type": "destruction",
-                "element": "quantum"
+                "element": "imaginary"
             },
             {
                 "name": "Amaris",
