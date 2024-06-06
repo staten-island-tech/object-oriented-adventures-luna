@@ -17,12 +17,12 @@ class base_functions():         # ***DONT IMPORT OR USE THIS IN OTHER FILES, ONL
                 characters = user['characters']
                 names = []
                 for character in characters:
-                    names.append(character['name'])
+                    names.append(character)
                 if char['name'] in names:
                     user['crystals'] += 80
                     user['stars'] += 1
                 else: 
-                    characters.append(char)
+                    characters.append(char['name'])
                     user['stars'] += 1
         new_file = "updated.json"
         with open(new_file, "w") as f:
