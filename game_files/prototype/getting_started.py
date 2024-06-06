@@ -123,7 +123,7 @@ class prologue():
             if en['name'] == "Oblivion Guard":
                 for i in range(3):
                     enemy_team.append(en)
-        while ally_hp != 0 and enemy_hp != 0:
+        while ally_hp <= 0 and enemy_hp <= 0:
             z = team[y]
             battle.cycle(z, enemy_team, team)
             b = []
@@ -191,7 +191,7 @@ class prologue():
                 elif en['name'] == "Oblivion Drones":
                     for i in range(2):
                         enemy_team.append(en)
-            while ally_hp != 0 and enemy_hp != 0:
+            while ally_hp <= 0 and enemy_hp <= 0:
                 z = team[y]
             battle.cycle(z,enemy_team, team)
             b = []
