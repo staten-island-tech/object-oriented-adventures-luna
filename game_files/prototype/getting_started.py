@@ -228,6 +228,7 @@ class prologue():
                         f.write(json_string)
                     os.remove(r"game_files\classes\json\users.json")
                     os.rename(new_file, r"game_files\classes\json\users.json") 
+                    print("You've gained 7 crystals")
                     wave += 1
             print("You look around to see that there are no more monsters. As you let your guard down you see a shadow behind you.")
             rand.contin()
@@ -273,6 +274,7 @@ class prologue():
                     f.write(json_string)
                 os.remove(r"game_files\classes\json\users.json")
                 os.rename(new_file, r"game_files\classes\json\users.json") 
+                print("You've gained 7 crystals")
             wave += 1
             quests.wave(wave, 1)
             enemy_team = []
@@ -314,6 +316,7 @@ class prologue():
                     f.write(json_string)
                 os.remove(r"game_files\classes\json\users.json")
                 os.rename(new_file, r"game_files\classes\json\users.json")
+                print("You've gained 40 crystals")
             rand.contin()
             dialogues_story.space_station(10)
             rand.contin()
@@ -378,6 +381,7 @@ class prologue():
                 f.write(json_string)
             os.remove(r"game_files\classes\json\users.json")
             os.rename(new_file, r"game_files\classes\json\users.json")
+            print("You've gained 1600 crystals")
             rand.contin()
             print("Going to spaceship...")
             rand.load()
