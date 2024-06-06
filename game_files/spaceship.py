@@ -84,11 +84,6 @@ class spaceship():
                 os.system("cls")
                 dialogues_quest.lyra(1)
                 rand.contin()
-                print("You: You too, Lyra.")
-                rand.contin()
-                dialogues_quest.lyra(2)
-                rand.contin()
-                dialogues_quest.transition(1)
                 rand.load()
             if answer == a[1]:
                 print("Lyra: Alright. Enjoy your time exploring the spaceship then new recruit!")
