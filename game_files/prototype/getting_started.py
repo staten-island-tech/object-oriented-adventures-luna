@@ -177,16 +177,17 @@ class prologue():
             answer = input("").lower()
         rand.contin()
         print("Getting ready for battle...")
-        enemy_team = []
-        for en in enemy_team1:
-            if en['name'] == "Oblivion Guard":
-                for i in range(3):
-                    enemy_team.append(en)
-            elif en['name'] == "Oblivion Orb":
-                for i in range(2):
-                    enemy_team.append(en)
         wave = 0
-        while wave != 3:
+        while wave != 2:
+            quests.wave(wave, 'spaceship')
+            enemy_team = []
+            for en in enemy_team1:
+                if en['name'] == "Oblivion Guard":
+                    for i in range(3):
+                        enemy_team.append(en)
+                elif en['name'] == "Oblivion Orb":
+                    for i in range(2):
+                        enemy_team.append(en)
             while ally_hp != 0 and enemy_hp != 0:
             z = team_name[y]
             battle.cycle(z,enemy_team, team)
@@ -219,3 +220,6 @@ class prologue():
                 f.write(json_string)
             os.remove(r"game_files\classes\json\users.json")
             os.rename(new_file, r"game_files\classes\json\users.json") 
+            wave += 1
+        
+    
