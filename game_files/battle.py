@@ -74,7 +74,7 @@ class battle():
         enemies = y
         characters = z
         for character in characters:
-            if character['name'] == x:
+            if character == x:
                 print (f"{character['name']} is preparing to attack.")
                 print( )
                 print(f"Name: {character['name']}")
