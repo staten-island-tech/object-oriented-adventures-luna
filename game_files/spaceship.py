@@ -212,4 +212,3 @@ class spaceship():
             pass
     def team(username):
         battle.select_character(username)
-
