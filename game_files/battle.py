@@ -80,9 +80,7 @@ class battle():
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
                 global attack_stat
-                attack_stat = []
-                for attack in character['attack']:
-                    attack_stat.append(attack)
+                attack_stat = character['attack']
                 print(f"Attack: {attack_stat[0]}")
                 print( )
         for enemy in enemies:
