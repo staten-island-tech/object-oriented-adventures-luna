@@ -256,8 +256,8 @@
     {
         "name": "Oblivion Drones",
         "type": "minion",
-        "hp": 10000,
-        "attack": 200
+        "hp": 4500,
+        "attack": 60
     },
     {
         "name": "General Aeron",
