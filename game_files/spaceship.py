@@ -8,7 +8,6 @@ sys.path.append('gamefile')
 from rand import *
 from dialogues import *
 from battle import *
-from prototype import getting_started
 
 class spaceship():
     def welcome(username):
@@ -18,7 +17,9 @@ class spaceship():
         for user in users:
             if user['username'] == username:
                 if len(user['quest']) == 0:
-                    pass                    ## import prologue
+                    print("You haven't finished your story quest yet!")
+                    rand.load()
+                    pass
         print("[1] Quests")
         for user in users:
             if user['username'] == username:
