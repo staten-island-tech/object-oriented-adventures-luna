@@ -65,7 +65,7 @@ class spaceship():
                 dialogues_quest.amalthea(1)
                 print("You:...")
                 dialogues_quest.amalthea(2)
-                dialogues_quest.transition(1)
+                rand.contin()
                 rand.load()
             if answer == a[1]:
                 print("Amalthea: I see")
@@ -107,7 +107,6 @@ class spaceship():
                 rand.contin()
                 dialogues_quest.astrophel(2)
                 rand.contin()
-                dialogues_quest.transition(1)
                 rand.load()
             if answer == a[1]:
                 print("Astrophel: Oh. Alright! Please enjoy your time on the spaceship then!")
