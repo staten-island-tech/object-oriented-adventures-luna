@@ -104,6 +104,7 @@ class prologue():
                 team.append(entity)
             elif entity['name'] in enemy_name:
                 enemy_team1.append(entity)
+        print(team)
         a = []
         b = []
         for character in team:
