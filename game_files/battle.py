@@ -109,11 +109,11 @@ class battle():
         if d == "U":
             import os
             os.system("cls")
-            return battle.ult(attack[1], enemies)
+            battle.ult(attack[1], y)
         elif d == "A":
             import os
             os.system("cls")
-            return battle.attack(attack[0], enemies)
+            battle.attack(attack[0], y)
     def attack_enemy(y, z):
         enemies = y
         characters = z
