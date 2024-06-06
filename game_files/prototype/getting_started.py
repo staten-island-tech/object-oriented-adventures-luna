@@ -193,19 +193,19 @@ class prologue():
                     for i in range(2):
                         enemy_team.append(en)
             while ally_hp <= 0 and enemy_hp <= 0:
-            battle.cycle(z,enemy_team, team)
-            b = []
-            for en in enemy_team:
+                battle.cycle(z,enemy_team, team)
+                b = []
+                for en in enemy_team:
                 b.append(en['hp'])
-            battle.attack_enemy(enemy_team, team)
-            a = []
-            for character in team:
-                a.append(character['hp'])
-            ally_hp = sum(a)
-            enemy_hp = sum(b)
-            y += 1
-            if y > l - 1:
-                y = 0
+                battle.attack_enemy(enemy_team, team)
+                a = []
+                for character in team:
+                    a.append(character['hp'])
+                ally_hp = sum(a)
+                enemy_hp = sum(b)
+                y += 1
+                if y > l - 1:
+                    y = 0
             if ally_hp <= 0:
                 quests.lose(username, team)
                 prologue.path(username)
