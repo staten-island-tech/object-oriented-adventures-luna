@@ -113,17 +113,17 @@ class prologue():
         for character in team:
             a.append(character['hp'])
         ally_hp = sum(a)
-        enemy_hp = sum(b)
         y = 0
         z = team[y]
         l = len(team)
         enemy_team = []
-        for enemy in entities:
-            if enemy['name'] == "Oblivion Guard":
+        for en in entities:
+            if en['name'] == "Oblivion Guard":
                 for i in range(3):
                     enemy_team.append(en)
         for enemy in enemy_team:
             b.append(enemy['hp'])
+        enemy_hp = sum(b)
         while ally_hp <= 0 and enemy_hp <= 0:
             battle.cycle(z, enemy_team, team)
             b = []
@@ -136,7 +136,7 @@ class prologue():
             ally_hp = sum(a)
             enemy_hp = sum(b)
             y += 1
-            if y > l - 1:
+            if y > (l - 1):
                 y = 0
         if ally_hp <= 0:
             quests.lose(username, team)
@@ -208,7 +208,7 @@ class prologue():
                 ally_hp = sum(a)
                 enemy_hp = sum(b)
                 y += 1
-                if y > l - 1:
+                if y > (l - 1):
                     y = 0
                 if ally_hp <= 0:
                     quests.lose(username, team)
