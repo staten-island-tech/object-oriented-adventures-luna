@@ -8,6 +8,7 @@ sys.path.append('gamefile')
 from rand import *
 from dialogues import *
 from battle import *
+from star_system import starsystem
 
 class spaceship():
     def welcome(username):
@@ -191,8 +192,24 @@ class spaceship():
             print("Adhara: Alright then. Have fun on the spaceship!")
             rand.contin()
             spaceship.welcome(username)
-    def star_system():
-        pass
+    def star_system(username):
+        print("Welcome to the star system - what would you like to do?")
+        print("[1] View your characters")
+        print("[2] Buy 1 star and pull once")
+        print("[3] Buy 10 stars and pull 10 times")
+        answer = input("")
+        z = ["1", "2", "3"]
+        while answer not in z:
+            print("Choose again! You can't just make your own choices!!")
+            answer = input("")
+        if answer == "1":
+            starsystem.view_characters(username)
+        elif answer == "2":
+            starsystem.pull_one(username)
+        elif answer == "3":
+            starsystem.pull_ten(username)
+        else:
+            pass
     def team(username):
         battle.select_character(username)
 
