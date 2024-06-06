@@ -79,9 +79,8 @@ class battle():
                 print( )
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
-                global attack_stat
-                attack_stat = character['attack']
-                print(f"Attack: {attack_stat[0]}")
+                attack = character['attack']
+                print(f"Attack: {attack[0]}")
                 print( )
         for enemy in enemies:
             print (enemy['name'])
@@ -92,7 +91,7 @@ class battle():
         e = 0
         if c in b:
             print("You are able to use your ultimate right now. It will affect all enemies")
-            print(f"Ultimate: {attack_stat[1]}")
+            print(f"Ultimate: {attack[1]}")
             print("[U] Use Ultimate")
             e += 1
         else:
@@ -108,11 +107,11 @@ class battle():
         if d == "U":
             import os
             os.system("cls")
-            battle.ult(attack_stat[1], enemies)
+            return battle.ult(attack[1], enemies)
         elif d == "A":
             import os
             os.system("cls")
-            battle.attack(attack_stat[0], enemies)
+            return battle.attack(attack[0], enemies)
     def attack_enemy(y, z):
         enemies = y
         characters = z
