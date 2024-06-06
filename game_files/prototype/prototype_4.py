@@ -81,12 +81,12 @@ class taiyo():
                     team_hps.append(team_member['hp'])
                 total_ally_hp = sum(team_hps)
                 print("Getting ready for battle...")
-                wave = 1
+                wave = 0
                 y = 0
                 z = team[y]   #first character in ally team
                 l = len(team)    # number of team members - should be 4
-                while wave != 2:
-                    quests.wave(wave,1)
+                while wave < 2:
+                    quests.wave(wave,0)
                     enemy_team = []       #list of the 3 trainee guards (whole dictionary)
                     for enemy in entities:
                         if enemy['name'] == "Trainee Guard":
@@ -117,7 +117,7 @@ class taiyo():
                             quests.lose(username, team)
                             taiyo.path(username)
                         else:
-                            reward = 8
+                            reward = 7
                             add = user['crystals'] + reward
                             user['crystals'] = add
                             print(f"{username} now has {user['crystals']} crystals")
@@ -127,55 +127,222 @@ class taiyo():
                         os.remove(r"game_files\classes\json\users.json")
                         os.rename(new_file, r"game_files\classes\json\users.json")
                     wave += 1
-                    print("You look around to see that there are no more monsters. As you let your guard down you see a shadow behind you.")
                     rand.contin()
                 
-                #second battle
+                #second battle wave 1
                 wave = 0
-                while wave != 3:
-                    quests.wave(wave,3)
-                    enemy_team = []       #list of the 3 trainee guards (whole dictionary)
-                    for enemy in entities:
-                        if enemy['name'] == "Trainee Guard":
-                            x = 1
-                            while x != 3:
-                                enemy_team.append(enemy)
-                                x += 1
-                    enemy_hps = []       # list of the 3 trainee guard' hps
+                quests.wave(wave,1)
+                enemy_team = []       #list of the 3 trainee guards (whole dictionary)
+                for enemy in entities:
+                    if enemy['name'] == "Trainee Guard":
+                        x = 1
+                        while x != 3:
+                            enemy_team.append(enemy)
+                            x += 1
+                enemy_hps = []       # list of the 3 trainee guard' hps
+                for i in enemy_team:
+                    enemy_hps.append(i['hp'])
+                total_enemy_hp = sum(enemy_hps)       #sum of the 3 trainee guard hps
+                
+                while total_ally_hp <= 0 and total_enemy_hp <= 0:
+                    battle.cycle(z, enemy_team, team)
+                    enemy_hps = []
                     for i in enemy_team:
                         enemy_hps.append(i['hp'])
-                    total_enemy_hp = sum(enemy_hps)       #sum of the 3 trainee guard hps
+                    battle.attack_enemy(enemy_team, team)
+                    team_hps = []
+                    for character in team:
+                        team_hps.append(character['hp'])
+                    total_ally_hp = sum(team_hps)
+                    total_enemy_hp = sum(enemy_hps)
+                    y += 1
+                    if y > (l - 1):
+                        y = 0
+                if total_ally_hp <= 0:
+                    quests.lose(username, team)
+                    taiyo.path(username)
+                else:
+                    reward = 40       
+                    add = user['crystals'] + reward
+                    user['crystals'] = add
+                    print(f"{username} now has {user['crystals']} crystals")
+                new_file = "updated.json"
+                with open(new_file, "w") as f:
+                    json.dump(users, f)
+                os.remove(r"game_files\classes\json\users.json")
+                os.rename(new_file, r"game_files\classes\json\users.json")
+        
+                rand.contin()
+
+                    #second wave of second taiyo battle (4 normal guards)
+                wave += 1    # wave = 2
+                quests.wave(wave, 1)
+                enemy_team = []       
+                for enemy in entities:
+                    if enemy['name'] == "Guard":
+                        x = 1
+                        while x != 4:
+                            enemy_team.append(enemy)
+                            x += 1
+                enemy_hps = []      
+                for i in enemy_team:
+                    enemy_hps.append(i['hp'])
+                total_enemy_hp = sum(enemy_hps)       
                 
-                    while total_ally_hp <= 0 and total_enemy_hp <= 0:
-                        battle.cycle(z, enemy_team, team)
-                        enemy_hps = []
-                        for i in enemy_team:
-                            enemy_hps.append(i['hp'])
-                        battle.attack_enemy(enemy_team, team)
-                        team_hps = []
-                        for character in team:
-                            team_hps.append(character['hp'])
-                        total_ally_hp = sum(team_hps)
-                        total_enemy_hp = sum(enemy_hps)
-                        y += 1
-                        if y > (l - 1):
-                            y = 0
-                        if total_ally_hp <= 0:
-                            quests.lose(username, team)
-                            taiyo.path(username)
-                        else:
-                            reward = 8
-                            add = user['crystals'] + reward
-                            user['crystals'] = add
-                            print(f"{username} now has {user['crystals']} crystals")
-                        new_file = "updated.json"
-                        with open(new_file, "w") as f:
-                            json.dump(users, f)
-                        os.remove(r"game_files\classes\json\users.json")
-                        os.rename(new_file, r"game_files\classes\json\users.json")
-                    wave += 1
-                    print("You look around to see that there are no more monsters. As you let your guard down you see a shadow behind you.")
+                while total_ally_hp <= 0 and total_enemy_hp <= 0:
+                    battle.cycle(z, enemy_team, team)
+                    enemy_hps = []
+                    for i in enemy_team:
+                        enemy_hps.append(i['hp'])
+                    battle.attack_enemy(enemy_team, team)
+                    team_hps = []
+                    for character in team:
+                        team_hps.append(character['hp'])
+                    total_ally_hp = sum(team_hps)
+                    total_enemy_hp = sum(enemy_hps)
+                    y += 1
+                    if y > (l - 1):
+                        y = 0
+                if total_ally_hp <= 0:
+                    quests.lose(username, team)
+                    taiyo.path(username)
+                else:
+                    reward = 40       
+                    add = user['crystals'] + reward
+                    user['crystals'] = add
+                    print(f"{username} now has {user['crystals']} crystals")
+                new_file = "updated.json"
+                with open(new_file, "w") as f:
+                        json.dump(users, f)
+                os.remove(r"game_files\classes\json\users.json")
+                os.rename(new_file, r"game_files\classes\json\users.json")
+        
+                rand.contin()
+
+                # second battle wave 3 (Captain of the Guard)
+                wave += 1    # wave = 3
+                quests.wave(wave, 1)
+                enemy_team = []       
+                for enemy in entities:
+                    if enemy['name'] == "Guard Captain":
+                        enemy_team.append(enemy)
+                enemy_hps = []      
+                for i in enemy_team:
+                    enemy_hps.append(i['hp'])
+                total_enemy_hp = sum(enemy_hps)       
+                
+                while total_ally_hp <= 0 and total_enemy_hp <= 0:
+                    battle.cycle(z, enemy_team, team)
+                    enemy_hps = []
+                    for i in enemy_team:
+                        enemy_hps.append(i['hp'])
+                    battle.attack_enemy(enemy_team, team)
+                    team_hps = []
+                    for character in team:
+                        team_hps.append(character['hp'])
+                    total_ally_hp = sum(team_hps)
+                    total_enemy_hp = sum(enemy_hps)
+                    y += 1
+                    if y > (l - 1):
+                        y = 0
+                if total_ally_hp <= 0:
+                    quests.lose(username, team)
+                    taiyo.path(username)
+                else:
+                    reward = 40       
+                    add = user['crystals'] + reward
+                    user['crystals'] = add
+                    print(f"{username} now has {user['crystals']} crystals")
+                new_file = "updated.json"
+                with open(new_file, "w") as f:
+                        json.dump(users, f)
+                os.remove(r"game_files\classes\json\users.json")
+                os.rename(new_file, r"game_files\classes\json\users.json")
+        
+                rand.contin()
+
+                # asahi arrives
+                x = 20
+                while x != 22:
+                    dialogues_story.taiyo(x)
+                    x += 1
                     rand.contin()
+                dialogues_player.taiyo(8)
+                answer = input("")
+                a = ['a','b']
+                while answer not in a:
+                    dialogues_story.taiyo(22)
+                    dialogues_player.taiyo(8)
+                    answer = input("")
+                rand.contin()
+
+                # third battle wave 1
+                wave = 0    
+                quests.wave(wave, 1)
+                enemy_team = []       
+                for enemy in entities:
+                    if enemy['name'] == "Queen of Taiyo":
+                        enemy_team.append(enemy)
+                enemy_hps = []      
+                for i in enemy_team:
+                    enemy_hps.append(i['hp'])
+                total_enemy_hp = sum(enemy_hps)       
+                
+                while total_ally_hp <= 0 and total_enemy_hp <= 0:
+                    battle.cycle(z, enemy_team, team)
+                    enemy_hps = []
+                    for i in enemy_team:
+                        enemy_hps.append(i['hp'])
+                    battle.attack_enemy(enemy_team, team)
+                    team_hps = []
+                    for character in team:
+                        team_hps.append(character['hp'])
+                    total_ally_hp = sum(team_hps)
+                    total_enemy_hp = sum(enemy_hps)
+                    y += 1
+                    if y > (l - 1):
+                        y = 0
+                if total_ally_hp <= 0:
+                    quests.lose(username, team)
+                    taiyo.path(username)
+                else:
+                    reward = 40       
+                    add = user['crystals'] + reward
+                    user['crystals'] = add
+                    print(f"{username} now has {user['crystals']} crystals")
+                new_file = "updated.json"
+                with open(new_file, "w") as f:
+                        json.dump(users, f)
+                os.remove(r"game_files\classes\json\users.json")
+                os.rename(new_file, r"game_files\classes\json\users.json")
+        
+                rand.contin()
+
+                # after all three taiyo battles...
+                x = 23
+                while x != 25:
+                    dialogues_story.taiyo(x)
+                    x += 1
+                    rand.contin()
+                print("[a] Pick it up")
+                print("[b] Leave without it")
+                answer = input("").lower()
+                a = ['a','b']
+                while answer not in a:
+                    answer = input("we know this is a hard choice...but YOU HAVE TO CHOOSE ONE").lower()
+                if answer == "a":
+                    dialogues_story(26)
+                else: 
+                    dialogues_story(27)
+                    rand.contin()
+                    dialogues_story(28)
+
+
+                
+                
+                
+
+
 
 
         

@@ -287,7 +287,7 @@ Taiyo: Guards of Taiyo
     - 3 Battles(same as the other worlds)
     - First Battle: Normal Battle(3 trainee gaurds(two waves))
     - Second Battle: Boss Battle(wave one: 3 trainee guards, wave two: 4 normal guards, wave three: Captain of the Guard)
-    - Third Battle: Boss Battle(Queen of Taiyo(could summon normal guards to her side))
+    - Third Battle: Boss Battle(Queen of Taiyo)
       - After defeating the third boss, the player will see a gem that is dropped.
             Choice One: Pick it up
                 - Happy Ending(find their sibling(gem shows where their sibling is))
