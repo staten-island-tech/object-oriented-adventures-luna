@@ -38,9 +38,11 @@ class battle():
         enemies = y
         print("Choose an enemy to attack:")
         b = ["A", "B", "C", "D", "E", "F"]
+        a = 0
         for enemy in enemies: 
             print(f"[{b[a]}] {enemy['name']}")
             print(f"HP: {enemy['hp']}")
+            a += 1
         enemy_chosen = input("").upper()
         c = 0
         d = b[c]
