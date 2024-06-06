@@ -102,7 +102,7 @@ class dialogues_story():
                     "Moving around, you see that the planet is more developed than the other planets you have encountered.", 
                     "You see shrines, townhouses, walls, statues, and other large monuments in the distance.", 
                     "Soon, you arrive at the center of the town, and you are stopped by the guards.", 
-                    "Mael: Are you alright?", 
+                    "Mael: Are you alright?", #x=20
                     "Unknown: Are you guys alright?", 
                     "Looking up, you see Asahi in a spaceship.", 
                     "Together you guys defeat the queen of the planet. And a stone falls on the ground.", 

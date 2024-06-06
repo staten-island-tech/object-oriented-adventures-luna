@@ -297,7 +297,7 @@ class prologue():
                 ally_hp = sum(a)
                 enemy_hp = sum(b)
                 y += 1
-                if y > l - 1:
+                if y > (l - 1):
                     y = 0
             if ally_hp <= 0:
                 quests.lose(username, team)
