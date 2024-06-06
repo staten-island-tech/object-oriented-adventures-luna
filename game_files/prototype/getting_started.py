@@ -96,7 +96,7 @@ class prologue():
             f.write(json_string)
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json")
-        enemy_name = ["Oblivion Guard", "Oblivion Drone", "General Aeron"]
+        enemy_name = ["Oblivion Guard", "Oblivion Drones", "General Aeron"]
         enemy_team1 = []
         team_name = []
         for user in users:
@@ -120,7 +120,7 @@ class prologue():
         l = len(team)
         enemy_team = []
         for en in enemy_team1:
-            if en['name'] == "Oblivion Guards":
+            if en['name'] == "Oblivion Guard":
                 for i in range(3):
                     enemy_team.append(en)
         while ally_hp != 0 and enemy_hp != 0:
@@ -188,11 +188,11 @@ class prologue():
                 if en['name'] == "Oblivion Guard":
                     for i in range(3):
                         enemy_team.append(en)
-                elif en['name'] == "Oblivion Orb":
+                elif en['name'] == "Oblivion Drones":
                     for i in range(2):
                         enemy_team.append(en)
             while ally_hp != 0 and enemy_hp != 0:
-                z = team_name[y]
+                z = team[y]
             battle.cycle(z,enemy_team, team)
             b = []
             for en in enemy_team:
