@@ -203,10 +203,13 @@ class spaceship():
             print("Choose again! You can't just make your own choices!!")
             answer = input("")
         if answer == "1":
+            os.system("cls")
             starsystem.view_characters(username)
         elif answer == "2":
+            os.system("cls")
             starsystem.pull_one(username)
         elif answer == "3":
+            os.system("cls")
             starsystem.pull_ten(username)
         else:
             pass

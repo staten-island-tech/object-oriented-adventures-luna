@@ -89,7 +89,7 @@ class dialogues_story():
                     "Asahi: I see.", 
                     "Asahi: Sure.", 
                     "As Asahi translates the scroll for you, his face begins to darken.", 
-                    "Asahi: It seems that your next destination in Taiyo.", 
+                    "Asahi: It seems that your next destination is Taiyo.", 
                     "Asahi: I'm afraid you would need to go to Taiyo with Mael again.", 
                     "Mael: Alright.", 
                     "Asahi: It's complicated. Sorry for staying behind twice.", 
@@ -102,7 +102,7 @@ class dialogues_story():
                     "Moving around, you see that the planet is more developed than the other planets you have encountered.", 
                     "You see shrines, townhouses, walls, statues, and other large monuments in the distance.", 
                     "Soon, you arrive at the center of the town, and you are stopped by the guards.", 
-                    "Mael: Are you alright?", 
+                    "Mael: Are you alright?", #x=20
                     "Unknown: Are you guys alright?", 
                     "Looking up, you see Asahi in a spaceship.", 
                     "Together you guys defeat the queen of the planet. And a stone falls on the ground.", 
@@ -176,13 +176,14 @@ class dialogues_player():
     def taiyo(x):
         dialogue = ["You: We're finally back..", #after x0
                     "You: [a] Well, It was something for sure. [b] I found some booty for you to see", #x3
-                    "You: Could you take a look at this? We found it in Pero.",
-                    "You: Huh? Again?",
-                    "You: It's alright. I understand.",
-                    "You: Are you gonna come later on?",
-                    "You: Yeah. Let's go.",
-                    "You: Soooo.. which planet is this?",
-                    "You: [a] A plane??? [b] omg it's.. Asahi???"]
+                    "You: Could you take a look at this? We found it in Pero.", #x4
+                    "You: Huh? Again?", #x8
+                    "You: It's alright. I understand.", #x10
+                    "You: Are you gonna come later on?", #also x10
+                    "You: Yeah. Let's go.", #x12
+                    "You: Soooo.. which planet is this?", #x15
+                    "You: [a] A plane??? [b] omg it's.. Asahi???" #x22
+                    ]
         print(dialogue[x])
         
 class tutorial():

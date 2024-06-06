@@ -57,8 +57,6 @@ class prototype():
                     if user['name'] == username:
                         data = len(user['quest'])
                 if data == 0:
-                    prologue.start(username)
-                    prologue.newbeginnings()
                     prologue.path(username)
                 else:
                     print("Transporting back to spaceship...")
