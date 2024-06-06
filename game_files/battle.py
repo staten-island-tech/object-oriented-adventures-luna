@@ -37,26 +37,24 @@ class battle():
     def attack(x, y):
         enemies = y
         print("Choose an enemy to attack:")
-        a = 0
         b = ["A", "B", "C", "D", "E", "F"]
         for enemy in enemies: 
             print(f"[{b[a]}] {enemy['name']}")
             print(f"HP: {enemy['hp']}")
-            a += 1 
         enemy_chosen = input("").upper()
         c = 0
         d = b[c]
         while d != enemy_chosen:
-            c += 1
             d = b[c]
-        a = 0
+            c += 1
+        z = 0
         for enemy in enemies:
-            if a == c:
+            if z == c:
                 e = enemy['hp']
                 f = e
                 d = x
                 enemy['hp'] = f - d
-            a += 1
+            z += 1
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -73,17 +71,17 @@ class battle():
     def cycle(x, y, z):
         enemies = y
         characters = z
-        a = 0
         for character in characters:
-            if a == x:
+            if character == x:
                 print (f"{character['name']} is preparing to attack.")
                 print( )
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
-                attack_stat = character['attack']
-                print(f"Attack: {attack_stat[0]}")
+                global attack
+                attack = character['attack']
+                print(f"Attack: {attack[0]}")
                 print( )
-            a += 1
+            
         for enemy in enemies:
             print (enemy['name'])
             print (enemy['hp'])
@@ -93,7 +91,7 @@ class battle():
         e = 0
         if c in b:
             print("You are able to use your ultimate right now. It will affect all enemies")
-            print(f"Ultimate: {attack_stat[1]}")
+            print(f"Ultimate: {attack[1]}")
             print("[U] Use Ultimate")
             e += 1
         else:
@@ -109,11 +107,11 @@ class battle():
         if d == "U":
             import os
             os.system("cls")
-            battle.ult(attack_stat[1], enemies)
+            battle.ult(attack[1], y)
         elif d == "A":
             import os
             os.system("cls")
-            battle.attack(attack_stat[0], enemies)
+            battle.attack(attack[0], y)
     def attack_enemy(y, z):
         enemies = y
         characters = z

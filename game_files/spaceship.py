@@ -3,10 +3,10 @@ with open (r"game_files\classes\json\users.json", "r") as hi :
     users = json.load(hi)
 
 import sys
+import os
 sys.path.append('gamefile')
 from rand import *
 from dialogues import *
-import os
 from battle import *
 
 class spaceship():
@@ -14,10 +14,6 @@ class spaceship():
         print("??: Welcome abroad the spaceship! Captain Xingxing, here!")
         rand.contin()
         print("Xingxing: Greetings! Is there anything you would like?")
-        for user in users:
-            if user['username'] == username:
-                if len(user['quest']) == 0:
-                    pass                    ## import prologue
         print("[1] Quests")
         for user in users:
             if user['username'] == username:
@@ -65,10 +61,13 @@ class spaceship():
                 dialogues_quest.amalthea(1)
                 print("You:...")
                 dialogues_quest.amalthea(2)
-                dialogues_quest.transition(1)
+                rand.contin()
                 rand.load()
+                pass
             if answer == a[1]:
                 print("Amalthea: I see")
+                rand.contin()
+                spaceship.welcome(username)
         elif quests == 2:
             dialogues_quest.lyra(0)
             print("[1] Yes")
@@ -82,16 +81,14 @@ class spaceship():
                 os.system("cls")
                 dialogues_quest.lyra(1)
                 rand.contin()
-                print("You: You too, Lyra.")
-                rand.contin()
-                dialogues_quest.lyra(2)
-                rand.contin()
-                dialogues_quest.transition(1)
                 rand.load()
+                pass
             if answer == a[1]:
                 print("Lyra: Alright. Enjoy your time exploring the spaceship then new recruit!")
                 os.system("cls")
                 print("Lyra: The observatory at the front of this spacecraft is absolutely wonderful! Be sure to see it!")
+                rand.contin()
+                spaceship.welcome(username)
         elif quests == 3:
             dialogues_quest.astrophel(0)
             print("[1] Yes")
@@ -106,12 +103,14 @@ class spaceship():
                 rand.contin()
                 print("You: I will. see you when I come back then, Astrophel!")
                 rand.contin()
+                pass
                 dialogues_quest.astrophel(2)
                 rand.contin()
-                dialogues_quest.transition(1)
                 rand.load()
             if answer == a[1]:
                 print("Astrophel: Oh. Alright! Please enjoy your time on the spaceship then!")
+                rand.contin()
+                spaceship.welcome(username)
         elif quests == 4:
             print("Looking around you find yourself at the transportation and logistics department once more.")
             rand.contin()
@@ -122,6 +121,8 @@ class spaceship():
             print("Lyra: You must have gotten used to coming here...")
             rand.contin()
             print("Nodding, you leave the division to wander the large endless spaceship.")
+            rand.contin()
+            spaceship.welcome(username)
         else:
             print("Wow. You are too weak for this, player!")
             rand.contin()
@@ -129,15 +130,69 @@ class spaceship():
             os.system("cls")
             rand.load()
             spaceship.welcome(username)
+
     def daily(username):
         print("Dailies Chosen...")
         rand.contin()
         rand.load()
         print("You walk towards the holo-reality, a virtual reality simulator on the spaceship used for training.")
-
+        rand.contin()
+        dialogues_quest.adhara(0)
+        print("[1] Yes")
+        print("[2] No")
+        a = input("")
+        b = ["1", "2"]
+        while a not in b:
+            print("Adhara: What do you mean?")
+            a = input("")
+        if a == b[0]:
+            os.system("cls")
+            print("Which world would you like to challenge again?")
+            quests = []
+            for user in users:
+                if user['username'] == username:
+                    quests = [user['quests']]
+            letter = ["A", "B", "C", "D", "E"]
+            length = len(quests)
+            y = 0
+            x = letter[y]
+            z = 1
+            letters = []
+            for i in range(length):
+                print(f"[{x}] {quests[z]}")
+                letters.append(x)
+                y += 1
+                z += 1
+            answer = input("").upper()
+            while answer not in letters:
+                print("You haven't unlocked this world yet!!")
+                rand.contin()
+                print("Please choose again.")
+                rand.contin()
+                for i in range(length):
+                    print(f"[{x}] {quests[z]}")
+                    y += 1
+                    z += 1
+                answer = input("").upper()
+            if answer in letters:
+                y = 0
+                number = 0
+                for l in letters:
+                    if l == x:
+                        number = y + 1
+                    y += 1
+                dialogues_quest.adhara(1)
+                rand.contin()
+                dialogues_quest.adhara(2)
+                rand.contin()
+                rand.load()
+                pass
+        elif a == b[1]:
+            print("Adhara: Alright then. Have fun on the spaceship!")
+            rand.contin()
+            spaceship.welcome(username)
     def star_system():
         pass
     def team(username):
         battle.select_character(username)
 
-spaceship.quest_story("exa")
