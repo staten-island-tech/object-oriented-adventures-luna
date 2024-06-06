@@ -86,16 +86,19 @@ class prologue():
             rand.contin()
         for user in users:
             if user['username'] == username:
-                c = user['characters']
-                c.append('Asahi')
-                team_name = user['team']
-                team_name.append('Asahi')
-        new_file = "updated.json"
-        with open(new_file, "w") as f:
-            json_string = json.dumps(users)
-            f.write(json_string)
-        os.remove(r"game_files\classes\json\users.json")
-        os.rename(new_file, r"game_files\classes\json\users.json")
+                if 'Asahi' in user['character']:
+                    pass
+                else:
+                    c = user['characters']
+                    c.append('Asahi')
+                    team_name = user['team']
+                    team_name.append('Asahi')
+                    new_file = "updated.json"
+                    with open(new_file, "w") as f:
+                        json_string = json.dumps(users)
+                        f.write(json_string)
+                    os.remove(r"game_files\classes\json\users.json")
+                    os.rename(new_file, r"game_files\classes\json\users.json")
         enemy_name = ["Oblivion Guard", "Oblivion Drones", "General Aeron"]
         enemy_team1 = []
         team_name = []
