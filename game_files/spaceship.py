@@ -14,12 +14,6 @@ class spaceship():
         print("??: Welcome abroad the spaceship! Captain Xingxing, here!")
         rand.contin()
         print("Xingxing: Greetings! Is there anything you would like?")
-        for user in users:
-            if user['username'] == username:
-                if len(user['quest']) == 0:
-                    print("You haven't finished your story quest yet!")
-                    rand.load()
-                    pass
         print("[1] Quests")
         for user in users:
             if user['username'] == username:
