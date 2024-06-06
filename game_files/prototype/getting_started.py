@@ -98,6 +98,10 @@ class prologue():
         os.rename(new_file, r"game_files\classes\json\users.json")
         enemy_name = ["Oblivion Guard", "Oblivion Drone", "General Aeron"]
         enemy_team1 = []
+        team_name = []
+        for user in users:
+            if user['username'] == username:
+                team_name = user['team']
         team = []
         for entity in entities:
             if entity['name'] in team_name:
