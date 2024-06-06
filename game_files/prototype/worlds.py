@@ -108,7 +108,7 @@ class worlds():
 				battle.attack_enemy(enemy_team, team)
 				a = []
 				for character in team:
-					a.append(character['hp']
+					a.append(character['hp'])
 				ally_hp = sum(a)
 				enemy_hp = sum(b)
 				y += 1
@@ -153,7 +153,7 @@ class worlds():
 				battle.attack_enemy(enemy_team, team)
 				a = []
 				for character in team:
-					a.append(character['hp']
+					a.append(character['hp'])
 				ally_hp = sum(a)
 				enemy_hp = sum(b)
 				y += 1
@@ -184,7 +184,7 @@ class worlds():
 		for enemy in entities:
 			if enemy['name'] == "Hydro Robot":
 				enemy_team.append(enemy)
-			elif enemy['name'] == "Hydro Robot Dog':
+			elif enemy['name'] == "Hydro Robot Dog":
 				enemy_team.append(enemy)
 		b = []
 		for en in enemy_team:
@@ -199,7 +199,7 @@ class worlds():
 			battle.attack_enemy(enemy_team, team)
 			a = []
 			for character in team:
-				a.append(character['hp']
+				a.append(character['hp'])
 			ally_hp = sum(a)
 			enemy_hp = sum(b)
 			y += 1
@@ -241,7 +241,7 @@ class worlds():
 			battle.attack_enemy(enemy_team, team)
 			a = []
 			for character in team:
-				a.append(character['hp']
+				a.append(character['hp'])
 			ally_hp = sum(a)
 			enemy_hp = sum(b)
 			y += 1
@@ -317,3 +317,5 @@ class worlds():
 		os.remove(r"game_files\classes\json\users.json")
 		os.rename(new_file, r"game_files\classes\json\users.json")
 		pro.wel(username)
+
+worlds.monde_mission('exa')

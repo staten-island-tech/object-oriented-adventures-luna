@@ -1,17 +1,11 @@
 [
     {
-        "username": "bob",
+        "username": "ex",
         "password": "123",
         "type": "player",
-        "crystals": 480,
-        "stars": 80,
-        "characters": [
-            "Callisto",
-            "Mael",
-            "Dinara",
-            "Himari",
-            "Izumi"
-        ],
+        "crystals": 80,
+        "stars": 0,
+        "characters": [],
         "team": [
             {
                 "name": "Amaris",
@@ -46,10 +40,23 @@
         "username": "exa",
         "password": "abc",
         "type": "player",
-        "crystals": 240,
-        "stars": 4,
-        "characters": [],
-        "team": [],
+        "crystals": 0,
+        "stars": 0,
+        "characters": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "Asahi"
+        ],
+        "team": [
+            "A",
+            "C",
+            "",
+            "",
+            "Asahi"
+        ],
         "quest": [
             "spaceship",
             "monde"
