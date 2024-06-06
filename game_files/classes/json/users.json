@@ -1,1 +1,58 @@
-[{"username": "ex", "password": "123", "type": "player", "crystals": 80, "stars": 0, "characters": [], "team": [{"name": "Amaris", "hp": 0, "attack": [500, 1500], "rarity": "*****", "weapon": "stellar gun", "type": "destruction", "element": "quantum"}, {"name": "Aelius", "hp": 0, "attack": [500, 1500], "rarity": "*****", "weapon": "stellar gun", "type": "destruction", "element": "imaginary"}, "", ""], "quest": []}, {"username": "exa", "password": "abc", "type": "player", "crystals": 6, "stars": 0, "characters": ["a", "b", "c", "d", "e", "Asahi", "Asahi", "Asahi", "Aelius", "Asahi", "Asahi", "Aelius", "Asahi", "Aelius", "Aelius", "Aelius", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi"], "team": ["A", "C", "", "", "Asahi", "Asahi", "Asahi", "Aelius", "Asahi", "Asahi", "Aelius", "Asahi", "Aelius", "Aelius", "Aelius", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi", "Asahi"], "quest": ["spaceship", "monde"]}]
+[
+    {
+        "username": "bob",
+        "password": "123",
+        "type": "player",
+        "crystals": 480,
+        "stars": 80,
+        "characters": [
+            "Callisto",
+            "Mael",
+            "Dinara",
+            "Himari",
+            "Izumi"
+        ],
+        "team": [
+            {
+                "name": "Amaris",
+                "hp": 0,
+                "attack": [
+                    500,
+                    1500
+                ],
+                "rarity": "*****",
+                "weapon": "stellar gun",
+                "type": "destruction",
+                "element": "quantum"
+            },
+            {
+                "name": "Aelius",
+                "hp": 0,
+                "attack": [
+                    500,
+                    1500
+                ],
+                "rarity": "*****",
+                "weapon": "stellar gun",
+                "type": "destruction",
+                "element": "imaginary"
+            },
+            "",
+            ""
+        ],
+        "quest": []
+    },
+    {
+        "username": "exa",
+        "password": "abc",
+        "type": "player",
+        "crystals": 240,
+        "stars": 4,
+        "characters": [],
+        "team": [],
+        "quest": [
+            "spaceship",
+            "monde"
+        ]
+    }
+]

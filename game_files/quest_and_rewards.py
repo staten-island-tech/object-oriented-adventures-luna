@@ -50,7 +50,7 @@ class quests():                                             #the whole class nee
                 f.write(json_string)
             os.remove(r"game_files\classes\json\users.json")
             os.rename(new_file, r"game_files\classes\json\users.json")
-    def wave(x, e):   # x = wave umber(current) z = world(taiyo, etc)
+    def wave(x, e):   # x = wave number(current) z = world(taiyo, etc)
         a = int(x)
         if e == 0:
             print(f"Wave {a+1}: Normal Battle")

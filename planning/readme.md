@@ -309,10 +309,8 @@ If you get a duplicate, you will get 80 crystals back.
 
 ### Rates:
 
-    Nothing: 85%
-    Characters: 15%
-        4-star characters: 99%
-        5-star characters: 1%
+    Nothing: 70%
+    Characters: 30%
 
 At 70 stars, soft pity will activate. The rate for characters would increase by 5-10% and the rate for nothing would decrease by the same amount.
 
