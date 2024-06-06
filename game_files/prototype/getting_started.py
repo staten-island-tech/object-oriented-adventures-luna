@@ -138,7 +138,7 @@ class prologue():
             y += 1
             if y > l - 1:
                 y = 0
-        if ally_hp != 0:
+        if ally_hp <= 0:
             quests.lose(username, team)
             prologue.path(username)
         rewards = 3
@@ -206,7 +206,7 @@ class prologue():
             y += 1
             if y > l - 1:
                 y = 0
-            if ally_hp != 0:
+            if ally_hp <= 0:
                 quests.lose(username, team)
                 prologue.path(username)
             else:
