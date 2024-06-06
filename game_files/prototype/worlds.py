@@ -317,5 +317,3 @@ class worlds():
 		os.remove(r"game_files\classes\json\users.json")
 		os.rename(new_file, r"game_files\classes\json\users.json")
 		pro.wel(username)
-
-worlds.monde_mission('exa')
