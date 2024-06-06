@@ -7,6 +7,7 @@ from battle import *
 from dialogues import *
 from quest_and_rewards import *
 from rand import *
+from spaceship_pro import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -306,3 +307,13 @@ class worlds():
 		print("Going back to spaceship...")
 		rand.contin()
 		rand.load()
+		for user in users:
+			if user['username'] == username:
+				user['quest'].append('monde')
+		new_file = "updated.json"
+		with open(new_file, "w") as f:
+			json_string = json.dumps(users)
+			f.write(json_string)
+		os.remove(r"game_files\classes\json\users.json")
+		os.rename(new_file, r"game_files\classes\json\users.json")
+		pro.wel(username)
