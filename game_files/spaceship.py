@@ -3,10 +3,10 @@ with open (r"game_files\classes\json\users.json", "r") as hi :
     users = json.load(hi)
 
 import sys
+import os
 sys.path.append('gamefile')
 from rand import *
 from dialogues import *
-import os
 from battle import *
 
 class spaceship():
@@ -17,7 +17,9 @@ class spaceship():
         for user in users:
             if user['username'] == username:
                 if len(user['quest']) == 0:
-                    pass                    ## import prologue
+                    print("You haven't finished your story quest yet!")
+                    rand.load()
+                    pass
         print("[1] Quests")
         for user in users:
             if user['username'] == username:
@@ -67,6 +69,7 @@ class spaceship():
                 dialogues_quest.amalthea(2)
                 rand.contin()
                 rand.load()
+                pass
             if answer == a[1]:
                 print("Amalthea: I see")
                 rand.contin()
@@ -85,6 +88,7 @@ class spaceship():
                 dialogues_quest.lyra(1)
                 rand.contin()
                 rand.load()
+                pass
             if answer == a[1]:
                 print("Lyra: Alright. Enjoy your time exploring the spaceship then new recruit!")
                 os.system("cls")
@@ -105,6 +109,7 @@ class spaceship():
                 rand.contin()
                 print("You: I will. see you when I come back then, Astrophel!")
                 rand.contin()
+                pass
                 dialogues_quest.astrophel(2)
                 rand.contin()
                 rand.load()
@@ -186,6 +191,8 @@ class spaceship():
                 rand.contin()
                 dialogues_quest.adhara(2)
                 rand.contin()
+                rand.load()
+                pass
         elif a == b[1]:
             print("Adhara: Alright then. Have fun on the spaceship!")
             rand.contin()
