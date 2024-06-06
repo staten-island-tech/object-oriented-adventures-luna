@@ -47,8 +47,8 @@ class battle():
         c = 0
         d = b[c]
         while d != enemy_chosen:
-            c += 1
             d = b[c]
+            c += 1
         a = 0
         for enemy in enemies:
             if a == c:
