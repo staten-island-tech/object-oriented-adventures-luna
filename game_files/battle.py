@@ -79,6 +79,7 @@ class battle():
                 print( )
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
+                global attack
                 attack = character['attack']
                 print(f"Attack: {attack[0]}")
                 print( )
