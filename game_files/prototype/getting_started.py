@@ -87,7 +87,7 @@ class prologue():
             rand.contin()
         for user in users:
             if user['username'] == username:
-                if 'Asahi' in user['character']:
+                if 'Asahi' in user['characters']:
                     pass
                 else:
                     c = user['characters']
@@ -366,6 +366,7 @@ class prologue():
                     add = crystals + rewards
                     print(f"{username} now has {add} crystals")
                     user['crystals'] = add
+                    user['quest'].append(space_station)
             new_file = "updated.json"
             with open(new_file, "w") as f:
                 json_string = json.dumps(users)
