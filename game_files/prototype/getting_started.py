@@ -7,6 +7,7 @@ from rand import *
 from dialogues import *
 from battle import *
 from quest_and_rewards import *
+from spaceship import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -374,4 +375,5 @@ class prologue():
             rand.contin()
             print("Going to spaceship...")
             rand.load()
+            spaceship.welcome(username)
 prologue.path('exa')
