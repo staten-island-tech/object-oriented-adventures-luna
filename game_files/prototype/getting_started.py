@@ -124,7 +124,7 @@ class prologue():
                     enemy_team.append(enemy)
         for enemy in enemy_team:
             b.append(enemy['hp'])
-        while ally_hp <= 0 and enemy_hp <= 0:
+        while ally_hp >= 0 and enemy_hp >= 0:
             battle.cycle(z, enemy_team, team)
             b = []
             for en in enemy_team:
@@ -197,7 +197,7 @@ class prologue():
             b = []
             for enemy in enemy_team:
                 b.append(enemy['hp'])
-            while ally_hp <= 0 and enemy_hp <= 0:
+            while ally_hp >= 0 and enemy_hp >= 0:
                 battle.cycle(z,enemy_team, team)
                 b = []
                 for en in enemy_team:
@@ -241,7 +241,7 @@ class prologue():
             b = []
             for enemy in enemy_team:
                 b.append(enemy['hp'])
-            while ally_hp <= 0 and enemy_hp <= 0:
+            while ally_hp >= 0 and enemy_hp >= 0:
                 battle.cycle(z,enemy_team, team)
                 b = []
                 for en in enemy_team:
@@ -281,7 +281,7 @@ class prologue():
             b = []
             for enemy in enemy_team:
                 b.append(enemy['hp'])
-            while ally_hp <= 0 and enemy_hp <= 0:
+            while ally_hp >= 0 and enemy_hp >= 0:
                 battle.cycle(z,enemy_team, team)
                 b = []
                 for en in enemy_team:
