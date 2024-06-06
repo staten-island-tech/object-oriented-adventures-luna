@@ -151,6 +151,7 @@ class prologue():
             f.write(json_string)
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json") 
+        print("You've gained 3 crystals")
         dialogues_story.space_station(8)
         rand.contin()
         dialogues_player.space_station(5)
@@ -186,4 +187,35 @@ class prologue():
                     enemy_team.append(en)
         wave = 0
         while wave != 3:
-            pass
+            while ally_hp != 0 and enemy_hp != 0:
+            z = team_name[y]
+            battle.cycle(z,enemy_team, team)
+            b = []
+            for en in enemy_team:
+                b.append(en['hp'])
+            battle.attack_enemy(enemy_team, team)
+            a = []
+            for character in team:
+                a.append(character['hp'])
+            ally_hp = sum(a)
+            enemy_hp = sum(b)
+            y += 1
+            if y > l - 1:
+                y = 0
+            if ally_hp != 0:
+                quests.lose(username, team)
+                prologue.path(username)
+            else:
+                reward = 7
+                for user in users:
+                if user['username'] == username:
+                    crystals = user['crystals']
+                    add = crystals + rewards
+                    print(f"{username} now has {add} crystals")
+                    user['crystals'] = add
+            new_file = "updated.json"
+            with open(new_file, "w") as f:
+                json_string = json.dumps(users)
+                f.write(json_string)
+            os.remove(r"game_files\classes\json\users.json")
+            os.rename(new_file, r"game_files\classes\json\users.json") 
