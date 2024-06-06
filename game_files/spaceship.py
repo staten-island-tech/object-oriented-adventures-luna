@@ -202,4 +202,3 @@ class spaceship():
     def team(username):
         battle.select_character(username)
 
-spaceship.quest_story("exa")
