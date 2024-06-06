@@ -194,6 +194,7 @@ class prologue():
                 elif enemy['name'] == "Oblivion Drones":
                     for i in range(2):
                         enemy_team.append(enemy)
+            b = []
             for enemy in enemy_team:
                 b.append(enemy['hp'])
             while ally_hp <= 0 and enemy_hp <= 0:
@@ -237,6 +238,7 @@ class prologue():
                 if enemy['name'] == "Oblivion Drones":
                     for i in range(2):
                         enemy_team.append(enemy)
+            b = []
             for enemy in enemy_team:
                 b.append(enemy['hp'])
             while ally_hp <= 0 and enemy_hp <= 0:
@@ -276,6 +278,7 @@ class prologue():
             for enemy in entities:
                 if enemy['name'] == "General Aeron":
                     enemy_team.append(enemy)
+            b = []
             for enemy in enemy_team:
                 b.append(enemy['hp'])
             while ally_hp <= 0 and enemy_hp <= 0:
