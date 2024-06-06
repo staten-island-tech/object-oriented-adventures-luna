@@ -42,22 +42,8 @@
         "type": "player",
         "crystals": 0,
         "stars": 0,
-        "characters": [
-            "a",
-            "b",
-            "c",
-            "d",
-            "e"
-        ],
-        "team": [
-            "A",
-            "C",
-            "",
-            ""
-        ],
-        "quest": [
-            "spaceship",
-            "monde"
-        ]
+        "characters": [],
+        "team": [],
+        "quest": []
     }
 ]
