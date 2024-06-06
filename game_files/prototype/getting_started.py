@@ -7,7 +7,7 @@ from rand import *
 from dialogues import *
 from battle import *
 from quest_and_rewards import *
-from spaceship import *
+from spaceship_pro import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -374,7 +374,7 @@ class prologue():
                     add = crystals + rewards
                     print(f"{username} now has {add} crystals")
                     user['crystals'] = add
-                    user['quest'].append("space_station")
+                    user['quest'].append("space station")
             new_file = "updated.json"
             with open(new_file, "w") as f:
                 json_string = json.dumps(users)
@@ -385,5 +385,5 @@ class prologue():
             rand.contin()
             print("Going to spaceship...")
             rand.load()
-            spaceship.welcome(username)
+            pro.wel(username)
 prologue.path('exa')
