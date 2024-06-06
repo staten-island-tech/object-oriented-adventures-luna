@@ -79,7 +79,9 @@ class battle():
                 print( )
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
-                attack_stat = character['attack']
+                attack_stat = []
+                for attack in character['attack']:
+                    attack_stat.append(attack)
                 print(f"Attack: {attack_stat[0]}")
                 print( )
         for enemy in enemies:
