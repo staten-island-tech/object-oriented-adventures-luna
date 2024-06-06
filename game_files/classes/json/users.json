@@ -55,43 +55,8 @@
         "type": "player",
         "crystals": 240,
         "stars": 4,
-        "characters": [
-            "a",
-            "b",
-            "c",
-            "d",
-            "e",
-            {
-                "name": "Amaris",
-                "hp": 0,
-                "attack": [
-                    500,
-                    1500
-                ],
-                "rarity": "*****",
-                "weapon": "stellar gun",
-                "type": "destruction",
-                "element": "quantum"
-            },
-            {
-                "name": "Amaris",
-                "hp": 0,
-                "attack": [
-                    500,
-                    1500
-                ],
-                "rarity": "*****",
-                "weapon": "stellar gun",
-                "type": "destruction",
-                "element": "quantum"
-            }
-        ],
-        "team": [
-            "Amaris",
-            "C",
-            "",
-            ""
-        ],
+        "characters": [],,
+        "team": [],
         "quest": [
             "spaceship",
             "monde"
