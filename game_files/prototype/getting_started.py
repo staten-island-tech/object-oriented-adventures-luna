@@ -86,18 +86,19 @@ class prologue():
             rand.contin()
         for user in users:
             if user['username'] == username:
-                c = user['characters']
-                c.append('Asahi')
-                team_name = user['team']
-                team_name.append('Asahi')
-        new_file = "updated.json"
-        with open(new_file, "w") as f:
-            json_string = json.dumps(users)
-            f.write(json_string)
-        os.remove(r"game_files\classes\json\users.json")
-        os.rename(new_file, r"game_files\classes\json\users.json")
-        enemy_name = ["Oblivion Guard", "Oblivion Drones", "General Aeron"]
-        enemy_team1 = []
+                if 'Asahi' in user['character']:
+                    pass
+                else:
+                    c = user['characters']
+                    c.append('Asahi')
+                    team_name = user['team']
+                    team_name.append('Asahi')
+                    new_file = "updated.json"
+                    with open(new_file, "w") as f:
+                        json_string = json.dumps(users)
+                        f.write(json_string)
+                    os.remove(r"game_files\classes\json\users.json")
+                    os.rename(new_file, r"game_files\classes\json\users.json")
         team_name = []
         for user in users:
             if user['username'] == username:
@@ -106,8 +107,6 @@ class prologue():
         for entity in entities:
             if entity['name'] in team_name:
                 team.append(entity)
-            elif entity['name'] in enemy_name:
-                enemy_team1.append(entity)
         a = []
         b = []
         for character in team:
@@ -117,14 +116,14 @@ class prologue():
         ally_hp = sum(a)
         enemy_hp = sum(b)
         y = 0
+        z = team[y]
         l = len(team)
         enemy_team = []
-        for en in enemy_team1:
-            if en['name'] == "Oblivion Guard":
+        for enemy in entity:
+            if enemy['name'] == "Oblivion Guard":
                 for i in range(3):
                     enemy_team.append(en)
         while ally_hp <= 0 and enemy_hp <= 0:
-            z = team[y]
             battle.cycle(z, enemy_team, team)
             b = []
             for en in enemy_team:
@@ -181,18 +180,19 @@ class prologue():
         rand.contin()
         print("Getting ready for battle...")
         wave = 0
+        z = team[y]
+        y = 0
         while wave != 2:
             quests.wave(wave, 'spaceship')
             enemy_team = []
-            for en in enemy_team1:
-                if en['name'] == "Oblivion Guard":
+            for enemy in entity:
+                if enemy['name'] == "Oblivion Guard":
                     for i in range(3):
                         enemy_team.append(en)
-                elif en['name'] == "Oblivion Drones":
+                elif enemy['name'] == "Oblivion Drones":
                     for i in range(2):
                         enemy_team.append(en)
             while ally_hp <= 0 and enemy_hp <= 0:
-                z = team[y]
             battle.cycle(z,enemy_team, team)
             b = []
             for en in enemy_team:
