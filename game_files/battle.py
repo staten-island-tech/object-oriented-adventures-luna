@@ -37,26 +37,24 @@ class battle():
     def attack(x, y):
         enemies = y
         print("Choose an enemy to attack:")
-        a = 0
         b = ["A", "B", "C", "D", "E", "F"]
         for enemy in enemies: 
             print(f"[{b[a]}] {enemy['name']}")
             print(f"HP: {enemy['hp']}")
-            a += 1 
         enemy_chosen = input("").upper()
         c = 0
         d = b[c]
         while d != enemy_chosen:
             d = b[c]
             c += 1
-        a = 0
+        z = 0
         for enemy in enemies:
-            if a == c:
+            if z == c:
                 e = enemy['hp']
                 f = e
                 d = x
                 enemy['hp'] = f - d
-            a += 1
+            z += 1
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
