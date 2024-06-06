@@ -73,19 +73,15 @@ class battle():
     def cycle(x, y, z):
         enemies = y
         characters = z
-        a = 0
         for character in characters:
-            if a == x:
+            if character['name'] == x:
                 print (f"{character['name']} is preparing to attack.")
                 print( )
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
-                attack_stat = []
-                for att in character['attack']:
-                    attack_stat.append(att)
+                attack_stat = character['attack']
                 print(f"Attack: {attack_stat[0]}")
                 print( )
-            a += 1
         for enemy in enemies:
             print (enemy['name'])
             print (enemy['hp'])
