@@ -21,22 +21,6 @@ class spaceship():
         if data == 2:
             print("[2] Star System")
             print("[3] Change Team")
-        answer = input("")
-        a = ["1", "2", "3"]
-        while answer not in a:
-            print("Xingxing: Choose again! You can't just make your own choices!!")
-            answer = input("")
-        print("Xingxing: Hmm. Alright then. Let's go.")
-        if answer == "1":
-            print("Xingxing: What type of mission are you going on this time?")
-            rand.quest_selector(username)
-            b = ["S", "B"]
-            quest = input("").upper()
-            while quest not in b:
-                print("Xingxing: What did I say! What do you want to do anyways!?")
-                quest = input("").upper()
-            print("Xingxing: Hmm...I see.")
-        rand.load()
     def quest_story(username):
         for user in users:
             if user['username'] == username:
