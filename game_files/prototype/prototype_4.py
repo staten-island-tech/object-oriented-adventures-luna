@@ -337,6 +337,7 @@ class taiyo():
                     rand.contin()
                     dialogues_story(28)
 
+taiyo.path("bob")
 
                 
                 
