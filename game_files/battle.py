@@ -83,6 +83,7 @@ class battle():
                 attack = character['attack']
                 print(f"Attack: {attack[0]}")
                 print( )
+            
         for enemy in enemies:
             print (enemy['name'])
             print (enemy['hp'])
