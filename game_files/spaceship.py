@@ -67,6 +67,7 @@ class spaceship():
                 dialogues_quest.amalthea(2)
                 rand.contin()
                 rand.load()
+                pass
             if answer == a[1]:
                 print("Amalthea: I see")
                 rand.contin()
@@ -85,6 +86,7 @@ class spaceship():
                 dialogues_quest.lyra(1)
                 rand.contin()
                 rand.load()
+                pass
             if answer == a[1]:
                 print("Lyra: Alright. Enjoy your time exploring the spaceship then new recruit!")
                 os.system("cls")
@@ -105,6 +107,7 @@ class spaceship():
                 rand.contin()
                 print("You: I will. see you when I come back then, Astrophel!")
                 rand.contin()
+                pass
                 dialogues_quest.astrophel(2)
                 rand.contin()
                 rand.load()
@@ -186,6 +189,8 @@ class spaceship():
                 rand.contin()
                 dialogues_quest.adhara(2)
                 rand.contin()
+                rand.load()
+                pass
         elif a == b[1]:
             print("Adhara: Alright then. Have fun on the spaceship!")
             rand.contin()
