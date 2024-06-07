@@ -21,6 +21,7 @@ class spaceship():
         if data == 2:
             print("[2] Star System")
             print("[3] Change Team")
+
     def quest_story(username):
         for user in users:
             if user['username'] == username:
@@ -66,7 +67,7 @@ class spaceship():
                 dialogues_quest.lyra(1)
                 rand.contin()
                 rand.load()
-                pass
+                worlds.pero_mission(username)
             elif answer == a[1]:
                 print("Lyra: Alright. Enjoy your time exploring the spaceship then new recruit!")
                 os.system("cls")
@@ -87,10 +88,8 @@ class spaceship():
                 rand.contin()
                 print("You: I will. see you when I come back then, Astrophel!")
                 rand.contin()
-                pass
-                dialogues_quest.astrophel(2)
-                rand.contin()
                 rand.load()
+                worlds.taiyo_mission(username)
             elif answer == a[1]:
                 print("Astrophel: Oh. Alright! Please enjoy your time on the spaceship then!")
                 rand.contin()
@@ -200,4 +199,3 @@ class spaceship():
     def team(username):
         battle.select_character(username)
 
-("exa")

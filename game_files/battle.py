@@ -1,6 +1,7 @@
 import json
 import os
 import random
+from rand import rand
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -9,7 +10,7 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 
 
-enemies = [{'name': "a", 
+""" enemies = [{'name': "a", 
           'hp': 4500, 
           'attack': 40, 
           'type': "minion"}, 
@@ -18,7 +19,7 @@ enemies = [{'name': "a",
            'attack': 100, 
            'type': "boss"}]
 
-"""characters = [{'name': "c", 
+characters = [{'name': "c", 
               'hp': 5000, 
               "rarity": "****", 
               'attack': [250, 750], 
@@ -31,10 +32,10 @@ enemies = [{'name': "a",
                'attack': [250, 750], 
                'element': "d1", 
                'weapon': "d2", 
-               'type': "d3"}] """
+               'type': "d3"}]  """
 
 class battle():
-    def attack(x, y):
+    def attack(x, y):                             # x is attack the enemy is taking (integer), y is list of dictionary of enemies, z is team you're using
         enemies = y
         print("Choose an enemy to attack:")
         b = ["A", "B", "C", "D", "E", "F"]
@@ -89,7 +90,7 @@ class battle():
             print (enemy['hp'])
             print( )
         b = [7, 1, 3, 13, 9, 15]
-        c = random.randrange(1, 20)
+        c = random.randint(1, 20)
         e = 0
         if c in b:
             print("You are able to use your ultimate right now. It will affect all enemies")
@@ -107,11 +108,11 @@ class battle():
             print ("[A] Use attack")
             d = input("").upper()
         if d == "U":
-            import os
+            rand.contin()
             os.system("cls")
             battle.ult(attack[1], y)
         elif d == "A":
-            import os
+            rand.contin()
             os.system("cls")
             battle.attack(attack[0], y)
     def attack_enemy(y, z):
@@ -121,12 +122,13 @@ class battle():
         for enemy in enemies:
             a += 1
         b = a - 1
-        c = random.randrange(0, b)
+        c = random.randint(0, b)    #choose random enemy to attack
         a = 0
         for enemy in enemies:
             if a == c:
                 d = enemy['name']
                 print(f"Enemy {enemy['name']} is preparing to attack.")
+                rand.contin()
                 os.system("cls")
                 attack_stat = enemy['attack']
             a += 1
@@ -139,8 +141,10 @@ class battle():
         for character in characters:
             if a == c:
                 print(f"Enemy {d} is preparing to attack {character['name']}.")
+                rand.contin()
                 os.system("cls")
                 print(f"Your character has taken {attack_stat} damage.")
+                rand.contin()
                 os.system("cls")
                 print(f"Name: {character['name']}")
                 new_hp = character['hp'] - attack_stat
@@ -185,4 +189,5 @@ class battle():
             f.write(json_string)
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json")
-battle.attack(10,enemies)
+
+#battle.attack_enemy(enemies,characters)

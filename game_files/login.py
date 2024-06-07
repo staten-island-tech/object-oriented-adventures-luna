@@ -1,9 +1,9 @@
-from user import *
+from user import create
+import json
+import os
 
-# Open the JSON file of pokemon data
-test = open(r"game_files\classes\json\users.json", encoding="utf8")
-# create variable "data" that represents the enitre pokedex list
-data = json.load(test)
+with open(r"game_files\classes\json\users.json", "r") as f:
+    data = json.load(f)
 
 
 class login():
@@ -15,7 +15,7 @@ class login():
                 password = input(f"Enter password for {username}: ")
         if len(num_matches) == 0:
             print("This username does not exist. Please try again ")
-            login.player()
+            login.player(username)
         for i in num_matches:       # works bc there's only one dictionary in the list since only one username should match
             while i['password'] != password:
                 print("incorrect password, try again")
@@ -23,4 +23,7 @@ class login():
         print("Congrats! You have successfully logged in ")
         # and then load that user's data or something idkidkidk
     def signup():
-        add()
+        create.add()
+        
+
+#login.signup()

@@ -63,7 +63,7 @@ class dialogues_story():
                     "Asahi: She's just a bit more convervative...", 
                     "Looking around you see a purple haired woman walking towards you, her long hair glistening in the starlight.", 
                     "Asahi: Say hi to your partner for the mission!", 
-                    "Asahi: Mael!",
+                    "Asahi: Mael!",  #x=10
                     "Mael: Hi.",
                     "Based off of her short yet simple style of talking, you could tell that",
                     "this is going to be a long trip."
@@ -73,13 +73,13 @@ class dialogues_story():
                     "It seems that after the defeat on the Space Ship, they have went to other planets.", 
                     "Mael: We're landing.",  
                     "Mael: ...",
-                    "Mael: Watchout!",
+                    "Mael: Watchout!", #x=20
                     "Mael: ...",
                     "You find a scroll on the floor.", 
                     "You then see a message on the paper, in a writing that you aren't familiar with.", 
                     "Mael: Asahi will probably be able to read it.", 
                     "Looking over your shoulder, you see Mael looking at the scroll intently.", 
-                    "With that this journey concludes and you and Mael go back to the ship with the scroll."]
+                    "With that, this journey concludes. You and Mael go back to the ship with the scroll."]
         print(dialogue[x])
     def taiyo(x):
         dialogue = ["Back at the spaceship, you and Mael rush towards Asahi's room to ask him to deciper the message.", 
@@ -166,8 +166,8 @@ class dialogues_player():
         print(dialogue[x])
     def pero(x):
         dialogue = ["You: Well we've already come this far, and I can't leave my sibling behind.",
-                    "You: [a] ..Why not? [b] Is something wrong?", #x4
-                    "You: Who?", #X6
+                    "You: [a] ..Why not? [b] Is something wrong?", #x3
+                    "You: Who?", #X7
                     "You: [a] Hi...? [b] HI!!!!!!!!!!!!!!", #X9
                     "You: Oh my god", #x20
                     "You: [a] Looks like they dropped something. [b] Booty?!", #x21

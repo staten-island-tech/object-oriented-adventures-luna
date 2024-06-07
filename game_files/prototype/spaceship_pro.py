@@ -33,5 +33,3 @@ class pro():
      elif answer == "3":
        spaceship.team(username)
      pro.wel(username)
-
-pro.wel('exa')

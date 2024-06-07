@@ -7,6 +7,7 @@ from battle import *
 from dialogues import *
 from quest_and_rewards import *
 from rand import *
+from prototype.prototype_4 import taiyo
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -315,5 +316,289 @@ class worlds():
 			f.write(json_string)
 		os.remove(r"game_files\classes\json\users.json")
 		os.rename(new_file, r"game_files\classes\json\users.json")
+	
 	def pero_mission(username):
-		pass
+		x = 0
+		while x <= 2:
+			dialogues_story.pero(x)
+			x += 1
+			rand.contin()
+		dialogues_player.pero(0)
+		rand.contin()
+		dialogues_story.pero(3)
+		rand.contin()
+		dialogues_story.pero(4)
+		rand.contin()
+		dialogues_player.pero(1)
+		answer = input("")
+		a = ['a','b']
+		while answer not in a:
+			dialogues_player.pero(1)
+			answer = input("")
+		rand.contin()
+		x = 5
+		while x <= 7:
+			dialogues_story.pero(x)
+			x += 1
+			rand.contin()
+		dialogues_player.pero(2)
+		rand.contin()
+		dialogues_story.pero(8)
+		rand.contin()
+		dialogues_story.pero(9)
+		rand.contin()
+		dialogues_player.pero(3)
+		answer = input("")
+		a = ['a','b']
+		while answer not in a:
+			dialogues_player.pero(3)
+			answer = input("")
+		rand.contin()
+		x = 10
+		while x <= 20:
+			dialogues_story.pero(x)
+			x += 1
+			rand.contin()
+		dialogues_player.pero(4)
+		rand.contin()
+		dialogues_story.pero(21)
+		rand.contin()
+		dialogues_player.pero(5)
+		answer = input("")
+		a = ['a','b']
+		while answer not in a:
+			dialogues_player.pero(5)
+			answer = input("")
+		rand.contin()
+		x = 22
+		while x <= 24:
+			dialogues_story.pero(x)
+			x += 1
+			rand.contin()
+		dialogues_player.pero(6)
+		answer = input("")
+		a = ['a','b']
+		while answer not in a:
+			dialogues_player.pero(6)
+			answer = input("")
+		rand.contin()
+		dialogues_story.pero(25)
+		rand.contin()
+
+		for user in users:
+			if user['username'] == username:
+				team = []
+				for character in entities:
+					if character['name'] in user['team']:
+						team.append(character)
+					else:
+						pass
+					team_hps = []
+				for team_member in team:
+					team_hps.append(team_member['hp'])
+				total_ally_hp = sum(team_hps)
+				print("Getting ready for battle...")
+				
+				# pero battle 1 - normal - 2 waves, 3 hydro bots each
+				wave = 0
+				y = 0
+				z = team[y]
+				l = len(team)
+				while wave < 2:
+					quests.wave(wave,0)
+					enemy_team = []
+					for enemy in entities:
+						if enemy['name'] == "Hydro Robot":
+							x = 1
+							while x <= 3:
+								enemy_team.append(enemy)
+								x += 1
+					enemy_hps = []
+					for i in enemy_team:
+						enemy_hps.append(i['hp'])
+					total_enemy_hp = sum(enemy_hps)
+
+					while total_ally_hp <= 0 and total_enemy_hp <= 0:
+						battle.cycle(z, enemy_team, team)
+						enemy_hps = []
+						for i in enemy_team:
+							enemy_hps.append(i['hp'])
+						battle.attack_enemy(enemy_team, team)
+						team_hps = []
+						for character in team:
+							team_hps.append(character['hp'])
+						total_ally_hp = sum(team_hps)
+						total_enemy_hp = sum(enemy_hps)
+						y += 1
+						if y > (l - 1):
+							y = 0
+					if total_ally_hp <= 0:
+						quests.lose(username, team)
+						worlds.pero_mission(username)
+					else:
+						reward = 7
+						add = user['crystals'] + reward
+						user['crystals'] = add
+						print(f"{username} now has {user['crystals']} crystals")
+					new_file = "updated.json"
+					with open(new_file, "w") as f:
+						json.dump(users, f)
+					os.remove(r"game_files\classes\json\users.json")
+					os.rename(new_file, r"game_files\classes\json\users.json")
+					wave += 1
+					rand.contin()
+							
+				# pero battle 2 - normal - 2 waves, 3 hydro robot dogs each
+				wave = 0
+				while wave < 2:
+					quests.wave(wave,0)
+					enemy_team = []
+					for enemy in entities:
+						if enemy['name'] == "Hydro Robot Dog":
+							x = 1
+							while x <= 3:
+								enemy_team.append(enemy)
+								x += 1
+					enemy_hps = []
+					for i in enemy_team:
+						enemy_hps.append(i['hp'])
+					total_enemy_hp = sum(enemy_hps)
+
+					while total_ally_hp <= 0 and total_enemy_hp <= 0:
+						battle.cycle(z, enemy_team, team)
+						enemy_hps = []
+						for i in enemy_team:
+							enemy_hps.append(i['hp'])
+						battle.attack_enemy(enemy_team, team)
+						team_hps = []
+						for character in team:
+							team_hps.append(character['hp'])
+						total_ally_hp = sum(team_hps)
+						total_enemy_hp = sum(enemy_hps)
+						y += 1
+						if y > (l - 1):
+							y = 0
+					if total_ally_hp <= 0:
+						quests.lose(username, team)
+						worlds.pero_mission(username)
+					else:
+						reward = 7
+						add = user['crystals'] + reward
+						user['crystals'] = add
+						print(f"{username} now has {user['crystals']} crystals")
+					new_file = "updated.json"
+					with open(new_file, "w") as f:
+						json.dump(users, f)
+					os.remove(r"game_files\classes\json\users.json")
+					os.rename(new_file, r"game_files\classes\json\users.json")
+					wave += 1
+					rand.contin()
+
+				# pero battle 3 - boss - wave 1: 2 minions, wave 2:hydro bot+giant hydro bot
+				#wave 1:
+				wave = 0
+				quests.wave(wave,1)
+				enemy_team = []       
+				for enemy in entities:
+					if enemy['name'] == "Hydro Robot":
+						x = 1
+						while x <= 2:
+							enemy_team.append(enemy)
+							x += 1
+					enemy_hps = []       
+				for i in enemy_team:
+					enemy_hps.append(i['hp'])
+				total_enemy_hp = sum(enemy_hps)       
+                
+				while total_ally_hp <= 0 and total_enemy_hp <= 0:
+					battle.cycle(z, enemy_team, team)
+					enemy_hps = []
+					for i in enemy_team:
+						enemy_hps.append(i['hp'])
+					battle.attack_enemy(enemy_team, team)
+					team_hps = []
+					for character in team:
+						team_hps.append(character['hp'])
+					total_ally_hp = sum(team_hps)
+					total_enemy_hp = sum(enemy_hps)
+					y += 1
+					if y > (l - 1):
+						y = 0
+				if total_ally_hp <= 0:
+					quests.lose(username, team)
+					worlds.pero_mission(username)
+				else:
+					reward = 40
+					add = user['crystals'] + reward
+					user['crystals'] = add
+					print(f"{username} now has {user['crystals']} crystals")
+				new_file = "updated.json"
+				with open(new_file, "w") as f:
+					json.dump(users, f)
+				os.remove(r"game_files\classes\json\users.json")
+				os.rename(new_file, r"game_files\classes\json\users.json")
+        
+				rand.contin()
+
+                
+				wave += 1    # wave = 2
+				quests.wave(wave, 1)
+				enemy_team = []       
+				for enemy in entities:
+					if enemy['name'] == "Hydro Robot" or enemy['name'] == "Giant Hydro Robot":
+						enemy_team.append(enemy)
+				enemy_hps = []
+				for i in enemy_team:
+					enemy_hps.append(i['hp'])
+				total_enemy_hp = sum(enemy_hps)       
+                
+				while total_ally_hp <= 0 and total_enemy_hp <= 0:
+					battle.cycle(z, enemy_team, team)
+					enemy_hps = []
+					for i in enemy_team:
+						enemy_hps.append(i['hp'])
+					battle.attack_enemy(enemy_team, team)
+					team_hps = []
+					for character in team:
+						team_hps.append(character['hp'])
+					total_ally_hp = sum(team_hps)
+					total_enemy_hp = sum(enemy_hps)
+					y += 1
+					if y > (l - 1):
+						y = 0
+				if total_ally_hp <= 0:
+					quests.lose(username, team)
+					worlds.pero_mission(username)
+				else:
+					reward = 40
+					add = user['crystals'] + reward
+					user['crystals'] = add
+					print(f"{username} now has {user['crystals']} crystals")
+				new_file = "updated.json"
+				with open(new_file, "w") as f:
+					json.dump(users, f)
+				os.remove(r"game_files\classes\json\users.json")
+				os.rename(new_file, r"game_files\classes\json\users.json")
+        
+				rand.contin()
+
+		# after all pero battles
+		dialogues_story.pero(26)
+		rand.contin()
+		print("Going back to spaceship...")
+		rand.contin()
+		rand.load()
+
+		for user in users:
+			if user['username'] == username:
+				user['quest'].append('monde')
+		new_file = "updated.json"
+		with open(new_file, "w") as f:
+			json_string = json.dumps(users)
+			f.write(json_string)
+		os.remove(r"game_files\classes\json\users.json")
+		os.rename(new_file, r"game_files\classes\json\users.json")
+
+	def taiyo_mission(username):
+		taiyo.path(username)
+		

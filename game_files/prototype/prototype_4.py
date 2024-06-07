@@ -22,7 +22,7 @@ class taiyo():
         dialogues_player.taiyo(0)
         rand.contin()
         x = 1
-        while x != 3:
+        while x <= 3:
             dialogues_story(x)
             x += 1
             rand.contin()
@@ -39,7 +39,7 @@ class taiyo():
         dialogues_player.taiyo(2)
         rand.contin()
         x = 5
-        while x != 8:
+        while x <= 8:
             dialogues_story(x)
             x += 1
             rand.contin()
@@ -60,7 +60,7 @@ class taiyo():
         dialogues_player.taiyo(6)
         rand.contin()
         x = 13
-        while x != 15:
+        while x <= 15:
             dialogues_story(x)
             x += 1
             rand.contin()
@@ -91,7 +91,7 @@ class taiyo():
                     for enemy in entities:
                         if enemy['name'] == "Trainee Guard":
                             x = 1
-                            while x != 3:
+                            while x <= 3:
                                 enemy_team.append(enemy)
                                 x += 1
                     enemy_hps = []       # list of the 3 trainee guard' hps
@@ -113,19 +113,19 @@ class taiyo():
                         y += 1
                         if y > (l - 1):
                             y = 0
-                        if total_ally_hp <= 0:
-                            quests.lose(username, team)
-                            taiyo.path(username)
-                        else:
-                            reward = 7
-                            add = user['crystals'] + reward
-                            user['crystals'] = add
-                            print(f"{username} now has {user['crystals']} crystals")
-                        new_file = "updated.json"
-                        with open(new_file, "w") as f:
-                            json.dump(users, f)
-                        os.remove(r"game_files\classes\json\users.json")
-                        os.rename(new_file, r"game_files\classes\json\users.json")
+                    if total_ally_hp <= 0:
+                        quests.lose(username, team)
+                        taiyo.path(username)
+                    else:
+                        reward = 7
+                        add = user['crystals'] + reward
+                        user['crystals'] = add
+                        print(f"{username} now has {user['crystals']} crystals")
+                    new_file = "updated.json"
+                    with open(new_file, "w") as f:
+                        json.dump(users, f)
+                    os.remove(r"game_files\classes\json\users.json")
+                    os.rename(new_file, r"game_files\classes\json\users.json")
                     wave += 1
                     rand.contin()
                 
@@ -136,7 +136,7 @@ class taiyo():
                 for enemy in entities:
                     if enemy['name'] == "Trainee Guard":
                         x = 1
-                        while x != 3:
+                        while x <= 3:
                             enemy_team.append(enemy)
                             x += 1
                 enemy_hps = []       # list of the 3 trainee guard' hps
@@ -181,7 +181,7 @@ class taiyo():
                 for enemy in entities:
                     if enemy['name'] == "Guard":
                         x = 1
-                        while x != 4:
+                        while x <= 4:
                             enemy_team.append(enemy)
                             x += 1
                 enemy_hps = []      
@@ -255,7 +255,7 @@ class taiyo():
                     print(f"{username} now has {user['crystals']} crystals")
                 new_file = "updated.json"
                 with open(new_file, "w") as f:
-                        json.dump(users, f)
+                    json.dump(users, f)
                 os.remove(r"game_files\classes\json\users.json")
                 os.rename(new_file, r"game_files\classes\json\users.json")
         
@@ -263,7 +263,7 @@ class taiyo():
 
                 # asahi arrives
                 x = 20
-                while x != 22:
+                while x <= 22:
                     dialogues_story.taiyo(x)
                     x += 1
                     rand.contin()
@@ -320,7 +320,7 @@ class taiyo():
 
                 # after all three taiyo battles...
                 x = 23
-                while x != 25:
+                while x <= 25:
                     dialogues_story.taiyo(x)
                     x += 1
                     rand.contin()
@@ -337,7 +337,6 @@ class taiyo():
                     rand.contin()
                     dialogues_story(28)
 
-taiyo.path("bob")
 
                 
                 

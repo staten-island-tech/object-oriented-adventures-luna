@@ -214,7 +214,7 @@ class prologue():
                     quests.lose(username, team)
                     prologue.path(username)
                 else:
-                    reward = 7
+                    rewards = 7
                     for user in users:
                         if user['username'] == username:
                             crystals = user['crystals']
@@ -260,7 +260,7 @@ class prologue():
                 quests.lose(username, team)
                 prologue.path(username)
             else:
-                reward = 7
+                rewards = 7
                 for user in users:
                     if user['username'] == username:
                         crystals = user['crystals']
@@ -366,7 +366,7 @@ class prologue():
                 print("Great Job! You finished the first story quest!!")
                 print("Your Journey has ended...")
                 print("You have not found your sibling, but you may continue playing to find out what would have happened if you chose the other route.")
-            reward = 1600
+            rewards = 1600
             for user in users:
                 if user['username'] == username:
                     crystals = user['crystals']
@@ -384,4 +384,3 @@ class prologue():
             rand.contin()
             print("Going to spaceship...")
             rand.load()
-prologue.path('exa')
