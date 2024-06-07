@@ -42,7 +42,7 @@ class spaceship():
                 print("Amalthea: What does that mean? Please be more specific!")
                 answer = input("")
             if answer == a[0]:
-                os.system()
+                os.system('cls')
                 dialogues_quest.amalthea(1)
                 print("You:...")
                 dialogues_quest.amalthea(2)

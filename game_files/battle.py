@@ -17,8 +17,8 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
           {'name': "b", 
            'hp': 10000, 
            'attack': 100, 
-           'type': "boss"}]
-
+           'type': "boss"}] """
+"""
 characters = [{'name': "c", 
               'hp': 5000, 
               "rarity": "****", 
@@ -89,7 +89,7 @@ class battle():
             print (enemy['name'])
             print (enemy['hp'])
             print( )
-        b = [7, 1, 3, 13, 9, 15]
+        b = [7, 1, 3, 13, 9, 15, 11, 18]
         c = random.randint(1, 20)
         e = 0
         if c in b:
@@ -136,7 +136,8 @@ class battle():
         for character in characters:
             a += 1
         b = a - 1
-        c = random.randrange(0, b)
+        print(b)
+        c = random.randint(0, b)
         a = 0
         for character in characters:
             if a == c:
@@ -190,4 +191,5 @@ class battle():
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json")
 
-#battle.attack_enemy(enemies,characters)
+""" characters = users[4]['team']
+battle.attack_enemy(enemies,characters) """

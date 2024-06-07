@@ -5,3 +5,5 @@ sys.path.append('/game_files')
 from game_files import star_system
 star_system.star.pull_one("exa")
  """
+import os
+os.system("cls")

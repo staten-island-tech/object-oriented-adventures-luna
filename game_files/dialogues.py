@@ -25,7 +25,8 @@ class dialogues_story():
                     "Asahi: Great!",                                    # The last four lines, two of them might not be used based off of the player's choice
                     "Asahi: Oh then be careful."
                     "As you depart from the space station alone in search of your sibling, you travel to many worlds after world with not even finding a sliver of your sibling's hair. This journey would continue until the end of your life.", 
-                    "As you depart from the space station with 'The Legacy', you ponder over what the future might hold for you."]
+                    "As you depart from the space station with 'The Legacy', you ponder over what the future might hold for you."
+                    ]
         print(dialogue[x])
     def getting_asahi(x):
         dialogue = ["You got Asahi!!!!!",

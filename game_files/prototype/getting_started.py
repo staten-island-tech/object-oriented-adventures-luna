@@ -89,20 +89,23 @@ class prologue():
                 if 'Asahi' in user['characters']:
                     pass
                 else:
-                    c = user['characters']
-                    c.append('Asahi')
+                    user['characters'].append('Asahi')
                     team_name = user['team']
-                    team_name.append('Asahi')
-                    new_file = "updated.json"
-                    with open(new_file, "w") as f:
-                        json_string = json.dumps(users)
-                        f.write(json_string)
-                    os.remove(r"game_files\classes\json\users.json")
-                    os.rename(new_file, r"game_files\classes\json\users.json")
+                    for entity in entities:
+                        if entity['name'] == "Asahi":
+                            del team_name[0]
+                            team_name.insert(0,entity)
+        new_file = "updated.json"
+        with open(new_file, "w") as f:
+            json_string = json.dumps(users)
+            f.write(json_string)
+        os.remove(r"game_files\classes\json\users.json")
+        os.rename(new_file, r"game_files\classes\json\users.json")
         team_name = []
         for user in users:
             if user['username'] == username:
-                team_name = user['team']
+                for i in user['team']:
+                    team_name.append(i['name'])
         team = []
         for entity in entities:
             if entity['name'] in team_name:
@@ -113,6 +116,8 @@ class prologue():
             a.append(character['hp'])
         ally_hp = sum(a)
         y = 0
+        print(team_name)
+        print(team)
         z = team[y]
         l = len(team)
         enemy_team = []
@@ -140,20 +145,22 @@ class prologue():
         if ally_hp <= 0:
             quests.lose(username, team)
             prologue.path(username)
-        rewards = 3
-        for user in users:
-            if user['username'] == username:
-                crystals = user['crystals']
-                add = crystals + rewards
-                print(f"{username} now has {add} crystals")
-                user['crystals'] = add
-        new_file = "updated.json"
-        with open(new_file, "w") as f:
-            json_string = json.dumps(users)
-            f.write(json_string)
-        os.remove(r"game_files\classes\json\users.json")
-        os.rename(new_file, r"game_files\classes\json\users.json") 
-        print("You've gained 3 crystals")
+        elif enemy_hp <= 0:
+            print("you've won the battle!")
+            rewards = 3
+            for user in users:
+                if user['username'] == username:
+                    crystals = user['crystals']
+                    add = crystals + rewards
+                    print(f"{username} now has {add} crystals")
+                    user['crystals'] = add
+            new_file = "updated.json"
+            with open(new_file, "w") as f:
+                json_string = json.dumps(users)
+                f.write(json_string)
+            os.remove(r"game_files\classes\json\users.json")
+            os.rename(new_file, r"game_files\classes\json\users.json") 
+            print("You've gained 3 crystals")
         rand.contin()
         dialogues_story.space_station(8)
         rand.contin()
@@ -196,9 +203,10 @@ class prologue():
             b = []
             for enemy in enemy_team:
                 b.append(enemy['hp'])
+            enemy_hp = sum(b)
             while ally_hp >= 0 and enemy_hp >= 0:
                 battle.cycle(z,enemy_team, team)
-                b = []
+                #b = []
                 for en in enemy_team:
                     b.append(en['hp'])
                 battle.attack_enemy(enemy_team, team)
@@ -214,6 +222,7 @@ class prologue():
                     quests.lose(username, team)
                     prologue.path(username)
                 else:
+                    print("You won the battle. You've gained 7 crystals")
                     rewards = 7
                     for user in users:
                         if user['username'] == username:
@@ -227,22 +236,22 @@ class prologue():
                         f.write(json_string)
                     os.remove(r"game_files\classes\json\users.json")
                     os.rename(new_file, r"game_files\classes\json\users.json") 
-                    print("You've gained 7 crystals")
-                    wave += 1
+            wave += 1
             print("You look around to see that there are no more monsters. As you let your guard down you see a shadow behind you.")
             rand.contin()
-            wave = 0
-            quests.wave(wave, 0)
-            enemy_team = []
-            for enemy in entities:
-                if enemy['name'] == "Oblivion Drones":
-                    for i in range(2):
-                        enemy_team.append(enemy)
-            b = []
-            y = 0
-            for enemy in enemy_team:
-                b.append(enemy['hp'])
-            while ally_hp >= 0 and enemy_hp >= 0:
+        wave = 0
+        quests.wave(wave, 0)
+        enemy_team = []
+        for enemy in entities:
+            if enemy['name'] == "Oblivion Drones":
+                for i in range(2):
+                    enemy_team.append(enemy)
+        b = []
+        y = 0
+        for enemy in enemy_team:
+            b.append(enemy['hp'])
+        enemy_hp = sum(b)
+        while ally_hp >= 0 and enemy_hp >= 0:
                 battle.cycle(z,enemy_team, team)
                 b = []
                 for en in enemy_team:
@@ -256,10 +265,11 @@ class prologue():
                 y += 1
                 if y > l - 1:
                     y = 0
-            if ally_hp <= 0:
+        if ally_hp <= 0:
                 quests.lose(username, team)
                 prologue.path(username)
-            else:
+        elif enemy_hp <= 0:
+                print("you won the battle! You gained 7 crystals")
                 rewards = 7
                 for user in users:
                     if user['username'] == username:
@@ -273,36 +283,37 @@ class prologue():
                     f.write(json_string)
                 os.remove(r"game_files\classes\json\users.json")
                 os.rename(new_file, r"game_files\classes\json\users.json") 
-                print("You've gained 7 crystals")
-            wave += 1
-            quests.wave(wave, 1)
-            enemy_team = []
-            for enemy in entities:
-                if enemy['name'] == "General Aeron":
-                    enemy_team.append(enemy)
+        wave += 1
+        quests.wave(wave, 1)
+        enemy_team = []
+        for enemy in entities:
+            if enemy['name'] == "General Aeron":
+                enemy_team.append(enemy)
+        b = []
+        for enemy in enemy_team:
+            b.append(enemy['hp'])
+        y = 0
+        enemy_hp = sum(b)
+        while ally_hp >= 0 and enemy_hp >= 0:
+            battle.cycle(z,enemy_team, team)
             b = []
-            for enemy in enemy_team:
-                b.append(enemy['hp'])
-            y = 0
-            while ally_hp >= 0 and enemy_hp >= 0:
-                battle.cycle(z,enemy_team, team)
-                b = []
-                for en in enemy_team:
-                    b.append(en['hp'])
-                battle.attack_enemy(enemy_team, team)
-                a = []
-                for character in team:
-                    a.append(character['hp'])
-                ally_hp = sum(a)
-                enemy_hp = sum(b)
-                y += 1
-                if y > (l - 1):
+            for en in enemy_team:
+                b.append(en['hp'])
+            battle.attack_enemy(enemy_team, team)
+            a = []
+            for character in team:
+                a.append(character['hp'])
+            ally_hp = sum(a)
+            enemy_hp = sum(b)
+            y += 1
+            if y > (l - 1):
                     y = 0
-            if ally_hp <= 0:
+        if ally_hp <= 0:
                 quests.lose(username, team)
                 prologue.path(username)
-            else:
-                reward = 40
+        elif enemy_hp <= 0:
+                print("you won the battle! you gain 40 crystals")
+                rewards = 40
                 for user in users:
                     if user['username'] == username:
                         crystals = user['crystals']
@@ -315,50 +326,49 @@ class prologue():
                     f.write(json_string)
                 os.remove(r"game_files\classes\json\users.json")
                 os.rename(new_file, r"game_files\classes\json\users.json")
-                print("You've gained 40 crystals")
-            rand.contin()
-            dialogues_story.space_station(10)
-            rand.contin()
-            dialogues_player.space_station(7)
-            rand.contin()
-            a = input("").lower()
-            b = ["a", "b"]
-            while a not in b:
+        rand.contin()
+        dialogues_story.space_station(10)
+        rand.contin()
+        dialogues_player.space_station(7)
+        rand.contin()
+        a = input("").lower()
+        b = ["a", "b"]
+        while a not in b:
                 print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
                 rand.contin()
                 print("You try and think of another response.")
                 dialogues_player.space_station(7)
                 a = input("").lower()
-            rand.contin()
-            dialogues_story.space_station(11)
-            rand.contin()
-            dialogues_player.space_station(8)
-            a = input("").lower()
-            while a not in b:
+        rand.contin()
+        dialogues_story.space_station(11)
+        rand.contin()
+        dialogues_player.space_station(8)
+        a = input("").lower()
+        while a not in b:
                 print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
                 rand.contin()
                 print("You try and think of another response.")
                 dialogues_player.space_station(8)
                 a = input("").lower()
-            rand.contin()
-            dialogues_story.space_station(12)
-            rand.contin()
-            dialogues_player.space_station(9)
-            a = input("").lower()
-            while a not in b:
+        rand.contin()
+        dialogues_story.space_station(12)
+        rand.contin()
+        dialogues_player.space_station(9)
+        a = input("").lower()
+        while a not in b:
                 print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
                 rand.contin()
                 print("You try and think of another response.")
                 dialogues_player.space_station(9)
                 a = input("").lower()
                 rand.contin()
-            if a == b[0]:
+        if a == b[0]:
                 dialogues_story.space_station(13)
                 rand.contin()
-                dialogues_story.space_station(16)
+                dialogues_story.space_station(15)
                 rand.contin()
                 print("Great Job! You finished the first story quest!!")
-            elif a == b[1]:
+        elif a == b[1]:
                 dialogues_story.space_station(14)
                 rand.contin()
                 dialogues_story.space_station(15)
@@ -366,21 +376,21 @@ class prologue():
                 print("Great Job! You finished the first story quest!!")
                 print("Your Journey has ended...")
                 print("You have not found your sibling, but you may continue playing to find out what would have happened if you chose the other route.")
-            rewards = 1600
-            for user in users:
-                if user['username'] == username:
+        rewards = 1600
+        for user in users:
+            if user['username'] == username:
                     crystals = user['crystals']
                     add = crystals + rewards
                     print(f"{username} now has {add} crystals")
                     user['crystals'] = add
                     user['quest'].append("space station")
-            new_file = "updated.json"
-            with open(new_file, "w") as f:
+        new_file = "updated.json"
+        with open(new_file, "w") as f:
                 json_string = json.dumps(users)
                 f.write(json_string)
-            os.remove(r"game_files\classes\json\users.json")
-            os.rename(new_file, r"game_files\classes\json\users.json")
-            print("You've gained 1600 crystals")
-            rand.contin()
-            print("Going to spaceship...")
-            rand.load()
+        os.remove(r"game_files\classes\json\users.json")
+        os.rename(new_file, r"game_files\classes\json\users.json")
+        print("You've completed this mission. You've gained 1600 crystals")
+        rand.contin()
+        print("Going to spaceship...")
+        rand.load()
