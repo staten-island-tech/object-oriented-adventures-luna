@@ -93,7 +93,6 @@ class prologue():
                     team_name = user['team']
                     for entity in entities:
                         if entity['name'] == "Asahi":
-                            del team_name[0]
                             team_name.insert(0,entity)
         new_file = "updated.json"
         with open(new_file, "w") as f:
