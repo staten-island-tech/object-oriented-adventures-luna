@@ -607,4 +607,3 @@ class worlds():
 	def taiyo_mission(username):
 		taiyo.path(username)
 
-worlds.monde_mission("idk")
