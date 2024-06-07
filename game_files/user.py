@@ -25,9 +25,9 @@ class create():
         while a != "y" and a != "n":
             a = input("Would you like to add a new user? y/n ").lower()
         while a == "y":
-            type = input("What type of user would you like to make? (player/admin) ").lower()
+            type = input("What type of user would you like to make? (player) ").lower()
             while type != "player" and type != "admin":
-                type = input("What type of user would you like to make? (player/admin) ").lower()
+                type = input("What type of user would you like to make? (player) ").lower()
             if type == "player":
                 username = input("Choose a username: ")
                 for user in user_data:
@@ -38,31 +38,7 @@ class create():
                 password = input("Choose a password: ")
                 crystals = 0
                 characters = [] 
-                team = [{"name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""},{"name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""},{"name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""},{"name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""}]
+                team = ["","","",""]
                 quest = []
                 stars = 0
                 player_made = player(username, password, type, crystals, stars, characters, team, quest)

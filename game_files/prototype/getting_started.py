@@ -105,7 +105,7 @@ class prologue():
         for user in users:
             if user['username'] == username:
                 for i in user['team']:
-                    team_name.append(i['name'])
+                    team_name.append(i)
         team = []
         for entity in entities:
             if entity['name'] in team_name:

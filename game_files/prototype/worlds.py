@@ -7,7 +7,6 @@ from battle import *
 from dialogues import *
 from quest_and_rewards import *
 from rand import *
-from prototype.prototype_4 import taiyo
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -76,7 +75,7 @@ class worlds():
 		for user in users:
 			if user['username'] == username:
 				for i in user['team']:
-					team_name.append(i['name'])
+					team_name.append(i)
 		team = []
 		for entity in entities:
 			if entity['name'] in team_name:
@@ -603,8 +602,3 @@ class worlds():
 			f.write(json_string)
 		os.remove(r"game_files\classes\json\users.json")
 		os.rename(new_file, r"game_files\classes\json\users.json")
-
-	def taiyo_mission(username):
-		taiyo.path(username)
-
-worlds.monde_mission("idk")

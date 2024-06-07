@@ -17,7 +17,7 @@ class pro():
      if answer == "1":
        print("Xingxing: What type of mission are you going on this time?")
        rand.quest_selector(username)
-       b = ["S", "D"]
+       b = ["S"]
        quest = input("").upper()
        while quest not in b:
          print("Xingxing: What did I say! What do you want to do anyways!?")
