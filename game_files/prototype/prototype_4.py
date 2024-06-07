@@ -116,7 +116,7 @@ class taiyo():
                     if total_ally_hp <= 0:
                         quests.lose(username, team)
                         taiyo.path(username)
-                    else:
+                    elif total_enemy_hp <= 0:
                         reward = 7
                         add = user['crystals'] + reward
                         user['crystals'] = add
@@ -161,7 +161,7 @@ class taiyo():
                 if total_ally_hp <= 0:
                     quests.lose(username, team)
                     taiyo.path(username)
-                else:
+                elif total_enemy_hp <= 0:
                     reward = 40       
                     add = user['crystals'] + reward
                     user['crystals'] = add
@@ -206,7 +206,7 @@ class taiyo():
                 if total_ally_hp <= 0:
                     quests.lose(username, team)
                     taiyo.path(username)
-                else:
+                elif total_enemy_hp <= 0:
                     reward = 40       
                     add = user['crystals'] + reward
                     user['crystals'] = add
@@ -248,7 +248,7 @@ class taiyo():
                 if total_ally_hp <= 0:
                     quests.lose(username, team)
                     taiyo.path(username)
-                else:
+                elif total_enemy_hp <= 0:
                     reward = 40       
                     add = user['crystals'] + reward
                     user['crystals'] = add
@@ -305,7 +305,7 @@ class taiyo():
                 if total_ally_hp <= 0:
                     quests.lose(username, team)
                     taiyo.path(username)
-                else:
+                elif total_enemy_hp <= 0:
                     reward = 40       
                     add = user['crystals'] + reward
                     user['crystals'] = add

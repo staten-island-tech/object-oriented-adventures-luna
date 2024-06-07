@@ -118,19 +118,20 @@ class worlds():
 			if ally_hp <= 0:
 				quests.lose(username, team)
 				worlds.monde_mission(username)
-			rewards = 7
-			for user in users:
-				if user['username'] == username:
-					crystals = user['crystals']
-					add = crystals + rewards
-					print(f"{username} now has {add} crystals.")
-					user['crystals'] = add
-			new_file = "updated.json"
-			with open(new_file, "w") as f:
-				json_string = json.dumps(users)
-				f.write(json_string)
-			os.remove(r"game_files\classes\json\users.json")
-			os.rename(new_file, r"game_files\classes\json\users.json")
+			elif enemy_hp <= 0:
+				rewards = 7
+				for user in users:
+					if user['username'] == username:
+						crystals = user['crystals']
+						add = crystals + rewards
+						print(f"{username} now has {add} crystals.")
+						user['crystals'] = add
+				new_file = "updated.json"
+				with open(new_file, "w") as f:
+					json_string = json.dumps(users)
+					f.write(json_string)
+				os.remove(r"game_files\classes\json\users.json")
+				os.rename(new_file, r"game_files\classes\json\users.json")
 			print("You've gained 7 crystals")
 			wave += 1
 		print("Battle 2")
@@ -151,6 +152,7 @@ class worlds():
 				b = []
 				for en in enemy_team:
 					b.append(en['hp'])
+				enemy_hp = sum(b)
 				battle.attack_enemy(enemy_team, team)
 				a = []
 				for character in team:
@@ -209,19 +211,20 @@ class worlds():
 		if ally_hp <= 0:
 			quests.lose(username, team)
 			worlds.monde_mission(username)
-		rewards = 7
-		for user in users:
-			if user['username'] == username:
-				crystals = user['crystals']
-				add = crystals + rewards
-				print(f"{username} now has {add} crystals.")
-				user['crystals'] = add
-		new_file = "updated.json"
-		with open(new_file, "w") as f:
-			json_string = json.dumps(users)
-			f.write(json_string)
-		os.remove(r"game_files\classes\json\users.json")
-		os.rename(new_file, r"game_files\classes\json\users.json")
+		elif enemy_hp <= 0:
+			rewards = 7
+			for user in users:
+				if user['username'] == username:
+					crystals = user['crystals']
+					add = crystals + rewards
+					print(f"{username} now has {add} crystals.")
+					user['crystals'] = add
+			new_file = "updated.json"
+			with open(new_file, "w") as f:
+				json_string = json.dumps(users)
+				f.write(json_string)
+			os.remove(r"game_files\classes\json\users.json")
+			os.rename(new_file, r"game_files\classes\json\users.json")
 		print("You've gained 7 crystals")
 		rand.contin()
 		quests.wave(1,1)
@@ -251,19 +254,20 @@ class worlds():
 		if ally_hp <= 0:
 			quests.lose(username, team)
 			worlds.monde_mission(username)
-		rewards = 40
-		for user in users:
-			if user['username'] == username:
-				crystals = user['crystals']
-				add = crystals + rewards
-				print(f"{username} now has {add} crystals.")
-				user['crystals'] = add
-		new_file = "updated.json"
-		with open(new_file, "w") as f:
-			json_string = json.dumps(users)
-			f.write(json_string)
-		os.remove(r"game_files\classes\json\users.json")
-		os.rename(new_file, r"game_files\classes\json\users.json")
+		elif enemy_hp <= 0:
+			rewards = 40
+			for user in users:
+				if user['username'] == username:
+					crystals = user['crystals']
+					add = crystals + rewards
+					print(f"{username} now has {add} crystals.")
+					user['crystals'] = add
+			new_file = "updated.json"
+			with open(new_file, "w") as f:
+				json_string = json.dumps(users)
+				f.write(json_string)
+			os.remove(r"game_files\classes\json\users.json")
+			os.rename(new_file, r"game_files\classes\json\users.json")
 		print("You've gained 40 crystals")
 		rand.contin()
 		dialogues_story.monde(10)
@@ -311,12 +315,12 @@ class worlds():
 		for user in users:
 			if user['username'] == username:
 				user['quest'].append('monde')
-		new_file = "updated.json"
-		with open(new_file, "w") as f:
-			json_string = json.dumps(users)
-			f.write(json_string)
-		os.remove(r"game_files\classes\json\users.json")
-		os.rename(new_file, r"game_files\classes\json\users.json")
+			new_file = "updated.json"
+			with open(new_file, "w") as f:
+				json_string = json.dumps(users)
+				f.write(json_string)
+			os.remove(r"game_files\classes\json\users.json")
+			os.rename(new_file, r"game_files\classes\json\users.json")
 	
 	def pero_mission(username):
 		x = 0
@@ -436,7 +440,7 @@ class worlds():
 					if total_ally_hp <= 0:
 						quests.lose(username, team)
 						worlds.pero_mission(username)
-					else:
+					elif total_enemy_hp <= 0:
 						reward = 7
 						add = user['crystals'] + reward
 						user['crystals'] = add
@@ -482,7 +486,7 @@ class worlds():
 					if total_ally_hp <= 0:
 						quests.lose(username, team)
 						worlds.pero_mission(username)
-					else:
+					elif total_enemy_hp <= 0:
 						reward = 7
 						add = user['crystals'] + reward
 						user['crystals'] = add
@@ -528,7 +532,7 @@ class worlds():
 				if total_ally_hp <= 0:
 					quests.lose(username, team)
 					worlds.pero_mission(username)
-				else:
+				elif total_enemy_hp <= 0:
 					reward = 40
 					add = user['crystals'] + reward
 					user['crystals'] = add
@@ -570,7 +574,7 @@ class worlds():
 				if total_ally_hp <= 0:
 					quests.lose(username, team)
 					worlds.pero_mission(username)
-				else:
+				elif total_enemy_hp <= 0:
 					reward = 40
 					add = user['crystals'] + reward
 					user['crystals'] = add
@@ -602,4 +606,5 @@ class worlds():
 
 	def taiyo_mission(username):
 		taiyo.path(username)
-		
+
+worlds.monde_mission("idk")
