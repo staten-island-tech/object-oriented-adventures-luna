@@ -12,13 +12,7 @@ class rand():
       c = input("").upper()
     os.system("cls")
   def load():
-    for i in range(20):
-      print("loading.")
-      os.system("cls")
-      print("loading..")
-      os.system("cls")
-      print("loading...")
-      os.system("cls")
+    for i in range(5):
       print("loading.")
       os.system("cls")
       print("loading..")

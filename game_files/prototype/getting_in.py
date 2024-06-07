@@ -62,16 +62,19 @@ class prototype():
                     print("Transporting back to spaceship...")
                     rand.contin()
                     pro.wel(username)
-            if account == "2":
+            elif account == "2":
                 login.signup()
-                os.system("cls")
                 rand.load()
                 username = input("What is your username? ")
+                
+                while username not in users['username']:
+                    username = input("try again ")
                 print("Welcome back!")
+                
                 prologue.start(username)
-                prologue.newbeginnings()
+                """ prologue.newbeginnings()
                 prologue.path(username)
-                pro.wel(username)
+                pro.wel(username) """
             a = "n"
 
-#prototype.start()
+prototype.start()

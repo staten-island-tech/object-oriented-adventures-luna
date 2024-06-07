@@ -74,8 +74,7 @@ class worlds():
 		team_name = []
 		for user in users:
 			if user['username'] == username:
-				for i in user['team']:
-					team_name.append(i)
+				team_name = user['team']
 		team = []
 		for entity in entities:
 			if entity['name'] in team_name:

@@ -29,19 +29,22 @@ class prologue():
             for user in users:
                 if user['username'] == username:
                     user['characters'].append("Aelius")
-                    user['team'].append("Aelius")
+                    user['team'].insert(0,"Aelius")
+            
         elif a == b[1]:
             for user in users:
                 if user['username'] == username:
                     user['characters'].append("Amaris")
-                    user['team'].append("Amaris")
+                    user['team'].insert(0,"Amaris")
         new_file = "updated.json"
         with open(new_file, "w") as f:
             json_string = json.dumps(users)
             f.write(json_string)
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json")
-        os.system("cls")
+        for i in user['characters']:
+             print(i)
+        
         print("Starting story now...")
         rand.contin()
         rand.load()
@@ -93,7 +96,7 @@ class prologue():
                     team_name = user['team']
                     for entity in entities:
                         if entity['name'] == "Asahi":
-                            team_name.insert(0,entity)
+                            team_name.insert(1,entity)
         new_file = "updated.json"
         with open(new_file, "w") as f:
             json_string = json.dumps(users)
@@ -105,6 +108,7 @@ class prologue():
             if user['username'] == username:
                 for i in user['team']:
                     team_name.append(i)
+        
         team = []
         for entity in entities:
             if entity['name'] in team_name:
@@ -393,3 +397,5 @@ class prologue():
         rand.contin()
         print("Going to spaceship...")
         rand.load()
+
+#prologue.start("idk")
