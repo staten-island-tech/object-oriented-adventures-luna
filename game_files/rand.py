@@ -13,17 +13,17 @@ class rand():
     os.system("cls")
   def load():
     for i in range(20):
-      print("loading '")
+      print("loading.")
       os.system("cls")
-      print("loading !")
+      print("loading..")
       os.system("cls")
-      print("loading ,")
+      print("loading...")
       os.system("cls")
-      print("loading .")
+      print("loading.")
       os.system("cls")
-      print("loading ;")
+      print("loading..")
       os.system("cls")
-      print("loading *")
+      print("loading...")
       os.system("cls")
   def quest_selector(username):
     for user in users:

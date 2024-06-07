@@ -9,6 +9,7 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 
 class quests():                                             #the whole class needs to be tested
+    
     def rewards(x, username):           # x is type of mission
         if x == "world":
             rewards = 80
@@ -50,24 +51,12 @@ class quests():                                             #the whole class nee
                 f.write(json_string)
             os.remove(r"game_files\classes\json\users.json")
             os.rename(new_file, r"game_files\classes\json\users.json")
-    def wave(x, z):   # x = wave umber(current) z = world(taiyo, etc)
+    def wave(x, e):   # x = wave number(current) z = world(taiyo, etc)
         a = int(x)
-        c = str(z).lower()
-        if x <= 2:
-            if a <= 1:
-                print(f"Wave {a+1}: Normal Battle")
-            else:
-                print("Wave 3: Boss Battle")
+        if e == 0:
+            print(f"Wave {a+1}: Normal Battle")
         else:
-            if c == "taiyo":
-                if a == 3:
-                    print(f"Wave 4: Boss Battle")
-                elif a > 3:
-                    print("Congratulations! Going back to main story...")
-                    rand.load()
-            else:
-                print("Congratulations! Going back to main story...")
-                rand.load()
+            print(f"Wave {a+1}: Boss Battle")
 
 """     def enemy(x, username):
         if x == "monde":

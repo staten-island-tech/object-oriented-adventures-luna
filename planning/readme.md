@@ -287,7 +287,7 @@ Taiyo: Guards of Taiyo
     - 3 Battles(same as the other worlds)
     - First Battle: Normal Battle(3 trainee gaurds(two waves))
     - Second Battle: Boss Battle(wave one: 3 trainee guards, wave two: 4 normal guards, wave three: Captain of the Guard)
-    - Third Battle: Boss Battle(Queen of Taiyo(could summon normal guards to her side))
+    - Third Battle: Boss Battle(Queen of Taiyo)
       - After defeating the third boss, the player will see a gem that is dropped.
             Choice One: Pick it up
                 - Happy Ending(find their sibling(gem shows where their sibling is))
@@ -309,10 +309,8 @@ If you get a duplicate, you will get 80 crystals back.
 
 ### Rates:
 
-    Nothing: 85%
-    Characters: 15%
-        4-star characters: 99%
-        5-star characters: 1%
+    Nothing: 70%
+    Characters: 30%
 
 At 70 stars, soft pity will activate. The rate for characters would increase by 5-10% and the rate for nothing would decrease by the same amount.
 

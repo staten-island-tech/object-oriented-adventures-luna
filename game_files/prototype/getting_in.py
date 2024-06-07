@@ -4,10 +4,12 @@ import os
 import sys
 
 sys.path.append("game_files")
+from prototype.getting_started import *
+
 from login import *
 from entry import *
 from rand import *
-
+from prototype.spaceship_pro import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -19,13 +21,13 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
 class prototype():
     def start():
         print("Welcome to Legacy!")
-        a = input("Is your terminal in full screen? y/n").lower()
+        a = input("Is your terminal in full screen? y/n ").lower()
         b = ["y", "n"]
         while a not in b:
-            a = input("Is your terminal in full screen? y/n").lower()
+            a = input("Is your terminal in full screen? y/n ").lower()
         while a == "n":
             print("Please put your terminal in full screen.")
-            a = input("Is your terminal in full screen now? y/n").lower()
+            a = input("Is your terminal in full screen now? y/n ").lower()
         while a == "y":
             os.system("cls")
             entry.screen()
@@ -52,19 +54,25 @@ class prototype():
                 rand.contin()
                 rand.load()
                 for user in users:
-                    if user['name'] == username:
+                    if user['username'] == username:
                         data = len(user['quest'])
                 if data == 0:
-                    pass                     ## import prologue and spaceship/tutorial battles
+                    prologue.path(username)
                 else:
                     print("Transporting back to spaceship...")
                     rand.contin()
-                    pass                   ## import spaceship code
+                    pro.wel(username)
             if account == "2":
                 login.signup()
                 os.system("cls")
                 rand.load()
-                pass
-                                    ##  import prologue
+                username = input("What is your username? ")
+                login.player(username)
+                print("Welcome back!")
+                prologue.start(username)
+                prologue.newbeginnings()
+                prologue.path(username)
+                pro.wel(username)
+            a = "n"
 
-prototype.start()
+#prototype.start()
