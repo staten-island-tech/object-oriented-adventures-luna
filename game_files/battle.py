@@ -185,3 +185,4 @@ class battle():
             f.write(json_string)
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json")
+battle.attack(10,enemies)
