@@ -1,6 +1,4 @@
 import json
-import sys
-import os
 
 from game_files.prototype.getting_in import *
 

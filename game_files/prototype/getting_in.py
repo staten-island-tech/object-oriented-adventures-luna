@@ -67,7 +67,6 @@ class prototype():
                 os.system("cls")
                 rand.load()
                 username = input("What is your username? ")
-                login.player(username)
                 print("Welcome back!")
                 prologue.start(username)
                 prologue.newbeginnings()

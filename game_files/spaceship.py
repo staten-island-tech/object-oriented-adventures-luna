@@ -8,6 +8,7 @@ from dialogues import *
 from battle import *
 from star_system import starsystem
 from prototype.worlds import *
+from prototype.prototype_4 import *
 
 class spaceship():
     def welcome(username):
@@ -89,7 +90,7 @@ class spaceship():
                 print("You: I will. see you when I come back then, Astrophel!")
                 rand.contin()
                 rand.load()
-                worlds.taiyo_mission(username)
+                taiyo.path(username)
             elif answer == a[1]:
                 print("Astrophel: Oh. Alright! Please enjoy your time on the spaceship then!")
                 rand.contin()

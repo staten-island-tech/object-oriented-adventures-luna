@@ -49,8 +49,7 @@
             "Asahi"
         ],
         "quest": [
-            "spaceship",
-            "monde"
+            "spaceship"
         ]
     },
     {
@@ -200,5 +199,52 @@
         "quest": [
             "space station"
         ]
+    },
+    {
+        "username": "whalen",
+        "password": "a",
+        "type": "player",
+        "crystals": 0,
+        "stars": 0,
+        "characters": [],
+        "team": [
+            {
+                "name": "",
+                "hp": 0,
+                "attack": [],
+                "rarity": "",
+                "weapon": "",
+                "type": "",
+                "element": ""
+            },
+            {
+                "name": "",
+                "hp": 0,
+                "attack": [],
+                "rarity": "",
+                "weapon": "",
+                "type": "",
+                "element": ""
+            },
+            {
+                "name": "",
+                "hp": 0,
+                "attack": [],
+                "rarity": "",
+                "weapon": "",
+                "type": "",
+                "element": ""
+            },
+            {
+                "name": "",
+                "hp": 0,
+                "attack": [],
+                "rarity": "",
+                "weapon": "",
+                "type": "",
+                "element": ""
+            }
+        ],
+        "quest": []
     }
 ]

@@ -30,5 +30,3 @@ class rand():
       if user['username'] == username:
         data = len(user['quest'])
     print("[S] Story Quest")
-    if data > 1:
-      print("[D] Dailies")

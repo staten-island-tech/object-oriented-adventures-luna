@@ -25,9 +25,9 @@ class create():
         while a != "y" and a != "n":
             a = input("Would you like to add a new user? y/n ").lower()
         while a == "y":
-            type = input("What type of user would you like to make? (player/admin) ").lower()
+            type = input("What type of user would you like to make? (player) ").lower()
             while type != "player" and type != "admin":
-                type = input("What type of user would you like to make? (player/admin) ").lower()
+                type = input("What type of user would you like to make? (player) ").lower()
             if type == "player":
                 username = input("Choose a username: ")
                 for user in user_data:
