@@ -332,7 +332,7 @@ class taiyo():
                     answer = input("we know this is a hard choice...but YOU HAVE TO CHOOSE ONE").lower()
                 if answer == "a":
                     dialogues_story(26)
-                else: 
+                elif answer == "b": 
                     dialogues_story(27)
                     rand.contin()
                     dialogues_story(28)
