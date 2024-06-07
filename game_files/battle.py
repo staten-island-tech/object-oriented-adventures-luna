@@ -9,7 +9,7 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
     entities = json.load(bye)
 
 
-""" enemies = [{'name': "a", 
+enemies = [{'name': "a", 
           'hp': 4500, 
           'attack': 40, 
           'type': "minion"}, 
@@ -18,7 +18,7 @@ with open (r"game_files\classes\json\entities.json", "r") as bye :
            'attack': 100, 
            'type': "boss"}]
 
-characters = [{'name': "c", 
+"""characters = [{'name': "c", 
               'hp': 5000, 
               "rarity": "****", 
               'attack': [250, 750], 
