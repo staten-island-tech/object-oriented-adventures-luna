@@ -7,7 +7,6 @@ from rand import *
 from dialogues import *
 from battle import *
 from quest_and_rewards import *
-from spaceship_pro import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -120,11 +119,11 @@ class prologue():
         for en in entities:
             if en['name'] == "Oblivion Guard":
                 for i in range(3):
-                    enemy_team.append(enemy)
+                    enemy_team.append(en)
         for enemy in enemy_team:
             b.append(enemy['hp'])
         enemy_hp = sum(b)
-        while ally_hp <= 0 and enemy_hp <= 0:
+        while ally_hp >= 0 and enemy_hp >= 0:
             battle.cycle(z, enemy_team, team)
             b = []
             for en in enemy_team:
@@ -385,5 +384,4 @@ class prologue():
             rand.contin()
             print("Going to spaceship...")
             rand.load()
-            pro.wel(username)
 prologue.path('exa')

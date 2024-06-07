@@ -7,7 +7,6 @@ from battle import *
 from dialogues import *
 from quest_and_rewards import *
 from rand import *
-from spaceship_pro import *
 
 with open (r"game_files\classes\json\users.json", "r") as hi : 
     users = json.load(hi)
@@ -75,16 +74,19 @@ class worlds():
 		team_name = []
 		for user in users:
 			if user['username'] == username:
-				team_name = user['team']
+				team_name = []
 		team = []
 		for entity in entities:
-			if entity['name'] in team:
+			if entity['name'] in team_name:
 				team.append(entity)
 		a = []
 		for character in team:
 			a.append(character['hp'])
 		ally_hp = sum(a)
 		wave = 0
+		y = 0
+		z = team[y]
+		l = len(team)
 		print("Battle 1: ")
 		while wave != 2:
 			quests.wave(wave, 0)
@@ -97,9 +99,6 @@ class worlds():
 			for en in enemy_team:
 				b.append(en['hp'])
 			enemy_hp = sum(b)
-			y = 0
-			z = team[y]
-			l = len(team)
 			while ally_hp >= 0 or enemy_hp >= 0:
 				battle.cycle(z, enemy_team, team)
 				b = []
@@ -316,6 +315,5 @@ class worlds():
 			f.write(json_string)
 		os.remove(r"game_files\classes\json\users.json")
 		os.rename(new_file, r"game_files\classes\json\users.json")
-		pro.wel(username)
-
-worlds.monde_mission('exa')
+	def pero_mission(username):
+		pass

@@ -1,7 +1,8 @@
 import sys
+
 sys.path.append("game_files")
 from rand import *
-from spaceship import spaceship
+from spaceship import *
 
 class pro():
   def wel(username):
@@ -30,7 +31,7 @@ class pro():
      elif answer == "2":
        spaceship.star_system(username)
      elif answer == "3":
-       spaceship.select_character(username)
+       spaceship.team(username)
      pro.wel(username)
 
 pro.wel('exa')
