@@ -4,14 +4,14 @@ with open (r"game_files\classes\json\users.json", "r") as hi :
 
 import sys
 import os
-sys.path.append("game_files")
 from rand import *
 from dialogues import *
 from battle import *
 from star_system import starsystem
 
-sys.path.append("game_files/prototype")
-from worlds import *
+sys.path.append('/game_files')
+from game_files import prototype
+
 
 class spaceship():
     def welcome(username):
@@ -51,7 +51,7 @@ class spaceship():
                 dialogues_quest.amalthea(2)
                 rand.contin()
                 rand.load()
-                worlds.monde_mission(username)
+                prototype.worlds.monde_mission(username)
             elif answer == a[1]:
                 print("Amalthea: I see")
                 rand.contin()
@@ -203,3 +203,5 @@ class spaceship():
             pass
     def team(username):
         battle.select_character(username)
+
+("exa")
