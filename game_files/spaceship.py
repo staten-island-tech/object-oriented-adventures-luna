@@ -8,10 +8,7 @@ from rand import *
 from dialogues import *
 from battle import *
 from star_system import starsystem
-
-sys.path.append('/game_files')
-from game_files import prototype
-
+from prototype.worlds import *
 
 class spaceship():
     def welcome(username):
@@ -51,7 +48,7 @@ class spaceship():
                 dialogues_quest.amalthea(2)
                 rand.contin()
                 rand.load()
-                prototype.worlds.monde_mission(username)
+                worlds.monde_mission()
             elif answer == a[1]:
                 print("Amalthea: I see")
                 rand.contin()
