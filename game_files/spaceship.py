@@ -1,9 +1,9 @@
 import json
-data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-users = json.load(data_users)
+with open (r"game_files/classes/json/users.json", "r") as hi : 
+    users = json.load(hi)
 
-data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-entities = json.load(data_entities)
+with open (r"game_files/classes/json/entities.json", "r") as bye :
+    entities = json.load(bye)
 
 import os
 from rand import *
@@ -15,11 +15,11 @@ from prototype.prototype_4 import *
 
 class spaceship():
     def welcome(username):
-        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-        users = json.load(data_users)
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
 
-        data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-        entities = json.load(data_entities)
+        with open (r"game_files/classes/json/entities.json", "r") as bye :
+            entities = json.load(bye)
         print("??: Welcome abroad the spaceship! Captain Xingxing, here!")
         rand.contin()
         print("Xingxing: Greetings! Is there anything you would like?")
@@ -187,11 +187,11 @@ class spaceship():
             pass
 
     def star_system(username):
-        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-        users = json.load(data_users)
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
 
-        data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-        entities = json.load(data_entities)
+        with open (r"game_files/classes/json/entities.json", "r") as bye :
+            entities = json.load(bye)
         print("Welcome to the star system - what would you like to do?")
         print("[1] View your characters")
         print("[2] Buy 1 star and pull once")
@@ -213,7 +213,7 @@ class spaceship():
         else:
             pass
     def team(username):
-        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-        users = json.load(data_users)
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
         battle.select_character(username)
 

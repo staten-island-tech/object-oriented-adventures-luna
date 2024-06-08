@@ -16,8 +16,9 @@ class player(user):
         self.team = team
         self.quest = quest
 
-data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-users = json.load(data_users)
+with open (r"game_files/classes/json/users.json", "r") as hi : 
+    users = json.load(hi)
+
 
 class create():
     def add():

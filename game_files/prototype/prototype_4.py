@@ -13,11 +13,11 @@ from rand import *
 
 class taiyo():
     def path(username):
-        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-        users = json.load(data_users)
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
 
-        data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-        entities = json.load(data_entities)
+        with open (r"game_files/classes/json/entities.json", "r") as bye :
+            entities = json.load(bye)
         dialogues_story.taiyo(0)
         rand.contin()
         dialogues_player.taiyo(0)
