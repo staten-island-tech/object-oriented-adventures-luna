@@ -2,6 +2,7 @@ import os
 import json
 import random
 import time
+from rand import rand
 
 with open (r"game_files/classes/json/users.json", "r") as hi : 
     users = json.load(hi)
@@ -135,6 +136,7 @@ class starsystem():
                             print(f"--PULL NUMBER {othercount}: --")
                             time.sleep(0.75)
                             base_functions.get_random_character(k,username)
+                            rand.contin()
                             count += 1
                             othercount += 1
                         answer = "n"
