@@ -337,8 +337,15 @@ class taiyo():
                     dialogues_story(27)
                     rand.contin()
                     dialogues_story(28)
-
-
+                for user in users:
+                    if user['username'] == username:
+                        user['quest'].append('taiyo')
+                new_file = "updated.json"
+                with open(new_file, "w") as f:
+                    json_string = json.dumps(users)
+                    f.write(json_string)
+                os.remove(r"game_files/classes/json/users.json")
+                os.rename(new_file, r"game_files/classes/json/users.json")
                 
                 
                 

@@ -75,8 +75,7 @@ class worlds():
 		team_name = []
 		for user in users:
 			if user['username'] == username:
-				for i in user['team']:
-					team_name.append(i)
+				team_name = user['team']
 		team = []
 		for entity in entities:
 			if entity['name'] in team_name:
@@ -366,30 +365,6 @@ class worlds():
 			rand.contin()
 		dialogues_player.pero(4)
 		rand.contin()
-		dialogues_story.pero(21)
-		rand.contin()
-		dialogues_player.pero(5)
-		answer = input("")
-		a = ['a','b']
-		while answer not in a:
-			dialogues_player.pero(5)
-			answer = input("")
-		rand.contin()
-		x = 22
-		while x <= 24:
-			dialogues_story.pero(x)
-			x += 1
-			rand.contin()
-		dialogues_player.pero(6)
-		answer = input("")
-		a = ['a','b']
-		while answer not in a:
-			dialogues_player.pero(6)
-			answer = input("")
-		rand.contin()
-		dialogues_story.pero(25)
-		rand.contin()
-
 		for user in users:
 			if user['username'] == username:
 				team = []
@@ -584,10 +559,32 @@ class worlds():
 					json.dump(users, f)
 				os.remove(r"game_files/classes/json/users.json")
 				os.rename(new_file, r"game_files/classes/json/users.json")
-        
-				rand.contin()
+		
+		rand.contin()
 
-		# after all pero battles
+		dialogues_story.pero(21)
+		rand.contin()
+		dialogues_player.pero(5)
+		answer = input("")
+		a = ['a','b']
+		while answer not in a:
+			dialogues_player.pero(5)
+			answer = input("")
+		rand.contin()
+		x = 22
+		while x <= 24:
+			dialogues_story.pero(x)
+			x += 1
+			rand.contin()
+		dialogues_player.pero(6)
+		answer = input("")
+		a = ['a','b']
+		while answer not in a:
+			dialogues_player.pero(6)
+			answer = input("")
+		rand.contin()
+		dialogues_story.pero(25)
+		rand.contin()
 		dialogues_story.pero(26)
 		rand.contin()
 		print("Going back to spaceship...")
@@ -596,7 +593,7 @@ class worlds():
 
 		for user in users:
 			if user['username'] == username:
-				user['quest'].append('monde')
+				user['quest'].append('pero')
 		new_file = "updated.json"
 		with open(new_file, "w") as f:
 			json_string = json.dumps(users)
