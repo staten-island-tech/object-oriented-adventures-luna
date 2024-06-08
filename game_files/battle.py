@@ -177,5 +177,3 @@ class battle():
         os.remove(r"game_files\classes\json\users.json")
         os.rename(new_file, r"game_files\classes\json\users.json")
 
-""" characters = users[4]['team']
-battle.attack_enemy(enemies,characters) """

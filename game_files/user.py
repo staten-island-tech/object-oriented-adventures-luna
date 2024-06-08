@@ -34,7 +34,7 @@ class create():
                         username = input("Username taken, choose another username: ")
                 print(username)
                 password = input("Choose a password: ")
-                print("Pick your character: ")
+                print("Pick your first character: ")
                 print("[A] Aelius")
                 print("[B] Amaris")
                 a = input("").upper()
@@ -66,5 +66,5 @@ class create():
         
         
 
-#create.add()
+create.add()
 
