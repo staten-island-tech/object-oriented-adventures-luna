@@ -16,8 +16,9 @@ class player(user):
         self.team = team
         self.quest = quest
 
-data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-users = json.load(data_users)
+with open (r"game_files/classes/json/users.json", "r") as hi : 
+    users = json.load(hi)
+
 
 class create():
     def add():
@@ -34,7 +35,7 @@ class create():
                         username = input("Username taken, choose another username: ")
                 print(username)
                 password = input("Choose a password: ")
-                print("Pick your character: ")
+                print("Pick your first character: ")
                 print("[A] Aelius")
                 print("[B] Amaris")
                 a = input("").upper()
@@ -43,16 +44,15 @@ class create():
                     print('That is not a character you could choose, please try again.')
                     a = input("").upper()
                 if a == b[0]:
-                    characters = ["Aelius"]
-                    team = ["Aelius","","",""]
+                    characters = ["Aelius", "Asahi"]
+                    team = ["Aelius","Asahi","",""]
                 elif a == b[1]:
-                    characters = ["Amaris"]
-                    team = ["Amaris","","",""]
+                    characters = ["Amaris", "Asahi"]
+                    team = ["Amaris","Asahi","",""]
                 crystals = 12800
                 quest = []
                 stars = 0
                 player_made = player(username, password, type, crystals, stars, characters, team, quest)
-                print(player_made.__dict__)
                 users.append(player_made.__dict__)
                 new_file = "updated.json"
                 with open(new_file, "w") as f:
@@ -64,7 +64,4 @@ class create():
         while a == "n":
             return "thank you for your time."
         
-        
-
-#create.add()
 

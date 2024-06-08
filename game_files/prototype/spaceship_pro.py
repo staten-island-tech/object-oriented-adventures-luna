@@ -13,7 +13,7 @@ class pro():
        print("Xingxing: Choose again! You can't just make your own choices!!")
        answer = input("")
      print("Xingxing: Hmm. Alright then. Let's go.")
-     rand.load()
+     os.system("cls")
      if answer == "1":
        spaceship.quest_story(username)
      elif answer == "2":

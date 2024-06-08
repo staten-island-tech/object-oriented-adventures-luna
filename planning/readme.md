@@ -263,7 +263,6 @@ Monde: Hydro Robots
 
     - Must talk to the first npc first for quest
     - Will be transported to the world, Monde
-    - Charlotte's attacks will be null to these mobs
     - 3 Battles(minion, minion, boss)
     - First Battle: Normale Battle(3 hydro robots(2 waves))
     - Second Battle: Normal Battle(same as battle one but against hydro robot dogs)
@@ -273,7 +272,6 @@ Pero: Minions of the Oblivion and Ice Trolls
 
     - Must pass Monde to transport to Pero
     - Must talk to second npc to get quest and will be transported to Pero
-    - All ice character's attacks will be null to these mobs
     - 3 Battles(same as the other worlds)
     - First Battle: Normal Battle(6 minions/Oblivion Guards and Ice goblins)
     - Second Battle: Normal Battle(3 minions(two waves)/Oblivion orbs and Ice archer goblins)
@@ -283,7 +281,6 @@ Taiyo: Guards of Taiyo
 
     - Must pass all previous worlds
     - Must talk to the third npc to get the quest and will be transported to Taiyo
-    - All imaginary character's attacks will be null to these mobs
     - 3 Battles(same as the other worlds)
     - First Battle: Normal Battle(3 trainee gaurds(two waves))
     - Second Battle: Boss Battle(wave one: 3 trainee guards, wave two: 4 normal guards, wave three: Captain of the Guard)

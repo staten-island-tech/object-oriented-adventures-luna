@@ -10,11 +10,11 @@ from entry import *
 from rand import *
 from prototype.spaceship_pro import *
 
-data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-users = json.load(data_users)
+with open (r"game_files/classes/json/users.json", "r") as hi : 
+    users = json.load(hi)
 
-data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-entities = json.load(data_entities)
+with open (r"game_files/classes/json/entities.json", "r") as bye :
+    entities = json.load(bye)
 
 
 
@@ -31,9 +31,7 @@ class prototype():
         while a == "y":
             os.system("cls")
             entry.screen()
-            c = input("[A] Continue").upper()
-            while c != "A":
-                c = input("").upper()
+            rand.contin()
             os.system("cls")
             print("Welcome to our game! Would you like to sign in to your existing account or sign up for a new account?")
             print("[1] Sign in")
@@ -52,11 +50,12 @@ class prototype():
                 os.system("cls")
                 print("Welcome back!")
                 rand.contin()
-                rand.load()
                 for user in users:
                     if user['username'] == username:
                         data = len(user['quest'])
                 if data == 0:
+                    print("Continuing story quest...")
+                    rand.contin()
                     prologue.path(username)
                 else:
                     print("Transporting back to spaceship...")
@@ -65,14 +64,14 @@ class prototype():
             if account == "2":
                 login.signup()
                 os.system("cls")
-                rand.load()
                 username = input("What is your username? ")
                 print("Welcome to our Game!")
                 print("Thank you for playing this game! To show our apprieciation we will be giving you 12,800 crystals!")
-                print("This will be useful to you later on in the game!")
+                print("This will be useful to you later on in the game! You will also be getting a free four-staar character when you start.")
+                print("This character will be Asahi who you will meet later on in the game.")
+                print("Thank you for your time! Have fun!")
+                rand.contin()
                 prologue.newbeginnings()
                 prologue.path(username)
                 pro.wel(username)
             a = "n"
-
-#prototype.start()

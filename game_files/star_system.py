@@ -2,42 +2,54 @@ import os
 import json
 import random
 import time
+from rand import rand
 
-data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-users = json.load(data_users)
+with open (r"game_files/classes/json/users.json", "r") as hi : 
+    users = json.load(hi)
 
-data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-entities = json.load(data_entities)
+with open (r"game_files/classes/json/entities.json", "r") as bye :
+    entities = json.load(bye)
 
 
 class base_functions():         # ***DONT IMPORT OR USE THIS IN OTHER FILES, ONLY USE the  starsystem class
-    def check_dupe_or_append(username, char):       #char is the entire character dictionary of that character (automatically replaced w variable in function)
+    def check_dupe_or_append(username, character):       #char is the entire character dictionary of that character (automatically replaced w variable in function)
         for user in users:                         #tested
             if user['username'] == username:
                 characters = user['characters']
-                names = []
-                for character in characters:
-                    names.append(character)
-                if char['name'] in names:
+                if character['name'] in characters:
                     user['crystals'] += 80
                     user['stars'] += 1
                 else: 
-                    characters.append(char['name'])
+                    characters.append(character['name'])
                     user['stars'] += 1
+                if user['stars'] > 90:
+                    user['stars'] = 0
+                else:
+                    pass
         new_file = "updated.json"
         with open(new_file, "w") as f:
-            json.dump(users, f)
-        os.remove(r"game_files\classes\json\users.json")
-        os.rename(new_file, r"game_files\classes\json\users.json")
+            json_string = json.dumps(users)
+            f.write(json_string)
+        os.remove(r"game_files/classes/json/users.json")
+        os.rename(new_file, r"game_files/classes/json/users.json")
         #os.system("cls")
 
     def get_random_character(k,n):                  # k = 30 --> represents the percent chance of pulling a character
                                                  # n is the username of the user who is pulling the characters --> becomes username in the pull_one and pull_ten functions
         char_list = []
-        for entity in entities[0:19]:
-            char_list.append(entity)
-        character = random.choices(char_list).pop()      #randomly chooses a character from entities list
-        num_list = [random.randint(1,100) for i in range(k)]    # generates a list of 15 random int btwn 1-100
+        for user in users:
+            if user['username'] == n:
+                if user['stars'] >= 90:
+                    for entity in entities[0:19]:
+                        if entity['rarity'] == "*****":
+                            char_list.append(entity)
+                        else:
+                            pass
+                else:
+                    for entity in entities[0:19]:
+                        char_list.append(entity)
+        character = random.choices(char_list).pop()      #randomly chooses a character from entities list, includes the entire dict
+        num_list = [random.randint(1,100) for i in range(k)]    # generates a list of 30 random int btwn 1-100
         b = random.randint(1,100)                  # generate 1 random int btwn 1-100
         if b in num_list:               # 30% chance of occurring
             print(character)
@@ -48,11 +60,13 @@ class base_functions():         # ***DONT IMPORT OR USE THIS IN OTHER FILES, ONL
             for user in users:
                 if user['username'] == n:
                     user['stars'] += 1
+
             new_file = "updated.json"
             with open(new_file, "w") as f:
-                json.dump(users, f)
-            os.remove(r"game_files\classes\json\users.json")
-            os.rename(new_file, r"game_files\classes\json\users.json")
+                json_string = json.dumps(users)
+                f.write(json_string)
+            os.remove(r"game_files/classes/json/users.json")
+            os.rename(new_file, r"game_files/classes/json/users.json")
 
     def activate_pity(username):
         k = starsystem.k
@@ -62,10 +76,11 @@ class base_functions():         # ***DONT IMPORT OR USE THIS IN OTHER FILES, ONL
                     k += random.randint(5,10)
                 elif 80 <= user['stars'] < 90:
                     k += random.randint(15,20)
-                elif user['stars'] >= 90:
+                elif user['stars'] > 90:
                     k = 100
                 else:
                     pass
+
                     
 
 
@@ -98,7 +113,6 @@ class starsystem():
                         base_functions.get_random_character(k,username)
                         answer = "n"
                 print(f"{username} now has {user['crystals']} crystals left")
-                print(f"you used {user['stars']} stars")
 
     def pull_ten(username):            #tested
         k = starsystem.k
@@ -121,8 +135,9 @@ class starsystem():
                             print(f"--PULL NUMBER {othercount}: --")
                             time.sleep(0.75)
                             base_functions.get_random_character(k,username)
+                            rand.contin()
                             count += 1
                             othercount += 1
                         answer = "n"
                 print(f"{username} now has {user['crystals']} crystals left")
-                print(f"you used {user['stars']} stars")
+
