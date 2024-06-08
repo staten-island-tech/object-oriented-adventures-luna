@@ -1,1 +1,32 @@
-[{"username": "toob", "password": "artin", "type": "player", "crystals": 9527, "stars": 91, "characters": ["Aelius", "Asahi", "Mael", "Estella", "Asahi: Prince of Taiyo", "Genevieve", "Altair", "Igor"], "team": ["Estella", "Asahi", "", ""], "quest": ["space station", "monde", "pero"]}]
+[
+    {
+        "username": "toob",
+        "password": "artin",
+        "type": "player",
+        "crystals": 7847,
+        "stars": 0,
+        "characters": [
+            "Aelius",
+            "Asahi",
+            "Mael",
+            "Estella",
+            "Asahi: Prince of Taiyo",
+            "Genevieve",
+            "Altair",
+            "Igor",
+            "Dinara",
+            "Innessa"
+        ],
+        "team": [
+            "Estella",
+            "Asahi",
+            "",
+            ""
+        ],
+        "quest": [
+            "space station",
+            "monde",
+            "pero"
+        ]
+    }
+]

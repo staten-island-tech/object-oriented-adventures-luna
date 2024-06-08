@@ -141,4 +141,3 @@ class starsystem():
                 print(f"{username} now has {user['crystals']} crystals left")
                 print(f"you used {user['stars']} stars")
 
-starsystem.pull_one("toob")
