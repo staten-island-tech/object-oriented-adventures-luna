@@ -65,3 +65,4 @@ class create():
             return "thank you for your time."
         
 
+create.add()
