@@ -1,8 +1,9 @@
 from user import create
 import json
 
-data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-users = json.load(data_users)
+with open (r"game_files/classes/json/users.json", "r") as hi : 
+    users = json.load(hi)
+
 
 
 

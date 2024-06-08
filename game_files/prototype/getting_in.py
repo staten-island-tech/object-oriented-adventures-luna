@@ -10,11 +10,11 @@ from entry import *
 from rand import *
 from prototype.spaceship_pro import *
 
-data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-users = json.load(data_users)
+with open (r"game_files/classes/json/users.json", "r") as hi : 
+    users = json.load(hi)
 
-data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-entities = json.load(data_entities)
+with open (r"game_files/classes/json/entities.json", "r") as bye :
+    entities = json.load(bye)
 
 
 
