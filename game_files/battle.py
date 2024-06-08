@@ -160,8 +160,14 @@ class battle():
         answer = input("Would you like to change your team setup: y/n ").lower()
         while answer == "y":
             c = input("Choose a character to add onto the team: ").title()
+            e = []
+            for entity in entities:
+                e.append(entity['name'])
+            while c not in e:
+                print("This is not a character in the game! Please try again.")
+                c = input("Choose a character to add onto the team: ").title()
             for charact in team:
-                if charact == c:
+                while charact == c:
                     print("You already have this character in the team! Please choose another character.")
                     c = input("Choose a character to add onto the team: ").title()
             d = input("Choose the character to replace(enter the letter in front of it): ").upper()

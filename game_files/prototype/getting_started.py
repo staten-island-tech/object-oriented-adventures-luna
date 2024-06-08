@@ -15,8 +15,7 @@ class prologue():
         for i in range(4):
             dialogues_story.prologue(x)
             x += 1
-            rand.contin()
-        rand.load()
+        rand.contin()
     def path(username):
         with open (r"game_files/classes/json/users.json", "r") as hi : 
             users = json.load(hi)
@@ -27,7 +26,7 @@ class prologue():
         for i in range(3):
             dialogues_story.space_station(x)
             x += 1
-            rand.contin()
+        rand.contin()
         dialogues_player.space_station(0)
         rand.contin()
         dialogues_story.space_station(3)
@@ -343,13 +342,11 @@ class prologue():
                 rand.contin()
         if a == b[0]:
                 dialogues_story.space_station(13)
-                rand.contin()
                 dialogues_story.space_station(15)
                 rand.contin()
                 print("Great Job! You finished the first story quest!!")
         elif a == b[1]:
                 dialogues_story.space_station(14)
-                rand.contin()
                 dialogues_story.space_station(15)
                 rand.contin()
                 print("Great Job! You finished the first story quest!!")
@@ -370,6 +367,5 @@ class prologue():
         os.remove(r"game_files/classes/json/users.json")
         os.rename(new_file, r"game_files/classes/json/users.json")
         print("You've completed this mission. You've gained 1600 crystals")
-        rand.contin()
         print("Going to spaceship...")
-        rand.load()
+        rand.contin()

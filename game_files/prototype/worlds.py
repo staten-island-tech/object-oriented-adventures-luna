@@ -29,7 +29,6 @@ class worlds():
 			a = input("").lower()
 		rand.contin()
 		dialogues_story.monde(1)
-		rand.contin()
 		dialogues_story.monde(2)
 		rand.contin()
 		dialogues_player.monde(1)
@@ -56,8 +55,8 @@ class worlds():
 		x = 6
 		for i in range(3):		## x6 to x8
 			dialogues_story.monde(x)
-			rand.contin()
 			x += 1
+		rand.contin()
 		dialogues_player.monde(5)
 		rand.contin()
 		dialogues_story.monde(9)
@@ -307,7 +306,6 @@ class worlds():
 		dialogues_player.monde(9)
 		rand.contin()
 		dialogues_story.monde(13)
-		rand.contin()
 		dialogues_story.monde(14)
 		rand.contin()
 		dialogues_player.monde(10)
@@ -328,7 +326,6 @@ class worlds():
 		rand.contin()
 		print("Going back to spaceship...")
 		rand.contin()
-		rand.load()
 		for user in users:
 			if user['username'] == username:
 				user['quest'].append('monde')
@@ -348,7 +345,6 @@ class worlds():
 		dialogues_player.pero(0)
 		rand.contin()
 		dialogues_story.pero(3)
-		rand.contin()
 		dialogues_story.pero(4)
 		rand.contin()
 		dialogues_player.pero(1)
@@ -369,7 +365,6 @@ class worlds():
 		dialogues_player.pero(2)
 		rand.contin()
 		dialogues_story.pero(8)
-		rand.contin()
 		dialogues_story.pero(9)
 		rand.contin()
 		dialogues_player.pero(3)
@@ -559,7 +554,7 @@ class worlds():
 		while x <= 24:
 			dialogues_story.pero(x)
 			x += 1
-			rand.contin()
+		rand.contin()
 		dialogues_player.pero(6)
 		answer = input("")
 		a = ['a','b']
@@ -571,13 +566,10 @@ class worlds():
 			a = input("").lower()
 		rand.contin()
 		dialogues_story.pero(25)
-		rand.contin()
 		dialogues_story.pero(26)
 		rand.contin()
 		print("Going back to spaceship...")
 		rand.contin()
-		rand.load()
-
 		for user in users:
 			if user['username'] == username:
 				user['quest'].append('pero')

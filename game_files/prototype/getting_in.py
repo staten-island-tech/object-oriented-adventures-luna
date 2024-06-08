@@ -50,7 +50,6 @@ class prototype():
                 os.system("cls")
                 print("Welcome back!")
                 rand.contin()
-                rand.load()
                 for user in users:
                     if user['username'] == username:
                         data = len(user['quest'])
@@ -65,15 +64,11 @@ class prototype():
             if account == "2":
                 login.signup()
                 os.system("cls")
-                rand.load()
                 username = input("What is your username? ")
                 print("Welcome to our Game!")
                 print("Thank you for playing this game! To show our apprieciation we will be giving you 12,800 crystals!")
-                rand.contin()
                 print("This will be useful to you later on in the game! You will also be getting a free four-staar character when you start.")
-                rand.contin()
                 print("This character will be Asahi who you will meet later on in the game.")
-                rand.contin()
                 print("Thank you for your time! Have fun!")
                 rand.contin()
                 prologue.newbeginnings()
