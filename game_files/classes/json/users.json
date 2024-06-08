@@ -3,8 +3,8 @@
         "username": "toob",
         "password": "artin",
         "type": "player",
-        "crystals": 4727,
-        "stars": 21,
+        "crystals": 4167,
+        "stars": 30,
         "characters": [
             "Aelius",
             "Asahi",
@@ -29,5 +29,23 @@
             "monde",
             "pero"
         ]
+    },
+    {
+        "username": "a",
+        "password": "b",
+        "type": "player",
+        "crystals": 11840,
+        "stars": 1,
+        "characters": [
+            "Aelius",
+            "Asahi"
+        ],
+        "team": [
+            "Aelius",
+            "Asahi",
+            "",
+            ""
+        ],
+        "quest": []
     }
 ]
