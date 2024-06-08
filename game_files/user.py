@@ -43,16 +43,15 @@ class create():
                     print('That is not a character you could choose, please try again.')
                     a = input("").upper()
                 if a == b[0]:
-                    characters = ["Aelius"]
-                    team = ["Aelius","","",""]
+                    characters = ["Aelius", "Asahi"]
+                    team = ["Aelius","Asahi","",""]
                 elif a == b[1]:
-                    characters = ["Amaris"]
-                    team = ["Amaris","","",""]
+                    characters = ["Amaris", "Asahi"]
+                    team = ["Amaris","Asahi","",""]
                 crystals = 12800
                 quest = []
                 stars = 0
                 player_made = player(username, password, type, crystals, stars, characters, team, quest)
-                print(player_made.__dict__)
                 users.append(player_made.__dict__)
                 new_file = "updated.json"
                 with open(new_file, "w") as f:
@@ -64,7 +63,4 @@ class create():
         while a == "n":
             return "thank you for your time."
         
-        
-
-create.add()
 

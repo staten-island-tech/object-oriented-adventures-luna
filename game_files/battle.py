@@ -36,25 +36,32 @@ characters = [{'name': "c",
 
 class battle():
     def attack(x, y):                             # x is attack the enemy is taking (integer), y is list of dictionary of enemies, z is team you're using
+        t = 0
         enemies = y
-        print("Choose an enemy to attack:")
         for enemy in enemies:
-                e = enemy['hp']
-                f = e
-                d = x
-                enemy['hp'] = f - d
+                if t == 0:
+                    e = enemy['hp']
+                    f = e - (x/2)
+                    enemy['hp'] = f
+                    t += 1
+                else:
+                    t = 0
         os.system("cls")
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
     def ult(x, y):
         enemies = y
+        t = 0
         for enemy in enemies:
-            e = enemy['hp']
-            f = e
-            d = x
-            enemy['hp'] = f - d
-        for enemy in enemies: 
+            if t == 0:
+                e = enemy['hp']
+                f = e - (x/3)
+                enemy['hp'] = f
+            else:
+                t = 0
+        os.system("cls")
+        for enemy in enemies:
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
     def cycle(x, y, z):
@@ -76,11 +83,11 @@ class battle():
             print (enemy['name'])
             print (enemy['hp'])
             print( )
-        b = [7, 1, 3, 13, 9, 15, 11, 18]
+        b = [7, 1, 3, 13, 9]
         c = random.randint(1, 20)
         e = 0
         if c in b:
-            print("You are able to use your ultimate right now. It will affect all enemies")
+            print("You are able to use your ultimate right now.")
             print("[U] Use Ultimate")
             e += 1
         else:
@@ -95,11 +102,9 @@ class battle():
             d = input("").upper()
         if d == "U":
             rand.contin()
-            os.system("cls")
             battle.ult(attack[1], y)
         elif d == "A":
             rand.contin()
-            os.system("cls")
             battle.attack(attack[0], y)
     def attack_enemy(y, z):
         enemies = y

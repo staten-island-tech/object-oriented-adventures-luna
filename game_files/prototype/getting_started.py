@@ -8,12 +8,6 @@ from dialogues import *
 from battle import *
 from quest_and_rewards import *
 
-data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-users = json.load(data_users)
-
-data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-entities = json.load(data_entities)
-
 
 class prologue():
     def newbeginnings():
@@ -24,6 +18,10 @@ class prologue():
             rand.contin()
         rand.load()
     def path(username):
+        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+        users = json.load(data_users)
+        data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+        entities = json.load(data_entities)
         x = 0
         for i in range(3):
             dialogues_story.space_station(x)
@@ -49,34 +47,10 @@ class prologue():
         rand.contin()
         dialogues_story.space_station(7)
         rand.contin()
-        for user in users:
-            if user['username'] == username:
-                if 'Asahi' in user['characters']:
-                    pass
-                else:
-                    print("Before you begin this battle, you will first get someone to help you on this journey.")
-                    x = 0
-                    for i in range(2):
-                        dialogues_story.getting_asahi(x)
-                        x += 1
-                        rand.contin()
-                    user['characters'].append('Asahi')
-                    team_name = user['team']
-                    for entity in entities:
-                        if entity['name'] == "Asahi":
-                            del team_name[1]
-                            team_name.insert(1,entity['name'])
-        new_file = "updated.json"
-        with open(new_file, "w") as f:
-            json_string = json.dumps(users)
-            f.write(json_string)
-        os.remove(r"game_files/classes/json/users.json")
-        os.rename(new_file, r"game_files/classes/json/users.json")
         team_name = []
         for user in users:
             if user['username'] == username:
-                for i in user['team']:
-                    team_name.append(i)
+                team_name = user['team']
         team = []
         for entity in entities:
             if entity['name'] in team_name:
@@ -86,11 +60,16 @@ class prologue():
         for character in team:
             a.append(character['hp'])
         ally_hp = sum(a)
-        y = 0
+        l = len(team)
+        y = []
+        q = 0
+        for i in range(l):
+             y.append(q)
+             q += 1
         print(team_name)
         print(team)
-        z = team[y]
-        l = len(team)
+        q = 0
+        z = team[y[q]]
         enemy_team = []
         for en in entities:
             if en['name'] == "Oblivion Guard":
@@ -100,23 +79,32 @@ class prologue():
             b.append(enemy['hp'])
         enemy_hp = sum(b)
         while ally_hp >= 0 and enemy_hp >= 0:
-            battle.cycle(z, enemy_team, team)
-            b = []
-            for en in enemy_team:
-                b.append(en['hp'])
             battle.attack_enemy(enemy_team, team)
+            enemy_hp = sum(b)
+            if enemy_hp <= 0:
+                 break
             a = []
             for character in team:
                 a.append(character['hp'])
             ally_hp = sum(a)
-            enemy_hp = sum(b)
-            y += 1
-            if y > (l - 1):
-                y = 0
+            if ally_hp <= 0:
+                 break
+            battle.cycle(z, enemy_team, team)
+            b = []
+            for en in enemy_team:
+                b.append(en['hp'])
+            q += 1
+            if q > (l - 1):
+                q = 0
+            z = team[y[q]]
+            rand.contin()
         if ally_hp <= 0:
             quests.lose(username, team)
             prologue.path(username)
-        elif enemy_hp <= 0:
+        elif ally_hp == 0:
+            quests.lose(username, team)
+            prologue.path(username)
+        else:
             print("you've won the battle!")
             rewards = 3
             for user in users:
@@ -144,7 +132,7 @@ class prologue():
             print("You try and think of another response.")
             dialogues_player.space_station(5)
             answer = input("").lower()
-        rand.contin()
+        os.system("cls")
         dialogues_story.space_station(9)
         rand.contin()
         dialogues_player.space_station(6)
@@ -157,10 +145,9 @@ class prologue():
             dialogues_player.space_station(6)
             answer = input("").lower()
         rand.contin()
-        print("Getting ready for battle...")
         wave = 0
-        z = team[y]
-        y = 0
+        q = 0
+        z = team[y[q]]
         while wave != 2:
             quests.wave(wave, 0)
             enemy_team = []
@@ -176,39 +163,45 @@ class prologue():
                 b.append(enemy['hp'])
             enemy_hp = sum(b)
             while ally_hp >= 0 and enemy_hp >= 0:
-                battle.cycle(z,enemy_team, team)
-                #b = []
-                for en in enemy_team:
-                    b.append(en['hp'])
                 battle.attack_enemy(enemy_team, team)
                 a = []
                 for character in team:
                     a.append(character['hp'])
                 ally_hp = sum(a)
-                enemy_hp = sum(b)
-                y += 1
-                if y > (l - 1):
-                    y = 0
                 if ally_hp <= 0:
-                    quests.lose(username, team)
-                    prologue.path(username)
-                else:
-                    print("You won the battle. You've gained 7 crystals")
-                    rewards = 7
-                    for user in users:
-                        if user['username'] == username:
-                            crystals = user['crystals']
-                            add = crystals + rewards
-                            print(f"{username} now has {add} crystals")
-                            user['crystals'] = add
-                    new_file = "updated.json"
-                    with open(new_file, "w") as f:
-                        json_string = json.dumps(users)
-                        f.write(json_string)
-                    os.remove(r"game_files/classes/json/users.json")
-                    os.rename(new_file, r"game_files/classes/json/users.json") 
+                    break
+                battle.cycle(z,enemy_team, team)
+                b = []
+                for en in enemy_team:
+                    b.append(en['hp'])
+                enemy_hp = sum(b)
+                if enemy_hp <= 0:
+                    break
+                q += 1
+                if q > (l - 1):
+                    q = 0
+            if ally_hp == 0:
+                quests.lose(username, team)
+                prologue.path(username)
+            elif ally_hp < 0:
+                quests.lose(username, team)
+                prologue.path(username)
+            else:
+                print("You won the battle. You've gained 7 crystals")
+                rewards = 7
+                for user in users:
+                    if user['username'] == username:
+                        crystals = user['crystals']
+                        add = crystals + rewards
+                        print(f"{username} now has {add} crystals")
+                        user['crystals'] = add
+                new_file = "updated.json"
+                with open(new_file, "w") as f:
+                    json_string = json.dumps(users)
+                    f.write(json_string)
+                os.remove(r"game_files/classes/json/users.json")
+                os.rename(new_file, r"game_files/classes/json/users.json") 
             wave += 1
-            print("You look around to see that there are no more monsters. As you let your guard down you see a shadow behind you.")
             rand.contin()
         wave = 0
         quests.wave(wave, 0)
@@ -218,28 +211,35 @@ class prologue():
                 for i in range(2):
                     enemy_team.append(enemy)
         b = []
-        y = 0
+        q = 0
         for enemy in enemy_team:
             b.append(enemy['hp'])
         enemy_hp = sum(b)
         while ally_hp >= 0 and enemy_hp >= 0:
-                battle.cycle(z,enemy_team, team)
-                b = []
-                for en in enemy_team:
-                    b.append(en['hp'])
                 battle.attack_enemy(enemy_team, team)
                 a = []
                 for character in team:
                     a.append(character['hp'])
                 ally_hp = sum(a)
+                if ally_hp <= 0:
+                     break
+                battle.cycle(z,enemy_team, team)
+                b = []
+                for en in enemy_team:
+                    b.append(en['hp'])
                 enemy_hp = sum(b)
-                y += 1
-                if y > l - 1:
-                    y = 0
-        if ally_hp <= 0:
+                if enemy_hp <= 0:
+                     break
+                q += 1
+                if q > l - 1:
+                    q = 0
+        if ally_hp < 0:
                 quests.lose(username, team)
                 prologue.path(username)
-        elif enemy_hp <= 0:
+        elif ally_hp == 0:
+                quests.lose(username, team)
+                prologue.path(username)
+        else:
                 print("you won the battle! You gained 7 crystals")
                 rewards = 7
                 for user in users:
@@ -263,23 +263,30 @@ class prologue():
         b = []
         for enemy in enemy_team:
             b.append(enemy['hp'])
-        y = 0
+        q = 0
         enemy_hp = sum(b)
         while ally_hp >= 0 and enemy_hp >= 0:
-            battle.cycle(z,enemy_team, team)
-            b = []
-            for en in enemy_team:
-                b.append(en['hp'])
             battle.attack_enemy(enemy_team, team)
             a = []
             for character in team:
                 a.append(character['hp'])
             ally_hp = sum(a)
+            if ally_hp <= 0:
+                 break
+            battle.cycle(z,enemy_team, team)
+            b = []
+            for en in enemy_team:
+                b.append(en['hp'])
             enemy_hp = sum(b)
-            y += 1
-            if y > (l - 1):
-                    y = 0
-        if ally_hp <= 0:
+            if enemy_hp <= 0:
+                 break
+            q += 1
+            if q > (l - 1):
+                    q = 0
+        if ally_hp < 0:
+                quests.lose(username, team)
+                prologue.path(username)
+        elif ally_hp == 0:
                 quests.lose(username, team)
                 prologue.path(username)
         elif enemy_hp <= 0:
@@ -310,7 +317,7 @@ class prologue():
                 print("You try and think of another response.")
                 dialogues_player.space_station(7)
                 a = input("").lower()
-        rand.contin()
+        os.system("cls")
         dialogues_story.space_station(11)
         rand.contin()
         dialogues_player.space_station(8)

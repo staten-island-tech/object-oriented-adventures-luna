@@ -57,6 +57,8 @@ class prototype():
                     if user['username'] == username:
                         data = len(user['quest'])
                 if data == 0:
+                    print("Continuing story quest...")
+                    rand.contin()
                     prologue.path(username)
                 else:
                     print("Transporting back to spaceship...")
@@ -69,7 +71,11 @@ class prototype():
                 username = input("What is your username? ")
                 print("Welcome to our Game!")
                 print("Thank you for playing this game! To show our apprieciation we will be giving you 12,800 crystals!")
+                rand.contin()
                 print("This will be useful to you later on in the game!")
+                rand.contin()
+                print("Thank you for your time! Have fun!")
+                rand.contin()
                 prologue.newbeginnings()
                 prologue.path(username)
                 pro.wel(username)
