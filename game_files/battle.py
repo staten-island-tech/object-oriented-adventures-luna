@@ -173,12 +173,13 @@ class battle():
             print (f"This is your new team set up: {team}")
             answer = input("continue changing team setup? y/n ").lower()
         if answer == "n":
-            print(f"thank you for your time. You will now be returning to the space ship....")
+            print(f"Thank you for your time. You will now be returning to the space ship....")
         # append to json file
         new_file = "updated.json"
         with open(new_file, "w") as f:
             json_string = json.dumps(users)
             f.write(json_string)
-        os.remove(r"game_files\classes\json\users.json")
-        os.rename(new_file, r"game_files\classes\json\users.json")
+        os.remove(r"game_files/classes/json/users.json")
+        os.rename(new_file, r"game_files/classes/json/users.json")
 
+battle.select_character('toob')
