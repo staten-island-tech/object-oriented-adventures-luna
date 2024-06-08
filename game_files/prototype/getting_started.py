@@ -28,13 +28,18 @@ class prologue():
         if a == b[0]:
             for user in users:
                 if user['username'] == username:
-                    user['characters'].append("Aelius")
-                    user['team'].append("Aelius")
+                    c = user['characters']
+                    c.append("Aelius")
+                    del t[0]
+                    t.insert[0, "Amaris"]
         elif a == b[1]:
             for user in users:
                 if user['username'] == username:
-                    user['characters'].append("Amaris")
-                    user['team'].append("Amaris")
+                    c = user['characters']
+                    c.append("Amaris")
+                    t = user['team']
+                    del t[0]
+                    t.insert[0, "Amaris"]
         new_file = "updated.json"
         with open(new_file, "w") as f:
             json_string = json.dumps(users)
@@ -79,22 +84,22 @@ class prologue():
         dialogues_story.space_station(7)
         rand.contin()
         print("Before you begin this battle, you will first get someone to help you on this journey.")
-        x = 0
-        for i in range(2):
-            dialogues_story.getting_asahi(x)
-            x += 1
-            rand.contin()
         for user in users:
             if user['username'] == username:
                 if 'Asahi' in user['characters']:
                     pass
                 else:
+                    x = 0
+                    for i in range(2):
+                        dialogues_story.getting_asahi(x)
+                        x += 1
+                        rand.contin()
                     user['characters'].append('Asahi')
                     team_name = user['team']
                     for entity in entities:
                         if entity['name'] == "Asahi":
                             del team_name[0]
-                            team_name.insert(0,entity)
+                            team_name.insert(1,entity['name'])
         new_file = "updated.json"
         with open(new_file, "w") as f:
             json_string = json.dumps(users)
