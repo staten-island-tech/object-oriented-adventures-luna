@@ -31,7 +31,7 @@ class prototype():
         while a == "y":
             os.system("cls")
             entry.screen()
-            c = input("[A] Continue").upper()
+            rand.contin()
             while c != "A":
                 c = input("").upper()
             os.system("cls")
