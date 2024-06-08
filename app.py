@@ -2,11 +2,11 @@ import json
 
 from game_files.prototype.getting_in import *
 
-with open (r"game_files\classes\json\users.json", "r") as hi : 
-    users = json.load(hi)
+data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+users = json.load(data_users)
 
-with open (r"game_files\classes\json\entities.json", "r") as bye :
-    entities = json.load(bye)
+data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+entities = json.load(data_entities)
 
 prototype.start()
 prototype.start()   #for some reason it doesn't work with only one

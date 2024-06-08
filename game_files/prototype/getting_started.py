@@ -8,48 +8,14 @@ from dialogues import *
 from battle import *
 from quest_and_rewards import *
 
-with open (r"game_files\classes\json\users.json", "r") as hi : 
-    users = json.load(hi)
+data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+users = json.load(data_users)
 
-with open (r"game_files\classes\json\entities.json", "r") as bye :
-    entities = json.load(bye)
+data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+entities = json.load(data_entities)
+
 
 class prologue():
-    def start(username):
-        print("Pick your character: ")
-        print("[A] Aelius")
-        print("[B] Amaris")
-        print("Please note that you will not be able to change your character once you have chosen the one you want.")
-        a = input("").lower()
-        b = ["a", "b"]
-        while a not in b:
-            print("Please choose again! That was not one of the options.")
-            a = input("").lower()
-        if a == b[0]:
-            for user in users:
-                if user['username'] == username:
-                    c = user['characters']
-                    c.append("Aelius")
-                    del t[0]
-                    t.insert[0, "Amaris"]
-        elif a == b[1]:
-            for user in users:
-                if user['username'] == username:
-                    c = user['characters']
-                    c.append("Amaris")
-                    t = user['team']
-                    del t[0]
-                    t.insert[0, "Amaris"]
-        new_file = "updated.json"
-        with open(new_file, "w") as f:
-            json_string = json.dumps(users)
-            f.write(json_string)
-        os.remove(r"game_files\classes\json\users.json")
-        os.rename(new_file, r"game_files\classes\json\users.json")
-        os.system("cls")
-        print("Starting story now...")
-        rand.contin()
-        rand.load()
     def newbeginnings():
         x = 0
         for i in range(4):
@@ -83,12 +49,12 @@ class prologue():
         rand.contin()
         dialogues_story.space_station(7)
         rand.contin()
-        print("Before you begin this battle, you will first get someone to help you on this journey.")
         for user in users:
             if user['username'] == username:
                 if 'Asahi' in user['characters']:
                     pass
                 else:
+                    print("Before you begin this battle, you will first get someone to help you on this journey.")
                     x = 0
                     for i in range(2):
                         dialogues_story.getting_asahi(x)
@@ -98,14 +64,14 @@ class prologue():
                     team_name = user['team']
                     for entity in entities:
                         if entity['name'] == "Asahi":
-                            del team_name[0]
+                            del team_name[1]
                             team_name.insert(1,entity['name'])
         new_file = "updated.json"
         with open(new_file, "w") as f:
             json_string = json.dumps(users)
             f.write(json_string)
-        os.remove(r"game_files\classes\json\users.json")
-        os.rename(new_file, r"game_files\classes\json\users.json")
+        os.remove(r"game_files/classes/json/users.json")
+        os.rename(new_file, r"game_files/classes/json/users.json")
         team_name = []
         for user in users:
             if user['username'] == username:
@@ -163,8 +129,8 @@ class prologue():
             with open(new_file, "w") as f:
                 json_string = json.dumps(users)
                 f.write(json_string)
-            os.remove(r"game_files\classes\json\users.json")
-            os.rename(new_file, r"game_files\classes\json\users.json") 
+            os.remove(r"game_files/classes/json/users.json")
+            os.rename(new_file, r"game_files/classes/json/users.json") 
             print("You've gained 3 crystals")
         rand.contin()
         dialogues_story.space_station(8)
@@ -239,8 +205,8 @@ class prologue():
                     with open(new_file, "w") as f:
                         json_string = json.dumps(users)
                         f.write(json_string)
-                    os.remove(r"game_files\classes\json\users.json")
-                    os.rename(new_file, r"game_files\classes\json\users.json") 
+                    os.remove(r"game_files/classes/json/users.json")
+                    os.rename(new_file, r"game_files/classes/json/users.json") 
             wave += 1
             print("You look around to see that there are no more monsters. As you let your guard down you see a shadow behind you.")
             rand.contin()
@@ -286,8 +252,8 @@ class prologue():
                 with open(new_file, "w") as f:
                     json_string = json.dumps(users)
                     f.write(json_string)
-                os.remove(r"game_files\classes\json\users.json")
-                os.rename(new_file, r"game_files\classes\json\users.json") 
+                os.remove(r"game_files/classes/json/users.json")
+                os.rename(new_file, r"game_files/classes/json/users.json") 
         wave += 1
         quests.wave(wave, 1)
         enemy_team = []
@@ -329,8 +295,8 @@ class prologue():
                 with open(new_file, "w") as f:
                     json_string = json.dumps(users)
                     f.write(json_string)
-                os.remove(r"game_files\classes\json\users.json")
-                os.rename(new_file, r"game_files\classes\json\users.json")
+                os.remove(r"game_files/classes/json/users.json")
+                os.rename(new_file, r"game_files/classes/json/users.json")
         rand.contin()
         dialogues_story.space_station(10)
         rand.contin()
@@ -393,8 +359,8 @@ class prologue():
         with open(new_file, "w") as f:
                 json_string = json.dumps(users)
                 f.write(json_string)
-        os.remove(r"game_files\classes\json\users.json")
-        os.rename(new_file, r"game_files\classes\json\users.json")
+        os.remove(r"game_files/classes/json/users.json")
+        os.rename(new_file, r"game_files/classes/json/users.json")
         print("You've completed this mission. You've gained 1600 crystals")
         rand.contin()
         print("Going to spaceship...")

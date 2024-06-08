@@ -15,19 +15,7 @@ class pro():
      print("Xingxing: Hmm. Alright then. Let's go.")
      rand.load()
      if answer == "1":
-       print("Xingxing: What type of mission are you going on this time?")
-       rand.quest_selector(username)
-       b = ["S"]
-       quest = input("").upper()
-       while quest not in b:
-         print("Xingxing: What did I say! What do you want to do anyways!?")
-         quest = input("").upper()
-       print("Xingxing: Hmm...I see.")
-       if quest == "S":
-         spaceship.quest_story(username)
-       elif quest == "D":
-         spaceship.daily(username)
-       rand.contin()
+       spaceship.quest_story(username)
      elif answer == "2":
        spaceship.star_system(username)
      elif answer == "3":

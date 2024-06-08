@@ -3,11 +3,11 @@ import os
 import random
 from rand import rand
 
-with open (r"game_files\classes\json\users.json", "r") as hi : 
-    users = json.load(hi)
+data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+users = json.load(data_users)
 
-with open (r"game_files\classes\json\entities.json", "r") as bye :
-    entities = json.load(bye)
+data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+entities = json.load(data_entities)
 
 
 """ enemies = [{'name': "a", 
@@ -38,26 +38,12 @@ class battle():
     def attack(x, y):                             # x is attack the enemy is taking (integer), y is list of dictionary of enemies, z is team you're using
         enemies = y
         print("Choose an enemy to attack:")
-        b = ["A", "B", "C", "D", "E", "F"]
-        a = 0
-        for enemy in enemies: 
-            print(f"[{b[a]}] {enemy['name']}")
-            print(f"HP: {enemy['hp']}")
-            a += 1
-        enemy_chosen = input("").upper()
-        c = 0
-        d = b[c]
-        while d != enemy_chosen:
-            d = b[c]
-            c += 1
-        z = 0
         for enemy in enemies:
-            if z == c:
                 e = enemy['hp']
                 f = e
                 d = x
                 enemy['hp'] = f - d
-            z += 1
+        os.system("cls")
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -83,6 +69,7 @@ class battle():
                 global attack
                 attack = character['attack']
                 print(f"Attack: {attack[0]}")
+                print(f"Ultimate: {attack[1]}")
                 print( )
             
         for enemy in enemies:
@@ -94,7 +81,6 @@ class battle():
         e = 0
         if c in b:
             print("You are able to use your ultimate right now. It will affect all enemies")
-            print(f"Ultimate: {attack[1]}")
             print("[U] Use Ultimate")
             e += 1
         else:

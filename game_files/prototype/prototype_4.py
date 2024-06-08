@@ -9,11 +9,12 @@ from quest_and_rewards import *
 from spaceship import *
 from rand import *
 
-with open (r"game_files\classes\json\users.json", "r") as hi : 
-    users = json.load(hi)
+data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+users = json.load(data_users)
 
-with open (r"game_files\classes\json\entities.json", "r") as bye :
-    entities = json.load(bye)
+data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+entities = json.load(data_entities)
+
 
 class taiyo():
     def path(username):
@@ -124,8 +125,8 @@ class taiyo():
                     new_file = "updated.json"
                     with open(new_file, "w") as f:
                         json.dump(users, f)
-                    os.remove(r"game_files\classes\json\users.json")
-                    os.rename(new_file, r"game_files\classes\json\users.json")
+                    os.remove(r"game_files/classes/json/users.json")
+                    os.rename(new_file, r"game_files/classes/json/users.json")
                     wave += 1
                     rand.contin()
                 
@@ -169,8 +170,8 @@ class taiyo():
                 new_file = "updated.json"
                 with open(new_file, "w") as f:
                     json.dump(users, f)
-                os.remove(r"game_files\classes\json\users.json")
-                os.rename(new_file, r"game_files\classes\json\users.json")
+                os.remove(r"game_files/classes/json/users.json")
+                os.rename(new_file, r"game_files/classes/json/users.json")
         
                 rand.contin()
 
@@ -214,8 +215,8 @@ class taiyo():
                 new_file = "updated.json"
                 with open(new_file, "w") as f:
                         json.dump(users, f)
-                os.remove(r"game_files\classes\json\users.json")
-                os.rename(new_file, r"game_files\classes\json\users.json")
+                os.remove(r"game_files/classes/json/users.json")
+                os.rename(new_file, r"game_files/classes/json/users.json")
         
                 rand.contin()
 
@@ -256,8 +257,8 @@ class taiyo():
                 new_file = "updated.json"
                 with open(new_file, "w") as f:
                     json.dump(users, f)
-                os.remove(r"game_files\classes\json\users.json")
-                os.rename(new_file, r"game_files\classes\json\users.json")
+                os.remove(r"game_files/classes/json/users.json")
+                os.rename(new_file, r"game_files/classes/json/users.json")
         
                 rand.contin()
 
@@ -313,8 +314,8 @@ class taiyo():
                 new_file = "updated.json"
                 with open(new_file, "w") as f:
                         json.dump(users, f)
-                os.remove(r"game_files\classes\json\users.json")
-                os.rename(new_file, r"game_files\classes\json\users.json")
+                os.remove(r"game_files/classes/json/users.json")
+                os.rename(new_file, r"game_files/classes/json/users.json")
         
                 rand.contin()
 

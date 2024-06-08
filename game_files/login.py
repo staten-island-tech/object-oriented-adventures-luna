@@ -1,15 +1,15 @@
 from user import create
 import json
-import os
 
-with open(r"game_files\classes\json\users.json", "r") as f:
-    data = json.load(f)
+data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+users = json.load(data_users)
+
 
 
 class login():
     def player(username):
         num_matches = []
-        for user in data:
+        for user in users:
             if username in user["username"]:
                 num_matches.append(user)
                 password = input(f"Enter password for {username}: ")
