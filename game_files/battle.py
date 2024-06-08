@@ -76,6 +76,7 @@ class battle():
                 print(f"Attack: {attack[0]}")
                 print(f"Ultimate: {attack[1]}")
                 print( )
+            continue
             
         for enemy in enemies:
             print (enemy['name'])
@@ -123,7 +124,6 @@ class battle():
         for character in characters:
             a += 1
         b = a - 1
-        print(b)
         c = random.randint(0, b)
         a = 0
         for character in characters:
@@ -136,6 +136,7 @@ class battle():
                 new_hp = character['hp'] - attack_stat
                 character['hp'] = new_hp
                 print(f"HP: {new_hp}")
+                os.system("cls")
             a += 1
     def select_character(username):             ## needs to be tested - TESTED 
         for user in users:

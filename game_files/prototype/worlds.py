@@ -121,6 +121,7 @@ class worlds():
 				quests.lose(username, team)
 				worlds.monde_mission(username)
 			elif enemy_hp <= 0:
+				print("you won the battle! You've gained 7 crystals")
 				rewards = 7
 				for user in users:
 					if user['username'] == username:
@@ -134,7 +135,6 @@ class worlds():
 					f.write(json_string)
 				os.remove(r"game_files/classes/json/users.json")
 				os.rename(new_file, r"game_files/classes/json/users.json")
-			print("You've gained 7 crystals")
 			wave += 1
 		print("Battle 2")
 		while wave != 2:
