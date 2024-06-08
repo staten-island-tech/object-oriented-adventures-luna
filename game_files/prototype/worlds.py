@@ -8,14 +8,13 @@ from dialogues import *
 from quest_and_rewards import *
 from rand import *
 
-data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-users = json.load(data_users)
-
-data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-entities = json.load(data_entities)
-
 
 class worlds():
+	data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+	users = json.load(data_users)
+
+	data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+	entities = json.load(data_entities)
 	def monde_mission(username):
 		dialogues_story.monde(0)
 		rand.contin()

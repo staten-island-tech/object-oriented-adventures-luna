@@ -9,15 +9,15 @@ from quest_and_rewards import *
 from spaceship import *
 from rand import *
 
-data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-users = json.load(data_users)
-
-data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-entities = json.load(data_entities)
 
 
 class taiyo():
     def path(username):
+        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+        users = json.load(data_users)
+
+        data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+        entities = json.load(data_entities)
         dialogues_story.taiyo(0)
         rand.contin()
         dialogues_player.taiyo(0)
