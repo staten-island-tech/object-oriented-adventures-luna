@@ -15,6 +15,11 @@ from prototype.prototype_4 import *
 
 class spaceship():
     def welcome(username):
+        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+        users = json.load(data_users)
+
+        data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+        entities = json.load(data_entities)
         print("??: Welcome abroad the spaceship! Captain Xingxing, here!")
         rand.contin()
         print("Xingxing: Greetings! Is there anything you would like?")
@@ -22,7 +27,7 @@ class spaceship():
         for user in users:
             if user['username'] == username:
                 data = len(user['quest'])
-        if data == 2:
+        if data >= 2:
             print("[2] Star System")
             print("[3] Change Team")
 
@@ -180,6 +185,11 @@ class spaceship():
             pass
 
     def star_system(username):
+        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+        users = json.load(data_users)
+
+        data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+        entities = json.load(data_entities)
         print("Welcome to the star system - what would you like to do?")
         print("[1] View your characters")
         print("[2] Buy 1 star and pull once")
@@ -201,5 +211,10 @@ class spaceship():
         else:
             pass
     def team(username):
+        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+        users = json.load(data_users)
+
+        data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+        entities = json.load(data_entities)
         battle.select_character(username)
 

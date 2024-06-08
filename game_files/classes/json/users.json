@@ -1,1 +1,29 @@
-[]
+[
+    {
+        "username": "toob",
+        "password": "artin",
+        "type": "player",
+        "crystals": 11280,
+        "stars": 10,
+        "characters": [
+            "Aelius",
+            "Asahi",
+            "Mael",
+            "Estella",
+            "Asahi: Prince of Taiyo",
+            "Genevieve"
+        ],
+        "team": [
+            "Aelius",
+            "Asahi",
+            "",
+            ""
+        ],
+        "quest": [
+            "space station",
+            "monde",
+            "pero",
+            "taiyo"
+        ]
+    }
+]

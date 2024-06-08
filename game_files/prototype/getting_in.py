@@ -32,8 +32,6 @@ class prototype():
             os.system("cls")
             entry.screen()
             rand.contin()
-            while c != "A":
-                c = input("").upper()
             os.system("cls")
             print("Welcome to our game! Would you like to sign in to your existing account or sign up for a new account?")
             print("[1] Sign in")
@@ -72,7 +70,9 @@ class prototype():
                 print("Welcome to our Game!")
                 print("Thank you for playing this game! To show our apprieciation we will be giving you 12,800 crystals!")
                 rand.contin()
-                print("This will be useful to you later on in the game!")
+                print("This will be useful to you later on in the game! You will also be getting a free four-staar character when you start.")
+                rand.contin()
+                print("This character will be Asahi who you will meet later on in the game.")
                 rand.contin()
                 print("Thank you for your time! Have fun!")
                 rand.contin()
@@ -80,5 +80,3 @@ class prototype():
                 prologue.path(username)
                 pro.wel(username)
             a = "n"
-
-#prototype.start()

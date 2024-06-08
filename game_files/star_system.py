@@ -26,9 +26,10 @@ class base_functions():         # ***DONT IMPORT OR USE THIS IN OTHER FILES, ONL
                     user['stars'] += 1
         new_file = "updated.json"
         with open(new_file, "w") as f:
-            json.dump(users, f)
-        os.remove(r"game_files\classes\json\users.json")
-        os.rename(new_file, r"game_files\classes\json\users.json")
+            json_string = json.dumps(users)
+            f.write(json_string)
+        os.remove(r"game_files/classes/json/users.json")
+        os.rename(new_file, r"game_files/classes/json/users.json")
         #os.system("cls")
 
     def get_random_character(k,n):                  # k = 30 --> represents the percent chance of pulling a character
@@ -50,9 +51,10 @@ class base_functions():         # ***DONT IMPORT OR USE THIS IN OTHER FILES, ONL
                     user['stars'] += 1
             new_file = "updated.json"
             with open(new_file, "w") as f:
-                json.dump(users, f)
-            os.remove(r"game_files\classes\json\users.json")
-            os.rename(new_file, r"game_files\classes\json\users.json")
+                json_string = json.dumps(users)
+                f.write(json_string)
+            os.remove(r"game_files/classes/json/users.json")
+            os.rename(new_file, r"game_files/classes/json/users.json")
 
     def activate_pity(username):
         k = starsystem.k
