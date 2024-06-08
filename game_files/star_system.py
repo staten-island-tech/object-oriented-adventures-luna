@@ -113,7 +113,6 @@ class starsystem():
                         base_functions.get_random_character(k,username)
                         answer = "n"
                 print(f"{username} now has {user['crystals']} crystals left")
-                print(f"you used {user['stars']} stars")
 
     def pull_ten(username):            #tested
         k = starsystem.k
@@ -141,5 +140,4 @@ class starsystem():
                             othercount += 1
                         answer = "n"
                 print(f"{username} now has {user['crystals']} crystals left")
-                print(f"you used {user['stars']} stars")
 

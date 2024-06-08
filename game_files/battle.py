@@ -78,6 +78,7 @@ class battle():
                 print(f"Attack: {attack[0]}")
                 print(f"Ultimate: {attack[1]}")
                 print( )
+            continue
             
         for enemy in enemies:
             print (enemy['name'])
@@ -127,7 +128,6 @@ class battle():
         for character in characters:
             a += 1
         b = a - 1
-        print(b)
         c = random.randint(0, b)
         a = 0
         for character in characters:
@@ -142,6 +142,7 @@ class battle():
                 new_hp = character['hp'] - attack_stat
                 character['hp'] = new_hp
                 print(f"HP: {new_hp}")
+                os.system("cls")
             a += 1
     def select_character(username):             ## needs to be tested - TESTED 
         for user in users:
@@ -160,8 +161,14 @@ class battle():
         answer = input("Would you like to change your team setup: y/n ").lower()
         while answer == "y":
             c = input("Choose a character to add onto the team: ").title()
+            e = []
+            for entity in entities:
+                e.append(entity['name'])
+            while c not in e:
+                print("This is not a character in the game! Please try again.")
+                c = input("Choose a character to add onto the team: ").title()
             for charact in team:
-                if charact == c:
+                while charact == c:
                     print("You already have this character in the team! Please choose another character.")
                     c = input("Choose a character to add onto the team: ").title()
             d = input("Choose the character to replace(enter the letter in front of it): ").upper()

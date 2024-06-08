@@ -15,8 +15,7 @@ class prologue():
         for i in range(4):
             dialogues_story.prologue(x)
             x += 1
-            rand.contin()
-        rand.load()
+        rand.contin()
     def path(username):
         with open (r"game_files/classes/json/users.json", "r") as hi : 
             users = json.load(hi)
@@ -27,7 +26,7 @@ class prologue():
         for i in range(3):
             dialogues_story.space_station(x)
             x += 1
-            rand.contin()
+        rand.contin()
         dialogues_player.space_station(0)
         rand.contin()
         dialogues_story.space_station(3)
@@ -67,8 +66,6 @@ class prologue():
         for i in range(l):
              y.append(q)
              q += 1
-        print(team_name)
-        print(team)
         q = 0
         z = team[y[q]]
         enemy_team = []
@@ -106,7 +103,7 @@ class prologue():
             quests.lose(username, team)
             prologue.path(username)
         else:
-            print("you've won the battle!")
+            print("you've won the battle! You've gained 3 crystals")
             rewards = 3
             for user in users:
                 if user['username'] == username:
@@ -120,7 +117,6 @@ class prologue():
                 f.write(json_string)
             os.remove(r"game_files/classes/json/users.json")
             os.rename(new_file, r"game_files/classes/json/users.json") 
-            print("You've gained 3 crystals")
         rand.contin()
         dialogues_story.space_station(8)
         rand.contin()
@@ -181,6 +177,7 @@ class prologue():
                 q += 1
                 if q > (l - 1):
                     q = 0
+            rand.contin()
             if ally_hp == 0:
                 quests.lose(username, team)
                 prologue.path(username)
@@ -234,6 +231,7 @@ class prologue():
                 q += 1
                 if q > l - 1:
                     q = 0
+        rand.contin()
         if ally_hp < 0:
                 quests.lose(username, team)
                 prologue.path(username)
@@ -255,6 +253,7 @@ class prologue():
                     f.write(json_string)
                 os.remove(r"game_files/classes/json/users.json")
                 os.rename(new_file, r"game_files/classes/json/users.json") 
+        rand.contin()
         wave += 1
         quests.wave(wave, 1)
         enemy_team = []
@@ -343,13 +342,11 @@ class prologue():
                 rand.contin()
         if a == b[0]:
                 dialogues_story.space_station(13)
-                rand.contin()
                 dialogues_story.space_station(15)
                 rand.contin()
                 print("Great Job! You finished the first story quest!!")
         elif a == b[1]:
                 dialogues_story.space_station(14)
-                rand.contin()
                 dialogues_story.space_station(15)
                 rand.contin()
                 print("Great Job! You finished the first story quest!!")
@@ -370,6 +367,5 @@ class prologue():
         os.remove(r"game_files/classes/json/users.json")
         os.rename(new_file, r"game_files/classes/json/users.json")
         print("You've completed this mission. You've gained 1600 crystals")
-        rand.contin()
         print("Going to spaceship...")
-        rand.load()
+        rand.contin()
