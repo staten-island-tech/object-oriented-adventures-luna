@@ -101,16 +101,20 @@ class worlds():
 				b.append(en['hp'])
 			enemy_hp = sum(b)
 			while ally_hp >= 0 or enemy_hp >= 0:
-				battle.cycle(z, enemy_team, team)
-				b = []
-				for en in enemy_team:
-					b.append(en['hp'])
 				battle.attack_enemy(enemy_team, team)
 				a = []
 				for character in team:
 					a.append(character['hp'])
 				ally_hp = sum(a)
+				if ally_hp <= 0:
+					break
+				battle.cycle(z, enemy_team, team)
+				b = []
+				for en in enemy_team:
+					b.append(en['hp'])
 				enemy_hp = sum(b)
+				if enemy_hp <= 0:
+					break
 				y += 1
 				if y >= l:
 					y = 0
@@ -147,17 +151,20 @@ class worlds():
 			enemy_hp = sum(b)
 			y = 0
 			while ally_hp >= 0 or enemy_hp >= 0:
-				battle.cycle(z, enemy_team, team)
-				b = []
-				for en in enemy_team:
-					b.append(en['hp'])
-				enemy_hp = sum(b)
 				battle.attack_enemy(enemy_team, team)
 				a = []
 				for character in team:
 					a.append(character['hp'])
 				ally_hp = sum(a)
+				if ally_hp <= 0:
+					break
+				battle.cycle(z, enemy_team, team)
+				b = []
+				for en in enemy_team:
+					b.append(en['hp'])
 				enemy_hp = sum(b)
+				if enemy_hp <= 0:
+					break
 				y += 1
 				if y >= l:
 					y = 0
@@ -194,16 +201,20 @@ class worlds():
 		enemy_hp = sum(b)
 		y = 0
 		while ally_hp >= 0 or enemy_hp >= 0:
-			battle.cycle(z, enemy_team, team)
-			b = []
-			for en in enemy_team:
-				b.append(en['hp'])
 			battle.attack_enemy(enemy_team, team)
 			a = []
 			for character in team:
 				a.append(character['hp'])
 			ally_hp = sum(a)
+			if ally_hp <= 0:
+				break
+			battle.cycle(z, enemy_team, team)
+			b = []
+			for en in enemy_team:
+				b.append(en['hp'])
 			enemy_hp = sum(b)
+			if enemy_hp <= 0:
+				break
 			y += 1
 			if y >= l:
 				y = 0
@@ -237,16 +248,20 @@ class worlds():
 		enemy_hp = sum(b)
 		y = 0
 		while ally_hp >= 0 or enemy_hp >= 0:
-			battle.cycle(z, enemy_team, team)
-			b = []
-			for en in enemy_team:
-				b.append(en['hp'])
 			battle.attack_enemy(enemy_team, team)
 			a = []
 			for character in team:
 				a.append(character['hp'])
 			ally_hp = sum(a)
+			if ally_hp <= 0:
+				break
+			battle.cycle(z, enemy_team, team)
+			b = []
+			for en in enemy_team:
+				b.append(en['hp'])
 			enemy_hp = sum(b)
+			if enemy_hp <= 0:
+				break
 			y += 1
 			if y >= l:
 				y = 0
