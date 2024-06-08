@@ -88,7 +88,7 @@ class worlds():
 		y = 0
 		z = team[y]
 		l = len(team)
-		print("Battle 1: ")
+		print("Battle 1")
 		while wave != 2:
 			quests.wave(wave, 0)
 			enemy_team = []
@@ -118,6 +118,7 @@ class worlds():
 				y += 1
 				if y >= l:
 					y = 0
+				z = team[y]
 			if ally_hp <= 0:
 				quests.lose(username, team)
 				worlds.monde_mission(username)
@@ -168,6 +169,7 @@ class worlds():
 				y += 1
 				if y >= l:
 					y = 0
+				z = team[y]
 			if ally_hp <= 0:
 				quests.lose(username, team)
 				worlds.monde_mission(username)
@@ -218,6 +220,7 @@ class worlds():
 			y += 1
 			if y >= l:
 				y = 0
+			z = team[y]
 		if ally_hp <= 0:
 			quests.lose(username, team)
 			worlds.monde_mission(username)
@@ -265,6 +268,7 @@ class worlds():
 			y += 1
 			if y >= l:
 				y = 0
+			z = team[y]
 		if ally_hp <= 0:
 			quests.lose(username, team)
 			worlds.monde_mission(username)
@@ -351,9 +355,12 @@ class worlds():
 		dialogues_player.pero(1)
 		answer = input("")
 		a = ['a','b']
-		while answer not in a:
+		while a not in b:
+			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
+			rand.contin()
+			print("You try and think of another response.")
 			dialogues_player.pero(1)
-			answer = input("")
+			a = input("").lower()
 		rand.contin()
 		x = 5
 		while x <= 7:
@@ -369,9 +376,12 @@ class worlds():
 		dialogues_player.pero(3)
 		answer = input("")
 		a = ['a','b']
-		while answer not in a:
+		while a not in b:
+			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
+			rand.contin()
+			print("You try and think of another response.")
 			dialogues_player.pero(3)
-			answer = input("")
+			a = input("").lower()
 		rand.contin()
 		x = 10
 		while x <= 20:
@@ -380,203 +390,163 @@ class worlds():
 			rand.contin()
 		dialogues_player.pero(4)
 		rand.contin()
+		print("Battle 1:")
 		for user in users:
 			if user['username'] == username:
-				team = []
-				for character in entities:
-					if character['name'] in user['team']:
-						team.append(character)
-					else:
-						pass
-					team_hps = []
-				for team_member in team:
-					team_hps.append(team_member['hp'])
-				total_ally_hp = sum(team_hps)
-				print("Getting ready for battle...")
-				
-				# pero battle 1 - normal - 2 waves, 3 hydro bots each
-				wave = 0
+				team_name = user['team']
+		team = []
+		for entity in entities:
+			if entity['name'] in team_name:
+				team.append(entity)
+		a = []
+		for character in team:
+			a.append(character['hp'])
+		ally_hp = sum(a)
+		y = 0
+		z = team[y]
+		l = len(team)
+		enemy_team = []
+		for enemy in entities:
+			if enemy['name'] == "Oblivion Guard":
+				for i in range(3):
+					enemy_team.append(enemy)
+			elif enemy['name'] == "Ice Goblin":
+				for i in range(3):
+					enemy_team.append(enemy)
+		b = []
+		for i in enemy_team:
+			b.append(i['hp'])
+		enemy_hp = sum(b)
+		while ally_hp <= 0 and enemy_hp <= 0:
+			battle.attack_enemy(enemy_team, team)
+			a = []
+			for character in team:
+				a.append(character['hp'])
+			ally_hp = sum(a)
+			if ally_hp <= 0:
+				break
+			battle.cycle(z, enemy_team, team)
+			b = []
+			for en in enemy_team:
+				b.append(en['hp'])
+			enemy_hp = sum(b)
+			if enemy_hp <= 0:
+				break
+			y += 1
+			if y >= l:
 				y = 0
-				z = team[y]
-				l = len(team)
-				while wave < 2:
-					quests.wave(wave,0)
-					enemy_team = []
-					for enemy in entities:
-						if enemy['name'] == "Hydro Robot":
-							x = 1
-							while x <= 3:
-								enemy_team.append(enemy)
-								x += 1
-					enemy_hps = []
-					for i in enemy_team:
-						enemy_hps.append(i['hp'])
-					total_enemy_hp = sum(enemy_hps)
-
-					while total_ally_hp <= 0 and total_enemy_hp <= 0:
-						battle.cycle(z, enemy_team, team)
-						enemy_hps = []
-						for i in enemy_team:
-							enemy_hps.append(i['hp'])
-						battle.attack_enemy(enemy_team, team)
-						team_hps = []
-						for character in team:
-							team_hps.append(character['hp'])
-						total_ally_hp = sum(team_hps)
-						total_enemy_hp = sum(enemy_hps)
-						y += 1
-						if y > (l - 1):
-							y = 0
-					if total_ally_hp <= 0:
-						quests.lose(username, team)
-						worlds.pero_mission(username)
-					elif total_enemy_hp <= 0:
-						reward = 7
-						add = user['crystals'] + reward
-						user['crystals'] = add
-						print(f"{username} now has {user['crystals']} crystals")
-					new_file = "updated.json"
-					with open(new_file, "w") as f:
-						json.dump(users, f)
-					os.remove(r"game_files/classes/json/users.json")
-					os.rename(new_file, r"game_files/classes/json/users.json")
-					wave += 1
-					rand.contin()
-							
-				# pero battle 2 - normal - 2 waves, 3 hydro robot dogs each
-				wave = 0
-				while wave < 2:
-					quests.wave(wave,0)
-					enemy_team = []
-					for enemy in entities:
-						if enemy['name'] == "Hydro Robot Dog":
-							x = 1
-							while x <= 3:
-								enemy_team.append(enemy)
-								x += 1
-					enemy_hps = []
-					for i in enemy_team:
-						enemy_hps.append(i['hp'])
-					total_enemy_hp = sum(enemy_hps)
-
-					while total_ally_hp <= 0 and total_enemy_hp <= 0:
-						battle.cycle(z, enemy_team, team)
-						enemy_hps = []
-						for i in enemy_team:
-							enemy_hps.append(i['hp'])
-						battle.attack_enemy(enemy_team, team)
-						team_hps = []
-						for character in team:
-							team_hps.append(character['hp'])
-						total_ally_hp = sum(team_hps)
-						total_enemy_hp = sum(enemy_hps)
-						y += 1
-						if y > (l - 1):
-							y = 0
-					if total_ally_hp <= 0:
-						quests.lose(username, team)
-						worlds.pero_mission(username)
-					elif total_enemy_hp <= 0:
-						reward = 7
-						add = user['crystals'] + reward
-						user['crystals'] = add
-						print(f"{username} now has {user['crystals']} crystals")
-					new_file = "updated.json"
-					with open(new_file, "w") as f:
-						json.dump(users, f)
-					os.remove(r"game_files/classes/json/users.json")
-					os.rename(new_file, r"game_files/classes/json/users.json")
-					wave += 1
-					rand.contin()
-
-				# pero battle 3 - boss - wave 1: 2 minions, wave 2:hydro bot+giant hydro bot
-				#wave 1:
-				wave = 0
-				quests.wave(wave,1)
-				enemy_team = []       
-				for enemy in entities:
-					if enemy['name'] == "Hydro Robot":
-						x = 1
-						while x <= 2:
-							enemy_team.append(enemy)
-							x += 1
-					enemy_hps = []       
-				for i in enemy_team:
-					enemy_hps.append(i['hp'])
-				total_enemy_hp = sum(enemy_hps)       
-                
-				while total_ally_hp <= 0 and total_enemy_hp <= 0:
-					battle.cycle(z, enemy_team, team)
-					enemy_hps = []
-					for i in enemy_team:
-						enemy_hps.append(i['hp'])
-					battle.attack_enemy(enemy_team, team)
-					team_hps = []
-					for character in team:
-						team_hps.append(character['hp'])
-					total_ally_hp = sum(team_hps)
-					total_enemy_hp = sum(enemy_hps)
-					y += 1
-					if y > (l - 1):
-						y = 0
-				if total_ally_hp <= 0:
-					quests.lose(username, team)
-					worlds.pero_mission(username)
-				elif total_enemy_hp <= 0:
-					reward = 40
-					add = user['crystals'] + reward
-					user['crystals'] = add
-					print(f"{username} now has {user['crystals']} crystals")
-				new_file = "updated.json"
-				with open(new_file, "w") as f:
-					json.dump(users, f)
-				os.remove(r"game_files/classes/json/users.json")
-				os.rename(new_file, r"game_files/classes/json/users.json")
-        
-				rand.contin()
-
-                
-				wave += 1    # wave = 2
-				quests.wave(wave, 1)
-				enemy_team = []       
-				for enemy in entities:
-					if enemy['name'] == "Hydro Robot" or enemy['name'] == "Giant Hydro Robot":
+			z = team[y]
+		if ally_hp <= 0:
+			quests.lose(username, team)
+			worlds.monde_mission(username)
+		else:
+			for user in users:
+				reward = 7
+				add = user['crystals'] + reward
+				user['crystals'] = add
+				print(f"{username} now has {user['crystals']} crystals")
+			new_file = "updated.json"
+			with open(new_file, "w") as f:
+				json_string = json.dumps(users)
+				f.write(json_string)
+			os.remove(r"game_files/classes/json/users.json")
+			os.rename(new_file, r"game_files/classes/json/users.json")
+			print("You've earned 7 crystals.")
+			rand.contin()
+		wave = 0
+		print("Battle 2:")
+		while wave <= 2:
+			quests.wave(wave,0)
+			enemy_team = []
+			for enemy in entities:
+				if enemy['name'] == "Oblivion Orb":
+					for i in range(2):
 						enemy_team.append(enemy)
-				enemy_hps = []
-				for i in enemy_team:
-					enemy_hps.append(i['hp'])
-				total_enemy_hp = sum(enemy_hps)       
-                
-				while total_ally_hp <= 0 and total_enemy_hp <= 0:
-					battle.cycle(z, enemy_team, team)
-					enemy_hps = []
-					for i in enemy_team:
-						enemy_hps.append(i['hp'])
-					battle.attack_enemy(enemy_team, team)
-					team_hps = []
-					for character in team:
-						team_hps.append(character['hp'])
-					total_ally_hp = sum(team_hps)
-					total_enemy_hp = sum(enemy_hps)
-					y += 1
-					if y > (l - 1):
-						y = 0
-				if total_ally_hp <= 0:
-					quests.lose(username, team)
-					worlds.pero_mission(username)
-				elif total_enemy_hp <= 0:
-					reward = 40
+				elif enemy['name'] == "Ice Archer Goblin":
+					enemy_team.append(enemy)
+			y = 0
+			while ally_hp <= 0 and enemy_hp <= 0:
+				battle.attack_enemy(enemy_team, team)
+				a = []
+				for character in team:
+					a.append(character['hp'])
+				ally_hp = sum(a)
+				if ally_hp <= 0:
+					break
+				battle.cycle(z, enemy_team, team)
+				b = []
+				for en in enemy_team:
+					b.append(en['hp'])
+				enemy_hp = sum(b)
+				if enemy_hp <= 0:
+					break
+				y += 1
+				if y >= l:
+					y = 0
+				z = team[y]
+			if ally_hp <= 0:
+				quests.lose(username, team)
+				worlds.monde_mission(username)
+			else:
+				for user in users:
+					reward = 7
 					add = user['crystals'] + reward
 					user['crystals'] = add
 					print(f"{username} now has {user['crystals']} crystals")
 				new_file = "updated.json"
 				with open(new_file, "w") as f:
-					json.dump(users, f)
+					json_string = json.dumps(users)
+					f.write(json_string)
 				os.remove(r"game_files/classes/json/users.json")
-				os.rename(new_file, r"game_files/classes/json/users.json")
-		
-		rand.contin()
-
+				os.rename(new_file, r"game_files/classes/json/users.json")	
+				print("You've gained 7 crystals.")
+				rand.contin()
+			wave += 1
+		enemy_team = []
+		print("Battle 3:")
+		for enemy in entities:
+			if enemy['name'] == "Yeti":
+				enemy_team.append(enemy)
+		b = []
+		for i in enemy_team:
+			b.append(i['hp'])
+		enemy_hp = sum(b)
+		while ally_hp <= 0 and enemy_hp <= 0:
+			battle.attack_enemy(enemy_team, team)
+			a = []
+			for character in team:
+				a.append(character['hp'])
+			ally_hp = sum(a)
+			if ally_hp <= 0:
+				break
+			battle.cycle(z, enemy_team, team)
+			b = []
+			for en in enemy_team:
+				b.append(en['hp'])
+			enemy_hp = sum(b)
+			if enemy_hp <= 0:
+				break
+			y += 1
+			if y >= l:
+				y = 0
+			z = team[y]
+		if ally_hp <= 0:
+			quests.lose(username, team)
+			worlds.monde_mission(username)
+		else:
+			for user in users:
+				reward = 40
+				add = user['crystals'] + reward
+				user['crystals'] = add
+				print(f"{username} now has {user['crystals']} crystals")
+			new_file = "updated.json"
+			with open(new_file, "w") as f:
+				json_string = json.dumps(users)
+				f.write(json_string)
+			os.remove(r"game_files/classes/json/users.json")
+			os.rename(new_file, r"game_files/classes/json/users.json")	
+			print("You've gained 40 crystals.")
+			rand.contin()
 		dialogues_story.pero(21)
 		rand.contin()
 		dialogues_player.pero(5)
@@ -594,9 +564,12 @@ class worlds():
 		dialogues_player.pero(6)
 		answer = input("")
 		a = ['a','b']
-		while answer not in a:
+		while a not in b:
+			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
+			rand.contin()
+			print("You try and think of another response.")
 			dialogues_player.pero(6)
-			answer = input("")
+			a = input("").lower()
 		rand.contin()
 		dialogues_story.pero(25)
 		rand.contin()
