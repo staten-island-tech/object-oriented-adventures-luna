@@ -416,7 +416,7 @@ class worlds():
 		for i in enemy_team:
 			b.append(i['hp'])
 		enemy_hp = sum(b)
-		while ally_hp <= 0 and enemy_hp <= 0:
+		while ally_hp >= 0 and enemy_hp >= 0:
 			battle.attack_enemy(enemy_team, team)
 			a = []
 			for character in team:
@@ -464,7 +464,7 @@ class worlds():
 				elif enemy['name'] == "Ice Archer Goblin":
 					enemy_team.append(enemy)
 			y = 0
-			while ally_hp <= 0 and enemy_hp <= 0:
+			while ally_hp >= 0 and enemy_hp >= 0:
 				battle.attack_enemy(enemy_team, team)
 				a = []
 				for character in team:
@@ -510,7 +510,7 @@ class worlds():
 		for i in enemy_team:
 			b.append(i['hp'])
 		enemy_hp = sum(b)
-		while ally_hp <= 0 and enemy_hp <= 0:
+		while ally_hp >= 0 and enemy_hp >= 0:
 			battle.attack_enemy(enemy_team, team)
 			a = []
 			for character in team:

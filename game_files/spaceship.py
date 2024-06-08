@@ -40,7 +40,9 @@ class spaceship():
         os.system("cls")
         rand.load()
         print("You walk towards the transportation and logistics division to begin your next task.")
+        rand.contin()
         print("You feel that you are getting closer to finding your sibling.")
+        rand.contin()
         if quests == 1:
             dialogues_quest.amalthea(0)
             print("[1] Yes")
@@ -95,7 +97,7 @@ class spaceship():
             if answer == a[0]:
                 dialogues_quest.astrophel(1)
                 rand.contin()
-                print("You: I will. see you when I come back then, Astrophel!")
+                print("You: I will. See you when I come back then, Astrophel!")
                 rand.contin()
                 rand.load()
                 taiyo.path(username)
@@ -213,8 +215,5 @@ class spaceship():
     def team(username):
         data_users = open("./game_files/classes/json/users.json", encoding="utf8")
         users = json.load(data_users)
-
-        data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
-        entities = json.load(data_entities)
         battle.select_character(username)
 
