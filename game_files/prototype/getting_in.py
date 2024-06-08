@@ -67,7 +67,7 @@ class prototype():
                 username = input("What is your username? ")
                 print("Welcome to our Game!")
                 print("Thank you for playing this game! To show our apprieciation we will be giving you 12,800 crystals!")
-                print("This will be useful to you later on in the game! You will also be getting a free four-staar character when you start.")
+                print("This will be useful to you later on in the game! You will also be getting a free four-star character when you start.")
                 print("This character will be Asahi who you will meet later on in the game.")
                 print("Thank you for your time! Have fun!")
                 rand.contin()

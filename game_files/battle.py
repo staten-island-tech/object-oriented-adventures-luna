@@ -46,7 +46,6 @@ class battle():
                     t += 1
                 else:
                     t = 0
-        os.system("cls")
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -60,7 +59,6 @@ class battle():
                 enemy['hp'] = f
             else:
                 t = 0
-        os.system("cls")
         for enemy in enemies:
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -101,10 +99,8 @@ class battle():
             print ("[A] Use attack")
             d = input("").upper()
         if d == "U":
-            rand.contin()
             battle.ult(attack[1], y)
         elif d == "A":
-            rand.contin()
             battle.attack(attack[0], y)
     def attack_enemy(y, z):
         enemies = y
@@ -133,8 +129,6 @@ class battle():
         for character in characters:
             if a == c:
                 print(f"Enemy {d} is preparing to attack {character['name']}.")
-                rand.contin()
-                os.system("cls")
                 print(f"Your character has taken {attack_stat} damage.")
                 rand.contin()
                 os.system("cls")
