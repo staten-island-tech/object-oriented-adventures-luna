@@ -5,17 +5,17 @@ import sys
 
 sys.path.append("game_files")
 from prototype.getting_started import *
-
 from login import *
 from entry import *
 from rand import *
 from prototype.spaceship_pro import *
 
-with open (r"game_files\classes\json\users.json", "r") as hi : 
-    users = json.load(hi)
+data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+users = json.load(data_users)
 
-with open (r"game_files\classes\json\entities.json", "r") as bye :
-    entities = json.load(bye)
+data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+entities = json.load(data_entities)
+
 
 
 class prototype():
@@ -62,19 +62,17 @@ class prototype():
                     print("Transporting back to spaceship...")
                     rand.contin()
                     pro.wel(username)
-            elif account == "2":
+            if account == "2":
                 login.signup()
+                os.system("cls")
                 rand.load()
                 username = input("What is your username? ")
-                
-                while username not in users['username']:
-                    username = input("try again ")
-                print("Welcome back!")
-                
-                prologue.start(username)
-                """ prologue.newbeginnings()
+                print("Welcome to our Game!")
+                print("Thank you for playing this game! To show our apprieciation we will be giving you 12,800 crystals!")
+                print("This will be useful to you later on in the game!")
+                prologue.newbeginnings()
                 prologue.path(username)
-                pro.wel(username) """
+                pro.wel(username)
             a = "n"
 
-prototype.start()
+#prototype.start()

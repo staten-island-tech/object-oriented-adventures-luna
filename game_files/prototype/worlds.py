@@ -8,11 +8,12 @@ from dialogues import *
 from quest_and_rewards import *
 from rand import *
 
-with open (r"game_files\classes\json\users.json", "r") as hi : 
-    users = json.load(hi)
+data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+users = json.load(data_users)
 
-with open (r"game_files\classes\json\entities.json", "r") as bye :
-    entities = json.load(bye)
+data_entities = open("./game_files/classes/json/entities.json", encoding="utf8")
+entities = json.load(data_entities)
+
 
 class worlds():
 	def monde_mission(username):
@@ -128,8 +129,8 @@ class worlds():
 				with open(new_file, "w") as f:
 					json_string = json.dumps(users)
 					f.write(json_string)
-				os.remove(r"game_files\classes\json\users.json")
-				os.rename(new_file, r"game_files\classes\json\users.json")
+				os.remove(r"game_files/classes/json/users.json")
+				os.rename(new_file, r"game_files/classes/json/users.json")
 			print("You've gained 7 crystals")
 			wave += 1
 		print("Battle 2")
@@ -174,8 +175,8 @@ class worlds():
 			with open(new_file, "w") as f:
 				json_string = json.dumps(users)
 				f.write(json_string)
-			os.remove(r"game_files\classes\json\users.json")
-			os.rename(new_file, r"game_files\classes\json\users.json")
+			os.remove(r"game_files/classes/json/users.json")
+			os.rename(new_file, r"game_files/classes/json/users.json")
 			print("You've gained 7 crystals")
 			wave += 1
 		rand.contin()
@@ -221,8 +222,8 @@ class worlds():
 			with open(new_file, "w") as f:
 				json_string = json.dumps(users)
 				f.write(json_string)
-			os.remove(r"game_files\classes\json\users.json")
-			os.rename(new_file, r"game_files\classes\json\users.json")
+			os.remove(r"game_files/classes/json/users.json")
+			os.rename(new_file, r"game_files/classes/json/users.json")
 		print("You've gained 7 crystals")
 		rand.contin()
 		quests.wave(1,1)
@@ -264,8 +265,8 @@ class worlds():
 			with open(new_file, "w") as f:
 				json_string = json.dumps(users)
 				f.write(json_string)
-			os.remove(r"game_files\classes\json\users.json")
-			os.rename(new_file, r"game_files\classes\json\users.json")
+			os.remove(r"game_files/classes/json/users.json")
+			os.rename(new_file, r"game_files/classes/json/users.json")
 		print("You've gained 40 crystals")
 		rand.contin()
 		dialogues_story.monde(10)
@@ -317,8 +318,8 @@ class worlds():
 			with open(new_file, "w") as f:
 				json_string = json.dumps(users)
 				f.write(json_string)
-			os.remove(r"game_files\classes\json\users.json")
-			os.rename(new_file, r"game_files\classes\json\users.json")
+			os.remove(r"game_files/classes/json/users.json")
+			os.rename(new_file, r"game_files/classes/json/users.json")
 	
 	def pero_mission(username):
 		x = 0
@@ -446,8 +447,8 @@ class worlds():
 					new_file = "updated.json"
 					with open(new_file, "w") as f:
 						json.dump(users, f)
-					os.remove(r"game_files\classes\json\users.json")
-					os.rename(new_file, r"game_files\classes\json\users.json")
+					os.remove(r"game_files/classes/json/users.json")
+					os.rename(new_file, r"game_files/classes/json/users.json")
 					wave += 1
 					rand.contin()
 							
@@ -492,8 +493,8 @@ class worlds():
 					new_file = "updated.json"
 					with open(new_file, "w") as f:
 						json.dump(users, f)
-					os.remove(r"game_files\classes\json\users.json")
-					os.rename(new_file, r"game_files\classes\json\users.json")
+					os.remove(r"game_files/classes/json/users.json")
+					os.rename(new_file, r"game_files/classes/json/users.json")
 					wave += 1
 					rand.contin()
 
@@ -538,8 +539,8 @@ class worlds():
 				new_file = "updated.json"
 				with open(new_file, "w") as f:
 					json.dump(users, f)
-				os.remove(r"game_files\classes\json\users.json")
-				os.rename(new_file, r"game_files\classes\json\users.json")
+				os.remove(r"game_files/classes/json/users.json")
+				os.rename(new_file, r"game_files/classes/json/users.json")
         
 				rand.contin()
 
@@ -580,8 +581,8 @@ class worlds():
 				new_file = "updated.json"
 				with open(new_file, "w") as f:
 					json.dump(users, f)
-				os.remove(r"game_files\classes\json\users.json")
-				os.rename(new_file, r"game_files\classes\json\users.json")
+				os.remove(r"game_files/classes/json/users.json")
+				os.rename(new_file, r"game_files/classes/json/users.json")
         
 				rand.contin()
 
@@ -599,5 +600,5 @@ class worlds():
 		with open(new_file, "w") as f:
 			json_string = json.dumps(users)
 			f.write(json_string)
-		os.remove(r"game_files\classes\json\users.json")
-		os.rename(new_file, r"game_files\classes\json\users.json")
+		os.remove(r"game_files/classes/json/users.json")
+		os.rename(new_file, r"game_files/classes/json/users.json")
