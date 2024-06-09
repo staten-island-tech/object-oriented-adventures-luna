@@ -42,10 +42,17 @@ class battle():
                 a = entity['attack']
                 q = a[0]
         enemies = y
+        e = []
         for enemy in enemies:
-            e = enemy['hp']
-            new_hp = e - q
-            enemy['hp'] = new_hp
+                e.append(enemy['hp'])
+        w = []
+        for hp in e:
+            new = hp - q
+            w.append(new)
+        j = 0
+        for enemy in enemies:
+            enemy['hp'] = w[j]
+            j += 1
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -56,10 +63,17 @@ class battle():
                 a = entity['attack']
                 q = a[1]
         enemies = y
+        e = []
         for enemy in enemies:
-            e = enemy['hp']
-            new_hp = e - q
-            enemy['hp'] = new_hp
+                e.append(enemy['hp'])
+        w = []
+        for hp in e:
+            new = hp - q
+            w.append(new)
+        j = 0
+        for enemy in enemies:
+            enemy['hp'] = w[j]
+            j += 1
         for enemy in enemies:
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
