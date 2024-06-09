@@ -94,6 +94,7 @@ class worlds():
 				if enemy['name'] == "Hydro Robot":
 					for i in range(3):
 						enemy_team.append(enemy)
+			rand.hp_full(enemy_team)
 			b = []
 			for en in enemy_team:
 				b.append(en['hp'])
@@ -144,6 +145,7 @@ class worlds():
 				if enemy['name'] == "Hydro Robot Dog":
 					for i in range(3):
 						enemy_team.append(enemy)
+			rand.hp_full(enemy_team)
 			b = []
 			for en in enemy_team:
 				b.append(en['hp'])
@@ -195,6 +197,7 @@ class worlds():
 				enemy_team.append(enemy)
 			elif enemy['name'] == "Hydro Robot Dog":
 				enemy_team.append(enemy)
+		rand.hp_full(enemy_team)
 		b = []
 		for en in enemy_team:
 			b.append(en['hp'])
@@ -243,6 +246,7 @@ class worlds():
 		for enemy in entities:
 			if enemy['name'] == "Giant Hydro Robot":
 				enemy_team.append(enemy)
+		rand.hp_full(enemy_team)
 		b = []
 		for en in enemy_team:
 			b.append(en['hp'])

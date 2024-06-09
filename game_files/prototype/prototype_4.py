@@ -94,6 +94,7 @@ class taiyo():
                 if enemy['name'] == "Trainee Guard":
                         for i in range(3):
                             enemy_team.append(enemy)
+            rand.hp_full(enemy_team)
             b = []       # list of the 3 trainee guard' hps
             for enemy in enemy_team:
                 b.append(enemy['hp'])
@@ -144,6 +145,7 @@ class taiyo():
             if enemy['name'] == "Trainee Guard":
                     for i in range(3):
                         enemy_team.append(enemy)
+        rand.hp_full(enemy_team)
         b = []       # list of the 3 trainee guard' hps
         for enemy in enemy_team:
             b.append(enemy['hp'])
@@ -192,6 +194,7 @@ class taiyo():
             if enemy['name'] == "Guard":
                     for i in range(4):
                         enemy_team.append(enemy)
+        rand.hp_full(enemy_team)
         b = []       # list of the 3 trainee guard' hps
         for enemy in enemy_team:
             b.append(enemy['hp'])
@@ -238,6 +241,7 @@ class taiyo():
             if enemy['name'] == "Guard Captain":
                     for i in range(4):
                         enemy_team.append(enemy)
+        rand.hp_full(enemy_team)
         b = []       # list of the 3 trainee guard' hps
         for enemy in enemy_team:
             b.append(enemy['hp'])
@@ -302,6 +306,7 @@ class taiyo():
             if enemy['name'] == "Queen of Taiyo":
                     for i in range(4):
                         enemy_team.append(enemy)
+        rand.hp_full(enemy_team)
         b = []       # list of the 3 trainee guard' hps
         for enemy in enemy_team:
             b.append(enemy['hp'])
