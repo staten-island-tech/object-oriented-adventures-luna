@@ -44,7 +44,8 @@ class battle():
         enemies = y
         for enemy in enemies:
             e = enemy['hp']
-            enemy['hp'] = e - q
+            new_hp = e - q
+            enemy['hp'] = new_hp
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -57,7 +58,8 @@ class battle():
         enemies = y
         for enemy in enemies:
             e = enemy['hp']
-            enemy['hp'] = e - q
+            new_hp = e - q
+            enemy['hp'] = new_hp
         for enemy in enemies:
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
