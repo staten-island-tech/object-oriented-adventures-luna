@@ -92,16 +92,16 @@ class starsystem():
         for user in users: 
             if user['username'] == username:
                 characters = user['characters']
-                print(f"{username} currently has these characters: ")
-                for i in characters:
-                    print(i)
+            print(f"{username} currently has these characters: ")
+            for i in characters:
+                print(i)
         
     def pull_one(username):            #tested
         k = starsystem.k
         base_functions.activate_pity(username)
         for user in users:
             if user['username'] == username:
-                print(f"{username} currenty has {user['crystals']} crystals")
+                print(f"{username} currently has {user['crystals']} crystals")
                 if user['crystals'] < 160:
                     print("you do not have enough crystals.")
                 else: 
@@ -112,7 +112,7 @@ class starsystem():
                         user['crystals'] -= 160
                         base_functions.get_random_character(k,username)
                         answer = "n"
-                print(f"{username} now has {user['crystals']} crystals left")
+            print(f"{username} now has {user['crystals']} crystals left")
 
     def pull_ten(username):            #tested
         k = starsystem.k
@@ -140,4 +140,3 @@ class starsystem():
                             othercount += 1
                         answer = "n"
                 print(f"{username} now has {user['crystals']} crystals left")
-
