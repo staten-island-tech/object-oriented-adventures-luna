@@ -375,3 +375,4 @@ class prologue():
         print("Going to spaceship...")
         rand.contin()
 
+prologue.path('exa')
