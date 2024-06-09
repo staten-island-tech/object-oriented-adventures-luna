@@ -1,13 +1,16 @@
 import os
 import json
-import time
 
 with open (r"game_files/classes/json/entities.json", "r") as bye :
     entities = json.load(bye)
 
 class rand():
   def contin():
-    time.sleep(5)
+    print("[A] Continue")
+    c = input("").upper()
+    while c != "A":
+      print("That is not one of the answer choices please choose again!")
+      c = input("").upper()
     os.system("cls")
   def quest_selector(username):
     print("[S] Story Quest")
