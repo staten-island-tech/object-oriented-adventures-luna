@@ -263,10 +263,6 @@ class prologue():
                     f.write(json_string)
                 os.remove(r"game_files/classes/json/users.json")
                 os.rename(new_file, r"game_files/classes/json/users.json") 
-        for enemy in entities:
-            if enemy['name'] == "Oblivion Drone":
-                if enemy not in used:
-                    used.append(enemy)
         rand.contin()
         wave += 1
         quests.wave(wave, 1)
