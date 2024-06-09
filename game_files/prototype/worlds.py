@@ -27,7 +27,7 @@ class worlds():
 			print("You try and think of another response.")
 			dialogues_player.monde(0)
 			a = input("").lower()
-		rand.contin()
+		os.system("cls")
 		dialogues_story.monde(1)
 		dialogues_story.monde(2)
 		rand.contin()
@@ -39,7 +39,7 @@ class worlds():
 			print("You try and think of another response.")
 			dialogues_player.monde(1)
 			a = input("").lower()
-		rand.contin()
+		os.system("cls")
 		dialogues_story.monde(3)
 		rand.contin()
 		dialogues_player.monde(2)
@@ -63,13 +63,14 @@ class worlds():
 		rand.contin()
 		dialogues_player.monde(6)
 		a = input("").lower()
+		b = ["a", "b"]
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
 			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.monde(6)
 			a = input("").lower()
-		rand.contin()
+		os.system("cls")
 		team_name = []
 		for user in users:
 			if user['username'] == username:
@@ -304,7 +305,7 @@ class worlds():
 			print("You try and think of another response.")
 			dialogues_player.monde(8)
 			a = input("").lower()
-		rand.contin()
+		os.system("cls")
 		dialogues_story.monde(12)
 		rand.contin()
 		dialogues_player.monde(9)
@@ -352,40 +353,40 @@ class worlds():
 		dialogues_story.pero(4)
 		rand.contin()
 		dialogues_player.pero(1)
-		answer = input("")
-		a = ['a','b']
+		a = input("")
+		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
 			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.pero(1)
 			a = input("").lower()
-		rand.contin()
+		os.system("cls")
 		x = 5
-		while x <= 7:
+		while x == 7:
 			dialogues_story.pero(x)
 			x += 1
-			rand.contin()
+		rand.contin()
 		dialogues_player.pero(2)
 		rand.contin()
 		dialogues_story.pero(8)
 		dialogues_story.pero(9)
 		rand.contin()
 		dialogues_player.pero(3)
-		answer = input("")
-		a = ['a','b']
+		a = input("")
+		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
 			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.pero(3)
 			a = input("").lower()
-		rand.contin()
+		os.system("cls")
 		x = 10
 		while x <= 20:
 			dialogues_story.pero(x)
 			x += 1
-			rand.contin()
+		rand.contin()
 		dialogues_player.pero(4)
 		rand.contin()
 		print("Battle 1:")
@@ -548,27 +549,30 @@ class worlds():
 		dialogues_story.pero(21)
 		rand.contin()
 		dialogues_player.pero(5)
-		answer = input("")
-		a = ['a','b']
-		while answer not in a:
-			dialogues_player.pero(5)
-			answer = input("")
-		rand.contin()
-		x = 22
-		while x <= 24:
-			dialogues_story.pero(x)
-			x += 1
-		rand.contin()
-		dialogues_player.pero(6)
-		answer = input("")
-		a = ['a','b']
+		a = input("")
+		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
 			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.pero(6)
 			a = input("").lower()
+		os.system("cls")
+		x = 22
+		while x <= 24:
+			dialogues_story.pero(x)
+			x += 1
 		rand.contin()
+		dialogues_player.pero(6)
+		a = input("")
+		b = ['a','b']
+		while a not in b:
+			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
+			rand.contin()
+			print("You try and think of another response.")
+			dialogues_player.pero(6)
+			a = input("").lower()
+		os.system("cls")
 		dialogues_story.pero(25)
 		dialogues_story.pero(26)
 		rand.contin()

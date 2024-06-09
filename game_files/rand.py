@@ -14,19 +14,6 @@ class rand():
     os.system("cls")
   def quest_selector(username):
     print("[S] Story Quest")
-  def attk_full(x, y, z, t):
-    used = x
-    enemy_team = y
-    attack = z
-    for enemy in enemy_team:
-      if enemy not in used:
-        e = enemy['hp']
-        if t == 'u':
-          enemy['hp'] = e - (attack/3)
-        elif t == 'a':
-          enemy['hp'] = e - (attack/2)
-      elif enemy in used:
-        pass
   def hp_full(x):
     enemy_team = x
     for enemy in enemy_team:
