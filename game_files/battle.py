@@ -43,7 +43,6 @@ class battle():
             e = enemy['hp']
             f = e - (x/2)
             enemy['hp'] = f
-            t += 1
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -158,6 +157,11 @@ class battle():
                 while charact == c:
                     print("You already have this character in the team! Please choose another character.")
                     c = input("Choose a character to add onto the team: ").title()
+            for user in users:
+                if user['username'] == username:
+                    while c not in user['characters']:
+                        print("You don't have this character in your data. Please try again.")
+                        c = input("Choose a character to add onto the team: ").title()
             d = input("Choose the character to replace(enter the letter in front of it): ").upper()
             a = 0
             for letter in b:
