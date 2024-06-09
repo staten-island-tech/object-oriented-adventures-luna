@@ -117,9 +117,6 @@ class battle():
         for enemy in enemies:
             if a == c:
                 d = enemy['name']
-                print(f"Enemy {enemy['name']} is preparing to attack.")
-                rand.contin()
-                os.system("cls")
                 attack_stat = enemy['attack']
             a += 1
         a = 0
