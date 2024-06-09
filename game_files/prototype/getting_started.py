@@ -379,7 +379,7 @@ class prologue():
         rand.contin()
         for user in users:
             if user['username'] == username:
-                user['quest'].append('monde')
+                user['quest'].append('space station')
         new_file = "updated.json"
         with open(new_file, "w") as f:
             json_string = json.dumps(users)

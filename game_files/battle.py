@@ -110,7 +110,10 @@ class battle():
             print("You are not able to use your ultimate right now.")
         print("[A] Use attack")
         d = input("").upper()
-        answers = ["U", "A"]
+        if e == 1:
+            answers = ["U", "A"]
+        elif e == 0:
+            answers = ["A"]
         if d not in answers:
             if e == 1:
                 print("[U] Use Ultimate")
