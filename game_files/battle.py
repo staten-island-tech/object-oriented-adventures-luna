@@ -136,8 +136,8 @@ class battle():
                 new_hp = character['hp'] - attack_stat
                 character['hp'] = new_hp
                 print(f"HP: {new_hp}")
-                os.system("cls")
                 rand.contin()
+                os.system("cls")
             a += 1
     def select_character(username):             ## needs to be tested - TESTED 
         for user in users:

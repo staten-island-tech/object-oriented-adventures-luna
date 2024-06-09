@@ -317,7 +317,6 @@ class prologue():
         dialogues_story.space_station(10)
         rand.contin()
         dialogues_player.space_station(7)
-        rand.contin()
         a = input("").lower()
         b = ["a", "b"]
         while a not in b:
@@ -375,3 +374,4 @@ class prologue():
         print("You've completed this mission. You've gained 1600 crystals")
         print("Going to spaceship...")
         rand.contin()
+

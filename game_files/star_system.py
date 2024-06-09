@@ -92,9 +92,9 @@ class starsystem():
         for user in users: 
             if user['username'] == username:
                 characters = user['characters']
-            print(f"{username} currently has these characters: ")
-            for i in characters:
-                print(i)
+                print(f"{username} currently has these characters: ")
+                for i in characters:
+                    print(i)
         
     def pull_one(username):            #tested
         k = starsystem.k

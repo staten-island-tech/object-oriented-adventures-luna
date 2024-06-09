@@ -57,6 +57,7 @@ class prototype():
                     print("Continuing story quest...")
                     rand.contin()
                     prologue.path(username)
+                    pro.wel(username)
                 else:
                     print("Transporting back to spaceship...")
                     rand.contin()
