@@ -40,13 +40,10 @@ class battle():
         t = 0
         enemies = y
         for enemy in enemies:
-                if t == 0:
-                    e = enemy['hp']
-                    f = e - (x/2)
-                    enemy['hp'] = f
-                    t += 1
-                else:
-                    t = 0
+            e = enemy['hp']
+            f = e - (x/2)
+            enemy['hp'] = f
+            t += 1
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -55,12 +52,10 @@ class battle():
         enemies = y
         t = 0
         for enemy in enemies:
-            if t == 0:
-                e = enemy['hp']
-                f = e - (x/3)
-                enemy['hp'] = f
-            else:
-                t = 0
+            e = enemy['hp']
+            f = e - (x/3)
+            enemy['hp'] = f
+
         for enemy in enemies:
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
