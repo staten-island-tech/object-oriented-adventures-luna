@@ -37,24 +37,25 @@ characters = [{'name': "c",
 class battle():
     def attack(x, y):                             # x is attack the enemy is taking (integer), y is list of dictionary of enemies, z is team you're using
         os.system("cls")
-        t = 0
+        for entity in entities:
+            if entity['name'] == x:
+                q = entity['attack'[0]]
         enemies = y
         for enemy in enemies:
             e = enemy['hp']
-            f = e - (x/2)
-            enemy['hp'] = f
+            enemy['hp'] = e - q
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
     def ult(x, y):
         os.system("cls")
+        for entity in entities:
+            if entity['name'] == x:
+                q = entity['attack'[1]]
         enemies = y
-        t = 0
         for enemy in enemies:
             e = enemy['hp']
-            f = e - (x/3)
-            enemy['hp'] = f
-
+            enemy['hp'] = e - q
         for enemy in enemies:
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -68,6 +69,8 @@ class battle():
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
                 global attack
+                global name
+                name = character['name']
                 attack = character['attack']
                 print(f"Attack: {attack[0]}")
                 print(f"Ultimate: {attack[1]}")
@@ -96,9 +99,9 @@ class battle():
             print ("[A] Use attack")
             d = input("").upper()
         if d == "U":
-            battle.ult(attack[1], y)
+            battle.ult(name, y)
         elif d == "A":
-            battle.attack(attack[0], y)
+            battle.attack(name, y)
     def attack_enemy(y, z):
         enemies = y
         characters = z
