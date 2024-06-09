@@ -37,30 +37,43 @@ characters = [{'name': "c",
 class battle():
     def attack(x, y):                             # x is attack the enemy is taking (integer), y is list of dictionary of enemies, z is team you're using
         os.system("cls")
-        t = 0
+        for entity in entities:
+            if entity['name'] == x:
+                a = entity['attack']
+                q = a[0]
         enemies = y
+        e = []
         for enemy in enemies:
-                if t == 0:
-                    e = enemy['hp']
-                    f = e - (x/2)
-                    enemy['hp'] = f
-                    t += 1
-                else:
-                    t = 0
+                e.append(enemy['hp'])
+        w = []
+        for hp in e:
+            new = hp - q
+            w.append(new)
+        j = 0
+        for enemy in enemies:
+            enemy['hp'] = w[j]
+            j += 1
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
     def ult(x, y):
         os.system("cls")
+        for entity in entities:
+            if entity['name'] == x:
+                a = entity['attack']
+                q = a[1]
         enemies = y
-        t = 0
+        e = []
         for enemy in enemies:
-            if t == 0:
-                e = enemy['hp']
-                f = e - (x/3)
-                enemy['hp'] = f
-            else:
-                t = 0
+                e.append(enemy['hp'])
+        w = []
+        for hp in e:
+            new = hp - q
+            w.append(new)
+        j = 0
+        for enemy in enemies:
+            enemy['hp'] = w[j]
+            j += 1
         for enemy in enemies:
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -74,6 +87,8 @@ class battle():
                 print(f"Name: {character['name']}")
                 print(f"HP: {character['hp']}")
                 global attack
+                global name
+                name = character['name']
                 attack = character['attack']
                 print(f"Attack: {attack[0]}")
                 print(f"Ultimate: {attack[1]}")
@@ -102,9 +117,9 @@ class battle():
             print ("[A] Use attack")
             d = input("").upper()
         if d == "U":
-            battle.ult(attack[1], y)
+            battle.ult(name, y)
         elif d == "A":
-            battle.attack(attack[0], y)
+            battle.attack(name, y)
     def attack_enemy(y, z):
         enemies = y
         characters = z
@@ -117,9 +132,6 @@ class battle():
         for enemy in enemies:
             if a == c:
                 d = enemy['name']
-                print(f"Enemy {enemy['name']} is preparing to attack.")
-                rand.contin()
-                os.system("cls")
                 attack_stat = enemy['attack']
             a += 1
         a = 0
@@ -166,6 +178,11 @@ class battle():
                 while charact == c:
                     print("You already have this character in the team! Please choose another character.")
                     c = input("Choose a character to add onto the team: ").title()
+            for user in users:
+                if user['username'] == username:
+                    while c not in user['characters']:
+                        print("You don't have this character in your data. Please try again.")
+                        c = input("Choose a character to add onto the team: ").title()
             d = input("Choose the character to replace(enter the letter in front of it): ").upper()
             a = 0
             for letter in b:

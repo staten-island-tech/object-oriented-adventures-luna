@@ -17,34 +17,19 @@ class rand():
   def hp_full(x):
     enemy_team = x
     for enemy in enemy_team:
-            if enemy['hp'] <= 0:
-              if enemy['name'] == "Oblivion Guard":
-                enemy['hp'] = 4500
-              elif enemy['name'] == "Oblivion Drone":
-                enemy['hp'] = 4500
-              elif enemy['name'] == "General Aeron":
-               enemy['hp'] = 10000
-              elif enemy['name'] == "Hydro Robot":
-               enemy['hp'] = 4500
-              elif enemy['name'] == "Hydro Robot Dog":
-               enemy['hp'] = 4500
-              elif enemy['name'] == "Giant Hydro Robot":
-               enemy['hp'] = 10000
-              elif enemy['name'] == "Ice Goblin":
-               enemy['hp'] = 4500
-              elif enemy['name'] == "Ice Archer Goblin":
-               enemy['hp'] = 4500
-              elif enemy['name'] == "Oblivion Orb":
-               enemy['hp'] = 4500
-              elif enemy['name'] == "Yeti":
-               enemy['hp'] = 10000
-              elif enemy['name'] == "Trainee Guard":
-               enemy['hp'] = 4500
-              elif enemy['name'] == "Guard":
-               enemy['hp'] = 4500
-              elif enemy['name'] == "Guard Captain":
-               enemy['hp'] = 10000
-              elif enemy['name'] == "Queen of Taiyo":
-               enemy['hp'] = 20000
-            else:
-              pass
+      if enemy['hp'] == 0:
+        if enemy['type'] == "minion":
+          enemy['hp'] = 4500
+        elif enemy['name'] == "Queen of Taiyo":
+          enemy['hp'] = 20000
+        elif enemy['type'] == "boss":
+          enemy['hp'] = 10000
+      elif enemy['hp'] < 0:
+        if enemy['type'] == "minion":
+          enemy['hp'] = 4500
+        elif enemy['name'] == "Queen of Taiyo":
+          enemy['hp'] = 20000
+        elif enemy['type'] == "boss":
+          enemy['hp'] = 10000
+      elif enemy['hp'] > 0:
+        pass

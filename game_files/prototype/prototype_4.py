@@ -26,7 +26,7 @@ class taiyo():
         while x <= 3:
             dialogues_story.taiyo(x)
             x += 1
-            rand.contin()
+        rand.contin()
         dialogues_player.taiyo(1)
         answer = input("")
         a = ['a','b']
@@ -36,7 +36,6 @@ class taiyo():
             print("You try and think of another response.")
             dialogues_player.taiyo(1)
             a = input("").lower()
-        rand.contin()
         dialogues_story.taiyo(4)
         rand.contin()
         dialogues_player.taiyo(2)
@@ -49,15 +48,12 @@ class taiyo():
         dialogues_player.taiyo(3)
         rand.contin()
         dialogues_story.taiyo(9)
-        rand.contin()
         dialogues_story.taiyo(10)
         rand.contin()
         dialogues_player.taiyo(4)
-        rand.contin()
         dialogues_player.taiyo(5)
         rand.contin()
         dialogues_story.taiyo(11)
-        rand.contin()
         dialogues_story.taiyo(12)
         rand.contin()
         dialogues_player.taiyo(6)
@@ -66,7 +62,7 @@ class taiyo():
         while x <= 15:
             dialogues_story.taiyo(x)
             x += 1
-            rand.contin()
+        rand.contin()
         dialogues_player.taiyo(7)
         rand.contin()
         dialogues_story.taiyo(19)       #stopped by guards here
@@ -94,6 +90,7 @@ class taiyo():
                 if enemy['name'] == "Trainee Guard":
                         for i in range(3):
                             enemy_team.append(enemy)
+            rand.hp_full(enemy_team)
             b = []       # list of the 3 trainee guard' hps
             for enemy in enemy_team:
                 b.append(enemy['hp'])
@@ -144,6 +141,7 @@ class taiyo():
             if enemy['name'] == "Trainee Guard":
                     for i in range(3):
                         enemy_team.append(enemy)
+        rand.hp_full(enemy_team)
         b = []       # list of the 3 trainee guard' hps
         for enemy in enemy_team:
             b.append(enemy['hp'])
@@ -192,6 +190,7 @@ class taiyo():
             if enemy['name'] == "Guard":
                     for i in range(4):
                         enemy_team.append(enemy)
+        rand.hp_full(enemy_team)
         b = []       # list of the 3 trainee guard' hps
         for enemy in enemy_team:
             b.append(enemy['hp'])
@@ -238,6 +237,7 @@ class taiyo():
             if enemy['name'] == "Guard Captain":
                     for i in range(4):
                         enemy_team.append(enemy)
+        rand.hp_full(enemy_team)
         b = []       # list of the 3 trainee guard' hps
         for enemy in enemy_team:
             b.append(enemy['hp'])
@@ -284,7 +284,7 @@ class taiyo():
         while x <= 22:
             dialogues_story.taiyo(x)
             x += 1
-            rand.contin()
+        rand.contin()
         dialogues_player.taiyo(8)
         answer = input("")
         a = ['a','b']
@@ -294,7 +294,6 @@ class taiyo():
             print("You try and think of another response.")
             dialogues_player.taiyo(1)
             a = input("").lower()
-        rand.contin()
         
         print("Battle 4: ")
         enemy_team = []       #list of the 4 guards (whole dictionary)
@@ -302,6 +301,7 @@ class taiyo():
             if enemy['name'] == "Queen of Taiyo":
                     for i in range(4):
                         enemy_team.append(enemy)
+        rand.hp_full(enemy_team)
         b = []       # list of the 3 trainee guard' hps
         for enemy in enemy_team:
             b.append(enemy['hp'])
@@ -360,7 +360,6 @@ class taiyo():
             rand.contin()
         elif answer == "b": 
             dialogues_story(27)
-            rand.contin()
             dialogues_story(28)
             rand.contin()
         for user in users:

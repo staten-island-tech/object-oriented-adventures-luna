@@ -184,6 +184,7 @@ class prologue():
                 q += 1
                 if q > (l - 1):
                     q = 0
+                z = team[y[q]]
             rand.contin()
             if ally_hp == 0:
                 quests.lose(username, team)
@@ -239,6 +240,7 @@ class prologue():
                 q += 1
                 if q > l - 1:
                     q = 0
+                z = team[y[q]]
         rand.contin()
         if ally_hp < 0:
                 quests.lose(username, team)
@@ -291,7 +293,8 @@ class prologue():
                  break
             q += 1
             if q > (l - 1):
-                    q = 0
+                q = 0
+            z = team[y[q]]
         if ally_hp < 0:
                 quests.lose(username, team)
                 prologue.path(username)
@@ -334,17 +337,17 @@ class prologue():
                 print("You try and think of another response.")
                 dialogues_player.space_station(8)
                 a = input("").lower()
-        rand.contin()
+        os.system("cls")
         dialogues_story.space_station(12)
         rand.contin()
         dialogues_player.space_station(9)
         a = input("").lower()
         while a not in b:
-                print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-                print("You try and think of another response.")
-                dialogues_player.space_station(9)
-                a = input("").lower()
-                rand.contin()
+            print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
+            print("You try and think of another response.")
+            dialogues_player.space_station(9)
+            a = input("").lower()
+        os.system("cls")
         if a == b[0]:
                 dialogues_story.space_station(13)
                 dialogues_story.space_station(15)
@@ -374,4 +377,13 @@ class prologue():
         print("You've completed this mission. You've gained 1600 crystals")
         print("Going to spaceship...")
         rand.contin()
+        for user in users:
+            if user['username'] == username:
+                user['quest'].append('monde')
+        new_file = "updated.json"
+        with open(new_file, "w") as f:
+            json_string = json.dumps(users)
+            f.write(json_string)
+        os.remove(r"game_files/classes/json/users.json")
+        os.rename(new_file, r"game_files/classes/json/users.json")
 
