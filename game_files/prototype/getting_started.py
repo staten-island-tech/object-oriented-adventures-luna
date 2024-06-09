@@ -69,28 +69,32 @@ class prologue():
         q = 0
         z = team[y[q]]
         enemy_team = []
-        for en in entities:
-            if en['name'] == "Oblivion Guard":
+        for enemy in entities:
+            if enemy['name'] == "Oblivion Guard":
                 for i in range(3):
-                    enemy_team.append(en)
+                    enemy_team.append(enemy)
         for enemy in enemy_team:
             b.append(enemy['hp'])
         enemy_hp = sum(b)
         while ally_hp >= 0 and enemy_hp >= 0:
             battle.attack_enemy(enemy_team, team)
-            enemy_hp = sum(b)
-            if enemy_hp <= 0:
-                 break
             a = []
             for character in team:
                 a.append(character['hp'])
             ally_hp = sum(a)
-            if ally_hp <= 0:
+            if ally_hp == 0:
+                 break
+            elif ally_hp < 0:
                  break
             battle.cycle(z, enemy_team, team)
             b = []
             for en in enemy_team:
                 b.append(en['hp'])
+            enemy_hp = sum(b)
+            if enemy_hp == 0:
+                 break
+            elif enemy_hp < 0:
+                 break
             q += 1
             if q > (l - 1):
                 q = 0
@@ -125,7 +129,6 @@ class prologue():
         hi = ["a", "b"]
         while answer not in hi:
             print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-            rand.contin()
             print("You try and think of another response.")
             dialogues_player.space_station(5)
             answer = input("").lower()
@@ -137,11 +140,10 @@ class prologue():
         hi = ["a", "b"]
         while answer not in hi:
             print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-            rand.contin()
             print("You try and think of another response.")
             dialogues_player.space_station(6)
             answer = input("").lower()
-        rand.contin()
+        os.system("cls")
         wave = 0
         q = 0
         z = team[y[q]]
@@ -155,6 +157,7 @@ class prologue():
                 elif enemy['name'] == "Oblivion Drones":
                     for i in range(2):
                         enemy_team.append(enemy)
+            rand.hp_full(enemy_team)
             b = []
             for enemy in enemy_team:
                 b.append(enemy['hp'])
@@ -165,14 +168,18 @@ class prologue():
                 for character in team:
                     a.append(character['hp'])
                 ally_hp = sum(a)
-                if ally_hp <= 0:
+                if ally_hp == 0:
                     break
-                battle.cycle(z,enemy_team, team)
+                elif ally_hp < 0:
+                    break
+                battle.cycle(z, enemy_team, team)
                 b = []
                 for en in enemy_team:
                     b.append(en['hp'])
                 enemy_hp = sum(b)
-                if enemy_hp <= 0:
+                if enemy_hp == 0:
+                    break
+                elif enemy_hp < 0:
                     break
                 q += 1
                 if q > (l - 1):
@@ -208,6 +215,7 @@ class prologue():
             if enemy['name'] == "Oblivion Drones":
                 for i in range(2):
                     enemy_team.append(enemy)
+        rand.hp_full(enemy_team)
         b = []
         q = 0
         for enemy in enemy_team:
@@ -260,6 +268,7 @@ class prologue():
         for enemy in entities:
             if enemy['name'] == "General Aeron":
                 enemy_team.append(enemy)
+        rand.hp_full(enemy_team)
         b = []
         for enemy in enemy_team:
             b.append(enemy['hp'])
@@ -308,12 +317,10 @@ class prologue():
         dialogues_story.space_station(10)
         rand.contin()
         dialogues_player.space_station(7)
-        rand.contin()
         a = input("").lower()
         b = ["a", "b"]
         while a not in b:
                 print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-                rand.contin()
                 print("You try and think of another response.")
                 dialogues_player.space_station(7)
                 a = input("").lower()
@@ -324,7 +331,6 @@ class prologue():
         a = input("").lower()
         while a not in b:
                 print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-                rand.contin()
                 print("You try and think of another response.")
                 dialogues_player.space_station(8)
                 a = input("").lower()
@@ -335,7 +341,6 @@ class prologue():
         a = input("").lower()
         while a not in b:
                 print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-                rand.contin()
                 print("You try and think of another response.")
                 dialogues_player.space_station(9)
                 a = input("").lower()
@@ -369,3 +374,4 @@ class prologue():
         print("You've completed this mission. You've gained 1600 crystals")
         print("Going to spaceship...")
         rand.contin()
+
