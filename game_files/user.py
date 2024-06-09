@@ -64,3 +64,7 @@ class create():
         while a == "n":
             return "thank you for your time."
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 8ddd320 (a)
