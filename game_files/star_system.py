@@ -4,15 +4,17 @@ import random
 import time
 from rand import rand
 
-with open (r"game_files/classes/json/users.json", "r") as hi : 
+""" with open (r"game_files/classes/json/users.json", "r") as hi : 
     users = json.load(hi)
 
 with open (r"game_files/classes/json/entities.json", "r") as bye :
-    entities = json.load(bye)
+    entities = json.load(bye) """
 
 
 class base_functions():         # ***DONT IMPORT OR USE THIS IN OTHER FILES, ONLY USE the  starsystem class
     def check_dupe_or_append(username, character):       #char is the entire character dictionary of that character (automatically replaced w variable in function)
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
         for user in users:                         #tested
             if user['username'] == username:
                 characters = user['characters']
@@ -37,6 +39,11 @@ class base_functions():         # ***DONT IMPORT OR USE THIS IN OTHER FILES, ONL
 
     def get_random_character(k,n):                  # k = 30 --> represents the percent chance of pulling a character
                                                  # n is the username of the user who is pulling the characters --> becomes username in the pull_one and pull_ten functions
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
+        with open (r"game_files/classes/json/entities.json", "r") as bye :
+            entities = json.load(bye)
+        
         char_list = []
         for user in users:
             if user['username'] == n:
@@ -70,6 +77,8 @@ class base_functions():         # ***DONT IMPORT OR USE THIS IN OTHER FILES, ONL
             os.rename(new_file, r"game_files/classes/json/users.json")
 
     def activate_pity(username):
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
         k = starsystem.k
         for user in users:
             if user['username'] == username:
@@ -90,6 +99,8 @@ class starsystem():
     k = 30
 
     def view_characters(username):            #tested
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
         for user in users: 
             if user['username'] == username:
                 characters = user['characters']
@@ -98,6 +109,8 @@ class starsystem():
                     print(i)
         
     def pull_one(username):            #tested
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
         k = starsystem.k
         base_functions.activate_pity(username)
         for user in users:
@@ -116,6 +129,8 @@ class starsystem():
                 print(f"{username} now has {user['crystals']} crystals left")
 
     def pull_ten(username):            #tested
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
         k = starsystem.k
         base_functions.activate_pity(username)
 
