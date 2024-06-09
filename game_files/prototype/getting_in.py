@@ -31,8 +31,6 @@ class prototype():
         while a == "y":
             os.system("cls")
             entry.screen()
-            rand.contin()
-            os.system("cls")
             print("Welcome to our game! Would you like to sign in to your existing account or sign up for a new account?")
             print("[1] Sign in")
             print("[2] Sign up")
@@ -49,7 +47,6 @@ class prototype():
                 login.player(username)
                 os.system("cls")
                 print("Welcome back!")
-                rand.contin()
                 for user in users:
                     if user['username'] == username:
                         data = len(user['quest'])
