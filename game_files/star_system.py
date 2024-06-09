@@ -17,6 +17,7 @@ class base_functions():         # ***DONT IMPORT OR USE THIS IN OTHER FILES, ONL
             if user['username'] == username:
                 characters = user['characters']
                 if character['name'] in characters:
+                    print("you already have this character so you get 80 crystals instead")
                     user['crystals'] += 80
                     user['stars'] += 1
                 else: 
@@ -112,7 +113,7 @@ class starsystem():
                         user['crystals'] -= 160
                         base_functions.get_random_character(k,username)
                         answer = "n"
-            print(f"{username} now has {user['crystals']} crystals left")
+                print(f"{username} now has {user['crystals']} crystals left")
 
     def pull_ten(username):            #tested
         k = starsystem.k
@@ -133,7 +134,7 @@ class starsystem():
                         othercount = 1
                         while count < 10:
                             print(f"--PULL NUMBER {othercount}: --")
-                            time.sleep(0.75)
+                            time.sleep(0.25)
                             base_functions.get_random_character(k,username)
                             rand.contin()
                             count += 1
