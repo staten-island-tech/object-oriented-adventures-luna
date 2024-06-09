@@ -39,7 +39,8 @@ class battle():
         os.system("cls")
         for entity in entities:
             if entity['name'] == x:
-                q = entity['attack'[0]]
+                a = entity['attack']
+                q = a[0]
         enemies = y
         for enemy in enemies:
             e = enemy['hp']
@@ -51,7 +52,8 @@ class battle():
         os.system("cls")
         for entity in entities:
             if entity['name'] == x:
-                q = entity['attack'[1]]
+                a = entity['attack']
+                q = a[1]
         enemies = y
         for enemy in enemies:
             e = enemy['hp']
