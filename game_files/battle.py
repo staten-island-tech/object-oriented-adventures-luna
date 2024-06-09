@@ -37,12 +37,13 @@ characters = [{'name': "c",
 class battle():
     def attack(x, y):                             # x is attack the enemy is taking (integer), y is list of dictionary of enemies, z is team you're using
         os.system("cls")
+        t = 0
         enemies = y
         for enemy in enemies:
-            for i in range(1):
-                hp = enemy['hp']
-                damage = x
-                enemy['hp'] = hp - damage
+            e = enemy['hp']
+            f = e - (x/2)
+            enemy['hp'] = f
+            t += 1
         for enemy in enemies: 
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
@@ -51,11 +52,10 @@ class battle():
         enemies = y
         t = 0
         for enemy in enemies:
-            for enemy in enemies:
-                for i in range(1):
-                    hp = enemy['hp']
-                    damage = x
-                    enemy['hp'] = hp - damage
+            e = enemy['hp']
+            f = e - (x/3)
+            enemy['hp'] = f
+
         for enemy in enemies:
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
