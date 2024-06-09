@@ -1,102 +1,50 @@
 [
     {
-        "username": "ex",
-        "password": "123",
+        "username": "toob",
+        "password": "artin",
         "type": "player",
-        "crystals": 80,
-        "stars": 0,
-        "characters": [],
+        "crystals": 4727,
+        "stars": 21,
+        "characters": [
+            "Aelius",
+            "Asahi",
+            "Mael",
+            "Estella",
+            "Asahi: Prince of Taiyo",
+            "Genevieve",
+            "Altair",
+            "Igor",
+            "Dinara",
+            "Innessa",
+            "Charlotte"
+        ],
         "team": [
-            {
-                "name": "Amaris",
-                "hp": 0,
-                "attack": [
-                    500,
-                    1500
-                ],
-                "rarity": "*****",
-                "weapon": "stellar gun",
-                "type": "destruction",
-                "element": "quantum"
-            },
-            {
-                "name": "Aelius",
-                "hp": 0,
-                "attack": [
-                    500,
-                    1500
-                ],
-                "rarity": "*****",
-                "weapon": "stellar gun",
-                "type": "destruction",
-                "element": "imaginary"
-            },
+            "Estella",
+            "Asahi",
             "",
             ""
         ],
-        "quest": []
-    },
-    {
-        "username": "exa",
-        "password": "abc",
-        "type": "player",
-        "crystals": 3,
-        "stars": 0,
-        "characters": [
-            "Asahi"
-        ],
-        "team": [
-            "Asahi"
-        ],
         "quest": [
-            "spaceship",
-            "monde"
+            "space station",
+            "monde",
+            "pero"
         ]
     },
     {
-        "username": "test",
-        "password": "hehe",
+        "username": "saph",
+        "password": "elisa",
         "type": "player",
-        "crystals": 0,
+        "crystals": 12821,
         "stars": 0,
-        "characters": [],
+        "characters": [
+            "Aelius",
+            "Asahi"
+        ],
         "team": [
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            },
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            },
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            },
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            }
+            "Aelius",
+            "Asahi",
+            "",
+            ""
         ],
         "quest": []
     },
@@ -104,98 +52,19 @@
         "username": "a",
         "password": "b",
         "type": "player",
-        "crystals": 0,
-        "stars": 0,
-        "characters": [],
-        "team": [
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            },
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            },
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            },
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            }
-        ],
-        "quest": []
-    },
-    {
-        "username": "idk",
-        "password": "idk",
-        "type": "player",
-        "crystals": 1850,
-        "stars": 0,
+        "crystals": 16035,
+        "stars": 11,
         "characters": [
-            "Asahi"
+            "Aelius",
+            "Asahi",
+            "Izumi",
+            "Aleksandr"
         ],
         "team": [
-            {
-                "name": "Asahi",
-                "hp": 5000,
-                "attack": [
-                    250,
-                    750
-                ],
-                "rarity": "****",
-                "weapon": "greatsword",
-                "type": "preservation",
-                "element": "imaginary"
-            },
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            },
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            },
-            {
-                "name": "",
-                "hp": 0,
-                "attack": [],
-                "rarity": "",
-                "weapon": "",
-                "type": "",
-                "element": ""
-            }
+            "Aelius",
+            "Asahi",
+            "",
+            ""
         ],
         "quest": [
             "space station"

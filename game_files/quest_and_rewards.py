@@ -2,10 +2,10 @@ import json
 import os
 from rand import *
 
-with open (r"game_files\classes\json\users.json", "r") as hi : 
+with open (r"game_files/classes/json/users.json", "r") as hi : 
     users = json.load(hi)
 
-with open (r"game_files\classes\json\entities.json", "r") as bye :
+with open (r"game_files/classes/json/entities.json", "r") as bye :
     entities = json.load(bye)
 
 class quests():                                             #the whole class needs to be tested
