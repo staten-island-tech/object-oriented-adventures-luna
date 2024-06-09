@@ -27,7 +27,7 @@ class spaceship():
         for user in users:
             if user['username'] == username:
                 data = len(user['quest'])
-        if data >= 2:
+        if data >= 1:
             print("[2] Star System")
             print("[3] Change Team")
 
