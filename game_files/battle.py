@@ -36,6 +36,7 @@ characters = [{'name': "c",
 
 class battle():
     def attack(x, y):                             # x is attack the enemy is taking (integer), y is list of dictionary of enemies, z is team you're using
+        os.system("cls")
         t = 0
         enemies = y
         for enemy in enemies:
@@ -50,6 +51,7 @@ class battle():
             print(f"Enemy Name: {enemy['name']}")
             print(f"HP: {enemy['hp']}")
     def ult(x, y):
+        os.system("cls")
         enemies = y
         t = 0
         for enemy in enemies:
@@ -130,13 +132,12 @@ class battle():
             if a == c:
                 print(f"Enemy {d} is preparing to attack {character['name']}.")
                 print(f"Your character has taken {attack_stat} damage.")
-                rand.contin()
-                os.system("cls")
                 print(f"Name: {character['name']}")
                 new_hp = character['hp'] - attack_stat
                 character['hp'] = new_hp
                 print(f"HP: {new_hp}")
                 os.system("cls")
+                rand.contin()
             a += 1
     def select_character(username):             ## needs to be tested - TESTED 
         for user in users:

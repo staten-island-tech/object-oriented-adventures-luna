@@ -69,13 +69,12 @@ class prologue():
         q = 0
         z = team[y[q]]
         enemy_team = []
-        for en in entities:
-            if en['name'] == "Oblivion Guard":
+        for enemy in entities:
+            if enemy['name'] == "Oblivion Guard":
                 for i in range(3):
-                    enemy_team.append(en)
+                    enemy_team.append(enemy)
         for enemy in enemy_team:
             b.append(enemy['hp'])
-        rand.hp_full(enemy_team)
         enemy_hp = sum(b)
         while ally_hp >= 0 and enemy_hp >= 0:
             battle.attack_enemy(enemy_team, team)
@@ -144,14 +143,14 @@ class prologue():
             print("You try and think of another response.")
             dialogues_player.space_station(6)
             answer = input("").lower()
-        rand.contin()
+        os.system("cls")
         wave = 0
         q = 0
         z = team[y[q]]
         while wave != 2:
             quests.wave(wave, 0)
             enemy_team = []
-            for en in entities:
+            for enemy in entities:
                 if enemy['name'] == "Oblivion Guard":
                     for i in range(3):
                         enemy_team.append(enemy)
