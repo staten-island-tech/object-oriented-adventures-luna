@@ -135,6 +135,8 @@ class worlds():
 					f.write(json_string)
 				os.remove(r"game_files/classes/json/users.json")
 				os.rename(new_file, r"game_files/classes/json/users.json")
+				with open (r"game_files/classes/json/users.json", "r") as hi : 
+					users = json.load(hi)
 			wave += 1
 		print("Battle 2")
 		while wave != 2:
@@ -186,7 +188,9 @@ class worlds():
 			os.remove(r"game_files/classes/json/users.json")
 			os.rename(new_file, r"game_files/classes/json/users.json")
 			print("You've gained 7 crystals")
-			wave += 1
+			with open (r"game_files/classes/json/users.json", "r") as hi : 
+				users = json.load(hi)
+		wave += 1
 		rand.contin()
 		print("Battle 3")
 		quests.wave(0,0)
@@ -238,6 +242,8 @@ class worlds():
 				f.write(json_string)
 			os.remove(r"game_files/classes/json/users.json")
 			os.rename(new_file, r"game_files/classes/json/users.json")
+			with open (r"game_files/classes/json/users.json", "r") as hi : 
+				users = json.load(hi)
 		print("You've gained 7 crystals")
 		rand.contin()
 		quests.wave(1,1)
@@ -287,6 +293,8 @@ class worlds():
 				f.write(json_string)
 			os.remove(r"game_files/classes/json/users.json")
 			os.rename(new_file, r"game_files/classes/json/users.json")
+			with open (r"game_files/classes/json/users.json", "r") as hi : 
+				users = json.load(hi)
 		print("You've gained 40 crystals")
 		rand.contin()
 		dialogues_story.monde(10)
@@ -447,6 +455,8 @@ class worlds():
 				f.write(json_string)
 			os.remove(r"game_files/classes/json/users.json")
 			os.rename(new_file, r"game_files/classes/json/users.json")
+			with open (r"game_files/classes/json/users.json", "r") as hi : 
+				users = json.load(hi)
 			print("You've earned 7 crystals.")
 			rand.contin()
 		wave = 0
@@ -543,6 +553,8 @@ class worlds():
 				f.write(json_string)
 			os.remove(r"game_files/classes/json/users.json")
 			os.rename(new_file, r"game_files/classes/json/users.json")	
+			with open (r"game_files/classes/json/users.json", "r") as hi : 
+				users = json.load(hi)
 			print("You've gained 40 crystals.")
 			rand.contin()
 		dialogues_story.pero(21)

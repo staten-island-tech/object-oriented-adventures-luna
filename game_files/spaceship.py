@@ -32,6 +32,8 @@ class spaceship():
             print("[3] Change Team")
 
     def quest_story(username):
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
         for user in users:
             if user['username'] == username:
                 quests = len(user['quest'])
@@ -119,11 +121,8 @@ class spaceship():
             pass
 
     def star_system(username):
-        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-        users = json.load(data_users)
-
-        data_users = open("./game_files/classes/json/entities.json", encoding="utf8")
-        entities = json.load(data_users)
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
         print("Welcome to the star system - what would you like to do?")
         print("[1] View your characters")
         print("[2] Buy 1 star and pull onces")
@@ -145,7 +144,6 @@ class spaceship():
         else:
             pass
     def team(username):
-        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
-        users = json.load(data_users)
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
         battle.select_character(username)
-

@@ -124,8 +124,16 @@ class starsystem():
                         answer = input("are you sure you want to use 160 crystals? y/n ").lower()
                     while answer == "y":
                         user['crystals'] -= 160
+                        new_file = "updated.json"
+                        with open(new_file, "w") as f:
+                            json_string = json.dumps(users)
+                            f.write(json_string)
+                        os.remove(r"game_files/classes/json/users.json")
+                        os.rename(new_file, r"game_files/classes/json/users.json")
                         base_functions.get_random_character(k,username)
                         answer = "n"
+                with open (r"game_files/classes/json/users.json", "r") as hi : 
+                    users = json.load(hi)
                 print(f"{username} now has {user['crystals']} crystals left")
 
     def pull_ten(username):            #tested
@@ -145,6 +153,12 @@ class starsystem():
                         answer = input("are you sure you want to use 1600 crystals? y/n ").lower()
                     while answer == "y":
                         user['crystals'] -= 1600
+                        new_file = "updated.json"
+                        with open(new_file, "w") as f:
+                            json_string = json.dumps(users)
+                            f.write(json_string)
+                        os.remove(r"game_files/classes/json/users.json")
+                        os.rename(new_file, r"game_files/classes/json/users.json")
                         count = 0
                         othercount = 1
                         while count < 10:
@@ -155,4 +169,6 @@ class starsystem():
                             count += 1
                             othercount += 1
                         answer = "n"
+                with open (r"game_files/classes/json/users.json", "r") as hi : 
+                    users = json.load(hi)
                 print(f"{username} now has {user['crystals']} crystals left")
