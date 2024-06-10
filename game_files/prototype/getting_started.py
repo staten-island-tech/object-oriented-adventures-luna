@@ -377,13 +377,4 @@ class prologue():
         print("You've completed this mission. You've gained 1600 crystals")
         print("Going to spaceship...")
         rand.contin()
-        for user in users:
-            if user['username'] == username:
-                user['quest'].append('space station')
-        new_file = "updated.json"
-        with open(new_file, "w") as f:
-            json_string = json.dumps(users)
-            f.write(json_string)
-        os.remove(r"game_files/classes/json/users.json")
-        os.rename(new_file, r"game_files/classes/json/users.json")
 
