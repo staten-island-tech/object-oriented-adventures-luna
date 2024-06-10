@@ -59,6 +59,7 @@ class spaceship():
                 print("You:...")
                 dialogues_quest.amalthea(2)
                 rand.contin()
+                print("Beginning Story Quest...")
                 worlds.monde_mission(username)
             elif answer == a[1]:
                 print("Amalthea: I see")
@@ -77,6 +78,7 @@ class spaceship():
                 os.system("cls")
                 dialogues_quest.lyra(1)
                 rand.contin()
+                print("Beginning Story Quest...")
                 worlds.pero_mission(username)
             elif answer == a[1]:
                 print("Lyra: Alright. Enjoy your time exploring the spaceship then new recruit!")
@@ -98,6 +100,7 @@ class spaceship():
                 rand.contin()
                 print("You: I will. See you when I come back then, Astrophel!")
                 rand.contin()
+                print("Beginning Story Quest...")
                 taiyo.path(username)
             elif answer == a[1]:
                 print("Astrophel: Oh. Alright! Please enjoy your time on the spaceship then!")
