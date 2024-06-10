@@ -120,8 +120,10 @@ class battle():
             print ("[A] Use attack")
             d = input("").upper()
         if d == "U":
+            os.system("cls")
             battle.ult(name, y)
         elif d == "A":
+            os.system("cls")
             battle.attack(name, y)
     def attack_enemy(y, z):
         enemies = y
