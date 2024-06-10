@@ -119,14 +119,14 @@ class spaceship():
             pass
 
     def star_system(username):
-        with open (r"game_files/classes/json/users.json", "r") as hi : 
-            users = json.load(hi)
+        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+        users = json.load(data_users)
 
-        with open (r"game_files/classes/json/entities.json", "r") as bye :
-            entities = json.load(bye)
+        data_users = open("./game_files/classes/json/entities.json", encoding="utf8")
+        entities = json.load(data_users)
         print("Welcome to the star system - what would you like to do?")
         print("[1] View your characters")
-        print("[2] Buy 1 star and pull once")
+        print("[2] Buy 1 star and pull onces")
         print("[3] Buy 10 stars and pull 10 times")
         answer = input("")
         z = ["1", "2", "3"]
@@ -145,7 +145,7 @@ class spaceship():
         else:
             pass
     def team(username):
-        with open (r"game_files/classes/json/users.json", "r") as hi : 
-            users = json.load(hi)
+        data_users = open("./game_files/classes/json/users.json", encoding="utf8")
+        users = json.load(data_users)
         battle.select_character(username)
 

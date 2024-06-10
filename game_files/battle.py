@@ -4,11 +4,10 @@ import random
 from rand import rand
 
 with open (r"game_files/classes/json/users.json", "r") as hi : 
-    users = json.load(hi)
+        users = json.load(hi)
 
 with open (r"game_files/classes/json/entities.json", "r") as bye :
     entities = json.load(bye)
-
 
 """ enemies = [{'name': "a", 
           'hp': 4500, 
@@ -157,6 +156,11 @@ class battle():
                 os.system("cls")
             a += 1
     def select_character(username):             ## needs to be tested - TESTED 
+        with open (r"game_files/classes/json/users.json", "r") as hi : 
+            users = json.load(hi)
+
+        with open (r"game_files/classes/json/entities.json", "r") as bye :
+            entities = json.load(bye)
         for user in users:
             if user['username'] == username:
                 characters = user['characters']
