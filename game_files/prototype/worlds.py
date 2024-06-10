@@ -10,12 +10,13 @@ from rand import *
 
 
 class worlds():
-	with open (r"game_files/classes/json/users.json", "r") as hi : 
-		users = json.load(hi)
 
-	with open (r"game_files/classes/json/entities.json", "r") as bye :
-		entities = json.load(bye)
 	def monde_mission(username):
+		with open (r"game_files/classes/json/users.json", "r") as hi : 
+			users = json.load(hi)
+
+		with open (r"game_files/classes/json/entities.json", "r") as bye :
+			entities = json.load(bye)
 		dialogues_story.monde(0)
 		rand.contin()
 		dialogues_player.monde(0)
@@ -342,6 +343,11 @@ class worlds():
 			os.rename(new_file, r"game_files/classes/json/users.json")
 	
 	def pero_mission(username):
+		with open (r"game_files/classes/json/users.json", "r") as hi : 
+			users = json.load(hi)
+
+		with open (r"game_files/classes/json/entities.json", "r") as bye :
+			entities = json.load(bye)
 		x = 0
 		while x <= 2:
 			dialogues_story.pero(x)
