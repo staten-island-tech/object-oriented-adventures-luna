@@ -23,7 +23,6 @@ class worlds():
 		b = ["a", "b"]
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.monde(0)
 			a = input("").lower()
@@ -33,9 +32,9 @@ class worlds():
 		rand.contin()
 		dialogues_player.monde(1)
 		a = input("").lower()
+		b = ["a", "b"]
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.monde(1)
 			a = input("").lower()
@@ -66,7 +65,6 @@ class worlds():
 		b = ["a", "b"]
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.monde(6)
 			a = input("").lower()
@@ -299,9 +297,9 @@ class worlds():
 		rand.contin()
 		dialogues_player.monde(8)
 		a = input("").lower()
+		b = ["a", "b"]
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.monde(8)
 			a = input("").lower()
@@ -357,7 +355,6 @@ class worlds():
 		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.pero(1)
 			a = input("").lower()
@@ -377,7 +374,6 @@ class worlds():
 		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.pero(3)
 			a = input("").lower()
@@ -440,10 +436,11 @@ class worlds():
 			worlds.monde_mission(username)
 		else:
 			for user in users:
-				reward = 7
-				add = user['crystals'] + reward
-				user['crystals'] = add
-				print(f"{username} now has {user['crystals']} crystals")
+				if user['username'] == username:
+					reward = 7
+					add = user['crystals'] + reward
+					user['crystals'] = add
+					print(f"{username} now has {user['crystals']} crystals")
 			new_file = "updated.json"
 			with open(new_file, "w") as f:
 				json_string = json.dumps(users)
@@ -488,10 +485,11 @@ class worlds():
 				worlds.monde_mission(username)
 			else:
 				for user in users:
-					reward = 7
-					add = user['crystals'] + reward
-					user['crystals'] = add
-					print(f"{username} now has {user['crystals']} crystals")
+					if user['username'] == username:
+						reward = 7
+						add = user['crystals'] + reward
+						user['crystals'] = add
+						print(f"{username} now has {user['crystals']} crystals")
 				new_file = "updated.json"
 				with open(new_file, "w") as f:
 					json_string = json.dumps(users)
@@ -534,10 +532,11 @@ class worlds():
 			worlds.monde_mission(username)
 		else:
 			for user in users:
-				reward = 40
-				add = user['crystals'] + reward
-				user['crystals'] = add
-				print(f"{username} now has {user['crystals']} crystals")
+				if user['username'] == username:
+					reward = 40
+					add = user['crystals'] + reward
+					user['crystals'] = add
+					print(f"{username} now has {user['crystals']} crystals")
 			new_file = "updated.json"
 			with open(new_file, "w") as f:
 				json_string = json.dumps(users)
@@ -553,7 +552,6 @@ class worlds():
 		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.pero(6)
 			a = input("").lower()
@@ -568,13 +566,11 @@ class worlds():
 		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
-			rand.contin()
 			print("You try and think of another response.")
 			dialogues_player.pero(6)
 			a = input("").lower()
 		os.system("cls")
 		dialogues_story.pero(25)
-		dialogues_story.pero(26)
 		rand.contin()
 		print("Going back to spaceship...")
 		rand.contin()

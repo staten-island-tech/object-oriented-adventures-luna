@@ -16,8 +16,10 @@ class pro():
      os.system("cls")
      if answer == "1":
        spaceship.quest_story(username)
+       pro.wel(username)
      elif answer == "2":
        spaceship.star_system(username)
+       pro.wel(username)
      elif answer == "3":
        spaceship.team(username)
-     pro.wel(username)
+       pro.wel(username)

@@ -118,10 +118,11 @@ class taiyo():
                 taiyo.path(username)
             else:
                 for user in users:
-                    reward = 7
-                    add = user['crystals'] + reward
-                    user['crystals'] = add
-                    print(f"{username} now has {user['crystals']} crystals")
+                    if user['username'] == username:
+                        reward = 7
+                        add = user['crystals'] + reward
+                        user['crystals'] = add
+                        print(f"{username} now has {user['crystals']} crystals")
                 new_file = "updated.json"
                 with open(new_file, "w") as f:
                     json_string = json.dumps(users)
@@ -169,10 +170,11 @@ class taiyo():
             taiyo.path(username)
         else:
             for user in users:
-                reward = 7
-                add = user['crystals'] + reward
-                user['crystals'] = add
-                print(f"{username} now has {user['crystals']} crystals")
+                if user['username'] == username:
+                    reward = 7
+                    add = user['crystals'] + reward
+                    user['crystals'] = add
+                    print(f"{username} now has {user['crystals']} crystals")
             new_file = "updated.json"
             with open(new_file, "w") as f:
                 json_string = json.dumps(users)
@@ -218,10 +220,11 @@ class taiyo():
             taiyo.path(username)
         else:
             for user in users:
-                reward = 7
-                add = user['crystals'] + reward
-                user['crystals'] = add
-                print(f"{username} now has {user['crystals']} crystals")
+                if user['username'] == username:
+                    reward = 7
+                    add = user['crystals'] + reward
+                    user['crystals'] = add
+                    print(f"{username} now has {user['crystals']} crystals")
             new_file = "updated.json"
             with open(new_file, "w") as f:
                 json_string = json.dumps(users)
@@ -265,10 +268,11 @@ class taiyo():
             taiyo.path(username)
         else:
             for user in users:
-                reward = 40
-                add = user['crystals'] + reward
-                user['crystals'] = add
-                print(f"{username} now has {user['crystals']} crystals")
+                if user['username'] == username:
+                    reward = 40
+                    add = user['crystals'] + reward
+                    user['crystals'] = add
+                    print(f"{username} now has {user['crystals']} crystals")
             new_file = "updated.json"
             with open(new_file, "w") as f:
                 json_string = json.dumps(users)
@@ -329,10 +333,11 @@ class taiyo():
             taiyo.path(username)
         else:
             for user in users:
-                reward = 40
-                add = user['crystals'] + reward
-                user['crystals'] = add
-                print(f"{username} now has {user['crystals']} crystals")
+                if user['username'] == username:
+                    reward = 40
+                    add = user['crystals'] + reward
+                    user['crystals'] = add
+                    print(f"{username} now has {user['crystals']} crystals")
             new_file = "updated.json"
             with open(new_file, "w") as f:
                 json_string = json.dumps(users)
