@@ -28,7 +28,7 @@ class taiyo():
             x += 1
         rand.contin()
         dialogues_player.taiyo(1)
-        answer = input("")
+        answer = input("").lower()
         a = ['a','b']
         while answer not in a:
             print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
@@ -290,7 +290,7 @@ class taiyo():
             x += 1
         rand.contin()
         dialogues_player.taiyo(8)
-        answer = input("")
+        answer = input("").lower()
         a = ['a','b']
         while answer not in a:
             print("You think it over before you speak and decide that it is not the right thing to say at the moment.")

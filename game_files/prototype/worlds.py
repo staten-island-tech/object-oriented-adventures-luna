@@ -364,7 +364,7 @@ class worlds():
 		dialogues_story.pero(4)
 		rand.contin()
 		dialogues_player.pero(1)
-		a = input("")
+		a = input("").lower()
 		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
@@ -383,7 +383,7 @@ class worlds():
 		dialogues_story.pero(9)
 		rand.contin()
 		dialogues_player.pero(3)
-		a = input("")
+		a = input("").lower()
 		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
@@ -565,7 +565,7 @@ class worlds():
 		dialogues_story.pero(21)
 		rand.contin()
 		dialogues_player.pero(5)
-		a = input("")
+		a = input("").lower()
 		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
@@ -579,7 +579,7 @@ class worlds():
 			x += 1
 		rand.contin()
 		dialogues_player.pero(6)
-		a = input("")
+		a = input("").lower()
 		b = ['a','b']
 		while a not in b:
 			print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
