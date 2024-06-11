@@ -1,1 +1,188 @@
-[{"username": "toob", "password": "artin", "type": "player", "crystals": 4795, "stars": 21, "characters": ["Aelius", "Asahi", "Mael", "Estella", "Asahi: Prince of Taiyo", "Genevieve", "Altair", "Igor", "Dinara", "Innessa", "Charlotte"], "team": ["Estella", "Asahi", "", ""], "quest": ["space station", "monde", "pero"]}, {"username": "saph", "password": "elisa", "type": "player", "crystals": 10019, "stars": 40, "characters": ["Aelius", "Asahi", "Estella", "Aleksandr", "Himari", "Fumiko", "Altair", "Sirius", "Charlotte", "Dinara"], "team": ["Aelius", "Asahi", "", ""], "quest": ["space station"]}, {"username": "a", "password": "b", "type": "player", "crystals": 16103, "stars": 11, "characters": ["Aelius", "Asahi", "Izumi", "Aleksandr"], "team": ["Aelius", "Asahi", "Izumi", "Aleksandr"], "quest": ["space station"]}, {"username": "whalen", "password": "whalen", "type": "player", "crystals": 12871, "stars": 0, "characters": ["Aelius", "Asahi"], "team": ["Aelius", "Asahi", "", ""], "quest": []}, {"username": "leah", "password": "dawg", "type": "player", "crystals": 14532, "stars": 0, "characters": ["Aelius", "Asahi"], "team": ["Aelius", "Asahi", "Sirius", "Izumi"], "quest": ["space station", "monde"]}, {"username": "aa", "password": "a", "type": "player", "crystals": 12932, "stars": 10, "characters": ["Aelius", "Asahi", "Asahi: Prince of Taiyo", "Callisto"], "team": ["Aelius", "Asahi", "Callisto", "Callisto"], "quest": ["space station", "monde"]}, {"username": "sarah", "password": "poop", "type": "player", "crystals": 12800, "stars": 0, "characters": ["Aelius", "Asahi"], "team": ["Aelius", "Asahi", "", ""], "quest": []}, {"username": "Not Mark", "password": "MarkSucksAtBall", "type": "player", "crystals": 11607, "stars": 20, "characters": ["Aelius", "Asahi", "Charlotte", "Innessa", "Celine"], "team": ["Aelius", "Asahi", "Charlotte", "Innessa"], "quest": ["space station", "space station", "pero"]}]
+[
+    {
+        "username": "toob",
+        "password": "artin",
+        "type": "player",
+        "crystals": 4795,
+        "stars": 21,
+        "characters": [
+            "Aelius",
+            "Asahi",
+            "Mael",
+            "Estella",
+            "Asahi: Prince of Taiyo",
+            "Genevieve",
+            "Altair",
+            "Igor",
+            "Dinara",
+            "Innessa",
+            "Charlotte"
+        ],
+        "team": [
+            "Estella",
+            "Asahi",
+            "",
+            ""
+        ],
+        "quest": [
+            "space station",
+            "monde",
+            "pero"
+        ]
+    },
+    {
+        "username": "saph",
+        "password": "elisa",
+        "type": "player",
+        "crystals": 10019,
+        "stars": 40,
+        "characters": [
+            "Aelius",
+            "Asahi",
+            "Estella",
+            "Aleksandr",
+            "Himari",
+            "Fumiko",
+            "Altair",
+            "Sirius",
+            "Charlotte",
+            "Dinara"
+        ],
+        "team": [
+            "Aelius",
+            "Asahi",
+            "",
+            ""
+        ],
+        "quest": [
+            "space station"
+        ]
+    },
+    {
+        "username": "a",
+        "password": "b",
+        "type": "player",
+        "crystals": 16103,
+        "stars": 11,
+        "characters": [
+            "Aelius",
+            "Asahi",
+            "Izumi",
+            "Aleksandr"
+        ],
+        "team": [
+            "Aelius",
+            "Asahi",
+            "Izumi",
+            "Aleksandr"
+        ],
+        "quest": [
+            "space station"
+        ]
+    },
+    {
+        "username": "whalen",
+        "password": "whalen",
+        "type": "player",
+        "crystals": 12871,
+        "stars": 0,
+        "characters": [
+            "Aelius",
+            "Asahi"
+        ],
+        "team": [
+            "Aelius",
+            "Asahi",
+            "",
+            ""
+        ],
+        "quest": []
+    },
+    {
+        "username": "leah",
+        "password": "dawg",
+        "type": "player",
+        "crystals": 14532,
+        "stars": 0,
+        "characters": [
+            "Aelius",
+            "Asahi"
+        ],
+        "team": [
+            "Aelius",
+            "Asahi",
+            "Sirius",
+            "Izumi"
+        ],
+        "quest": [
+            "space station",
+            "monde"
+        ]
+    },
+    {
+        "username": "aa",
+        "password": "a",
+        "type": "player",
+        "crystals": 12932,
+        "stars": 10,
+        "characters": [
+            "Aelius",
+            "Asahi",
+            "Asahi: Prince of Taiyo",
+            "Callisto"
+        ],
+        "team": [
+            "Aelius",
+            "Asahi",
+            "Callisto",
+            "Callisto"
+        ],
+        "quest": [
+            "space station",
+            "monde"
+        ]
+    },
+    {
+        "username": "sarah",
+        "password": "poop",
+        "type": "player",
+        "crystals": 12800,
+        "stars": 0,
+        "characters": [
+            "Aelius",
+            "Asahi"
+        ],
+        "team": [
+            "Aelius",
+            "Asahi",
+            "",
+            ""
+        ],
+        "quest": []
+    },
+    {
+        "username": "Not Mark",
+        "password": "MarkSucksAtBall",
+        "type": "player",
+        "crystals": 11607,
+        "stars": 20,
+        "characters": [
+            "Aelius",
+            "Asahi",
+            "Charlotte",
+            "Innessa",
+            "Celine"
+        ],
+        "team": [
+            "Aelius",
+            "Asahi",
+            "Charlotte",
+            "Innessa"
+        ],
+        "quest": [
+            "space station",
+            "space station",
+            "pero"
+        ]
+    }
+]
