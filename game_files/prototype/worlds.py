@@ -10,7 +10,6 @@ from rand import *
 
 
 class worlds():
-
 	def monde_mission(username):
 		with open (r"game_files/classes/json/users.json", "r") as hi : 
 			users = json.load(hi)
