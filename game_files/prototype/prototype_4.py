@@ -28,7 +28,7 @@ class taiyo():
             x += 1
         rand.contin()
         dialogues_player.taiyo(1)
-        answer = input("")
+        answer = input("").lower()
         a = ['a','b']
         while answer not in a:
             print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
@@ -290,7 +290,7 @@ class taiyo():
             x += 1
         rand.contin()
         dialogues_player.taiyo(8)
-        answer = input("")
+        answer = input("").lower()
         a = ['a','b']
         while answer not in a:
             print("You think it over before you speak and decide that it is not the right thing to say at the moment.")
@@ -361,11 +361,11 @@ class taiyo():
         while answer not in a:
             answer = input("we know this is a hard choice...but YOU HAVE TO CHOOSE ONE").lower()
         if answer == "a":
-            dialogues_story(26)
+            dialogues_story.taiyo(26)
             rand.contin()
         elif answer == "b": 
-            dialogues_story(27)
-            dialogues_story(28)
+            dialogues_story.taiyo(27)
+            dialogues_story.taiyo(28)
             rand.contin()
         for user in users:
             if user['username'] == username:
